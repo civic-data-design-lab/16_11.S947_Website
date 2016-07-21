@@ -1,0 +1,114 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800);
+@import 'https://fonts.googleapis.com/css?family=Secular+One';
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    margin:0px;
+    border: 0px;
+    padding:0px;
+    transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+}
+
+.footer {
+
+}
+
+.header {
+    position: absolute;
+    top: 0px;
+    width:100%;
+    height: auto;
+    border-bottom: 1px solid black;
+    background-color: white;
+}
+
+.header_content {
+    margin:30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.cddl_logo {
+    height: 40px;
+
+
+}
+
+.header_content_buttons {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+}
+
+.header_content_buttons ul {
+    float: right;
+    margin: 0px;
+    margin-left: 40px;
+    font-size: 18px;
+    color: rgba(0,0,0,0.5);
+}
+
+.mybtn:hover {
+    cursor: pointer !important;
+    opacity: 0.6 !important;
+}
+
+.middle {
+    position: absolute;
+    top: 0px;
+    bottom:0px;
+    width:100%;
+    z-index: -1;
+    background: url(../img/Photo_riyadh_business_wire.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: 0% 70%;
+}
+
+.middle_content {
+    max-width: 994px;
+    width: 77%;
+    height: 70%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+}
+
+.middle_content_bg {
+    font-size: 51px;
+    font-family: 'Secular One', sans-serif;
+    font-weight: bold;
+}
+
+.middle_content_right {
+    float:right;
+    border-top: 1px solid white;
+}
+
+.middle_content_left {
+    font-size: 24px;
+}
+
+.middle_content_md {
+    background: url(../img/icon_down.png);
+    background-size: contain;
+    /* margin: 0 auto; */
+    /* margin-top: 60px; */
+    position: absolute;
+    left: 50%;
+    bottom: 0%;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transform: translateX(-50%);
+}
+
+.middle_content_md {
+
+}
