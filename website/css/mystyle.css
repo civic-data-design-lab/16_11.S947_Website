@@ -161,6 +161,13 @@
 
 .texts {
     font-weight: 300;
+    font-size: 18px;
+}
+
+.texts_team {
+    font-weight: 300;
+    font-size: 16px;
+
 }
 
 .texts i {
@@ -172,6 +179,13 @@
     margin-top: 20px !important;
     margin-right: 10px !important;
     margin-bottom: 70px;
+}
+
+.content_block_sub {
+    margin-left: 0px !important;
+    margin-top: 20px !important;
+    margin-right: 0px !important;
+    margin-bottom: 20px;
 }
 
 .content_sm_block {
@@ -201,4 +215,37 @@
     width:100%;
     position: relative;
     border-top: 1px solid rgba(0,0,0,0.2);
+}
+
+.project_icon {
+    position: relative;
+    background-color: rgb(188,189,192);
+    padding:0px;
+}
+
+
+.content_project {
+    width:100% !important;
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+
+}
+
+.avator {
+    width:300px;
+    height: 300px;
+    background-color: rgb(188,189,192);
+    float:right;
+}
+
+.texts_title {
+    font-size: 30px;
+}
+
+.content_block_team {
+    margin-left: 10px !important;
+    margin-top: 20px !important;
+    margin-right: 10px !important;
+    margin-bottom: 20px;
+
 }

@@ -12,7 +12,6 @@ $(function(){
     });
 
     myui.initcontrol();
-    console.log("inited");
 
 });
 
