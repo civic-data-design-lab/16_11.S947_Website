@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Service Gap Analysis</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="css/landing-page.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+	<!-- Data links -->
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="http://d3js.org/queue.v1.min.js"></script>
+    <script src="//d3js.org/d3.v3.min.js"></script>
+    
+    <style>
+    body {
+      position: absolute;
+      top: 30px;
+    }
+     .hotspothover {
+            fill: #ffe28a; 
+        }
+    }
+
+    .hotspot {
+            opacity: .7;
+        }
+
+    .buffer {
+        fill: "#5F9EA0"
+        stroke: "#5F9EA0"
+    }
+
+    h2 {
+        top: 300px;
+    }
+
+#wrap{
+  width:1200px;
+  height:900px;
+  margin-left: 60px;
+  margin-top:30px;
+        }
+
+h2{
+    margin:0;
+    padding:0;
+}
+
+h4{
+    margin:0;
+    padding:0;
+}
+
+.axis path {
+  display: none;
+}
+
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.group-label {
+  font-weight: bold;
+  text-anchor: end;
+}
+
+#radio1 {
+	width: 400px;
+	height: 40px;
+}
+
+#form {
+  width: 400px;
+  height: 15px;
+  position: relative;
+  right: 10px;
+  top: 10px;
+}
+
+#radio1>input[type=radio]{
+	width:400px;
+	height:15px;
+	position: relative;
+}
+table, th, td {
+    border-style: solid;
+    border-width: 1px;
+    border-color: gray;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: center;
+}
+table{
+  /*width:600px;*/
+  height:100px;
+  background-color: #FFFFFF;
+}
+
+#tablesum {
+  width:1200px;
+  height:250px;
+  margin-left:60px;
+  margin-top:20px;
+}
+
+ #maptext{
+     margin-left:60px;
+   }
+
+</style>
+    
+</head>
+
+<body>
+
+ <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                    <a class="navbar-brand topnav" href="/project">WOMEN ON THE MOVE</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/project/movement.html">MOVEMENT</a>
+                    </li>
+                    <li>
+                        <a href="/project/access.html">ACCESS</a>
+                    </li>
+                    <li>
+                        <a href="/project/about.html">ABOUT</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+      <div class="container">
+    <br>
+    <br>
+    <h1 align="center"><strong>HOW MANY UNIVERSITY WOMEN DOES THE METRO SERVE?</strong></h1>
+    <br>
+        </div>
+    <div class="container">
+    <div id="wrap">
+     <h2>Princess Noura University As Origin</h2>
+    <h4> Number of commuters within walking distance of a metro station, per hour</h4>
+    <div id="area1">
+    </div>
+     <br>
+     <div id ="radio1"> 
+     <form>
+    <label><input type="radio" name="mode" value="multiples1" checked> Expand</label>
+    <label><input type="radio" name="mode" value="stacked1"> Collapse</label>
+    </form>
+    </div>
+    <div id="area2">  <h2>Princess Noura University As Destination</h2>
+    <h4> Number of commuters within walking distance of a metro station, per hour</h4></div>
+</div>
+<div id = tablesum> 
+<h2>Summary of Metro Access Throughout in A Typical Day</h2>
+<h4> Percent of Total Commuters within Walking Distance of a Metro Station</h4>
+<br>
+<table id= summarychart>
+  <tr>
+    <th> </th>
+    <th>Within 400m of a metro stop</th>
+    <th>Within 400-800m of a metro stop</th>
+    <th>Not within walking distance</th> 
+  </tr>
+  <tr> 
+    <td>travelling from PNU</td>
+    <td>7.4% </td> 
+    <td>12.2% </td> 
+    <td>80.4% </td> 
+  </tr>
+  <tr>
+    <td>travelling to PNU </td>
+    <td>4.9% </td> 
+    <td>12.7% </td> 
+    <td>82.4% </td> 
+  </tr>
+</table>	
+</div>
+    <div id="maptext">
+    <h2 >Mapping Metro Access</h2>
+        <p><h4>This interactive map of Riyadh contains three data layers that aggregate flow (number of women going to/from Princess Noura) for a typical day:
+        <br>
+        <ul>
+        <li>400m Station Buffers: Hover over to see the flow at that station</li>
+        <li>800m Station Buffers: Hover over to see the flow at that station</li>
+        <li>Flow Grid: Click on the hexagons to see the flow in that area</li>
+        </ul> 
+        Toggle layers on and off using the top right "Visible layers" button. </p>
+        </h4>
+        </p>
+        </div>
+    <iframe width="100%" height="620" frameborder="0" src="https://cortni.cartodb.com/viz/67aa3566-19f6-11e6-8dd1-0e3ff518bd15/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+    </div>
+
+<script>
+var margin = {top: 0, right: 20, bottom: 0, left: 60},
+    width = 700 - margin.left - margin.right,
+    height = 320 - margin.top - margin.bottom;
+
+var ya0 = d3.scale.ordinal()
+    .rangeRoundBands([height, 0], .2);
+
+var ya1 = d3.scale.linear();
+
+var xa = d3.scale.ordinal()
+    .rangeRoundBands([0, width], .1, 0);
+
+var xaAxis = d3.svg.axis()
+    .scale(xa)
+    .orient("bottom")
+    // .tickValues(['6am','7am','8am','9am','10am','11am','12noon','1pm','2pm','3pm','4pm','5pm','6pm','7pm', '8pm','9pm','10pm','11pm']);
+
+var nest1 = d3.nest()
+    .key(function(d) { return d.levelaccess1; });
+
+var stack1 = d3.layout.stack()
+    .values(function(d) { return d.values; })
+    .x(function(d) { return d.hour1; })
+    .y(function(d) { return d.counta; })
+    .out(function(d, ya0) { d.valueOffset = ya0 + (+d.order1); });
+
+var color1 = d3.scale.category20();
+
+var svg1 = d3.select("#area1").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+
+// var inputPND =  d3.selectAll("input").on("change", function(){
+//    return this.value;})
+
+
+d3.tsv("bars/PNOhotspotmetrobuffer.tsv", function(error, data) {
+  data.forEach(function(d){
+        d.hour1 = +d.hour1;
+        d.counta = +d.counta;
+  });
+
+  var dataByGroup1 = nest1.entries(data);
+  console.log(dataByGroup1);
+  
+  stack1(dataByGroup1);
+
+  xa.domain(dataByGroup1[0].values.map(function(d) { return d.hour1; }));
+  ya0.domain(dataByGroup1.map(function(d) { return d.key; }));
+  ya1.domain([0, d3.max(data, function(d) { return d.counta; })]).range([ya0.rangeBand(), 0]);
+
+  var group1 = svg1.selectAll(".group")
+      .data(dataByGroup1)
+    .enter().append("g")
+      .attr("class", "group")
+      .attr("transform", function(d) { return "translate(0," + ya0(d.key) + ")"; });
+
+var tooltip1 = d3.select("#area1")
+  .append("div")
+  .style("position", "absolute")
+  .style("font-family", "'Open Sans', sans-serif")
+  .style("font-size", "12px")
+  .style("z-index", "10")
+  .style("visibility", "hidden");
+
+
+  group1.append("text")
+      .attr("class", "group-label")
+      .attr("x", -6)
+      .attr("y", function(d) { return ya1(d.values[0].counta / 2); })
+      .attr("dy", ".1em")
+      .text(function(d) { return d.key; });
+
+  group1.selectAll("rect")
+      .data(function(d) { return d.values; })
+    .enter().append("rect")
+      .style("fill", function(d) { return color1(d.levelaccess1); })
+      .attr("x", function(d) { return xa(d.hour1); })
+      .attr("y", function(d) { return ya1(d.counta); })
+      .attr("width", xa.rangeBand())
+      .attr("height", function(d) { return ya0.rangeBand() - ya1(d.counta); })
+        .on("mouseover", function(d){
+          return tooltip1.style("visibility", "visible").text(d.counta + "persons");
+        })
+        .on("mousemove", function(d){
+          return tooltip1.style("top", (event.pageY-20)+"px").style("left",(event.pageX-100)+"px").text(d.counta + " persons ");
+        })
+        .on("mouseout", function(d){
+          return tooltip1.style("visibility", "hidden");
+        });
+
+  group1.filter(function(d, i) { return !i; }).append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + ya0.rangeBand() + ")")
+      .call(xaAxis);
+
+});
+
+
+  var timeout = setTimeout(function() {
+    d3.select("input[value=\"stacked1\"]").property("checked", true).each(change);
+  }, 1000);
+
+  function transitionMultiples1() {
+    var t1 = svg1.transition().duration(750),
+        g1 = t1.selectAll(".group").attr("transform", function(d) { return "translate(0," + ya0(d.key) + ")"; });
+    g1.selectAll("rect").attr("y", function(d) { return ya1(d.counta); });
+    g1.select(".group-label").attr("y", function(d) { return ya1(d.values[0].counta / 2); })
+  }
+
+  function transitionStacked1() {
+    var t1 = svg1.transition().duration(750),
+        g1 = t1.selectAll(".group").attr("transform", "translate(0," + ya0(ya0.domain()[0]) + ")");
+    g1.selectAll("rect").attr("y", function(d) { return ya1(d.counta + d.valueOffset); });
+    g1.select(".group-label").attr("y", function(d) { return ya1(d.values[0].counta / 2 + d.values[0].valueOffset*10-10); })
+  }
+
+  function transitionMultiples() {
+    var t = svg.transition().duration(750),
+        g = t.selectAll(".group").attr("transform", function(d) { return "translate(0," + y0(d.key) + ")"; });
+    g.selectAll("rect").attr("y", function(d) { return y1(d.count); });
+    g.select(".group-label").attr("y", function(d) { return y1(d.values[0].count / 2); })
+  }
+
+  function transitionStacked() {
+    var t = svg.transition().duration(750),
+        g = t.selectAll(".group").attr("transform", "translate(0," + y0(y0.domain()[0]) + ")");
+    g.selectAll("rect").attr("y", function(d) { return y1(d.count + d.valueOffset); });
+    g.select(".group-label").attr("y", function(d) { return y1(d.values[0].count / 2 + d.values[0].valueOffset*2); })
+  }
+
+  function transitionMultiplesAll(){
+    transitionMultiples();
+    transitionMultiples1();
+  }
+
+  function transitionStackedAll(){
+    transitionStacked();
+    transitionStacked1();
+  }
+
+  function change() {
+    clearTimeout(timeout);
+    if (this.value === "multiples1") transitionMultiplesAll();
+    else transitionStackedAll();
+    console.log("changedtoo");
+  }
+
+// var margin = {top: 0, right: 20, bottom: 0, left: 60},
+//     width = 700- margin.left - margin.right,
+//     height = 320 - margin.top - margin.bottom;
+
+var y0 = d3.scale.ordinal()
+    .rangeRoundBands([height, 0], .2);
+
+var y1 = d3.scale.linear();
+
+var x = d3.scale.ordinal()
+    .rangeRoundBands([0, width], .1, 0);
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom");
+    // .tickFormat(formatDate);
+
+var nest = d3.nest()
+    .key(function(d) { return d.levelaccess; });
+
+var stack = d3.layout.stack()
+    .values(function(d) { return d.values; })
+    .x(function(d) { return d.hour; })
+    .y(function(d) { return d.count; })
+    .out(function(d, y0) { d.valueOffset = y0 + (+d.order); });
+
+var color = d3.scale.category20();
+
+var svg = d3.select("#area2").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+
+
+d3.tsv("bars/PNDhotspotmetrobuffer.tsv", function(error, data) {
+  data.forEach(function(d){
+    d.hour = +d.hour;
+    d.count = +d.count;
+    d.levelaccess = d.levelaccess;
+  });
+
+  var dataByGroup = nest.entries(data);
+  console.log(dataByGroup);
+  
+  stack(dataByGroup);
+
+  x.domain(dataByGroup[0].values.map(function(d) { return d.hour; }));
+  y0.domain(dataByGroup.map(function(d) { return d.key; }));
+  y1.domain([0, d3.max(data, function(d) { return d.count; })]).range([y0.rangeBand(), 0]);
+
+  var group = svg.selectAll(".group")
+      .data(dataByGroup)
+    .enter().append("g")
+      .attr("class", "group")
+      .attr("transform", function(d) { return "translate(0," + y0(d.key) + ")"; });
+
+var tooltip = d3.select("#area2")
+  .append("div")
+  .style("position", "absolute")
+  .style("font-family", "'Open Sans', sans-serif")
+  .style("font-size", "12px")
+  .style("z-index", "10")
+  .style("visibility", "hidden");
+
+  group.append("text")
+      .attr("class", "group-label")
+      .attr("x", -6)
+      .attr("y", function(d) { return y1(d.values[0].count / 2); })
+      .attr("dy", ".1em")
+      .text(function(d) { return d.key; });
+
+  group.selectAll("rect")
+      .data(function(d) { return d.values; })
+    .enter().append("rect")
+      .style("fill", function(d) { return color(d.levelaccess); })
+      .attr("x", function(d) { return x(d.hour); })
+      .attr("y", function(d) { return y1(d.count); })
+      .attr("width", x.rangeBand())
+      .attr("height", function(d) { return y0.rangeBand() - y1(d.count); })
+        .on("mouseover", function(d){
+          return tooltip.style("visibility", "visible").text(d.count + "persons");
+        })
+        .on("mousemove", function(d){
+          return tooltip.style("top", (event.pageY)+"px").style("left",(event.pageX-100)+"px").text(d.count + " persons ");
+        })
+        .on("mouseout", function(d){
+          return tooltip.style("visibility", "hidden");
+        });
+
+  group.filter(function(d, i) { return !i; }).append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + y0.rangeBand() + ")")
+      .call(xAxis);
+
+  d3.selectAll("input").on("change", change);
+
+});
+
+
+</script>    
+</body>
+</html>

@@ -4,7 +4,7 @@ window.jQuery = window.$ =  require("./lib/jquery.min");
 window.d3 = require("./lib/d3.min");
 require("./lib/bootstrap.min");
 
-var ui = require("./modules/myui.js");
+var ui = require("./modules/myui");
 
 $(function(){
 

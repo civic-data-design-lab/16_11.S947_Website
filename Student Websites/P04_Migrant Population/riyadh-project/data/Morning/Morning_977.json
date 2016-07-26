@@ -1,0 +1,9016 @@
+{
+  "nodes": [
+    {
+      "Metro_dist": 0, 
+      "TAZ_id": 0, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 7908.57844127, 
+      "TAZ_id": 1, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 6463.9821648, 
+      "TAZ_id": 2, 
+      "ImmPer": 0.266268
+    }, 
+    {
+      "Metro_dist": 6218.65378066, 
+      "TAZ_id": 3, 
+      "ImmPer": 0.292916
+    }, 
+    {
+      "Metro_dist": 11555.8914876, 
+      "TAZ_id": 4, 
+      "ImmPer": 0.470032
+    }, 
+    {
+      "Metro_dist": 824.63980383, 
+      "TAZ_id": 5, 
+      "ImmPer": 0.319783
+    }, 
+    {
+      "Metro_dist": 4238.2938704, 
+      "TAZ_id": 6, 
+      "ImmPer": 0.380869
+    }, 
+    {
+      "Metro_dist": 6376.14628323, 
+      "TAZ_id": 7, 
+      "ImmPer": 0.659341
+    }, 
+    {
+      "Metro_dist": 1645.31194955, 
+      "TAZ_id": 8, 
+      "ImmPer": 0.125157
+    }, 
+    {
+      "Metro_dist": 2406.35897266, 
+      "TAZ_id": 9, 
+      "ImmPer": 0.194685
+    }, 
+    {
+      "Metro_dist": 1481.15089378, 
+      "TAZ_id": 10, 
+      "ImmPer": 0.357046
+    }, 
+    {
+      "Metro_dist": 1702.74033487, 
+      "TAZ_id": 11, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 2874.16021861, 
+      "TAZ_id": 12, 
+      "ImmPer": 0.213477
+    }, 
+    {
+      "Metro_dist": 3530.25476364, 
+      "TAZ_id": 13, 
+      "ImmPer": 0.483096
+    }, 
+    {
+      "Metro_dist": 1506.0642871, 
+      "TAZ_id": 14, 
+      "ImmPer": 0.580271
+    }, 
+    {
+      "Metro_dist": 814.916104613, 
+      "TAZ_id": 15, 
+      "ImmPer": 0.177608
+    }, 
+    {
+      "Metro_dist": 650.303993756, 
+      "TAZ_id": 16, 
+      "ImmPer": 0.49826
+    }, 
+    {
+      "Metro_dist": 615.533414587, 
+      "TAZ_id": 17, 
+      "ImmPer": 0.379254
+    }, 
+    {
+      "Metro_dist": 597.366639181, 
+      "TAZ_id": 18, 
+      "ImmPer": 0.388889
+    }, 
+    {
+      "Metro_dist": 633.886819499, 
+      "TAZ_id": 19, 
+      "ImmPer": 0.266452
+    }, 
+    {
+      "Metro_dist": 665.855837174, 
+      "TAZ_id": 20, 
+      "ImmPer": 0.184874
+    }, 
+    {
+      "Metro_dist": 1263.16510589, 
+      "TAZ_id": 21, 
+      "ImmPer": 0.556772
+    }, 
+    {
+      "Metro_dist": 645.972279938, 
+      "TAZ_id": 22, 
+      "ImmPer": 0.48487
+    }, 
+    {
+      "Metro_dist": 701.580591889, 
+      "TAZ_id": 23, 
+      "ImmPer": 0.390909
+    }, 
+    {
+      "Metro_dist": 566.788539672, 
+      "TAZ_id": 24, 
+      "ImmPer": 0.495373
+    }, 
+    {
+      "Metro_dist": 1369.366129, 
+      "TAZ_id": 25, 
+      "ImmPer": 0.399738
+    }, 
+    {
+      "Metro_dist": 1401.8830763, 
+      "TAZ_id": 26, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 2249.99991223, 
+      "TAZ_id": 27, 
+      "ImmPer": 0.542983
+    }, 
+    {
+      "Metro_dist": 3659.52835409, 
+      "TAZ_id": 28, 
+      "ImmPer": 0.392375
+    }, 
+    {
+      "Metro_dist": 2693.43839451, 
+      "TAZ_id": 29, 
+      "ImmPer": 0.771753
+    }, 
+    {
+      "Metro_dist": 2777.45857193, 
+      "TAZ_id": 30, 
+      "ImmPer": 0.724457
+    }, 
+    {
+      "Metro_dist": 1699.57783225, 
+      "TAZ_id": 31, 
+      "ImmPer": 0.568443
+    }, 
+    {
+      "Metro_dist": 477.475194408, 
+      "TAZ_id": 32, 
+      "ImmPer": 0.376833
+    }, 
+    {
+      "Metro_dist": 612.817315243, 
+      "TAZ_id": 33, 
+      "ImmPer": 0.385275
+    }, 
+    {
+      "Metro_dist": 1809.38461872, 
+      "TAZ_id": 34, 
+      "ImmPer": 0.309222
+    }, 
+    {
+      "Metro_dist": 656.19113539, 
+      "TAZ_id": 35, 
+      "ImmPer": 0.402827
+    }, 
+    {
+      "Metro_dist": 1712.20310334, 
+      "TAZ_id": 36, 
+      "ImmPer": 0.431337
+    }, 
+    {
+      "Metro_dist": 726.603638986, 
+      "TAZ_id": 37, 
+      "ImmPer": 0.419178
+    }, 
+    {
+      "Metro_dist": 1731.57416928, 
+      "TAZ_id": 38, 
+      "ImmPer": 0.439576
+    }, 
+    {
+      "Metro_dist": 2131.73274109, 
+      "TAZ_id": 39, 
+      "ImmPer": 0.91
+    }, 
+    {
+      "Metro_dist": 2399.50016792, 
+      "TAZ_id": 40, 
+      "ImmPer": 0.933333
+    }, 
+    {
+      "Metro_dist": 1752.04047318, 
+      "TAZ_id": 41, 
+      "ImmPer": 0.91791
+    }, 
+    {
+      "Metro_dist": 1275.75690306, 
+      "TAZ_id": 42, 
+      "ImmPer": 0.608554
+    }, 
+    {
+      "Metro_dist": 728.802734307, 
+      "TAZ_id": 43, 
+      "ImmPer": 0.778029
+    }, 
+    {
+      "Metro_dist": 4181.71804385, 
+      "TAZ_id": 44, 
+      "ImmPer": 0.057194
+    }, 
+    {
+      "Metro_dist": 5083.70869568, 
+      "TAZ_id": 45, 
+      "ImmPer": 0.134489
+    }, 
+    {
+      "Metro_dist": 2836.48123817, 
+      "TAZ_id": 46, 
+      "ImmPer": 0.72722
+    }, 
+    {
+      "Metro_dist": 5299.55391119, 
+      "TAZ_id": 47, 
+      "ImmPer": 0.429226
+    }, 
+    {
+      "Metro_dist": 4187.61726997, 
+      "TAZ_id": 48, 
+      "ImmPer": 0.497512
+    }, 
+    {
+      "Metro_dist": 3375.09720121, 
+      "TAZ_id": 49, 
+      "ImmPer": 0.367538
+    }, 
+    {
+      "Metro_dist": 4321.32841432, 
+      "TAZ_id": 50, 
+      "ImmPer": 0.016835
+    }, 
+    {
+      "Metro_dist": 573.423585428, 
+      "TAZ_id": 51, 
+      "ImmPer": 0.014925
+    }, 
+    {
+      "Metro_dist": 1587.86414027, 
+      "TAZ_id": 52, 
+      "ImmPer": 0.018886
+    }, 
+    {
+      "Metro_dist": 1076.29900846, 
+      "TAZ_id": 53, 
+      "ImmPer": 0.250434
+    }, 
+    {
+      "Metro_dist": 1180.77831325, 
+      "TAZ_id": 54, 
+      "ImmPer": 0.384047
+    }, 
+    {
+      "Metro_dist": 2225.48446756, 
+      "TAZ_id": 55, 
+      "ImmPer": 0.381852
+    }, 
+    {
+      "Metro_dist": 1678.0970841, 
+      "TAZ_id": 56, 
+      "ImmPer": 0.414074
+    }, 
+    {
+      "Metro_dist": 1202.12300632, 
+      "TAZ_id": 57, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 507.184142458, 
+      "TAZ_id": 58, 
+      "ImmPer": 0.412985
+    }, 
+    {
+      "Metro_dist": 1100.31407813, 
+      "TAZ_id": 59, 
+      "ImmPer": 0.513566
+    }, 
+    {
+      "Metro_dist": 196.901761005, 
+      "TAZ_id": 60, 
+      "ImmPer": 0.6
+    }, 
+    {
+      "Metro_dist": 983.797710958, 
+      "TAZ_id": 61, 
+      "ImmPer": 0.513514
+    }, 
+    {
+      "Metro_dist": 329.453337064, 
+      "TAZ_id": 62, 
+      "ImmPer": 0.392507
+    }, 
+    {
+      "Metro_dist": 1367.77248297, 
+      "TAZ_id": 63, 
+      "ImmPer": 0.37576
+    }, 
+    {
+      "Metro_dist": 2483.46104312, 
+      "TAZ_id": 64, 
+      "ImmPer": 0.428136
+    }, 
+    {
+      "Metro_dist": 2602.33292793, 
+      "TAZ_id": 65, 
+      "ImmPer": 0.388027
+    }, 
+    {
+      "Metro_dist": 1195.54587496, 
+      "TAZ_id": 66, 
+      "ImmPer": 0.561203
+    }, 
+    {
+      "Metro_dist": 396.762140296, 
+      "TAZ_id": 67, 
+      "ImmPer": 0.434507
+    }, 
+    {
+      "Metro_dist": 171.329498388, 
+      "TAZ_id": 68, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 425.653934927, 
+      "TAZ_id": 69, 
+      "ImmPer": 0.443364
+    }, 
+    {
+      "Metro_dist": 1027.61605739, 
+      "TAZ_id": 70, 
+      "ImmPer": 0.809524
+    }, 
+    {
+      "Metro_dist": 231.214950096, 
+      "TAZ_id": 71, 
+      "ImmPer": 0.44213
+    }, 
+    {
+      "Metro_dist": 528.854625796, 
+      "TAZ_id": 72, 
+      "ImmPer": 0.536055
+    }, 
+    {
+      "Metro_dist": 352.997396221, 
+      "TAZ_id": 73, 
+      "ImmPer": 0.472263
+    }, 
+    {
+      "Metro_dist": 410.57951877, 
+      "TAZ_id": 74, 
+      "ImmPer": 0.443893
+    }, 
+    {
+      "Metro_dist": 96.9070175037, 
+      "TAZ_id": 75, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 1128.0436466, 
+      "TAZ_id": 76, 
+      "ImmPer": 0.633391
+    }, 
+    {
+      "Metro_dist": 1281.29680564, 
+      "TAZ_id": 77, 
+      "ImmPer": 0.527221
+    }, 
+    {
+      "Metro_dist": 362.626364922, 
+      "TAZ_id": 78, 
+      "ImmPer": 0.511566
+    }, 
+    {
+      "Metro_dist": 831.505732025, 
+      "TAZ_id": 79, 
+      "ImmPer": 0.512933
+    }, 
+    {
+      "Metro_dist": 743.749641552, 
+      "TAZ_id": 80, 
+      "ImmPer": 0.456764
+    }, 
+    {
+      "Metro_dist": 2589.79829202, 
+      "TAZ_id": 81, 
+      "ImmPer": 0.315514
+    }, 
+    {
+      "Metro_dist": 1488.04258192, 
+      "TAZ_id": 82, 
+      "ImmPer": 0.39519
+    }, 
+    {
+      "Metro_dist": 1513.76088883, 
+      "TAZ_id": 83, 
+      "ImmPer": 0.410722
+    }, 
+    {
+      "Metro_dist": 694.297249325, 
+      "TAZ_id": 84, 
+      "ImmPer": 0.342252
+    }, 
+    {
+      "Metro_dist": 650.923868639, 
+      "TAZ_id": 85, 
+      "ImmPer": 0.341301
+    }, 
+    {
+      "Metro_dist": 310.537867055, 
+      "TAZ_id": 86, 
+      "ImmPer": 0.781061
+    }, 
+    {
+      "Metro_dist": 494.344643591, 
+      "TAZ_id": 87, 
+      "ImmPer": 0.725174
+    }, 
+    {
+      "Metro_dist": 509.777585987, 
+      "TAZ_id": 88, 
+      "ImmPer": 0.606697
+    }, 
+    {
+      "Metro_dist": 1395.39148229, 
+      "TAZ_id": 89, 
+      "ImmPer": 0.626926
+    }, 
+    {
+      "Metro_dist": 825.050853334, 
+      "TAZ_id": 90, 
+      "ImmPer": 0.661433
+    }, 
+    {
+      "Metro_dist": 471.320331912, 
+      "TAZ_id": 91, 
+      "ImmPer": 0.749696
+    }, 
+    {
+      "Metro_dist": 1201.79214494, 
+      "TAZ_id": 92, 
+      "ImmPer": 0.517301
+    }, 
+    {
+      "Metro_dist": 1598.01381138, 
+      "TAZ_id": 93, 
+      "ImmPer": 0.589492
+    }, 
+    {
+      "Metro_dist": 1262.02016725, 
+      "TAZ_id": 94, 
+      "ImmPer": 0.703445
+    }, 
+    {
+      "Metro_dist": 1132.61365573, 
+      "TAZ_id": 95, 
+      "ImmPer": 0.652094
+    }, 
+    {
+      "Metro_dist": 1582.77441329, 
+      "TAZ_id": 96, 
+      "ImmPer": 0.656051
+    }, 
+    {
+      "Metro_dist": 1080.00729888, 
+      "TAZ_id": 97, 
+      "ImmPer": 0.781818
+    }, 
+    {
+      "Metro_dist": 361.151265382, 
+      "TAZ_id": 98, 
+      "ImmPer": 0.792169
+    }, 
+    {
+      "Metro_dist": 517.849093471, 
+      "TAZ_id": 99, 
+      "ImmPer": 0.801619
+    }, 
+    {
+      "Metro_dist": 383.647643181, 
+      "TAZ_id": 100, 
+      "ImmPer": 0.780827
+    }, 
+    {
+      "Metro_dist": 534.763565462, 
+      "TAZ_id": 101, 
+      "ImmPer": 0.668079
+    }, 
+    {
+      "Metro_dist": 650.389395676, 
+      "TAZ_id": 102, 
+      "ImmPer": 0.683427
+    }, 
+    {
+      "Metro_dist": 1310.6740002, 
+      "TAZ_id": 103, 
+      "ImmPer": 0.613762
+    }, 
+    {
+      "Metro_dist": 1399.53096365, 
+      "TAZ_id": 104, 
+      "ImmPer": 0.565702
+    }, 
+    {
+      "Metro_dist": 251.377245498, 
+      "TAZ_id": 105, 
+      "ImmPer": 0.601314
+    }, 
+    {
+      "Metro_dist": 577.911612262, 
+      "TAZ_id": 106, 
+      "ImmPer": 0.686421
+    }, 
+    {
+      "Metro_dist": 659.191594957, 
+      "TAZ_id": 107, 
+      "ImmPer": 0.622081
+    }, 
+    {
+      "Metro_dist": 945.261406866, 
+      "TAZ_id": 108, 
+      "ImmPer": 0.736976
+    }, 
+    {
+      "Metro_dist": 1019.4498553, 
+      "TAZ_id": 109, 
+      "ImmPer": 0.674826
+    }, 
+    {
+      "Metro_dist": 1383.24770067, 
+      "TAZ_id": 110, 
+      "ImmPer": 0.349359
+    }, 
+    {
+      "Metro_dist": 334.566305928, 
+      "TAZ_id": 111, 
+      "ImmPer": 0.8
+    }, 
+    {
+      "Metro_dist": 1384.34619513, 
+      "TAZ_id": 112, 
+      "ImmPer": 0.773086
+    }, 
+    {
+      "Metro_dist": 377.329332088, 
+      "TAZ_id": 113, 
+      "ImmPer": 0.797297
+    }, 
+    {
+      "Metro_dist": 392.474407395, 
+      "TAZ_id": 114, 
+      "ImmPer": 0.780085
+    }, 
+    {
+      "Metro_dist": 931.417830087, 
+      "TAZ_id": 115, 
+      "ImmPer": 0.903226
+    }, 
+    {
+      "Metro_dist": 1520.48151526, 
+      "TAZ_id": 116, 
+      "ImmPer": 0.924152
+    }, 
+    {
+      "Metro_dist": 2139.88561932, 
+      "TAZ_id": 117, 
+      "ImmPer": 0.833333
+    }, 
+    {
+      "Metro_dist": 720.553283602, 
+      "TAZ_id": 118, 
+      "ImmPer": 0.104491
+    }, 
+    {
+      "Metro_dist": 2814.20436376, 
+      "TAZ_id": 119, 
+      "ImmPer": 0.12783
+    }, 
+    {
+      "Metro_dist": 1473.70663264, 
+      "TAZ_id": 120, 
+      "ImmPer": 0.288538
+    }, 
+    {
+      "Metro_dist": 2130.09823637, 
+      "TAZ_id": 121, 
+      "ImmPer": 0.325654
+    }, 
+    {
+      "Metro_dist": 721.459125903, 
+      "TAZ_id": 122, 
+      "ImmPer": 0.388181
+    }, 
+    {
+      "Metro_dist": 1519.06957787, 
+      "TAZ_id": 123, 
+      "ImmPer": 0.441042
+    }, 
+    {
+      "Metro_dist": 1449.73699769, 
+      "TAZ_id": 124, 
+      "ImmPer": 0.357912
+    }, 
+    {
+      "Metro_dist": 1734.05492465, 
+      "TAZ_id": 125, 
+      "ImmPer": 0.120604
+    }, 
+    {
+      "Metro_dist": 341.008268744, 
+      "TAZ_id": 126, 
+      "ImmPer": 0.188511
+    }, 
+    {
+      "Metro_dist": 3966.03347346, 
+      "TAZ_id": 127, 
+      "ImmPer": 0.091505
+    }, 
+    {
+      "Metro_dist": 2987.30041122, 
+      "TAZ_id": 128, 
+      "ImmPer": 0.245702
+    }, 
+    {
+      "Metro_dist": 4567.10411017, 
+      "TAZ_id": 129, 
+      "ImmPer": 0.971292
+    }, 
+    {
+      "Metro_dist": 1543.99654725, 
+      "TAZ_id": 130, 
+      "ImmPer": 0.302857
+    }, 
+    {
+      "Metro_dist": 1805.54515616, 
+      "TAZ_id": 131, 
+      "ImmPer": 0.497468
+    }, 
+    {
+      "Metro_dist": 2221.92283391, 
+      "TAZ_id": 132, 
+      "ImmPer": 0.385055
+    }, 
+    {
+      "Metro_dist": 1341.11013273, 
+      "TAZ_id": 133, 
+      "ImmPer": 0.218494
+    }, 
+    {
+      "Metro_dist": 1498.5020075, 
+      "TAZ_id": 134, 
+      "ImmPer": 0.223155
+    }, 
+    {
+      "Metro_dist": 4212.8725089, 
+      "TAZ_id": 135, 
+      "ImmPer": 0.432377
+    }, 
+    {
+      "Metro_dist": 4193.6709914, 
+      "TAZ_id": 136, 
+      "ImmPer": 0.467345
+    }, 
+    {
+      "Metro_dist": 2760.49914856, 
+      "TAZ_id": 137, 
+      "ImmPer": 0.371994
+    }, 
+    {
+      "Metro_dist": 2738.34953697, 
+      "TAZ_id": 138, 
+      "ImmPer": 0.45251
+    }, 
+    {
+      "Metro_dist": 1419.93103677, 
+      "TAZ_id": 139, 
+      "ImmPer": 0.185294
+    }, 
+    {
+      "Metro_dist": 1396.23167484, 
+      "TAZ_id": 140, 
+      "ImmPer": 0.258874
+    }, 
+    {
+      "Metro_dist": 661.908647572, 
+      "TAZ_id": 141, 
+      "ImmPer": 0.259392
+    }, 
+    {
+      "Metro_dist": 690.138627409, 
+      "TAZ_id": 142, 
+      "ImmPer": 0.317147
+    }, 
+    {
+      "Metro_dist": 1600.63641311, 
+      "TAZ_id": 143, 
+      "ImmPer": 0.338531
+    }, 
+    {
+      "Metro_dist": 798.411817378, 
+      "TAZ_id": 144, 
+      "ImmPer": 0.27939
+    }, 
+    {
+      "Metro_dist": 881.553133229, 
+      "TAZ_id": 145, 
+      "ImmPer": 0.31251
+    }, 
+    {
+      "Metro_dist": 2642.44646506, 
+      "TAZ_id": 146, 
+      "ImmPer": 0.294376
+    }, 
+    {
+      "Metro_dist": 3003.14406043, 
+      "TAZ_id": 147, 
+      "ImmPer": 0.267811
+    }, 
+    {
+      "Metro_dist": 3083.00043866, 
+      "TAZ_id": 148, 
+      "ImmPer": 1
+    }, 
+    {
+      "Metro_dist": 4434.19362809, 
+      "TAZ_id": 149, 
+      "ImmPer": 0.177834
+    }, 
+    {
+      "Metro_dist": 9320.21102078, 
+      "TAZ_id": 150, 
+      "ImmPer": 0.461538
+    }, 
+    {
+      "Metro_dist": 30904.8548956, 
+      "TAZ_id": 151, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 1422.38353219, 
+      "TAZ_id": 152, 
+      "ImmPer": 0.014819
+    }, 
+    {
+      "Metro_dist": 1016.45868308, 
+      "TAZ_id": 153, 
+      "ImmPer": 0.226642
+    }, 
+    {
+      "Metro_dist": 597.877219823, 
+      "TAZ_id": 154, 
+      "ImmPer": 0.083054
+    }, 
+    {
+      "Metro_dist": 1408.31880287, 
+      "TAZ_id": 155, 
+      "ImmPer": 0.078342
+    }, 
+    {
+      "Metro_dist": 2925.68344254, 
+      "TAZ_id": 156, 
+      "ImmPer": 0.057276
+    }, 
+    {
+      "Metro_dist": 1686.43393502, 
+      "TAZ_id": 157, 
+      "ImmPer": 0.21885
+    }, 
+    {
+      "Metro_dist": 849.365401806, 
+      "TAZ_id": 158, 
+      "ImmPer": 0.078255
+    }, 
+    {
+      "Metro_dist": 1005.08437396, 
+      "TAZ_id": 159, 
+      "ImmPer": 0.251183
+    }, 
+    {
+      "Metro_dist": 1907.96113586, 
+      "TAZ_id": 160, 
+      "ImmPer": 0.395793
+    }, 
+    {
+      "Metro_dist": 200.38267402, 
+      "TAZ_id": 161, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 359.213068974, 
+      "TAZ_id": 162, 
+      "ImmPer": 0.272362
+    }, 
+    {
+      "Metro_dist": 1641.531752, 
+      "TAZ_id": 163, 
+      "ImmPer": 0.301336
+    }, 
+    {
+      "Metro_dist": 921.421184328, 
+      "TAZ_id": 164, 
+      "ImmPer": 0.212145
+    }, 
+    {
+      "Metro_dist": 2276.86170184, 
+      "TAZ_id": 165, 
+      "ImmPer": 0.158702
+    }, 
+    {
+      "Metro_dist": 1523.05357694, 
+      "TAZ_id": 166, 
+      "ImmPer": 0.179163
+    }, 
+    {
+      "Metro_dist": 4013.0778389, 
+      "TAZ_id": 167, 
+      "ImmPer": 0.125344
+    }, 
+    {
+      "Metro_dist": 2046.62866888, 
+      "TAZ_id": 168, 
+      "ImmPer": 0.286012
+    }, 
+    {
+      "Metro_dist": 3013.16637419, 
+      "TAZ_id": 169, 
+      "ImmPer": 0.309959
+    }, 
+    {
+      "Metro_dist": 9755.26348409, 
+      "TAZ_id": 170, 
+      "ImmPer": 0.022535
+    }, 
+    {
+      "Metro_dist": 4590.21605741, 
+      "TAZ_id": 171, 
+      "ImmPer": 0.058223
+    }, 
+    {
+      "Metro_dist": 4993.88353579, 
+      "TAZ_id": 172, 
+      "ImmPer": 0.299427
+    }, 
+    {
+      "Metro_dist": 3671.44138518, 
+      "TAZ_id": 173, 
+      "ImmPer": 0.550365
+    }, 
+    {
+      "Metro_dist": 1897.50680414, 
+      "TAZ_id": 174, 
+      "ImmPer": 0.682387
+    }, 
+    {
+      "Metro_dist": 3357.57390421, 
+      "TAZ_id": 175, 
+      "ImmPer": 0.76989
+    }, 
+    {
+      "Metro_dist": 2831.95606583, 
+      "TAZ_id": 176, 
+      "ImmPer": 0.733431
+    }, 
+    {
+      "Metro_dist": 2085.97573312, 
+      "TAZ_id": 177, 
+      "ImmPer": 0.788797
+    }, 
+    {
+      "Metro_dist": 2710.68439149, 
+      "TAZ_id": 178, 
+      "ImmPer": 0.736111
+    }, 
+    {
+      "Metro_dist": 3265.67245336, 
+      "TAZ_id": 179, 
+      "ImmPer": 0.601527
+    }, 
+    {
+      "Metro_dist": 2790.52436157, 
+      "TAZ_id": 180, 
+      "ImmPer": 0.68115
+    }, 
+    {
+      "Metro_dist": 2399.34575042, 
+      "TAZ_id": 181, 
+      "ImmPer": 0.64893
+    }, 
+    {
+      "Metro_dist": 1908.45805292, 
+      "TAZ_id": 182, 
+      "ImmPer": 0.647713
+    }, 
+    {
+      "Metro_dist": 672.846152641, 
+      "TAZ_id": 183, 
+      "ImmPer": 0.874225
+    }, 
+    {
+      "Metro_dist": 1194.55920043, 
+      "TAZ_id": 184, 
+      "ImmPer": 1
+    }, 
+    {
+      "Metro_dist": 1205.73630061, 
+      "TAZ_id": 185, 
+      "ImmPer": 0.950882
+    }, 
+    {
+      "Metro_dist": 608.891716121, 
+      "TAZ_id": 186, 
+      "ImmPer": 0.929461
+    }, 
+    {
+      "Metro_dist": 1889.02724403, 
+      "TAZ_id": 187, 
+      "ImmPer": 0.663984
+    }, 
+    {
+      "Metro_dist": 2241.73621904, 
+      "TAZ_id": 188, 
+      "ImmPer": 0.659794
+    }, 
+    {
+      "Metro_dist": 1999.07219149, 
+      "TAZ_id": 189, 
+      "ImmPer": 0.298725
+    }, 
+    {
+      "Metro_dist": 1691.60328382, 
+      "TAZ_id": 190, 
+      "ImmPer": 0.553785
+    }, 
+    {
+      "Metro_dist": 914.615073899, 
+      "TAZ_id": 191, 
+      "ImmPer": 0.587552
+    }, 
+    {
+      "Metro_dist": 1507.62706882, 
+      "TAZ_id": 192, 
+      "ImmPer": 0.466717
+    }, 
+    {
+      "Metro_dist": 1226.00321768, 
+      "TAZ_id": 193, 
+      "ImmPer": 0.695833
+    }, 
+    {
+      "Metro_dist": 1096.50730821, 
+      "TAZ_id": 194, 
+      "ImmPer": 0.357474
+    }, 
+    {
+      "Metro_dist": 1001.81102501, 
+      "TAZ_id": 195, 
+      "ImmPer": 0.545682
+    }, 
+    {
+      "Metro_dist": 1308.5728002, 
+      "TAZ_id": 196, 
+      "ImmPer": 0.949739
+    }, 
+    {
+      "Metro_dist": 1176.33511266, 
+      "TAZ_id": 197, 
+      "ImmPer": 0.901134
+    }, 
+    {
+      "Metro_dist": 829.577975085, 
+      "TAZ_id": 198, 
+      "ImmPer": 0.944798
+    }, 
+    {
+      "Metro_dist": 1360.1234705, 
+      "TAZ_id": 199, 
+      "ImmPer": 0.940703
+    }, 
+    {
+      "Metro_dist": 1424.55024219, 
+      "TAZ_id": 200, 
+      "ImmPer": 0.920284
+    }, 
+    {
+      "Metro_dist": 1087.93828342, 
+      "TAZ_id": 201, 
+      "ImmPer": 0.923124
+    }, 
+    {
+      "Metro_dist": 1296.24297841, 
+      "TAZ_id": 202, 
+      "ImmPer": 0.922371
+    }, 
+    {
+      "Metro_dist": 1193.26112506, 
+      "TAZ_id": 203, 
+      "ImmPer": 0.924424
+    }, 
+    {
+      "Metro_dist": 691.643062004, 
+      "TAZ_id": 204, 
+      "ImmPer": 0.922047
+    }, 
+    {
+      "Metro_dist": 1179.99078335, 
+      "TAZ_id": 205, 
+      "ImmPer": 0.784799
+    }, 
+    {
+      "Metro_dist": 316.142489734, 
+      "TAZ_id": 206, 
+      "ImmPer": 0.795757
+    }, 
+    {
+      "Metro_dist": 552.040863615, 
+      "TAZ_id": 207, 
+      "ImmPer": 0.787484
+    }, 
+    {
+      "Metro_dist": 757.263235323, 
+      "TAZ_id": 208, 
+      "ImmPer": 0.789613
+    }, 
+    {
+      "Metro_dist": 258.771100419, 
+      "TAZ_id": 209, 
+      "ImmPer": 0.78718
+    }, 
+    {
+      "Metro_dist": 748.028184553, 
+      "TAZ_id": 210, 
+      "ImmPer": 0.31674
+    }, 
+    {
+      "Metro_dist": 322.323502042, 
+      "TAZ_id": 211, 
+      "ImmPer": 0.259115
+    }, 
+    {
+      "Metro_dist": 289.26500224, 
+      "TAZ_id": 212, 
+      "ImmPer": 0.467107
+    }, 
+    {
+      "Metro_dist": 1338.95578523, 
+      "TAZ_id": 213, 
+      "ImmPer": 0.48564
+    }, 
+    {
+      "Metro_dist": 988.24987172, 
+      "TAZ_id": 214, 
+      "ImmPer": 0.631579
+    }, 
+    {
+      "Metro_dist": 1447.50236364, 
+      "TAZ_id": 215, 
+      "ImmPer": 0.774306
+    }, 
+    {
+      "Metro_dist": 360.160374287, 
+      "TAZ_id": 216, 
+      "ImmPer": 0.475569
+    }, 
+    {
+      "Metro_dist": 91.5996220238, 
+      "TAZ_id": 217, 
+      "ImmPer": 0.808163
+    }, 
+    {
+      "Metro_dist": 303.24743393, 
+      "TAZ_id": 218, 
+      "ImmPer": 0.724605
+    }, 
+    {
+      "Metro_dist": 614.532293198, 
+      "TAZ_id": 219, 
+      "ImmPer": 0.787987
+    }, 
+    {
+      "Metro_dist": 754.480349427, 
+      "TAZ_id": 220, 
+      "ImmPer": 0.802639
+    }, 
+    {
+      "Metro_dist": 940.804105139, 
+      "TAZ_id": 221, 
+      "ImmPer": 0.801872
+    }, 
+    {
+      "Metro_dist": 346.429386603, 
+      "TAZ_id": 222, 
+      "ImmPer": 0.823529
+    }, 
+    {
+      "Metro_dist": 1280.05748528, 
+      "TAZ_id": 223, 
+      "ImmPer": 0.800589
+    }, 
+    {
+      "Metro_dist": 468.699428811, 
+      "TAZ_id": 224, 
+      "ImmPer": 0.800622
+    }, 
+    {
+      "Metro_dist": 275.040832509, 
+      "TAZ_id": 225, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 304.843683449, 
+      "TAZ_id": 226, 
+      "ImmPer": 0.787234
+    }, 
+    {
+      "Metro_dist": 386.905860257, 
+      "TAZ_id": 227, 
+      "ImmPer": 0.643016
+    }, 
+    {
+      "Metro_dist": 722.44297711, 
+      "TAZ_id": 228, 
+      "ImmPer": 0.857143
+    }, 
+    {
+      "Metro_dist": 330.288555438, 
+      "TAZ_id": 229, 
+      "ImmPer": 0.858899
+    }, 
+    {
+      "Metro_dist": 537.087010359, 
+      "TAZ_id": 230, 
+      "ImmPer": 0.722936
+    }, 
+    {
+      "Metro_dist": 723.391385169, 
+      "TAZ_id": 231, 
+      "ImmPer": 0.817391
+    }, 
+    {
+      "Metro_dist": 909.678271554, 
+      "TAZ_id": 232, 
+      "ImmPer": 0.84573
+    }, 
+    {
+      "Metro_dist": 870.828347956, 
+      "TAZ_id": 233, 
+      "ImmPer": 0.902725
+    }, 
+    {
+      "Metro_dist": 983.373166462, 
+      "TAZ_id": 234, 
+      "ImmPer": 0.84708
+    }, 
+    {
+      "Metro_dist": 1762.63298901, 
+      "TAZ_id": 235, 
+      "ImmPer": 0.795902
+    }, 
+    {
+      "Metro_dist": 751.11851655, 
+      "TAZ_id": 236, 
+      "ImmPer": 0.779826
+    }, 
+    {
+      "Metro_dist": 1518.12039422, 
+      "TAZ_id": 237, 
+      "ImmPer": 0.846847
+    }, 
+    {
+      "Metro_dist": 587.981411976, 
+      "TAZ_id": 238, 
+      "ImmPer": 0.889265
+    }, 
+    {
+      "Metro_dist": 1168.86394923, 
+      "TAZ_id": 239, 
+      "ImmPer": 0.853949
+    }, 
+    {
+      "Metro_dist": 555.993183672, 
+      "TAZ_id": 240, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 194.680168051, 
+      "TAZ_id": 241, 
+      "ImmPer": 0.707861
+    }, 
+    {
+      "Metro_dist": 885.485869616, 
+      "TAZ_id": 242, 
+      "ImmPer": 0.676741
+    }, 
+    {
+      "Metro_dist": 700.085111643, 
+      "TAZ_id": 243, 
+      "ImmPer": 0.858227
+    }, 
+    {
+      "Metro_dist": 1297.99662471, 
+      "TAZ_id": 244, 
+      "ImmPer": 0.895636
+    }, 
+    {
+      "Metro_dist": 286.542842809, 
+      "TAZ_id": 245, 
+      "ImmPer": 0.820628
+    }, 
+    {
+      "Metro_dist": 673.643655676, 
+      "TAZ_id": 246, 
+      "ImmPer": 0.725825
+    }, 
+    {
+      "Metro_dist": 624.391230962, 
+      "TAZ_id": 247, 
+      "ImmPer": 0.720551
+    }, 
+    {
+      "Metro_dist": 867.022597129, 
+      "TAZ_id": 248, 
+      "ImmPer": 0.606313
+    }, 
+    {
+      "Metro_dist": 2190.79061951, 
+      "TAZ_id": 249, 
+      "ImmPer": 0.509106
+    }, 
+    {
+      "Metro_dist": 2530.22000918, 
+      "TAZ_id": 250, 
+      "ImmPer": 0.507203
+    }, 
+    {
+      "Metro_dist": 2354.51595134, 
+      "TAZ_id": 251, 
+      "ImmPer": 0.621405
+    }, 
+    {
+      "Metro_dist": 2261.57078084, 
+      "TAZ_id": 252, 
+      "ImmPer": 0.611042
+    }, 
+    {
+      "Metro_dist": 3116.6636659, 
+      "TAZ_id": 253, 
+      "ImmPer": 0.477016
+    }, 
+    {
+      "Metro_dist": 3886.2513327, 
+      "TAZ_id": 254, 
+      "ImmPer": 0.214286
+    }, 
+    {
+      "Metro_dist": 2185.3977444, 
+      "TAZ_id": 255, 
+      "ImmPer": 0.491887
+    }, 
+    {
+      "Metro_dist": 769.821850009, 
+      "TAZ_id": 256, 
+      "ImmPer": 0.611964
+    }, 
+    {
+      "Metro_dist": 1489.94809994, 
+      "TAZ_id": 257, 
+      "ImmPer": 0.415153
+    }, 
+    {
+      "Metro_dist": 552.96516758, 
+      "TAZ_id": 258, 
+      "ImmPer": 0.585714
+    }, 
+    {
+      "Metro_dist": 900.924385201, 
+      "TAZ_id": 259, 
+      "ImmPer": 0.569348
+    }, 
+    {
+      "Metro_dist": 814.107442749, 
+      "TAZ_id": 260, 
+      "ImmPer": 0.63969
+    }, 
+    {
+      "Metro_dist": 1381.38930674, 
+      "TAZ_id": 261, 
+      "ImmPer": 0.46982
+    }, 
+    {
+      "Metro_dist": 1402.6387566, 
+      "TAZ_id": 262, 
+      "ImmPer": 0.474189
+    }, 
+    {
+      "Metro_dist": 703.330228603, 
+      "TAZ_id": 263, 
+      "ImmPer": 0.263736
+    }, 
+    {
+      "Metro_dist": 838.382526927, 
+      "TAZ_id": 264, 
+      "ImmPer": 0.489077
+    }, 
+    {
+      "Metro_dist": 443.428903749, 
+      "TAZ_id": 265, 
+      "ImmPer": 0.392679
+    }, 
+    {
+      "Metro_dist": 2132.32773163, 
+      "TAZ_id": 266, 
+      "ImmPer": 0.557842
+    }, 
+    {
+      "Metro_dist": 1227.65781347, 
+      "TAZ_id": 267, 
+      "ImmPer": 0.509772
+    }, 
+    {
+      "Metro_dist": 2643.00716433, 
+      "TAZ_id": 268, 
+      "ImmPer": 0.819149
+    }, 
+    {
+      "Metro_dist": 1815.97270836, 
+      "TAZ_id": 269, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 629.496225606, 
+      "TAZ_id": 270, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 1903.066758, 
+      "TAZ_id": 271, 
+      "ImmPer": 0.810811
+    }, 
+    {
+      "Metro_dist": 118.838056048, 
+      "TAZ_id": 272, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 540.881130894, 
+      "TAZ_id": 273, 
+      "ImmPer": 0.834948
+    }, 
+    {
+      "Metro_dist": 522.621153743, 
+      "TAZ_id": 274, 
+      "ImmPer": 0.983271
+    }, 
+    {
+      "Metro_dist": 492.241966796, 
+      "TAZ_id": 275, 
+      "ImmPer": 0.986715
+    }, 
+    {
+      "Metro_dist": 455.326026114, 
+      "TAZ_id": 276, 
+      "ImmPer": 1
+    }, 
+    {
+      "Metro_dist": 552.039861143, 
+      "TAZ_id": 277, 
+      "ImmPer": 0.946173
+    }, 
+    {
+      "Metro_dist": 265.563065775, 
+      "TAZ_id": 278, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 39.7823625543, 
+      "TAZ_id": 279, 
+      "ImmPer": 0.950959
+    }, 
+    {
+      "Metro_dist": 119.038767453, 
+      "TAZ_id": 280, 
+      "ImmPer": 0.949045
+    }, 
+    {
+      "Metro_dist": 324.121014931, 
+      "TAZ_id": 281, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 149.334072538, 
+      "TAZ_id": 282, 
+      "ImmPer": 0.948984
+    }, 
+    {
+      "Metro_dist": 367.867255667, 
+      "TAZ_id": 283, 
+      "ImmPer": 0.947154
+    }, 
+    {
+      "Metro_dist": 389.465495137, 
+      "TAZ_id": 284, 
+      "ImmPer": 0.916667
+    }, 
+    {
+      "Metro_dist": 722.12859051, 
+      "TAZ_id": 285, 
+      "ImmPer": 0.907388
+    }, 
+    {
+      "Metro_dist": 473.468837299, 
+      "TAZ_id": 286, 
+      "ImmPer": 0.953961
+    }, 
+    {
+      "Metro_dist": 675.568691512, 
+      "TAZ_id": 287, 
+      "ImmPer": 0.950165
+    }, 
+    {
+      "Metro_dist": 1211.63159485, 
+      "TAZ_id": 288, 
+      "ImmPer": 0.936941
+    }, 
+    {
+      "Metro_dist": 960.496618092, 
+      "TAZ_id": 289, 
+      "ImmPer": 0.952203
+    }, 
+    {
+      "Metro_dist": 784.587531058, 
+      "TAZ_id": 290, 
+      "ImmPer": 0.906744
+    }, 
+    {
+      "Metro_dist": 668.420063102, 
+      "TAZ_id": 291, 
+      "ImmPer": 0.908216
+    }, 
+    {
+      "Metro_dist": 479.466333153, 
+      "TAZ_id": 292, 
+      "ImmPer": 0.908414
+    }, 
+    {
+      "Metro_dist": 469.729845237, 
+      "TAZ_id": 293, 
+      "ImmPer": 0.879096
+    }, 
+    {
+      "Metro_dist": 96.2613197631, 
+      "TAZ_id": 294, 
+      "ImmPer": 0.877128
+    }, 
+    {
+      "Metro_dist": 381.142513697, 
+      "TAZ_id": 295, 
+      "ImmPer": 0.876996
+    }, 
+    {
+      "Metro_dist": 362.019563541, 
+      "TAZ_id": 296, 
+      "ImmPer": 0.879787
+    }, 
+    {
+      "Metro_dist": 342.79496331, 
+      "TAZ_id": 297, 
+      "ImmPer": 0.969363
+    }, 
+    {
+      "Metro_dist": 566.126504052, 
+      "TAZ_id": 298, 
+      "ImmPer": 0.947338
+    }, 
+    {
+      "Metro_dist": 443.703542586, 
+      "TAZ_id": 299, 
+      "ImmPer": 0.980791
+    }, 
+    {
+      "Metro_dist": 385.959981407, 
+      "TAZ_id": 300, 
+      "ImmPer": 0.860343
+    }, 
+    {
+      "Metro_dist": 237.39484799, 
+      "TAZ_id": 301, 
+      "ImmPer": 0.776963
+    }, 
+    {
+      "Metro_dist": 2002.85357057, 
+      "TAZ_id": 302, 
+      "ImmPer": 0.808748
+    }, 
+    {
+      "Metro_dist": 403.873930759, 
+      "TAZ_id": 303, 
+      "ImmPer": 0.770903
+    }, 
+    {
+      "Metro_dist": 427.126429771, 
+      "TAZ_id": 304, 
+      "ImmPer": 0.685026
+    }, 
+    {
+      "Metro_dist": 576.030656802, 
+      "TAZ_id": 305, 
+      "ImmPer": 0.775891
+    }, 
+    {
+      "Metro_dist": 891.640666624, 
+      "TAZ_id": 306, 
+      "ImmPer": 0.773664
+    }, 
+    {
+      "Metro_dist": 1076.51144105, 
+      "TAZ_id": 307, 
+      "ImmPer": 0.740741
+    }, 
+    {
+      "Metro_dist": 934.930012244, 
+      "TAZ_id": 308, 
+      "ImmPer": 0.811201
+    }, 
+    {
+      "Metro_dist": 402.559913969, 
+      "TAZ_id": 309, 
+      "ImmPer": 0.690838
+    }, 
+    {
+      "Metro_dist": 759.739141214, 
+      "TAZ_id": 310, 
+      "ImmPer": 0.66437
+    }, 
+    {
+      "Metro_dist": 1344.64675241, 
+      "TAZ_id": 311, 
+      "ImmPer": 0.812737
+    }, 
+    {
+      "Metro_dist": 1480.21184381, 
+      "TAZ_id": 312, 
+      "ImmPer": 0.813413
+    }, 
+    {
+      "Metro_dist": 666.419662269, 
+      "TAZ_id": 313, 
+      "ImmPer": 0.713235
+    }, 
+    {
+      "Metro_dist": 1174.43839026, 
+      "TAZ_id": 314, 
+      "ImmPer": 0.625972
+    }, 
+    {
+      "Metro_dist": 341.552106594, 
+      "TAZ_id": 315, 
+      "ImmPer": 0.76234
+    }, 
+    {
+      "Metro_dist": 314.066485631, 
+      "TAZ_id": 316, 
+      "ImmPer": 0.760175
+    }, 
+    {
+      "Metro_dist": 442.991895738, 
+      "TAZ_id": 317, 
+      "ImmPer": 0.760791
+    }, 
+    {
+      "Metro_dist": 195.488572431, 
+      "TAZ_id": 318, 
+      "ImmPer": 0.759406
+    }, 
+    {
+      "Metro_dist": 732.15688149, 
+      "TAZ_id": 319, 
+      "ImmPer": 0.929134
+    }, 
+    {
+      "Metro_dist": 1080.73557072, 
+      "TAZ_id": 320, 
+      "ImmPer": 0.853369
+    }, 
+    {
+      "Metro_dist": 159.193038672, 
+      "TAZ_id": 321, 
+      "ImmPer": 0.928009
+    }, 
+    {
+      "Metro_dist": 1333.85899494, 
+      "TAZ_id": 322, 
+      "ImmPer": 0.907692
+    }, 
+    {
+      "Metro_dist": 1912.37861097, 
+      "TAZ_id": 323, 
+      "ImmPer": 0.669918
+    }, 
+    {
+      "Metro_dist": 445.942312366, 
+      "TAZ_id": 324, 
+      "ImmPer": 0.927963
+    }, 
+    {
+      "Metro_dist": 1362.47191676, 
+      "TAZ_id": 325, 
+      "ImmPer": 0.830583
+    }, 
+    {
+      "Metro_dist": 1502.2530718, 
+      "TAZ_id": 326, 
+      "ImmPer": 0.779995
+    }, 
+    {
+      "Metro_dist": 2888.52734262, 
+      "TAZ_id": 327, 
+      "ImmPer": 0.763445
+    }, 
+    {
+      "Metro_dist": 2276.82941752, 
+      "TAZ_id": 328, 
+      "ImmPer": 0.606324
+    }, 
+    {
+      "Metro_dist": 1833.32016595, 
+      "TAZ_id": 329, 
+      "ImmPer": 0.654004
+    }, 
+    {
+      "Metro_dist": 1423.30836616, 
+      "TAZ_id": 330, 
+      "ImmPer": 0.547619
+    }, 
+    {
+      "Metro_dist": 1872.24594944, 
+      "TAZ_id": 331, 
+      "ImmPer": 0.609829
+    }, 
+    {
+      "Metro_dist": 1770.67190388, 
+      "TAZ_id": 332, 
+      "ImmPer": 0.644548
+    }, 
+    {
+      "Metro_dist": 902.567007547, 
+      "TAZ_id": 333, 
+      "ImmPer": 0.458963
+    }, 
+    {
+      "Metro_dist": 1275.04158312, 
+      "TAZ_id": 334, 
+      "ImmPer": 0.52635
+    }, 
+    {
+      "Metro_dist": 187.593138325, 
+      "TAZ_id": 335, 
+      "ImmPer": 0.790798
+    }, 
+    {
+      "Metro_dist": 366.252619411, 
+      "TAZ_id": 336, 
+      "ImmPer": 0.790832
+    }, 
+    {
+      "Metro_dist": 1216.2228677, 
+      "TAZ_id": 337, 
+      "ImmPer": 0.354953
+    }, 
+    {
+      "Metro_dist": 1031.84648993, 
+      "TAZ_id": 338, 
+      "ImmPer": 0.571429
+    }, 
+    {
+      "Metro_dist": 606.220403061, 
+      "TAZ_id": 339, 
+      "ImmPer": 0.556692
+    }, 
+    {
+      "Metro_dist": 394.83782608, 
+      "TAZ_id": 340, 
+      "ImmPer": 0.787287
+    }, 
+    {
+      "Metro_dist": 492.707384949, 
+      "TAZ_id": 341, 
+      "ImmPer": 0.781035
+    }, 
+    {
+      "Metro_dist": 2388.23635156, 
+      "TAZ_id": 342, 
+      "ImmPer": 0.291033
+    }, 
+    {
+      "Metro_dist": 1407.04254664, 
+      "TAZ_id": 343, 
+      "ImmPer": 0.361812
+    }, 
+    {
+      "Metro_dist": 4168.41989319, 
+      "TAZ_id": 344, 
+      "ImmPer": 0.323529
+    }, 
+    {
+      "Metro_dist": 3416.81282565, 
+      "TAZ_id": 345, 
+      "ImmPer": 0.275386
+    }, 
+    {
+      "Metro_dist": 4473.51433952, 
+      "TAZ_id": 346, 
+      "ImmPer": 0.297468
+    }, 
+    {
+      "Metro_dist": 2601.06542911, 
+      "TAZ_id": 347, 
+      "ImmPer": 0.318275
+    }, 
+    {
+      "Metro_dist": 2690.26073301, 
+      "TAZ_id": 348, 
+      "ImmPer": 0.320455
+    }, 
+    {
+      "Metro_dist": 3235.1421494, 
+      "TAZ_id": 349, 
+      "ImmPer": 0.260791
+    }, 
+    {
+      "Metro_dist": 3979.36350114, 
+      "TAZ_id": 350, 
+      "ImmPer": 0.382661
+    }, 
+    {
+      "Metro_dist": 2741.16955503, 
+      "TAZ_id": 351, 
+      "ImmPer": 0.342562
+    }, 
+    {
+      "Metro_dist": 1957.32352184, 
+      "TAZ_id": 352, 
+      "ImmPer": 0.323337
+    }, 
+    {
+      "Metro_dist": 911.254848506, 
+      "TAZ_id": 353, 
+      "ImmPer": 0.480772
+    }, 
+    {
+      "Metro_dist": 1868.61730337, 
+      "TAZ_id": 354, 
+      "ImmPer": 0.276884
+    }, 
+    {
+      "Metro_dist": 1799.63729526, 
+      "TAZ_id": 355, 
+      "ImmPer": 0.335964
+    }, 
+    {
+      "Metro_dist": 1561.97273388, 
+      "TAZ_id": 356, 
+      "ImmPer": 0.269932
+    }, 
+    {
+      "Metro_dist": 889.045616974, 
+      "TAZ_id": 357, 
+      "ImmPer": 0.312434
+    }, 
+    {
+      "Metro_dist": 928.078753742, 
+      "TAZ_id": 358, 
+      "ImmPer": 0.218577
+    }, 
+    {
+      "Metro_dist": 1542.30792559, 
+      "TAZ_id": 359, 
+      "ImmPer": 0.222855
+    }, 
+    {
+      "Metro_dist": 828.08210408, 
+      "TAZ_id": 360, 
+      "ImmPer": 0.21005
+    }, 
+    {
+      "Metro_dist": 496.974061674, 
+      "TAZ_id": 361, 
+      "ImmPer": 0.576923
+    }, 
+    {
+      "Metro_dist": 1934.35400403, 
+      "TAZ_id": 362, 
+      "ImmPer": 0.229261
+    }, 
+    {
+      "Metro_dist": 2382.94212167, 
+      "TAZ_id": 363, 
+      "ImmPer": 0.230073
+    }, 
+    {
+      "Metro_dist": 2413.25868198, 
+      "TAZ_id": 364, 
+      "ImmPer": 0.215006
+    }, 
+    {
+      "Metro_dist": 1080.43017886, 
+      "TAZ_id": 365, 
+      "ImmPer": 0.390878
+    }, 
+    {
+      "Metro_dist": 3971.81378496, 
+      "TAZ_id": 366, 
+      "ImmPer": 0.156823
+    }, 
+    {
+      "Metro_dist": 4718.02874433, 
+      "TAZ_id": 367, 
+      "ImmPer": 0.020566
+    }, 
+    {
+      "Metro_dist": 6093.39839324, 
+      "TAZ_id": 368, 
+      "ImmPer": 0.099504
+    }, 
+    {
+      "Metro_dist": 1415.17366868, 
+      "TAZ_id": 369, 
+      "ImmPer": 0.108039
+    }, 
+    {
+      "Metro_dist": 968.638656491, 
+      "TAZ_id": 370, 
+      "ImmPer": 0.19072
+    }, 
+    {
+      "Metro_dist": 798.308112436, 
+      "TAZ_id": 371, 
+      "ImmPer": 0.082404
+    }, 
+    {
+      "Metro_dist": 1366.60100199, 
+      "TAZ_id": 372, 
+      "ImmPer": 0.235941
+    }, 
+    {
+      "Metro_dist": 3289.99767912, 
+      "TAZ_id": 373, 
+      "ImmPer": 0.670968
+    }, 
+    {
+      "Metro_dist": 3325.36479718, 
+      "TAZ_id": 374, 
+      "ImmPer": 0.986928
+    }, 
+    {
+      "Metro_dist": 3399.82680393, 
+      "TAZ_id": 375, 
+      "ImmPer": 0.989916
+    }, 
+    {
+      "Metro_dist": 3230.32511865, 
+      "TAZ_id": 376, 
+      "ImmPer": 0.988119
+    }, 
+    {
+      "Metro_dist": 7261.16432863, 
+      "TAZ_id": 377, 
+      "ImmPer": 1
+    }, 
+    {
+      "Metro_dist": 4775.69767365, 
+      "TAZ_id": 378, 
+      "ImmPer": 0.986742
+    }, 
+    {
+      "Metro_dist": 10681.5864526, 
+      "TAZ_id": 379, 
+      "ImmPer": 0.988527
+    }, 
+    {
+      "Metro_dist": 13638.6189501, 
+      "TAZ_id": 380, 
+      "ImmPer": 0.055661
+    }, 
+    {
+      "Metro_dist": 9064.09727534, 
+      "TAZ_id": 381, 
+      "ImmPer": 0.035294
+    }, 
+    {
+      "Metro_dist": 5815.70797168, 
+      "TAZ_id": 382, 
+      "ImmPer": 0.109641
+    }, 
+    {
+      "Metro_dist": 5423.22145397, 
+      "TAZ_id": 383, 
+      "ImmPer": 0.107982
+    }, 
+    {
+      "Metro_dist": 6090.11151353, 
+      "TAZ_id": 384, 
+      "ImmPer": 0.220866
+    }, 
+    {
+      "Metro_dist": 2093.93612852, 
+      "TAZ_id": 385, 
+      "ImmPer": 0.3833
+    }, 
+    {
+      "Metro_dist": 6177.263484, 
+      "TAZ_id": 386, 
+      "ImmPer": 0.244423
+    }, 
+    {
+      "Metro_dist": 3861.89924596, 
+      "TAZ_id": 387, 
+      "ImmPer": 0.191238
+    }, 
+    {
+      "Metro_dist": 3628.09718667, 
+      "TAZ_id": 388, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 1057.91232093, 
+      "TAZ_id": 389, 
+      "ImmPer": 0.954178
+    }, 
+    {
+      "Metro_dist": 387.941182114, 
+      "TAZ_id": 390, 
+      "ImmPer": 0.916605
+    }, 
+    {
+      "Metro_dist": 742.804536995, 
+      "TAZ_id": 391, 
+      "ImmPer": 0.791667
+    }, 
+    {
+      "Metro_dist": 2403.84554876, 
+      "TAZ_id": 392, 
+      "ImmPer": 0.313557
+    }, 
+    {
+      "Metro_dist": 3908.73462219, 
+      "TAZ_id": 393, 
+      "ImmPer": 0.316704
+    }, 
+    {
+      "Metro_dist": 3165.9805295, 
+      "TAZ_id": 394, 
+      "ImmPer": 0.436595
+    }, 
+    {
+      "Metro_dist": 4983.39292609, 
+      "TAZ_id": 395, 
+      "ImmPer": 0.309829
+    }, 
+    {
+      "Metro_dist": 2729.71235706, 
+      "TAZ_id": 396, 
+      "ImmPer": 0.153045
+    }, 
+    {
+      "Metro_dist": 5010.23806936, 
+      "TAZ_id": 397, 
+      "ImmPer": 0.116943
+    }, 
+    {
+      "Metro_dist": 1880.60761242, 
+      "TAZ_id": 398, 
+      "ImmPer": 0.942308
+    }, 
+    {
+      "Metro_dist": 7544.6519618, 
+      "TAZ_id": 399, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 6855.78533945, 
+      "TAZ_id": 400, 
+      "ImmPer": 0.019924
+    }, 
+    {
+      "Metro_dist": 5858.27138496, 
+      "TAZ_id": 401, 
+      "ImmPer": 0.053086
+    }, 
+    {
+      "Metro_dist": 8177.73384612, 
+      "TAZ_id": 402, 
+      "ImmPer": 0.175867
+    }, 
+    {
+      "Metro_dist": 9149.58033092, 
+      "TAZ_id": 403, 
+      "ImmPer": 0.044799
+    }, 
+    {
+      "Metro_dist": 11764.0235831, 
+      "TAZ_id": 404, 
+      "ImmPer": 1
+    }, 
+    {
+      "Metro_dist": 10145.0462043, 
+      "TAZ_id": 405, 
+      "ImmPer": 0.969643
+    }, 
+    {
+      "Metro_dist": 17833.5977838, 
+      "TAZ_id": 406, 
+      "ImmPer": 0.178419
+    }, 
+    {
+      "Metro_dist": 5528.24658219, 
+      "TAZ_id": 407, 
+      "ImmPer": 0.933333
+    }, 
+    {
+      "Metro_dist": 1142.45681623, 
+      "TAZ_id": 408, 
+      "ImmPer": 0.060797
+    }, 
+    {
+      "Metro_dist": 4388.76073146, 
+      "TAZ_id": 409, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 5536.9954476, 
+      "TAZ_id": 410, 
+      "ImmPer": 0.416667
+    }, 
+    {
+      "Metro_dist": 6998.39879343, 
+      "TAZ_id": 411, 
+      "ImmPer": 1
+    }, 
+    {
+      "Metro_dist": 45290.5573642, 
+      "TAZ_id": 412, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 556.55151801, 
+      "TAZ_id": 413, 
+      "ImmPer": 0.123656
+    }, 
+    {
+      "Metro_dist": 7252.10374871, 
+      "TAZ_id": 414, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 7955.19336574, 
+      "TAZ_id": 415, 
+      "ImmPer": 0.071429
+    }, 
+    {
+      "Metro_dist": 5093.78666218, 
+      "TAZ_id": 416, 
+      "ImmPer": 0.39856
+    }, 
+    {
+      "Metro_dist": 1669.57495265, 
+      "TAZ_id": 417, 
+      "ImmPer": 0.125255
+    }, 
+    {
+      "Metro_dist": 2738.74115917, 
+      "TAZ_id": 418, 
+      "ImmPer": 0.253041
+    }, 
+    {
+      "Metro_dist": 4691.86547353, 
+      "TAZ_id": 419, 
+      "ImmPer": 0.730769
+    }, 
+    {
+      "Metro_dist": 3201.0862463, 
+      "TAZ_id": 420, 
+      "ImmPer": 0.687839
+    }, 
+    {
+      "Metro_dist": 5225.09908068, 
+      "TAZ_id": 421, 
+      "ImmPer": 0.148297
+    }, 
+    {
+      "Metro_dist": 4549.37604112, 
+      "TAZ_id": 422, 
+      "ImmPer": 0.11665
+    }, 
+    {
+      "Metro_dist": 2492.46973826, 
+      "TAZ_id": 423, 
+      "ImmPer": 0.061628
+    }, 
+    {
+      "Metro_dist": 4554.1404157, 
+      "TAZ_id": 424, 
+      "ImmPer": 0.053079
+    }, 
+    {
+      "Metro_dist": 866.271936878, 
+      "TAZ_id": 425, 
+      "ImmPer": 0.46411
+    }, 
+    {
+      "Metro_dist": 4529.27225491, 
+      "TAZ_id": 426, 
+      "ImmPer": 0.018628
+    }, 
+    {
+      "Metro_dist": 6672.99839431, 
+      "TAZ_id": 427, 
+      "ImmPer": 0.091045
+    }, 
+    {
+      "Metro_dist": 5354.01894053, 
+      "TAZ_id": 428, 
+      "ImmPer": 0.064875
+    }, 
+    {
+      "Metro_dist": 3173.67699398, 
+      "TAZ_id": 429, 
+      "ImmPer": 0.571429
+    }, 
+    {
+      "Metro_dist": 2524.60309796, 
+      "TAZ_id": 430, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 2899.3117455, 
+      "TAZ_id": 431, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 2966.42239745, 
+      "TAZ_id": 432, 
+      "ImmPer": 0.299011
+    }, 
+    {
+      "Metro_dist": 1033.38779357, 
+      "TAZ_id": 433, 
+      "ImmPer": 0.144578
+    }, 
+    {
+      "Metro_dist": 534.36157514, 
+      "TAZ_id": 434, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 583.098590357, 
+      "TAZ_id": 435, 
+      "ImmPer": 0.5375
+    }, 
+    {
+      "Metro_dist": 99.1526931403, 
+      "TAZ_id": 436, 
+      "ImmPer": 0.580709
+    }, 
+    {
+      "Metro_dist": 1746.56416652, 
+      "TAZ_id": 437, 
+      "ImmPer": 0.178522
+    }, 
+    {
+      "Metro_dist": 972.34759361, 
+      "TAZ_id": 438, 
+      "ImmPer": 0.215213
+    }, 
+    {
+      "Metro_dist": 2831.78540144, 
+      "TAZ_id": 439, 
+      "ImmPer": 0.091721
+    }, 
+    {
+      "Metro_dist": 857.184726989, 
+      "TAZ_id": 440, 
+      "ImmPer": 0.081633
+    }, 
+    {
+      "Metro_dist": 1331.36028691, 
+      "TAZ_id": 441, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 2215.84304723, 
+      "TAZ_id": 442, 
+      "ImmPer": 0.085551
+    }, 
+    {
+      "Metro_dist": 6438.77525514, 
+      "TAZ_id": 443, 
+      "ImmPer": 1
+    }, 
+    {
+      "Metro_dist": 4956.73844893, 
+      "TAZ_id": 444, 
+      "ImmPer": 0.027298
+    }, 
+    {
+      "Metro_dist": 5105.18094977, 
+      "TAZ_id": 445, 
+      "ImmPer": 0.907277
+    }, 
+    {
+      "Metro_dist": 3613.16760786, 
+      "TAZ_id": 446, 
+      "ImmPer": 0.145578
+    }, 
+    {
+      "Metro_dist": 752.959086814, 
+      "TAZ_id": 447, 
+      "ImmPer": 0.266182
+    }, 
+    {
+      "Metro_dist": 576.526405659, 
+      "TAZ_id": 448, 
+      "ImmPer": 0.198692
+    }, 
+    {
+      "Metro_dist": 569.962270492, 
+      "TAZ_id": 449, 
+      "ImmPer": 0.201351
+    }, 
+    {
+      "Metro_dist": 5080.87817181, 
+      "TAZ_id": 450, 
+      "ImmPer": 0.992188
+    }, 
+    {
+      "Metro_dist": 6771.72856338, 
+      "TAZ_id": 451, 
+      "ImmPer": 1
+    }, 
+    {
+      "Metro_dist": 8585.26054799, 
+      "TAZ_id": 452, 
+      "ImmPer": 0.994792
+    }, 
+    {
+      "Metro_dist": 7537.40707214, 
+      "TAZ_id": 453, 
+      "ImmPer": 0.987952
+    }, 
+    {
+      "Metro_dist": 2587.13648681, 
+      "TAZ_id": 454, 
+      "ImmPer": 1
+    }, 
+    {
+      "Metro_dist": 2098.37317527, 
+      "TAZ_id": 455, 
+      "ImmPer": 0.332425
+    }, 
+    {
+      "Metro_dist": 2166.28586365, 
+      "TAZ_id": 456, 
+      "ImmPer": 0.051854
+    }, 
+    {
+      "Metro_dist": 603.997434968, 
+      "TAZ_id": 457, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 1837.7892068, 
+      "TAZ_id": 458, 
+      "ImmPer": 0.086506
+    }, 
+    {
+      "Metro_dist": 1721.22337794, 
+      "TAZ_id": 459, 
+      "ImmPer": 0.056937
+    }, 
+    {
+      "Metro_dist": 791.427028844, 
+      "TAZ_id": 460, 
+      "ImmPer": 1
+    }, 
+    {
+      "Metro_dist": 613.123004658, 
+      "TAZ_id": 461, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 1105.05305207, 
+      "TAZ_id": 462, 
+      "ImmPer": 0.359661
+    }, 
+    {
+      "Metro_dist": 1027.54253995, 
+      "TAZ_id": 463, 
+      "ImmPer": 0.074847
+    }, 
+    {
+      "Metro_dist": 1263.20738496, 
+      "TAZ_id": 464, 
+      "ImmPer": 0.104346
+    }, 
+    {
+      "Metro_dist": 1189.27906916, 
+      "TAZ_id": 465, 
+      "ImmPer": 0.107993
+    }, 
+    {
+      "Metro_dist": 1245.52958833, 
+      "TAZ_id": 466, 
+      "ImmPer": 0.088297
+    }, 
+    {
+      "Metro_dist": 1987.9056226, 
+      "TAZ_id": 467, 
+      "ImmPer": 0.108416
+    }, 
+    {
+      "Metro_dist": 439.288786968, 
+      "TAZ_id": 468, 
+      "ImmPer": 0.273688
+    }, 
+    {
+      "Metro_dist": 1612.77694034, 
+      "TAZ_id": 469, 
+      "ImmPer": 0.072712
+    }, 
+    {
+      "Metro_dist": 1934.75214168, 
+      "TAZ_id": 470, 
+      "ImmPer": 0.14835
+    }, 
+    {
+      "Metro_dist": 1026.0716624, 
+      "TAZ_id": 471, 
+      "ImmPer": 0.146068
+    }, 
+    {
+      "Metro_dist": 978.270098442, 
+      "TAZ_id": 472, 
+      "ImmPer": 0.326519
+    }, 
+    {
+      "Metro_dist": 1869.5202737, 
+      "TAZ_id": 473, 
+      "ImmPer": 0.265634
+    }, 
+    {
+      "Metro_dist": 2540.08786491, 
+      "TAZ_id": 474, 
+      "ImmPer": 0.311238
+    }, 
+    {
+      "Metro_dist": 969.843083584, 
+      "TAZ_id": 475, 
+      "ImmPer": 0.209401
+    }, 
+    {
+      "Metro_dist": 1859.79663387, 
+      "TAZ_id": 476, 
+      "ImmPer": 0.185968
+    }, 
+    {
+      "Metro_dist": 2561.41187933, 
+      "TAZ_id": 477, 
+      "ImmPer": 0.136982
+    }, 
+    {
+      "Metro_dist": 1238.64118781, 
+      "TAZ_id": 478, 
+      "ImmPer": 0.488267
+    }, 
+    {
+      "Metro_dist": 4120.5972053, 
+      "TAZ_id": 479, 
+      "ImmPer": 0.069217
+    }, 
+    {
+      "Metro_dist": 2512.11143493, 
+      "TAZ_id": 480, 
+      "ImmPer": 0.057552
+    }, 
+    {
+      "Metro_dist": 2293.03842015, 
+      "TAZ_id": 481, 
+      "ImmPer": 0.04
+    }, 
+    {
+      "Metro_dist": 3880.94694207, 
+      "TAZ_id": 482, 
+      "ImmPer": 0.038647
+    }, 
+    {
+      "Metro_dist": 4403.64334958, 
+      "TAZ_id": 483, 
+      "ImmPer": 0.049192
+    }, 
+    {
+      "Metro_dist": 2869.58223002, 
+      "TAZ_id": 484, 
+      "ImmPer": 0.303741
+    }, 
+    {
+      "Metro_dist": 2682.83950041, 
+      "TAZ_id": 485, 
+      "ImmPer": 0.144435
+    }, 
+    {
+      "Metro_dist": 11386.6459115, 
+      "TAZ_id": 486, 
+      "ImmPer": 0.022029
+    }, 
+    {
+      "Metro_dist": 6448.72132377, 
+      "TAZ_id": 487, 
+      "ImmPer": 0.057453
+    }, 
+    {
+      "Metro_dist": 1528.09921127, 
+      "TAZ_id": 488, 
+      "ImmPer": 0.042773
+    }, 
+    {
+      "Metro_dist": 2951.04734028, 
+      "TAZ_id": 489, 
+      "ImmPer": 0.203742
+    }, 
+    {
+      "Metro_dist": 1637.93343127, 
+      "TAZ_id": 490, 
+      "ImmPer": 0.153579
+    }, 
+    {
+      "Metro_dist": 2662.94227118, 
+      "TAZ_id": 491, 
+      "ImmPer": 0.175318
+    }, 
+    {
+      "Metro_dist": 3493.47544166, 
+      "TAZ_id": 492, 
+      "ImmPer": 0.352575
+    }, 
+    {
+      "Metro_dist": 10279.7272827, 
+      "TAZ_id": 493, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 8603.5873668, 
+      "TAZ_id": 494, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 10280.969015, 
+      "TAZ_id": 495, 
+      "ImmPer": 0.093901
+    }, 
+    {
+      "Metro_dist": 6846.134156, 
+      "TAZ_id": 496, 
+      "ImmPer": 0.139269
+    }, 
+    {
+      "Metro_dist": 7500.2145067, 
+      "TAZ_id": 497, 
+      "ImmPer": 0.526667
+    }, 
+    {
+      "Metro_dist": 6557.87817672, 
+      "TAZ_id": 498, 
+      "ImmPer": 0.185848
+    }, 
+    {
+      "Metro_dist": 7988.79443697, 
+      "TAZ_id": 499, 
+      "ImmPer": 0.333333
+    }, 
+    {
+      "Metro_dist": 9069.17467515, 
+      "TAZ_id": 500, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 4264.46221426, 
+      "TAZ_id": 501, 
+      "ImmPer": 0.059829
+    }, 
+    {
+      "Metro_dist": 5164.66770716, 
+      "TAZ_id": 502, 
+      "ImmPer": 0.502433
+    }, 
+    {
+      "Metro_dist": 5970.08769288, 
+      "TAZ_id": 503, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 7301.39774261, 
+      "TAZ_id": 504, 
+      "ImmPer": 0.29304
+    }, 
+    {
+      "Metro_dist": 3585.31970117, 
+      "TAZ_id": 505, 
+      "ImmPer": 0.243369
+    }, 
+    {
+      "Metro_dist": 2431.95661314, 
+      "TAZ_id": 506, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 2453.57184821, 
+      "TAZ_id": 507, 
+      "ImmPer": 0.138086
+    }, 
+    {
+      "Metro_dist": 1728.10677791, 
+      "TAZ_id": 508, 
+      "ImmPer": 0.373978
+    }, 
+    {
+      "Metro_dist": 2033.20171102, 
+      "TAZ_id": 509, 
+      "ImmPer": 0.942257
+    }, 
+    {
+      "Metro_dist": 6597.2616249, 
+      "TAZ_id": 510, 
+      "ImmPer": 1
+    }, 
+    {
+      "Metro_dist": 4216.0403588, 
+      "TAZ_id": 511, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 4669.50315326, 
+      "TAZ_id": 512, 
+      "ImmPer": 0.84
+    }, 
+    {
+      "Metro_dist": 8840.35005526, 
+      "TAZ_id": 513, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 8754.01519914, 
+      "TAZ_id": 514, 
+      "ImmPer": 0.187655
+    }, 
+    {
+      "Metro_dist": 8420.3143806, 
+      "TAZ_id": 515, 
+      "ImmPer": 0.273239
+    }, 
+    {
+      "Metro_dist": 17704.2251937, 
+      "TAZ_id": 516, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 12315.155241, 
+      "TAZ_id": 517, 
+      "ImmPer": 0.191011
+    }, 
+    {
+      "Metro_dist": 4910.34029506, 
+      "TAZ_id": 518, 
+      "ImmPer": 1
+    }, 
+    {
+      "Metro_dist": 7551.03712346, 
+      "TAZ_id": 519, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 700.252503898, 
+      "TAZ_id": 520, 
+      "ImmPer": 0.121993
+    }, 
+    {
+      "Metro_dist": 1973.69090471, 
+      "TAZ_id": 521, 
+      "ImmPer": 0.214503
+    }, 
+    {
+      "Metro_dist": 6344.83636252, 
+      "TAZ_id": 522, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 8159.69097093, 
+      "TAZ_id": 523, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 7027.52402359, 
+      "TAZ_id": 524, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 8840.26319631, 
+      "TAZ_id": 525, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 852.944863513, 
+      "TAZ_id": 526, 
+      "ImmPer": 0.403628
+    }, 
+    {
+      "Metro_dist": 13368.1807651, 
+      "TAZ_id": 527, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 10913.0275048, 
+      "TAZ_id": 528, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 1727.07343312, 
+      "TAZ_id": 529, 
+      "ImmPer": 0.397968
+    }, 
+    {
+      "Metro_dist": 10417.0331787, 
+      "TAZ_id": 530, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 11895.2363113, 
+      "TAZ_id": 531, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 677.577062067, 
+      "TAZ_id": 532, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 9186.41047548, 
+      "TAZ_id": 533, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 174.562015016, 
+      "TAZ_id": 534, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 11381.0104028, 
+      "TAZ_id": 535, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 3937.84940303, 
+      "TAZ_id": 536, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 5106.03688926, 
+      "TAZ_id": 537, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 2736.53834771, 
+      "TAZ_id": 538, 
+      "ImmPer": 0.041958
+    }, 
+    {
+      "Metro_dist": 4464.29069885, 
+      "TAZ_id": 539, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 3049.5424495, 
+      "TAZ_id": 540, 
+      "ImmPer": 0.416667
+    }, 
+    {
+      "Metro_dist": 3483.66863343, 
+      "TAZ_id": 541, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 1662.21403567, 
+      "TAZ_id": 542, 
+      "ImmPer": 1
+    }, 
+    {
+      "Metro_dist": 999.472503453, 
+      "TAZ_id": 543, 
+      "ImmPer": 1
+    }, 
+    {
+      "Metro_dist": 2975.36946701, 
+      "TAZ_id": 544, 
+      "ImmPer": 1
+    }, 
+    {
+      "Metro_dist": 5269.76980219, 
+      "TAZ_id": 545, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 4463.41262457, 
+      "TAZ_id": 546, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 3258.79583825, 
+      "TAZ_id": 547, 
+      "ImmPer": 1
+    }, 
+    {
+      "Metro_dist": 8019.39720414, 
+      "TAZ_id": 548, 
+      "ImmPer": 0.43075
+    }, 
+    {
+      "Metro_dist": 8922.27901742, 
+      "TAZ_id": 549, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 7108.29502675, 
+      "TAZ_id": 550, 
+      "ImmPer": 1
+    }, 
+    {
+      "Metro_dist": 7697.20475282, 
+      "TAZ_id": 551, 
+      "ImmPer": 1
+    }, 
+    {
+      "Metro_dist": 9338.14338668, 
+      "TAZ_id": 552, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 9726.83325157, 
+      "TAZ_id": 553, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 8740.35866614, 
+      "TAZ_id": 554, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 8241.79751539, 
+      "TAZ_id": 555, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 5001.45104205, 
+      "TAZ_id": 556, 
+      "ImmPer": 1
+    }, 
+    {
+      "Metro_dist": 5998.85843873, 
+      "TAZ_id": 557, 
+      "ImmPer": 1
+    }, 
+    {
+      "Metro_dist": 6687.64840622, 
+      "TAZ_id": 558, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 5161.69793208, 
+      "TAZ_id": 559, 
+      "ImmPer": 1
+    }, 
+    {
+      "Metro_dist": 1624.49251348, 
+      "TAZ_id": 560, 
+      "ImmPer": 0.522714
+    }, 
+    {
+      "Metro_dist": 12704.5961458, 
+      "TAZ_id": 561, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 731.62973424, 
+      "TAZ_id": 562, 
+      "ImmPer": 0.538586
+    }, 
+    {
+      "Metro_dist": 807.8984397, 
+      "TAZ_id": 563, 
+      "ImmPer": 0.432608
+    }, 
+    {
+      "Metro_dist": 504.40740256, 
+      "TAZ_id": 564, 
+      "ImmPer": 0.575439
+    }, 
+    {
+      "Metro_dist": 13626.7174357, 
+      "TAZ_id": 565, 
+      "ImmPer": 1
+    }, 
+    {
+      "Metro_dist": 919.739381169, 
+      "TAZ_id": 566, 
+      "ImmPer": 0.204697
+    }, 
+    {
+      "Metro_dist": 2006.43143926, 
+      "TAZ_id": 567, 
+      "ImmPer": 0.220208
+    }, 
+    {
+      "Metro_dist": 1035.15899192, 
+      "TAZ_id": 568, 
+      "ImmPer": 0.250548
+    }, 
+    {
+      "Metro_dist": 759.306363983, 
+      "TAZ_id": 569, 
+      "ImmPer": 0.321346
+    }, 
+    {
+      "Metro_dist": 330.295447819, 
+      "TAZ_id": 570, 
+      "ImmPer": 0.290153
+    }, 
+    {
+      "Metro_dist": 17274.1180202, 
+      "TAZ_id": 571, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 778.673912395, 
+      "TAZ_id": 572, 
+      "ImmPer": 0.260498
+    }, 
+    {
+      "Metro_dist": 282.079268731, 
+      "TAZ_id": 573, 
+      "ImmPer": 0.517857
+    }, 
+    {
+      "Metro_dist": 691.074618285, 
+      "TAZ_id": 574, 
+      "ImmPer": 0.578947
+    }, 
+    {
+      "Metro_dist": 624.237799995, 
+      "TAZ_id": 575, 
+      "ImmPer": 0.560461
+    }, 
+    {
+      "Metro_dist": 363.746079462, 
+      "TAZ_id": 576, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 937.283192805, 
+      "TAZ_id": 577, 
+      "ImmPer": 0.18293
+    }, 
+    {
+      "Metro_dist": 1661.35307869, 
+      "TAZ_id": 578, 
+      "ImmPer": 0.235602
+    }, 
+    {
+      "Metro_dist": 592.478623242, 
+      "TAZ_id": 579, 
+      "ImmPer": 0.105164
+    }, 
+    {
+      "Metro_dist": 1189.49788072, 
+      "TAZ_id": 580, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 856.700473884, 
+      "TAZ_id": 581, 
+      "ImmPer": 0.237043
+    }, 
+    {
+      "Metro_dist": 1547.37781934, 
+      "TAZ_id": 582, 
+      "ImmPer": 0.25
+    }, 
+    {
+      "Metro_dist": 917.91403399, 
+      "TAZ_id": 583, 
+      "ImmPer": 0.088603
+    }, 
+    {
+      "Metro_dist": 1327.35354386, 
+      "TAZ_id": 584, 
+      "ImmPer": 0.214876
+    }, 
+    {
+      "Metro_dist": 1670.88087067, 
+      "TAZ_id": 585, 
+      "ImmPer": 0.219154
+    }, 
+    {
+      "Metro_dist": 756.22029133, 
+      "TAZ_id": 586, 
+      "ImmPer": 0.289841
+    }, 
+    {
+      "Metro_dist": 11907.8990861, 
+      "TAZ_id": 587, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 1954.6653832, 
+      "TAZ_id": 588, 
+      "ImmPer": 0.024069
+    }, 
+    {
+      "Metro_dist": 21661.0362517, 
+      "TAZ_id": 589, 
+      "ImmPer": 0.136216
+    }, 
+    {
+      "Metro_dist": 1564.41808511, 
+      "TAZ_id": 590, 
+      "ImmPer": 0.044321
+    }, 
+    {
+      "Metro_dist": 1312.76828589, 
+      "TAZ_id": 591, 
+      "ImmPer": 0.047591
+    }, 
+    {
+      "Metro_dist": 611.65579862, 
+      "TAZ_id": 592, 
+      "ImmPer": 0.106427
+    }, 
+    {
+      "Metro_dist": 17742.4367878, 
+      "TAZ_id": 593, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 1356.40633799, 
+      "TAZ_id": 594, 
+      "ImmPer": 0.147761
+    }, 
+    {
+      "Metro_dist": 9214.42481904, 
+      "TAZ_id": 595, 
+      "ImmPer": 0.2
+    }, 
+    {
+      "Metro_dist": 1988.60219677, 
+      "TAZ_id": 596, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 1756.63928959, 
+      "TAZ_id": 597, 
+      "ImmPer": 0.441514
+    }, 
+    {
+      "Metro_dist": 1351.86603309, 
+      "TAZ_id": 598, 
+      "ImmPer": 0.325434
+    }, 
+    {
+      "Metro_dist": 387.857502632, 
+      "TAZ_id": 599, 
+      "ImmPer": 0.352888
+    }, 
+    {
+      "Metro_dist": 820.282687025, 
+      "TAZ_id": 600, 
+      "ImmPer": 0.231815
+    }, 
+    {
+      "Metro_dist": 1670.4514825, 
+      "TAZ_id": 601, 
+      "ImmPer": 0.319985
+    }, 
+    {
+      "Metro_dist": 1692.14642795, 
+      "TAZ_id": 602, 
+      "ImmPer": 0.342218
+    }, 
+    {
+      "Metro_dist": 794.634948153, 
+      "TAZ_id": 603, 
+      "ImmPer": 0.380383
+    }, 
+    {
+      "Metro_dist": 1433.34265617, 
+      "TAZ_id": 604, 
+      "ImmPer": 0.379777
+    }, 
+    {
+      "Metro_dist": 821.280347678, 
+      "TAZ_id": 605, 
+      "ImmPer": 0.446586
+    }, 
+    {
+      "Metro_dist": 1197.69385359, 
+      "TAZ_id": 606, 
+      "ImmPer": 0.344488
+    }, 
+    {
+      "Metro_dist": 469.397649615, 
+      "TAZ_id": 607, 
+      "ImmPer": 0.190416
+    }, 
+    {
+      "Metro_dist": 1904.64855663, 
+      "TAZ_id": 608, 
+      "ImmPer": 0.370096
+    }, 
+    {
+      "Metro_dist": 1436.55116074, 
+      "TAZ_id": 609, 
+      "ImmPer": 0.145237
+    }, 
+    {
+      "Metro_dist": 12424.3053069, 
+      "TAZ_id": 610, 
+      "ImmPer": 0.203488
+    }, 
+    {
+      "Metro_dist": 4108.10976795, 
+      "TAZ_id": 611, 
+      "ImmPer": 0.972973
+    }, 
+    {
+      "Metro_dist": 4186.58409318, 
+      "TAZ_id": 612, 
+      "ImmPer": 1
+    }, 
+    {
+      "Metro_dist": 7002.88682163, 
+      "TAZ_id": 613, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 4745.62391907, 
+      "TAZ_id": 614, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 3142.53345328, 
+      "TAZ_id": 615, 
+      "ImmPer": 0.527117
+    }, 
+    {
+      "Metro_dist": 7350.96705372, 
+      "TAZ_id": 616, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 3395.99732705, 
+      "TAZ_id": 617, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 3890.25124879, 
+      "TAZ_id": 618, 
+      "ImmPer": 0.5
+    }, 
+    {
+      "Metro_dist": 8753.2346072, 
+      "TAZ_id": 619, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 3852.75747519, 
+      "TAZ_id": 620, 
+      "ImmPer": 0.318595
+    }, 
+    {
+      "Metro_dist": 281.753740368, 
+      "TAZ_id": 621, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 12693.8972948, 
+      "TAZ_id": 622, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 76.5477280599, 
+      "TAZ_id": 623, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 588.164601246, 
+      "TAZ_id": 624, 
+      "ImmPer": 0.507126
+    }, 
+    {
+      "Metro_dist": 642.064877057, 
+      "TAZ_id": 625, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 2206.62138316, 
+      "TAZ_id": 626, 
+      "ImmPer": 0.426277
+    }, 
+    {
+      "Metro_dist": 20569.3223584, 
+      "TAZ_id": 627, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 1951.61894951, 
+      "TAZ_id": 628, 
+      "ImmPer": 0.487659
+    }, 
+    {
+      "Metro_dist": 1572.22799892, 
+      "TAZ_id": 629, 
+      "ImmPer": 0.417063
+    }, 
+    {
+      "Metro_dist": 16494.0209785, 
+      "TAZ_id": 630, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 5039.34075863, 
+      "TAZ_id": 631, 
+      "ImmPer": 0.515152
+    }, 
+    {
+      "Metro_dist": 5362.39989992, 
+      "TAZ_id": 632, 
+      "ImmPer": 0.308333
+    }, 
+    {
+      "Metro_dist": 21499.4707924, 
+      "TAZ_id": 633, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 3518.52136144, 
+      "TAZ_id": 634, 
+      "ImmPer": 0.443578
+    }, 
+    {
+      "Metro_dist": 16986.9942776, 
+      "TAZ_id": 635, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 14468.3992299, 
+      "TAZ_id": 636, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 1898.294895, 
+      "TAZ_id": 637, 
+      "ImmPer": 0.338979
+    }, 
+    {
+      "Metro_dist": 1455.98537552, 
+      "TAZ_id": 638, 
+      "ImmPer": 0.305364
+    }, 
+    {
+      "Metro_dist": 12047.2249997, 
+      "TAZ_id": 639, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 4346.4079675, 
+      "TAZ_id": 640, 
+      "ImmPer": 0.325893
+    }, 
+    {
+      "Metro_dist": 17799.9951839, 
+      "TAZ_id": 641, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 13485.4932278, 
+      "TAZ_id": 642, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 1468.22052292, 
+      "TAZ_id": 643, 
+      "ImmPer": 0.198189
+    }, 
+    {
+      "Metro_dist": 24004.7750357, 
+      "TAZ_id": 644, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 1041.59444339, 
+      "TAZ_id": 645, 
+      "ImmPer": 0.167286
+    }, 
+    {
+      "Metro_dist": 14354.2032117, 
+      "TAZ_id": 646, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 19466.308434, 
+      "TAZ_id": 647, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 1348.8063448, 
+      "TAZ_id": 648, 
+      "ImmPer": 0.448797
+    }, 
+    {
+      "Metro_dist": 1378.06989027, 
+      "TAZ_id": 649, 
+      "ImmPer": 0.310139
+    }, 
+    {
+      "Metro_dist": 8813.55414276, 
+      "TAZ_id": 650, 
+      "ImmPer": 0.163426
+    }, 
+    {
+      "Metro_dist": 9501.22194996, 
+      "TAZ_id": 651, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 1013.00514102, 
+      "TAZ_id": 652, 
+      "ImmPer": 0.47588
+    }, 
+    {
+      "Metro_dist": 601.898592268, 
+      "TAZ_id": 653, 
+      "ImmPer": 0.172222
+    }, 
+    {
+      "Metro_dist": 1096.11887972, 
+      "TAZ_id": 654, 
+      "ImmPer": 0.22334
+    }, 
+    {
+      "Metro_dist": 1378.86743873, 
+      "TAZ_id": 655, 
+      "ImmPer": 0.455056
+    }, 
+    {
+      "Metro_dist": 1366.08350301, 
+      "TAZ_id": 656, 
+      "ImmPer": 0.494815
+    }, 
+    {
+      "Metro_dist": 696.01782704, 
+      "TAZ_id": 657, 
+      "ImmPer": 0.233968
+    }, 
+    {
+      "Metro_dist": 1256.69205048, 
+      "TAZ_id": 658, 
+      "ImmPer": 0.134921
+    }, 
+    {
+      "Metro_dist": 1042.36987006, 
+      "TAZ_id": 659, 
+      "ImmPer": 0.199713
+    }, 
+    {
+      "Metro_dist": 6296.05918317, 
+      "TAZ_id": 660, 
+      "ImmPer": 0.085397
+    }, 
+    {
+      "Metro_dist": 14437.7320638, 
+      "TAZ_id": 661, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 10226.1695707, 
+      "TAZ_id": 662, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 20411.6462424, 
+      "TAZ_id": 663, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 1108.55863179, 
+      "TAZ_id": 664, 
+      "ImmPer": 0.383633
+    }, 
+    {
+      "Metro_dist": 14930.6933371, 
+      "TAZ_id": 665, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 766.573289762, 
+      "TAZ_id": 666, 
+      "ImmPer": 0.094752
+    }, 
+    {
+      "Metro_dist": 707.750637881, 
+      "TAZ_id": 667, 
+      "ImmPer": 0.089552
+    }, 
+    {
+      "Metro_dist": 277.310822549, 
+      "TAZ_id": 668, 
+      "ImmPer": 0.246622
+    }, 
+    {
+      "Metro_dist": 9333.55358877, 
+      "TAZ_id": 669, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 702.085206597, 
+      "TAZ_id": 670, 
+      "ImmPer": 0.25
+    }, 
+    {
+      "Metro_dist": 13917.0938095, 
+      "TAZ_id": 671, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 206.738527024, 
+      "TAZ_id": 672, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 9358.68779853, 
+      "TAZ_id": 673, 
+      "ImmPer": 0.026522
+    }, 
+    {
+      "Metro_dist": 305.473507131, 
+      "TAZ_id": 674, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 365.545591389, 
+      "TAZ_id": 675, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 398.353093627, 
+      "TAZ_id": 676, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 1199.62009265, 
+      "TAZ_id": 677, 
+      "ImmPer": 0.38874
+    }, 
+    {
+      "Metro_dist": 2300.46784023, 
+      "TAZ_id": 678, 
+      "ImmPer": 0.290887
+    }, 
+    {
+      "Metro_dist": 7408.92960929, 
+      "TAZ_id": 679, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 17062.418189, 
+      "TAZ_id": 680, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 25266.6811675, 
+      "TAZ_id": 681, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 975.041251014, 
+      "TAZ_id": 682, 
+      "ImmPer": 0.413793
+    }, 
+    {
+      "Metro_dist": 1732.4909918, 
+      "TAZ_id": 683, 
+      "ImmPer": 0.252523
+    }, 
+    {
+      "Metro_dist": 10904.249482, 
+      "TAZ_id": 684, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 15829.3431559, 
+      "TAZ_id": 685, 
+      "ImmPer": 0.098987
+    }, 
+    {
+      "Metro_dist": 14027.7162572, 
+      "TAZ_id": 686, 
+      "ImmPer": 1
+    }, 
+    {
+      "Metro_dist": 30616.3703308, 
+      "TAZ_id": 687, 
+      "ImmPer": 0.156919
+    }, 
+    {
+      "Metro_dist": 17993.8174225, 
+      "TAZ_id": 688, 
+      "ImmPer": 0.180754
+    }, 
+    {
+      "Metro_dist": 21159.928664, 
+      "TAZ_id": 689, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 6879.68185257, 
+      "TAZ_id": 690, 
+      "ImmPer": 1
+    }, 
+    {
+      "Metro_dist": 877.630502362, 
+      "TAZ_id": 691, 
+      "ImmPer": 0.372188
+    }, 
+    {
+      "Metro_dist": 6593.79818412, 
+      "TAZ_id": 692, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 7868.06266793, 
+      "TAZ_id": 693, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 11687.2311047, 
+      "TAZ_id": 694, 
+      "ImmPer": 0.436364
+    }, 
+    {
+      "Metro_dist": 9049.59935074, 
+      "TAZ_id": 695, 
+      "ImmPer": 0.442308
+    }, 
+    {
+      "Metro_dist": 1263.68001393, 
+      "TAZ_id": 696, 
+      "ImmPer": 0.527347
+    }, 
+    {
+      "Metro_dist": 805.337332086, 
+      "TAZ_id": 697, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 1330.6573878, 
+      "TAZ_id": 698, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 3516.74706394, 
+      "TAZ_id": 699, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 8034.87666865, 
+      "TAZ_id": 700, 
+      "ImmPer": 0.28125
+    }, 
+    {
+      "Metro_dist": 6754.41057559, 
+      "TAZ_id": 701, 
+      "ImmPer": 0.401158
+    }, 
+    {
+      "Metro_dist": 456.82045785, 
+      "TAZ_id": 702, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 601.288020662, 
+      "TAZ_id": 703, 
+      "ImmPer": 0.38902
+    }, 
+    {
+      "Metro_dist": 219.788815151, 
+      "TAZ_id": 704, 
+      "ImmPer": 0.393038
+    }, 
+    {
+      "Metro_dist": 752.5686475, 
+      "TAZ_id": 705, 
+      "ImmPer": 0.33796
+    }, 
+    {
+      "Metro_dist": 1800.4624176, 
+      "TAZ_id": 706, 
+      "ImmPer": 0.363269
+    }, 
+    {
+      "Metro_dist": 1940.57602518, 
+      "TAZ_id": 707, 
+      "ImmPer": 0.37766
+    }, 
+    {
+      "Metro_dist": 1511.11121559, 
+      "TAZ_id": 708, 
+      "ImmPer": 0.440949
+    }, 
+    {
+      "Metro_dist": 1641.79895323, 
+      "TAZ_id": 709, 
+      "ImmPer": 0.420718
+    }, 
+    {
+      "Metro_dist": 1664.82403658, 
+      "TAZ_id": 710, 
+      "ImmPer": 0.439955
+    }, 
+    {
+      "Metro_dist": 1099.3130689, 
+      "TAZ_id": 711, 
+      "ImmPer": 0.090909
+    }, 
+    {
+      "Metro_dist": 2255.83362326, 
+      "TAZ_id": 712, 
+      "ImmPer": 0.477325
+    }, 
+    {
+      "Metro_dist": 1937.33629291, 
+      "TAZ_id": 713, 
+      "ImmPer": 0.445415
+    }, 
+    {
+      "Metro_dist": 2587.43540814, 
+      "TAZ_id": 714, 
+      "ImmPer": 0.383512
+    }, 
+    {
+      "Metro_dist": 2050.99731261, 
+      "TAZ_id": 715, 
+      "ImmPer": 0.446996
+    }, 
+    {
+      "Metro_dist": 2305.51859831, 
+      "TAZ_id": 716, 
+      "ImmPer": 0.330667
+    }, 
+    {
+      "Metro_dist": 2262.28979557, 
+      "TAZ_id": 717, 
+      "ImmPer": 0.334209
+    }, 
+    {
+      "Metro_dist": 2263.62109381, 
+      "TAZ_id": 718, 
+      "ImmPer": 0.297444
+    }, 
+    {
+      "Metro_dist": 2791.4909695, 
+      "TAZ_id": 719, 
+      "ImmPer": 0.36547
+    }, 
+    {
+      "Metro_dist": 2565.48067294, 
+      "TAZ_id": 720, 
+      "ImmPer": 0.259941
+    }, 
+    {
+      "Metro_dist": 2977.43838961, 
+      "TAZ_id": 721, 
+      "ImmPer": 0.326377
+    }, 
+    {
+      "Metro_dist": 2428.18426441, 
+      "TAZ_id": 722, 
+      "ImmPer": 0.283054
+    }, 
+    {
+      "Metro_dist": 664.498099739, 
+      "TAZ_id": 723, 
+      "ImmPer": 0.36342
+    }, 
+    {
+      "Metro_dist": 1573.67039301, 
+      "TAZ_id": 724, 
+      "ImmPer": 0.300208
+    }, 
+    {
+      "Metro_dist": 684.2231037, 
+      "TAZ_id": 725, 
+      "ImmPer": 0.418887
+    }, 
+    {
+      "Metro_dist": 1586.81072838, 
+      "TAZ_id": 726, 
+      "ImmPer": 0.377491
+    }, 
+    {
+      "Metro_dist": 1681.65828524, 
+      "TAZ_id": 727, 
+      "ImmPer": 0.395397
+    }, 
+    {
+      "Metro_dist": 768.440477483, 
+      "TAZ_id": 728, 
+      "ImmPer": 0.263353
+    }, 
+    {
+      "Metro_dist": 658.07958154, 
+      "TAZ_id": 729, 
+      "ImmPer": 0.365903
+    }, 
+    {
+      "Metro_dist": 654.720508822, 
+      "TAZ_id": 730, 
+      "ImmPer": 0.229076
+    }, 
+    {
+      "Metro_dist": 1613.85574034, 
+      "TAZ_id": 731, 
+      "ImmPer": 0.250566
+    }, 
+    {
+      "Metro_dist": 1707.57468043, 
+      "TAZ_id": 732, 
+      "ImmPer": 0.219367
+    }, 
+    {
+      "Metro_dist": 786.256077141, 
+      "TAZ_id": 733, 
+      "ImmPer": 0.320452
+    }, 
+    {
+      "Metro_dist": 3290.39009268, 
+      "TAZ_id": 734, 
+      "ImmPer": 0.157191
+    }, 
+    {
+      "Metro_dist": 2294.13011588, 
+      "TAZ_id": 735, 
+      "ImmPer": 0.184141
+    }, 
+    {
+      "Metro_dist": 1741.25790702, 
+      "TAZ_id": 736, 
+      "ImmPer": 0.524061
+    }, 
+    {
+      "Metro_dist": 1356.15404289, 
+      "TAZ_id": 737, 
+      "ImmPer": 0.492
+    }, 
+    {
+      "Metro_dist": 1194.86869909, 
+      "TAZ_id": 738, 
+      "ImmPer": 0.458241
+    }, 
+    {
+      "Metro_dist": 727.38216146, 
+      "TAZ_id": 739, 
+      "ImmPer": 0.451121
+    }, 
+    {
+      "Metro_dist": 523.292505491, 
+      "TAZ_id": 740, 
+      "ImmPer": 0.44875
+    }, 
+    {
+      "Metro_dist": 295.881655013, 
+      "TAZ_id": 741, 
+      "ImmPer": 0.433579
+    }, 
+    {
+      "Metro_dist": 357.459421068, 
+      "TAZ_id": 742, 
+      "ImmPer": 0.251799
+    }, 
+    {
+      "Metro_dist": 887.246748728, 
+      "TAZ_id": 743, 
+      "ImmPer": 0.711712
+    }, 
+    {
+      "Metro_dist": 929.974212809, 
+      "TAZ_id": 744, 
+      "ImmPer": 0.545312
+    }, 
+    {
+      "Metro_dist": 660.885964062, 
+      "TAZ_id": 745, 
+      "ImmPer": 0.557467
+    }, 
+    {
+      "Metro_dist": 362.976787976, 
+      "TAZ_id": 746, 
+      "ImmPer": 0.693299
+    }, 
+    {
+      "Metro_dist": 681.808363963, 
+      "TAZ_id": 747, 
+      "ImmPer": 0.545832
+    }, 
+    {
+      "Metro_dist": 1482.19894444, 
+      "TAZ_id": 748, 
+      "ImmPer": 0.23879
+    }, 
+    {
+      "Metro_dist": 580.34509677, 
+      "TAZ_id": 749, 
+      "ImmPer": 0.438845
+    }, 
+    {
+      "Metro_dist": 881.443805471, 
+      "TAZ_id": 750, 
+      "ImmPer": 0.646648
+    }, 
+    {
+      "Metro_dist": 907.501613365, 
+      "TAZ_id": 751, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 1480.12780936, 
+      "TAZ_id": 752, 
+      "ImmPer": 0.567937
+    }, 
+    {
+      "Metro_dist": 1134.69224475, 
+      "TAZ_id": 753, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 1725.2621446, 
+      "TAZ_id": 754, 
+      "ImmPer": 0.563525
+    }, 
+    {
+      "Metro_dist": 1554.6723913, 
+      "TAZ_id": 755, 
+      "ImmPer": 0.348622
+    }, 
+    {
+      "Metro_dist": 618.838357468, 
+      "TAZ_id": 756, 
+      "ImmPer": 0.348445
+    }, 
+    {
+      "Metro_dist": 1553.49638963, 
+      "TAZ_id": 757, 
+      "ImmPer": 0.33605
+    }, 
+    {
+      "Metro_dist": 1537.38694549, 
+      "TAZ_id": 758, 
+      "ImmPer": 0.35016
+    }, 
+    {
+      "Metro_dist": 1719.00117494, 
+      "TAZ_id": 759, 
+      "ImmPer": 0.5
+    }, 
+    {
+      "Metro_dist": 814.436807799, 
+      "TAZ_id": 760, 
+      "ImmPer": 0.045002
+    }, 
+    {
+      "Metro_dist": 1653.31403121, 
+      "TAZ_id": 761, 
+      "ImmPer": 0.040761
+    }, 
+    {
+      "Metro_dist": 1781.53321017, 
+      "TAZ_id": 762, 
+      "ImmPer": 0.124404
+    }, 
+    {
+      "Metro_dist": 1271.04895666, 
+      "TAZ_id": 763, 
+      "ImmPer": 0.212852
+    }, 
+    {
+      "Metro_dist": 1359.34999763, 
+      "TAZ_id": 764, 
+      "ImmPer": 0.303462
+    }, 
+    {
+      "Metro_dist": 723.578805616, 
+      "TAZ_id": 765, 
+      "ImmPer": 0.148599
+    }, 
+    {
+      "Metro_dist": 1345.5168745, 
+      "TAZ_id": 766, 
+      "ImmPer": 0.108804
+    }, 
+    {
+      "Metro_dist": 593.563573043, 
+      "TAZ_id": 767, 
+      "ImmPer": 0.03589
+    }, 
+    {
+      "Metro_dist": 478.929658895, 
+      "TAZ_id": 768, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 1231.2869342, 
+      "TAZ_id": 769, 
+      "ImmPer": 0.143832
+    }, 
+    {
+      "Metro_dist": 1610.25961231, 
+      "TAZ_id": 770, 
+      "ImmPer": 0.113471
+    }, 
+    {
+      "Metro_dist": 1893.69286042, 
+      "TAZ_id": 771, 
+      "ImmPer": 0.107301
+    }, 
+    {
+      "Metro_dist": 1086.95845869, 
+      "TAZ_id": 772, 
+      "ImmPer": 0.108994
+    }, 
+    {
+      "Metro_dist": 1358.28042072, 
+      "TAZ_id": 773, 
+      "ImmPer": 0.099509
+    }, 
+    {
+      "Metro_dist": 1865.65521218, 
+      "TAZ_id": 774, 
+      "ImmPer": 0.129908
+    }, 
+    {
+      "Metro_dist": 3139.71614034, 
+      "TAZ_id": 775, 
+      "ImmPer": 1
+    }, 
+    {
+      "Metro_dist": 2433.06762329, 
+      "TAZ_id": 776, 
+      "ImmPer": 1
+    }, 
+    {
+      "Metro_dist": 1372.60546897, 
+      "TAZ_id": 777, 
+      "ImmPer": 1
+    }, 
+    {
+      "Metro_dist": 804.567842261, 
+      "TAZ_id": 778, 
+      "ImmPer": 0.117647
+    }, 
+    {
+      "Metro_dist": 773.195527891, 
+      "TAZ_id": 779, 
+      "ImmPer": 0.833333
+    }, 
+    {
+      "Metro_dist": 1989.97671948, 
+      "TAZ_id": 780, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 1607.24047283, 
+      "TAZ_id": 781, 
+      "ImmPer": 0.709416
+    }, 
+    {
+      "Metro_dist": 2044.35686998, 
+      "TAZ_id": 782, 
+      "ImmPer": 0.75
+    }, 
+    {
+      "Metro_dist": 598.759425695, 
+      "TAZ_id": 783, 
+      "ImmPer": 0.175627
+    }, 
+    {
+      "Metro_dist": 297.878908581, 
+      "TAZ_id": 784, 
+      "ImmPer": 0.521266
+    }, 
+    {
+      "Metro_dist": 706.032145554, 
+      "TAZ_id": 785, 
+      "ImmPer": 0.394649
+    }, 
+    {
+      "Metro_dist": 1006.11904449, 
+      "TAZ_id": 786, 
+      "ImmPer": 0.285714
+    }, 
+    {
+      "Metro_dist": 539.999305713, 
+      "TAZ_id": 787, 
+      "ImmPer": 0.288568
+    }, 
+    {
+      "Metro_dist": 1013.26939761, 
+      "TAZ_id": 788, 
+      "ImmPer": 0.474343
+    }, 
+    {
+      "Metro_dist": 153.209764861, 
+      "TAZ_id": 789, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 274.032677084, 
+      "TAZ_id": 790, 
+      "ImmPer": 0.760909
+    }, 
+    {
+      "Metro_dist": 437.119010398, 
+      "TAZ_id": 791, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 364.998740654, 
+      "TAZ_id": 792, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 395.624109773, 
+      "TAZ_id": 793, 
+      "ImmPer": 0.408545
+    }, 
+    {
+      "Metro_dist": 271.865099371, 
+      "TAZ_id": 794, 
+      "ImmPer": 0.48448
+    }, 
+    {
+      "Metro_dist": 311.264543381, 
+      "TAZ_id": 795, 
+      "ImmPer": 0.299257
+    }, 
+    {
+      "Metro_dist": 396.141810236, 
+      "TAZ_id": 796, 
+      "ImmPer": 0.297778
+    }, 
+    {
+      "Metro_dist": 719.83091251, 
+      "TAZ_id": 797, 
+      "ImmPer": 0.559149
+    }, 
+    {
+      "Metro_dist": 1362.01808102, 
+      "TAZ_id": 798, 
+      "ImmPer": 0.521924
+    }, 
+    {
+      "Metro_dist": 888.06437815, 
+      "TAZ_id": 799, 
+      "ImmPer": 0.584883
+    }, 
+    {
+      "Metro_dist": 904.331624388, 
+      "TAZ_id": 800, 
+      "ImmPer": 0.51779
+    }, 
+    {
+      "Metro_dist": 1288.84034243, 
+      "TAZ_id": 801, 
+      "ImmPer": 0.607595
+    }, 
+    {
+      "Metro_dist": 301.180627455, 
+      "TAZ_id": 802, 
+      "ImmPer": 0.556613
+    }, 
+    {
+      "Metro_dist": 654.683588172, 
+      "TAZ_id": 803, 
+      "ImmPer": 0.615159
+    }, 
+    {
+      "Metro_dist": 670.998835725, 
+      "TAZ_id": 804, 
+      "ImmPer": 0.670553
+    }, 
+    {
+      "Metro_dist": 694.953189037, 
+      "TAZ_id": 805, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 317.28648669, 
+      "TAZ_id": 806, 
+      "ImmPer": 0.384988
+    }, 
+    {
+      "Metro_dist": 396.085312382, 
+      "TAZ_id": 807, 
+      "ImmPer": 0.516343
+    }, 
+    {
+      "Metro_dist": 882.634808244, 
+      "TAZ_id": 808, 
+      "ImmPer": 0.497559
+    }, 
+    {
+      "Metro_dist": 673.099846197, 
+      "TAZ_id": 809, 
+      "ImmPer": 0.382904
+    }, 
+    {
+      "Metro_dist": 578.794912989, 
+      "TAZ_id": 810, 
+      "ImmPer": 0.163311
+    }, 
+    {
+      "Metro_dist": 1654.84502784, 
+      "TAZ_id": 811, 
+      "ImmPer": 0.38341
+    }, 
+    {
+      "Metro_dist": 634.827622233, 
+      "TAZ_id": 812, 
+      "ImmPer": 0.275235
+    }, 
+    {
+      "Metro_dist": 3273.45519223, 
+      "TAZ_id": 813, 
+      "ImmPer": 0.588235
+    }, 
+    {
+      "Metro_dist": 1575.81459031, 
+      "TAZ_id": 814, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 758.469034389, 
+      "TAZ_id": 815, 
+      "ImmPer": 0.641538
+    }, 
+    {
+      "Metro_dist": 3393.30887104, 
+      "TAZ_id": 816, 
+      "ImmPer": 0.478808
+    }, 
+    {
+      "Metro_dist": 2118.86362308, 
+      "TAZ_id": 817, 
+      "ImmPer": 0.567568
+    }, 
+    {
+      "Metro_dist": 2599.28210488, 
+      "TAZ_id": 818, 
+      "ImmPer": 0.377317
+    }, 
+    {
+      "Metro_dist": 1650.17259979, 
+      "TAZ_id": 819, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 4088.56727316, 
+      "TAZ_id": 820, 
+      "ImmPer": 0.262267
+    }, 
+    {
+      "Metro_dist": 4103.68407283, 
+      "TAZ_id": 821, 
+      "ImmPer": 0.332402
+    }, 
+    {
+      "Metro_dist": 3405.2249306, 
+      "TAZ_id": 822, 
+      "ImmPer": 0.551136
+    }, 
+    {
+      "Metro_dist": 2773.90834409, 
+      "TAZ_id": 823, 
+      "ImmPer": 0.494949
+    }, 
+    {
+      "Metro_dist": 1043.1345021, 
+      "TAZ_id": 824, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 552.551719262, 
+      "TAZ_id": 825, 
+      "ImmPer": 0.882038
+    }, 
+    {
+      "Metro_dist": 621.088549697, 
+      "TAZ_id": 826, 
+      "ImmPer": 0.611229
+    }, 
+    {
+      "Metro_dist": 951.194564241, 
+      "TAZ_id": 827, 
+      "ImmPer": 0.647409
+    }, 
+    {
+      "Metro_dist": 1078.1076728, 
+      "TAZ_id": 828, 
+      "ImmPer": 0.582009
+    }, 
+    {
+      "Metro_dist": 207.576597998, 
+      "TAZ_id": 829, 
+      "ImmPer": 0.796875
+    }, 
+    {
+      "Metro_dist": 166.887018012, 
+      "TAZ_id": 830, 
+      "ImmPer": 0.781069
+    }, 
+    {
+      "Metro_dist": 731.469795142, 
+      "TAZ_id": 831, 
+      "ImmPer": 0.668909
+    }, 
+    {
+      "Metro_dist": 435.938278666, 
+      "TAZ_id": 832, 
+      "ImmPer": 0.715536
+    }, 
+    {
+      "Metro_dist": 1137.15031052, 
+      "TAZ_id": 833, 
+      "ImmPer": 0.72043
+    }, 
+    {
+      "Metro_dist": 1531.09776854, 
+      "TAZ_id": 834, 
+      "ImmPer": 0.668407
+    }, 
+    {
+      "Metro_dist": 1309.41428548, 
+      "TAZ_id": 835, 
+      "ImmPer": 0.734328
+    }, 
+    {
+      "Metro_dist": 1186.83944797, 
+      "TAZ_id": 836, 
+      "ImmPer": 0.746789
+    }, 
+    {
+      "Metro_dist": 1086.87516718, 
+      "TAZ_id": 837, 
+      "ImmPer": 0.535005
+    }, 
+    {
+      "Metro_dist": 1055.32709726, 
+      "TAZ_id": 838, 
+      "ImmPer": 0.534836
+    }, 
+    {
+      "Metro_dist": 763.472851991, 
+      "TAZ_id": 839, 
+      "ImmPer": 0.265483
+    }, 
+    {
+      "Metro_dist": 1084.41200603, 
+      "TAZ_id": 840, 
+      "ImmPer": 0.465594
+    }, 
+    {
+      "Metro_dist": 998.295958195, 
+      "TAZ_id": 841, 
+      "ImmPer": 0.411195
+    }, 
+    {
+      "Metro_dist": 536.393547373, 
+      "TAZ_id": 842, 
+      "ImmPer": 0.559908
+    }, 
+    {
+      "Metro_dist": 522.31926424, 
+      "TAZ_id": 843, 
+      "ImmPer": 0.779563
+    }, 
+    {
+      "Metro_dist": 129.007486194, 
+      "TAZ_id": 844, 
+      "ImmPer": 0.784024
+    }, 
+    {
+      "Metro_dist": 1063.16886798, 
+      "TAZ_id": 845, 
+      "ImmPer": 0.558061
+    }, 
+    {
+      "Metro_dist": 864.488288288, 
+      "TAZ_id": 846, 
+      "ImmPer": 0.512195
+    }, 
+    {
+      "Metro_dist": 592.532106506, 
+      "TAZ_id": 847, 
+      "ImmPer": 0.7162
+    }, 
+    {
+      "Metro_dist": 1522.14485108, 
+      "TAZ_id": 848, 
+      "ImmPer": 0.699331
+    }, 
+    {
+      "Metro_dist": 1512.31794899, 
+      "TAZ_id": 849, 
+      "ImmPer": 0.668908
+    }, 
+    {
+      "Metro_dist": 1172.22565142, 
+      "TAZ_id": 850, 
+      "ImmPer": 0.68306
+    }, 
+    {
+      "Metro_dist": 1217.96981187, 
+      "TAZ_id": 851, 
+      "ImmPer": 0.639274
+    }, 
+    {
+      "Metro_dist": 1004.13905594, 
+      "TAZ_id": 852, 
+      "ImmPer": 0.753659
+    }, 
+    {
+      "Metro_dist": 500.869675667, 
+      "TAZ_id": 853, 
+      "ImmPer": 0.607306
+    }, 
+    {
+      "Metro_dist": 897.27275486, 
+      "TAZ_id": 854, 
+      "ImmPer": 0.4
+    }, 
+    {
+      "Metro_dist": 1157.16721356, 
+      "TAZ_id": 855, 
+      "ImmPer": 0.772727
+    }, 
+    {
+      "Metro_dist": 676.963180817, 
+      "TAZ_id": 856, 
+      "ImmPer": 0.620169
+    }, 
+    {
+      "Metro_dist": 241.761704917, 
+      "TAZ_id": 857, 
+      "ImmPer": 0.313131
+    }, 
+    {
+      "Metro_dist": 845.257487746, 
+      "TAZ_id": 858, 
+      "ImmPer": 0.522442
+    }, 
+    {
+      "Metro_dist": 357.739147059, 
+      "TAZ_id": 859, 
+      "ImmPer": 0.651505
+    }, 
+    {
+      "Metro_dist": 923.521661358, 
+      "TAZ_id": 860, 
+      "ImmPer": 0.555812
+    }, 
+    {
+      "Metro_dist": 1316.92746835, 
+      "TAZ_id": 861, 
+      "ImmPer": 0.595634
+    }, 
+    {
+      "Metro_dist": 1288.4124402, 
+      "TAZ_id": 862, 
+      "ImmPer": 0.506996
+    }, 
+    {
+      "Metro_dist": 1113.28830779, 
+      "TAZ_id": 863, 
+      "ImmPer": 0.611621
+    }, 
+    {
+      "Metro_dist": 1474.27415467, 
+      "TAZ_id": 864, 
+      "ImmPer": 0.648459
+    }, 
+    {
+      "Metro_dist": 846.423557474, 
+      "TAZ_id": 865, 
+      "ImmPer": 0.622414
+    }, 
+    {
+      "Metro_dist": 275.156515932, 
+      "TAZ_id": 866, 
+      "ImmPer": 0.608961
+    }, 
+    {
+      "Metro_dist": 456.097823343, 
+      "TAZ_id": 867, 
+      "ImmPer": 0.655285
+    }, 
+    {
+      "Metro_dist": 1070.94764851, 
+      "TAZ_id": 868, 
+      "ImmPer": 0.658754
+    }, 
+    {
+      "Metro_dist": 880.434448768, 
+      "TAZ_id": 869, 
+      "ImmPer": 0.142857
+    }, 
+    {
+      "Metro_dist": 1227.52502417, 
+      "TAZ_id": 870, 
+      "ImmPer": 0.342016
+    }, 
+    {
+      "Metro_dist": 979.327020234, 
+      "TAZ_id": 871, 
+      "ImmPer": 0.46865
+    }, 
+    {
+      "Metro_dist": 530.829729627, 
+      "TAZ_id": 872, 
+      "ImmPer": 0.341756
+    }, 
+    {
+      "Metro_dist": 1122.03966373, 
+      "TAZ_id": 873, 
+      "ImmPer": 0.544314
+    }, 
+    {
+      "Metro_dist": 213.858494737, 
+      "TAZ_id": 874, 
+      "ImmPer": 0.780664
+    }, 
+    {
+      "Metro_dist": 683.492583618, 
+      "TAZ_id": 875, 
+      "ImmPer": 0.778055
+    }, 
+    {
+      "Metro_dist": 131.662501073, 
+      "TAZ_id": 876, 
+      "ImmPer": 0.775551
+    }, 
+    {
+      "Metro_dist": 315.551410169, 
+      "TAZ_id": 877, 
+      "ImmPer": 0.68277
+    }, 
+    {
+      "Metro_dist": 771.994148445, 
+      "TAZ_id": 878, 
+      "ImmPer": 0.561326
+    }, 
+    {
+      "Metro_dist": 958.055916249, 
+      "TAZ_id": 879, 
+      "ImmPer": 0.564806
+    }, 
+    {
+      "Metro_dist": 1094.02994958, 
+      "TAZ_id": 880, 
+      "ImmPer": 0.716811
+    }, 
+    {
+      "Metro_dist": 1236.70198128, 
+      "TAZ_id": 881, 
+      "ImmPer": 0.669216
+    }, 
+    {
+      "Metro_dist": 888.108747327, 
+      "TAZ_id": 882, 
+      "ImmPer": 0.649183
+    }, 
+    {
+      "Metro_dist": 426.735388046, 
+      "TAZ_id": 883, 
+      "ImmPer": 0.734746
+    }, 
+    {
+      "Metro_dist": 382.078217698, 
+      "TAZ_id": 884, 
+      "ImmPer": 0.780859
+    }, 
+    {
+      "Metro_dist": 217.406084556, 
+      "TAZ_id": 885, 
+      "ImmPer": 0.712766
+    }, 
+    {
+      "Metro_dist": 229.536918974, 
+      "TAZ_id": 886, 
+      "ImmPer": 0.778711
+    }, 
+    {
+      "Metro_dist": 512.118034806, 
+      "TAZ_id": 887, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 654.457085475, 
+      "TAZ_id": 888, 
+      "ImmPer": 0.395399
+    }, 
+    {
+      "Metro_dist": 1690.60772735, 
+      "TAZ_id": 889, 
+      "ImmPer": 0.320682
+    }, 
+    {
+      "Metro_dist": 609.711299288, 
+      "TAZ_id": 890, 
+      "ImmPer": 0.22552
+    }, 
+    {
+      "Metro_dist": 602.488015945, 
+      "TAZ_id": 891, 
+      "ImmPer": 0.209696
+    }, 
+    {
+      "Metro_dist": 843.809001496, 
+      "TAZ_id": 892, 
+      "ImmPer": 0.191372
+    }, 
+    {
+      "Metro_dist": 661.100889618, 
+      "TAZ_id": 893, 
+      "ImmPer": 0.203091
+    }, 
+    {
+      "Metro_dist": 1224.71229214, 
+      "TAZ_id": 894, 
+      "ImmPer": 0.222594
+    }, 
+    {
+      "Metro_dist": 728.830993381, 
+      "TAZ_id": 895, 
+      "ImmPer": 0.262631
+    }, 
+    {
+      "Metro_dist": 593.385455033, 
+      "TAZ_id": 896, 
+      "ImmPer": 0.341078
+    }, 
+    {
+      "Metro_dist": 706.105904181, 
+      "TAZ_id": 897, 
+      "ImmPer": 0.227894
+    }, 
+    {
+      "Metro_dist": 162.878223116, 
+      "TAZ_id": 898, 
+      "ImmPer": 0.255134
+    }, 
+    {
+      "Metro_dist": 1000.70408479, 
+      "TAZ_id": 899, 
+      "ImmPer": 0.204093
+    }, 
+    {
+      "Metro_dist": 1577.48248665, 
+      "TAZ_id": 900, 
+      "ImmPer": 0.475844
+    }, 
+    {
+      "Metro_dist": 752.946440661, 
+      "TAZ_id": 901, 
+      "ImmPer": 0.316098
+    }, 
+    {
+      "Metro_dist": 621.465741876, 
+      "TAZ_id": 902, 
+      "ImmPer": 0.209866
+    }, 
+    {
+      "Metro_dist": 852.645643518, 
+      "TAZ_id": 903, 
+      "ImmPer": 0.301544
+    }, 
+    {
+      "Metro_dist": 1159.68253307, 
+      "TAZ_id": 904, 
+      "ImmPer": 0.374012
+    }, 
+    {
+      "Metro_dist": 1740.93502071, 
+      "TAZ_id": 905, 
+      "ImmPer": 0.263449
+    }, 
+    {
+      "Metro_dist": 1607.80815822, 
+      "TAZ_id": 906, 
+      "ImmPer": 0.257381
+    }, 
+    {
+      "Metro_dist": 1814.32580821, 
+      "TAZ_id": 907, 
+      "ImmPer": 0.237766
+    }, 
+    {
+      "Metro_dist": 2621.59156044, 
+      "TAZ_id": 908, 
+      "ImmPer": 0.282194
+    }, 
+    {
+      "Metro_dist": 2339.31240835, 
+      "TAZ_id": 909, 
+      "ImmPer": 0.266413
+    }, 
+    {
+      "Metro_dist": 2798.94345843, 
+      "TAZ_id": 910, 
+      "ImmPer": 0.227197
+    }, 
+    {
+      "Metro_dist": 1827.71847818, 
+      "TAZ_id": 911, 
+      "ImmPer": 0.448471
+    }, 
+    {
+      "Metro_dist": 3331.9022404, 
+      "TAZ_id": 912, 
+      "ImmPer": 0.49115
+    }, 
+    {
+      "Metro_dist": 2993.34603818, 
+      "TAZ_id": 913, 
+      "ImmPer": 0.368132
+    }, 
+    {
+      "Metro_dist": 2979.8331293, 
+      "TAZ_id": 914, 
+      "ImmPer": 0.400827
+    }, 
+    {
+      "Metro_dist": 1620.83602335, 
+      "TAZ_id": 915, 
+      "ImmPer": 0.416001
+    }, 
+    {
+      "Metro_dist": 1199.92869203, 
+      "TAZ_id": 916, 
+      "ImmPer": 0.27805
+    }, 
+    {
+      "Metro_dist": 269.845099951, 
+      "TAZ_id": 917, 
+      "ImmPer": 0.341401
+    }, 
+    {
+      "Metro_dist": 768.32309706, 
+      "TAZ_id": 918, 
+      "ImmPer": 0.349005
+    }, 
+    {
+      "Metro_dist": 499.471121106, 
+      "TAZ_id": 919, 
+      "ImmPer": 0.714286
+    }, 
+    {
+      "Metro_dist": 775.559381536, 
+      "TAZ_id": 920, 
+      "ImmPer": 0.728814
+    }, 
+    {
+      "Metro_dist": 1110.58172205, 
+      "TAZ_id": 921, 
+      "ImmPer": 0.219819
+    }, 
+    {
+      "Metro_dist": 496.708321753, 
+      "TAZ_id": 922, 
+      "ImmPer": 0.329833
+    }, 
+    {
+      "Metro_dist": 365.33306572, 
+      "TAZ_id": 923, 
+      "ImmPer": 0.534317
+    }, 
+    {
+      "Metro_dist": 959.229908361, 
+      "TAZ_id": 924, 
+      "ImmPer": 0.348634
+    }, 
+    {
+      "Metro_dist": 758.024813363, 
+      "TAZ_id": 925, 
+      "ImmPer": 0.435886
+    }, 
+    {
+      "Metro_dist": 732.770054367, 
+      "TAZ_id": 926, 
+      "ImmPer": 0.515989
+    }, 
+    {
+      "Metro_dist": 341.005906236, 
+      "TAZ_id": 927, 
+      "ImmPer": 0.540485
+    }, 
+    {
+      "Metro_dist": 949.2843725, 
+      "TAZ_id": 928, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 496.470751047, 
+      "TAZ_id": 929, 
+      "ImmPer": 0.410779
+    }, 
+    {
+      "Metro_dist": 449.027073793, 
+      "TAZ_id": 930, 
+      "ImmPer": 0.244994
+    }, 
+    {
+      "Metro_dist": 1211.32761847, 
+      "TAZ_id": 931, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 886.95286983, 
+      "TAZ_id": 932, 
+      "ImmPer": 0.375
+    }, 
+    {
+      "Metro_dist": 1342.42115041, 
+      "TAZ_id": 933, 
+      "ImmPer": 0.22066
+    }, 
+    {
+      "Metro_dist": 987.912081017, 
+      "TAZ_id": 934, 
+      "ImmPer": 0.227027
+    }, 
+    {
+      "Metro_dist": 1163.55513195, 
+      "TAZ_id": 935, 
+      "ImmPer": 0.244168
+    }, 
+    {
+      "Metro_dist": 888.257153811, 
+      "TAZ_id": 936, 
+      "ImmPer": 0.268257
+    }, 
+    {
+      "Metro_dist": 819.184232568, 
+      "TAZ_id": 937, 
+      "ImmPer": 0.318521
+    }, 
+    {
+      "Metro_dist": 897.547944909, 
+      "TAZ_id": 938, 
+      "ImmPer": 0.308864
+    }, 
+    {
+      "Metro_dist": 350.253993679, 
+      "TAZ_id": 939, 
+      "ImmPer": 0.295465
+    }, 
+    {
+      "Metro_dist": 387.229730195, 
+      "TAZ_id": 940, 
+      "ImmPer": 0.320469
+    }, 
+    {
+      "Metro_dist": 964.723364965, 
+      "TAZ_id": 941, 
+      "ImmPer": 0.317487
+    }, 
+    {
+      "Metro_dist": 1022.79032866, 
+      "TAZ_id": 942, 
+      "ImmPer": 0.374146
+    }, 
+    {
+      "Metro_dist": 720.242446486, 
+      "TAZ_id": 943, 
+      "ImmPer": 0.246445
+    }, 
+    {
+      "Metro_dist": 2503.41633248, 
+      "TAZ_id": 944, 
+      "ImmPer": 0.105001
+    }, 
+    {
+      "Metro_dist": 453.150471074, 
+      "TAZ_id": 945, 
+      "ImmPer": 0.262626
+    }, 
+    {
+      "Metro_dist": 845.671438175, 
+      "TAZ_id": 946, 
+      "ImmPer": 0.179104
+    }, 
+    {
+      "Metro_dist": 944.551509349, 
+      "TAZ_id": 947, 
+      "ImmPer": 0.260804
+    }, 
+    {
+      "Metro_dist": 409.345039613, 
+      "TAZ_id": 948, 
+      "ImmPer": 0.466189
+    }, 
+    {
+      "Metro_dist": 1714.46205127, 
+      "TAZ_id": 949, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 1825.77497986, 
+      "TAZ_id": 950, 
+      "ImmPer": 0.226196
+    }, 
+    {
+      "Metro_dist": 397.952034415, 
+      "TAZ_id": 951, 
+      "ImmPer": 0.28189
+    }, 
+    {
+      "Metro_dist": 697.971552464, 
+      "TAZ_id": 952, 
+      "ImmPer": 0.388614
+    }, 
+    {
+      "Metro_dist": 288.655666304, 
+      "TAZ_id": 953, 
+      "ImmPer": 0.12065
+    }, 
+    {
+      "Metro_dist": 645.361946738, 
+      "TAZ_id": 954, 
+      "ImmPer": 0.359038
+    }, 
+    {
+      "Metro_dist": 277.635615846, 
+      "TAZ_id": 955, 
+      "ImmPer": 0.306944
+    }, 
+    {
+      "Metro_dist": 1932.15258855, 
+      "TAZ_id": 956, 
+      "ImmPer": 0.244794
+    }, 
+    {
+      "Metro_dist": 1047.38985648, 
+      "TAZ_id": 957, 
+      "ImmPer": 0.296958
+    }, 
+    {
+      "Metro_dist": 1760.68329603, 
+      "TAZ_id": 958, 
+      "ImmPer": 0.281845
+    }, 
+    {
+      "Metro_dist": 895.208560727, 
+      "TAZ_id": 959, 
+      "ImmPer": 0.262964
+    }, 
+    {
+      "Metro_dist": 842.174119253, 
+      "TAZ_id": 960, 
+      "ImmPer": 0.22848
+    }, 
+    {
+      "Metro_dist": 1033.55164099, 
+      "TAZ_id": 961, 
+      "ImmPer": 0.373632
+    }, 
+    {
+      "Metro_dist": 858.839092012, 
+      "TAZ_id": 962, 
+      "ImmPer": 0.264793
+    }, 
+    {
+      "Metro_dist": 1099.52212354, 
+      "TAZ_id": 963, 
+      "ImmPer": 0.205411
+    }, 
+    {
+      "Metro_dist": 345.225554405, 
+      "TAZ_id": 964, 
+      "ImmPer": 0.215967
+    }, 
+    {
+      "Metro_dist": 686.967041243, 
+      "TAZ_id": 965, 
+      "ImmPer": 0.187602
+    }, 
+    {
+      "Metro_dist": 1338.00358598, 
+      "TAZ_id": 966, 
+      "ImmPer": 0.306401
+    }, 
+    {
+      "Metro_dist": 1104.10653773, 
+      "TAZ_id": 967, 
+      "ImmPer": 0.401598
+    }, 
+    {
+      "Metro_dist": 457.085492842, 
+      "TAZ_id": 968, 
+      "ImmPer": 0.375798
+    }, 
+    {
+      "Metro_dist": 410.781628748, 
+      "TAZ_id": 969, 
+      "ImmPer": 0.348434
+    }, 
+    {
+      "Metro_dist": 1227.21431791, 
+      "TAZ_id": 970, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 511.975355811, 
+      "TAZ_id": 971, 
+      "ImmPer": 0.217111
+    }, 
+    {
+      "Metro_dist": 963.570705928, 
+      "TAZ_id": 972, 
+      "ImmPer": 0.204876
+    }, 
+    {
+      "Metro_dist": 799.630050145, 
+      "TAZ_id": 973, 
+      "ImmPer": 0.079632
+    }, 
+    {
+      "Metro_dist": 354.002538556, 
+      "TAZ_id": 974, 
+      "ImmPer": 0.127469
+    }, 
+    {
+      "Metro_dist": 113.703833593, 
+      "TAZ_id": 975, 
+      "ImmPer": 0.160428
+    }, 
+    {
+      "Metro_dist": 379.430187841, 
+      "TAZ_id": 976, 
+      "ImmPer": 0.26738
+    }, 
+    {
+      "Metro_dist": 511.903110373, 
+      "TAZ_id": 977, 
+      "ImmPer": 0.322581
+    }, 
+    {
+      "Metro_dist": 911.727937184, 
+      "TAZ_id": 978, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 967.201667401, 
+      "TAZ_id": 979, 
+      "ImmPer": 0.068478
+    }, 
+    {
+      "Metro_dist": 1094.72195806, 
+      "TAZ_id": 980, 
+      "ImmPer": 0.09125
+    }, 
+    {
+      "Metro_dist": 1833.23420829, 
+      "TAZ_id": 981, 
+      "ImmPer": 0.184958
+    }, 
+    {
+      "Metro_dist": 2208.76109324, 
+      "TAZ_id": 982, 
+      "ImmPer": 0.147943
+    }, 
+    {
+      "Metro_dist": 1771.61391356, 
+      "TAZ_id": 983, 
+      "ImmPer": 0.226415
+    }, 
+    {
+      "Metro_dist": 1456.92279396, 
+      "TAZ_id": 984, 
+      "ImmPer": 0.104197
+    }, 
+    {
+      "Metro_dist": 2081.43905907, 
+      "TAZ_id": 985, 
+      "ImmPer": 0.1549
+    }, 
+    {
+      "Metro_dist": 759.544064854, 
+      "TAZ_id": 986, 
+      "ImmPer": 0.289286
+    }, 
+    {
+      "Metro_dist": 568.336776719, 
+      "TAZ_id": 987, 
+      "ImmPer": 0.289073
+    }, 
+    {
+      "Metro_dist": 95.6390388802, 
+      "TAZ_id": 988, 
+      "ImmPer": 0.289908
+    }, 
+    {
+      "Metro_dist": 808.779558666, 
+      "TAZ_id": 989, 
+      "ImmPer": 0.181698
+    }, 
+    {
+      "Metro_dist": 539.018090013, 
+      "TAZ_id": 990, 
+      "ImmPer": 0.294511
+    }, 
+    {
+      "Metro_dist": 1221.7747716, 
+      "TAZ_id": 991, 
+      "ImmPer": 0.276903
+    }, 
+    {
+      "Metro_dist": 643.676341311, 
+      "TAZ_id": 992, 
+      "ImmPer": 0.245294
+    }, 
+    {
+      "Metro_dist": 276.587992919, 
+      "TAZ_id": 993, 
+      "ImmPer": 0.249004
+    }, 
+    {
+      "Metro_dist": 399.235892437, 
+      "TAZ_id": 994, 
+      "ImmPer": 0.217169
+    }, 
+    {
+      "Metro_dist": 270.071592288, 
+      "TAZ_id": 995, 
+      "ImmPer": 0.275115
+    }, 
+    {
+      "Metro_dist": 751.243415321, 
+      "TAZ_id": 996, 
+      "ImmPer": 0.250776
+    }, 
+    {
+      "Metro_dist": 1248.46206402, 
+      "TAZ_id": 997, 
+      "ImmPer": 0.289187
+    }, 
+    {
+      "Metro_dist": 1750.18892438, 
+      "TAZ_id": 998, 
+      "ImmPer": 0.305125
+    }, 
+    {
+      "Metro_dist": 1309.77536225, 
+      "TAZ_id": 999, 
+      "ImmPer": 0.232107
+    }, 
+    {
+      "Metro_dist": 408.45272527, 
+      "TAZ_id": 1000, 
+      "ImmPer": 0.264124
+    }, 
+    {
+      "Metro_dist": 811.927271812, 
+      "TAZ_id": 1001, 
+      "ImmPer": 0.223472
+    }, 
+    {
+      "Metro_dist": 1015.26900308, 
+      "TAZ_id": 1002, 
+      "ImmPer": 0.185545
+    }, 
+    {
+      "Metro_dist": 1284.96551709, 
+      "TAZ_id": 1003, 
+      "ImmPer": 0.183673
+    }, 
+    {
+      "Metro_dist": 802.143721027, 
+      "TAZ_id": 1004, 
+      "ImmPer": 0.154922
+    }, 
+    {
+      "Metro_dist": 1283.02694507, 
+      "TAZ_id": 1005, 
+      "ImmPer": 0.192298
+    }, 
+    {
+      "Metro_dist": 389.484291545, 
+      "TAZ_id": 1006, 
+      "ImmPer": 0.168517
+    }, 
+    {
+      "Metro_dist": 1073.97430929, 
+      "TAZ_id": 1007, 
+      "ImmPer": 0.314832
+    }, 
+    {
+      "Metro_dist": 2315.18097148, 
+      "TAZ_id": 1008, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 692.629930945, 
+      "TAZ_id": 1009, 
+      "ImmPer": 0.371761
+    }, 
+    {
+      "Metro_dist": 372.088308429, 
+      "TAZ_id": 1010, 
+      "ImmPer": 0.383292
+    }, 
+    {
+      "Metro_dist": 1356.02771205, 
+      "TAZ_id": 1011, 
+      "ImmPer": 0.371229
+    }, 
+    {
+      "Metro_dist": 3537.60101084, 
+      "TAZ_id": 1012, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 1068.46985972, 
+      "TAZ_id": 1013, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 2918.79960569, 
+      "TAZ_id": 1014, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 1066.18454993, 
+      "TAZ_id": 1015, 
+      "ImmPer": 0.206368
+    }, 
+    {
+      "Metro_dist": 882.48213317, 
+      "TAZ_id": 1016, 
+      "ImmPer": 0.234008
+    }, 
+    {
+      "Metro_dist": 1322.25443718, 
+      "TAZ_id": 1017, 
+      "ImmPer": 0.177753
+    }, 
+    {
+      "Metro_dist": 3460.44102901, 
+      "TAZ_id": 1018, 
+      "ImmPer": 0.174658
+    }, 
+    {
+      "Metro_dist": 700.141243022, 
+      "TAZ_id": 1019, 
+      "ImmPer": 0.447368
+    }, 
+    {
+      "Metro_dist": 2621.19033086, 
+      "TAZ_id": 1020, 
+      "ImmPer": 0.170675
+    }, 
+    {
+      "Metro_dist": 1072.10459463, 
+      "TAZ_id": 1021, 
+      "ImmPer": 0.27234
+    }, 
+    {
+      "Metro_dist": 957.869252734, 
+      "TAZ_id": 1022, 
+      "ImmPer": 0.182209
+    }, 
+    {
+      "Metro_dist": 2974.27384955, 
+      "TAZ_id": 1023, 
+      "ImmPer": 0.791723
+    }, 
+    {
+      "Metro_dist": 1518.63623005, 
+      "TAZ_id": 1024, 
+      "ImmPer": 0.342412
+    }, 
+    {
+      "Metro_dist": 1425.01157043, 
+      "TAZ_id": 1025, 
+      "ImmPer": 0.627036
+    }, 
+    {
+      "Metro_dist": 1273.38499201, 
+      "TAZ_id": 1026, 
+      "ImmPer": 0.538462
+    }, 
+    {
+      "Metro_dist": 1228.97698163, 
+      "TAZ_id": 1027, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 3452.49418755, 
+      "TAZ_id": 1028, 
+      "ImmPer": 0.438172
+    }, 
+    {
+      "Metro_dist": 4397.93831098, 
+      "TAZ_id": 1029, 
+      "ImmPer": 0.27438
+    }, 
+    {
+      "Metro_dist": 3958.11660293, 
+      "TAZ_id": 1030, 
+      "ImmPer": 0.868852
+    }, 
+    {
+      "Metro_dist": 3048.31445514, 
+      "TAZ_id": 1031, 
+      "ImmPer": 0.683282
+    }, 
+    {
+      "Metro_dist": 3975.36747762, 
+      "TAZ_id": 1032, 
+      "ImmPer": 0.820397
+    }, 
+    {
+      "Metro_dist": 3431.41609233, 
+      "TAZ_id": 1033, 
+      "ImmPer": 0.337255
+    }, 
+    {
+      "Metro_dist": 380.648944998, 
+      "TAZ_id": 1034, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 1046.12390718, 
+      "TAZ_id": 1035, 
+      "ImmPer": 0.732247
+    }, 
+    {
+      "Metro_dist": 681.841949255, 
+      "TAZ_id": 1036, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 494.77466191, 
+      "TAZ_id": 1037, 
+      "ImmPer": 0.8
+    }, 
+    {
+      "Metro_dist": 1290.60765999, 
+      "TAZ_id": 1038, 
+      "ImmPer": 0.589147
+    }, 
+    {
+      "Metro_dist": 1012.49208812, 
+      "TAZ_id": 1039, 
+      "ImmPer": 0.76345
+    }, 
+    {
+      "Metro_dist": 1042.90689753, 
+      "TAZ_id": 1040, 
+      "ImmPer": 0.615385
+    }, 
+    {
+      "Metro_dist": 720.912313325, 
+      "TAZ_id": 1041, 
+      "ImmPer": 0.716125
+    }, 
+    {
+      "Metro_dist": 977.054346141, 
+      "TAZ_id": 1042, 
+      "ImmPer": 0.512712
+    }, 
+    {
+      "Metro_dist": 574.915623409, 
+      "TAZ_id": 1043, 
+      "ImmPer": 0.782823
+    }, 
+    {
+      "Metro_dist": 184.949446174, 
+      "TAZ_id": 1044, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 780.496306073, 
+      "TAZ_id": 1045, 
+      "ImmPer": 0.800789
+    }, 
+    {
+      "Metro_dist": 408.827403455, 
+      "TAZ_id": 1046, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 258.499047833, 
+      "TAZ_id": 1047, 
+      "ImmPer": 0.62069
+    }, 
+    {
+      "Metro_dist": 773.071259033, 
+      "TAZ_id": 1048, 
+      "ImmPer": 0.795945
+    }, 
+    {
+      "Metro_dist": 1020.00042466, 
+      "TAZ_id": 1049, 
+      "ImmPer": 0.800851
+    }, 
+    {
+      "Metro_dist": 848.288678338, 
+      "TAZ_id": 1050, 
+      "ImmPer": 0.802128
+    }, 
+    {
+      "Metro_dist": 794.666454674, 
+      "TAZ_id": 1051, 
+      "ImmPer": 0.797936
+    }, 
+    {
+      "Metro_dist": 769.884321678, 
+      "TAZ_id": 1052, 
+      "ImmPer": 0.8
+    }, 
+    {
+      "Metro_dist": 625.250450414, 
+      "TAZ_id": 1053, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 647.144980596, 
+      "TAZ_id": 1054, 
+      "ImmPer": 0.801843
+    }, 
+    {
+      "Metro_dist": 888.707094841, 
+      "TAZ_id": 1055, 
+      "ImmPer": 0.801257
+    }, 
+    {
+      "Metro_dist": 1103.31822766, 
+      "TAZ_id": 1056, 
+      "ImmPer": 0.801582
+    }, 
+    {
+      "Metro_dist": 793.513510416, 
+      "TAZ_id": 1057, 
+      "ImmPer": 0.804445
+    }, 
+    {
+      "Metro_dist": 586.48193359, 
+      "TAZ_id": 1058, 
+      "ImmPer": 0.804077
+    }, 
+    {
+      "Metro_dist": 649.687381375, 
+      "TAZ_id": 1059, 
+      "ImmPer": 0.797716
+    }, 
+    {
+      "Metro_dist": 444.566351647, 
+      "TAZ_id": 1060, 
+      "ImmPer": 0.9375
+    }, 
+    {
+      "Metro_dist": 538.898199828, 
+      "TAZ_id": 1061, 
+      "ImmPer": 0.965986
+    }, 
+    {
+      "Metro_dist": 1557.85971564, 
+      "TAZ_id": 1062, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 1366.94805125, 
+      "TAZ_id": 1063, 
+      "ImmPer": 0.940373
+    }, 
+    {
+      "Metro_dist": 1073.75773877, 
+      "TAZ_id": 1064, 
+      "ImmPer": 0.612245
+    }, 
+    {
+      "Metro_dist": 859.664286145, 
+      "TAZ_id": 1065, 
+      "ImmPer": 0.75
+    }, 
+    {
+      "Metro_dist": 615.277323524, 
+      "TAZ_id": 1066, 
+      "ImmPer": 0.931507
+    }, 
+    {
+      "Metro_dist": 695.11369649, 
+      "TAZ_id": 1067, 
+      "ImmPer": 0.754491
+    }, 
+    {
+      "Metro_dist": 256.000165456, 
+      "TAZ_id": 1068, 
+      "ImmPer": 0.764706
+    }, 
+    {
+      "Metro_dist": 410.731596884, 
+      "TAZ_id": 1069, 
+      "ImmPer": 0.514851
+    }, 
+    {
+      "Metro_dist": 785.728869731, 
+      "TAZ_id": 1070, 
+      "ImmPer": 0.823529
+    }, 
+    {
+      "Metro_dist": 416.867142462, 
+      "TAZ_id": 1071, 
+      "ImmPer": 0.738811
+    }, 
+    {
+      "Metro_dist": 715.727419799, 
+      "TAZ_id": 1072, 
+      "ImmPer": 0.778629
+    }, 
+    {
+      "Metro_dist": 391.730236565, 
+      "TAZ_id": 1073, 
+      "ImmPer": 0.800516
+    }, 
+    {
+      "Metro_dist": 1582.50211913, 
+      "TAZ_id": 1074, 
+      "ImmPer": 0.174362
+    }, 
+    {
+      "Metro_dist": 809.461172026, 
+      "TAZ_id": 1075, 
+      "ImmPer": 0.147248
+    }, 
+    {
+      "Metro_dist": 810.769877536, 
+      "TAZ_id": 1076, 
+      "ImmPer": 0.181673
+    }, 
+    {
+      "Metro_dist": 1421.68139535, 
+      "TAZ_id": 1077, 
+      "ImmPer": 0.191124
+    }, 
+    {
+      "Metro_dist": 710.739079994, 
+      "TAZ_id": 1078, 
+      "ImmPer": 0.243583
+    }, 
+    {
+      "Metro_dist": 447.89747691, 
+      "TAZ_id": 1079, 
+      "ImmPer": 0.19214
+    }, 
+    {
+      "Metro_dist": 1533.53126206, 
+      "TAZ_id": 1080, 
+      "ImmPer": 0.167695
+    }, 
+    {
+      "Metro_dist": 1003.93238088, 
+      "TAZ_id": 1081, 
+      "ImmPer": 0.6
+    }, 
+    {
+      "Metro_dist": 1095.91601287, 
+      "TAZ_id": 1082, 
+      "ImmPer": 0.24026
+    }, 
+    {
+      "Metro_dist": 740.80723256, 
+      "TAZ_id": 1083, 
+      "ImmPer": 0.177914
+    }, 
+    {
+      "Metro_dist": 711.626599856, 
+      "TAZ_id": 1084, 
+      "ImmPer": 0.583184
+    }, 
+    {
+      "Metro_dist": 722.495130481, 
+      "TAZ_id": 1085, 
+      "ImmPer": 0.290737
+    }, 
+    {
+      "Metro_dist": 281.085368596, 
+      "TAZ_id": 1086, 
+      "ImmPer": 0.455696
+    }, 
+    {
+      "Metro_dist": 757.535147379, 
+      "TAZ_id": 1087, 
+      "ImmPer": 0.341213
+    }, 
+    {
+      "Metro_dist": 389.819186577, 
+      "TAZ_id": 1088, 
+      "ImmPer": 0.244597
+    }, 
+    {
+      "Metro_dist": 394.464547609, 
+      "TAZ_id": 1089, 
+      "ImmPer": 0.286462
+    }, 
+    {
+      "Metro_dist": 427.265863753, 
+      "TAZ_id": 1090, 
+      "ImmPer": 0.240913
+    }, 
+    {
+      "Metro_dist": 398.952988804, 
+      "TAZ_id": 1091, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 426.894985144, 
+      "TAZ_id": 1092, 
+      "ImmPer": 0.641476
+    }, 
+    {
+      "Metro_dist": 2030.6931609, 
+      "TAZ_id": 1093, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 2595.06465594, 
+      "TAZ_id": 1094, 
+      "ImmPer": 0.237512
+    }, 
+    {
+      "Metro_dist": 2173.42149638, 
+      "TAZ_id": 1095, 
+      "ImmPer": 0.518213
+    }, 
+    {
+      "Metro_dist": 2646.47190366, 
+      "TAZ_id": 1096, 
+      "ImmPer": 0.48227
+    }, 
+    {
+      "Metro_dist": 2166.59514586, 
+      "TAZ_id": 1097, 
+      "ImmPer": 0.44898
+    }, 
+    {
+      "Metro_dist": 1717.79390012, 
+      "TAZ_id": 1098, 
+      "ImmPer": 0.754011
+    }, 
+    {
+      "Metro_dist": 257.026074114, 
+      "TAZ_id": 1099, 
+      "ImmPer": 0.602459
+    }, 
+    {
+      "Metro_dist": 225.86672541, 
+      "TAZ_id": 1100, 
+      "ImmPer": 0.386364
+    }, 
+    {
+      "Metro_dist": 760.326935559, 
+      "TAZ_id": 1101, 
+      "ImmPer": 0.578828
+    }, 
+    {
+      "Metro_dist": 409.71154397, 
+      "TAZ_id": 1102, 
+      "ImmPer": 0.631806
+    }, 
+    {
+      "Metro_dist": 390.13316556, 
+      "TAZ_id": 1103, 
+      "ImmPer": 0.601513
+    }, 
+    {
+      "Metro_dist": 543.358681576, 
+      "TAZ_id": 1104, 
+      "ImmPer": 0.128614
+    }, 
+    {
+      "Metro_dist": 254.601398784, 
+      "TAZ_id": 1105, 
+      "ImmPer": 0.346369
+    }, 
+    {
+      "Metro_dist": 538.068921155, 
+      "TAZ_id": 1106, 
+      "ImmPer": 0.566622
+    }, 
+    {
+      "Metro_dist": 462.896271474, 
+      "TAZ_id": 1107, 
+      "ImmPer": 0.548104
+    }, 
+    {
+      "Metro_dist": 596.757123372, 
+      "TAZ_id": 1108, 
+      "ImmPer": 0.170124
+    }, 
+    {
+      "Metro_dist": 371.402083705, 
+      "TAZ_id": 1109, 
+      "ImmPer": 0.757392
+    }, 
+    {
+      "Metro_dist": 886.199502896, 
+      "TAZ_id": 1110, 
+      "ImmPer": 0.301872
+    }, 
+    {
+      "Metro_dist": 1338.90814483, 
+      "TAZ_id": 1111, 
+      "ImmPer": 0.334693
+    }, 
+    {
+      "Metro_dist": 772.357024757, 
+      "TAZ_id": 1112, 
+      "ImmPer": 0.321492
+    }, 
+    {
+      "Metro_dist": 327.653838517, 
+      "TAZ_id": 1113, 
+      "ImmPer": 0.330181
+    }, 
+    {
+      "Metro_dist": 327.854088119, 
+      "TAZ_id": 1114, 
+      "ImmPer": 0.202786
+    }, 
+    {
+      "Metro_dist": 847.991598984, 
+      "TAZ_id": 1115, 
+      "ImmPer": 0.373256
+    }, 
+    {
+      "Metro_dist": 249.545901084, 
+      "TAZ_id": 1116, 
+      "ImmPer": 0.365825
+    }, 
+    {
+      "Metro_dist": 567.665000574, 
+      "TAZ_id": 1117, 
+      "ImmPer": 0.316218
+    }, 
+    {
+      "Metro_dist": 433.517780486, 
+      "TAZ_id": 1118, 
+      "ImmPer": 0.922025
+    }, 
+    {
+      "Metro_dist": 629.952591807, 
+      "TAZ_id": 1119, 
+      "ImmPer": 0.923339
+    }, 
+    {
+      "Metro_dist": 812.135602931, 
+      "TAZ_id": 1120, 
+      "ImmPer": 0.926694
+    }, 
+    {
+      "Metro_dist": 690.30424234, 
+      "TAZ_id": 1121, 
+      "ImmPer": 0.931097
+    }, 
+    {
+      "Metro_dist": 621.894653606, 
+      "TAZ_id": 1122, 
+      "ImmPer": 0.896511
+    }, 
+    {
+      "Metro_dist": 267.279341551, 
+      "TAZ_id": 1123, 
+      "ImmPer": 0.859577
+    }, 
+    {
+      "Metro_dist": 198.834869908, 
+      "TAZ_id": 1124, 
+      "ImmPer": 0.919647
+    }, 
+    {
+      "Metro_dist": 496.195102163, 
+      "TAZ_id": 1125, 
+      "ImmPer": 0.895669
+    }, 
+    {
+      "Metro_dist": 551.317713938, 
+      "TAZ_id": 1126, 
+      "ImmPer": 0.87605
+    }, 
+    {
+      "Metro_dist": 207.555394875, 
+      "TAZ_id": 1127, 
+      "ImmPer": 0.835498
+    }, 
+    {
+      "Metro_dist": 384.89396253, 
+      "TAZ_id": 1128, 
+      "ImmPer": 0.832494
+    }, 
+    {
+      "Metro_dist": 735.960334243, 
+      "TAZ_id": 1129, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 352.466727419, 
+      "TAZ_id": 1130, 
+      "ImmPer": 0.921053
+    }, 
+    {
+      "Metro_dist": 518.754490758, 
+      "TAZ_id": 1131, 
+      "ImmPer": 0.86115
+    }, 
+    {
+      "Metro_dist": 563.64252654, 
+      "TAZ_id": 1132, 
+      "ImmPer": 0.457143
+    }, 
+    {
+      "Metro_dist": 783.991645545, 
+      "TAZ_id": 1133, 
+      "ImmPer": 0.857143
+    }, 
+    {
+      "Metro_dist": 863.66922495, 
+      "TAZ_id": 1134, 
+      "ImmPer": 0.831081
+    }, 
+    {
+      "Metro_dist": 1054.54761904, 
+      "TAZ_id": 1135, 
+      "ImmPer": 0.857143
+    }, 
+    {
+      "Metro_dist": 954.520240178, 
+      "TAZ_id": 1136, 
+      "ImmPer": 0.928994
+    }, 
+    {
+      "Metro_dist": 706.576035797, 
+      "TAZ_id": 1137, 
+      "ImmPer": 0.827736
+    }, 
+    {
+      "Metro_dist": 613.328699586, 
+      "TAZ_id": 1138, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 849.373980039, 
+      "TAZ_id": 1139, 
+      "ImmPer": 0.883988
+    }, 
+    {
+      "Metro_dist": 1064.25406776, 
+      "TAZ_id": 1140, 
+      "ImmPer": 0.880528
+    }, 
+    {
+      "Metro_dist": 1021.37049941, 
+      "TAZ_id": 1141, 
+      "ImmPer": 0.91048
+    }, 
+    {
+      "Metro_dist": 1312.69180705, 
+      "TAZ_id": 1142, 
+      "ImmPer": 0.865052
+    }, 
+    {
+      "Metro_dist": 741.294349416, 
+      "TAZ_id": 1143, 
+      "ImmPer": 0.386473
+    }, 
+    {
+      "Metro_dist": 1065.49128648, 
+      "TAZ_id": 1144, 
+      "ImmPer": 0.82093
+    }, 
+    {
+      "Metro_dist": 1180.35063765, 
+      "TAZ_id": 1145, 
+      "ImmPer": 0.882353
+    }, 
+    {
+      "Metro_dist": 1324.98038545, 
+      "TAZ_id": 1146, 
+      "ImmPer": 0.802893
+    }, 
+    {
+      "Metro_dist": 1430.46717055, 
+      "TAZ_id": 1147, 
+      "ImmPer": 0.814591
+    }, 
+    {
+      "Metro_dist": 1420.39882374, 
+      "TAZ_id": 1148, 
+      "ImmPer": 0.812382
+    }, 
+    {
+      "Metro_dist": 1024.15304542, 
+      "TAZ_id": 1149, 
+      "ImmPer": 0.881373
+    }, 
+    {
+      "Metro_dist": 1005.15562822, 
+      "TAZ_id": 1150, 
+      "ImmPer": 0.876601
+    }, 
+    {
+      "Metro_dist": 1217.04300298, 
+      "TAZ_id": 1151, 
+      "ImmPer": 0.680525
+    }, 
+    {
+      "Metro_dist": 847.887247574, 
+      "TAZ_id": 1152, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 1170.92832521, 
+      "TAZ_id": 1153, 
+      "ImmPer": 0.794343
+    }, 
+    {
+      "Metro_dist": 1176.23848686, 
+      "TAZ_id": 1154, 
+      "ImmPer": 0.830465
+    }, 
+    {
+      "Metro_dist": 1321.68098394, 
+      "TAZ_id": 1155, 
+      "ImmPer": 0.847904
+    }, 
+    {
+      "Metro_dist": 178.636213837, 
+      "TAZ_id": 1156, 
+      "ImmPer": 0.796694
+    }, 
+    {
+      "Metro_dist": 463.836413424, 
+      "TAZ_id": 1157, 
+      "ImmPer": 0.737288
+    }, 
+    {
+      "Metro_dist": 97.3494903767, 
+      "TAZ_id": 1158, 
+      "ImmPer": 0.8
+    }, 
+    {
+      "Metro_dist": 375.501160834, 
+      "TAZ_id": 1159, 
+      "ImmPer": 0.291139
+    }, 
+    {
+      "Metro_dist": 582.380160155, 
+      "TAZ_id": 1160, 
+      "ImmPer": 0.529412
+    }, 
+    {
+      "Metro_dist": 418.835479991, 
+      "TAZ_id": 1161, 
+      "ImmPer": 0.801047
+    }, 
+    {
+      "Metro_dist": 431.289016083, 
+      "TAZ_id": 1162, 
+      "ImmPer": 0.478495
+    }, 
+    {
+      "Metro_dist": 122.900416087, 
+      "TAZ_id": 1163, 
+      "ImmPer": 0.84
+    }, 
+    {
+      "Metro_dist": 300.484203413, 
+      "TAZ_id": 1164, 
+      "ImmPer": 0.818182
+    }, 
+    {
+      "Metro_dist": 430.460286476, 
+      "TAZ_id": 1165, 
+      "ImmPer": 0.760081
+    }, 
+    {
+      "Metro_dist": 372.369724297, 
+      "TAZ_id": 1166, 
+      "ImmPer": 0.795645
+    }, 
+    {
+      "Metro_dist": 622.336203741, 
+      "TAZ_id": 1167, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 463.395575352, 
+      "TAZ_id": 1168, 
+      "ImmPer": 0.806656
+    }, 
+    {
+      "Metro_dist": 394.415434157, 
+      "TAZ_id": 1169, 
+      "ImmPer": 0.775791
+    }, 
+    {
+      "Metro_dist": 732.721624262, 
+      "TAZ_id": 1170, 
+      "ImmPer": 0.721374
+    }, 
+    {
+      "Metro_dist": 488.956190157, 
+      "TAZ_id": 1171, 
+      "ImmPer": 0.710145
+    }, 
+    {
+      "Metro_dist": 635.858606201, 
+      "TAZ_id": 1172, 
+      "ImmPer": 0.793073
+    }, 
+    {
+      "Metro_dist": 511.226707791, 
+      "TAZ_id": 1173, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 227.908077368, 
+      "TAZ_id": 1174, 
+      "ImmPer": 0.834699
+    }, 
+    {
+      "Metro_dist": 642.582433007, 
+      "TAZ_id": 1175, 
+      "ImmPer": 0.809211
+    }, 
+    {
+      "Metro_dist": 587.432193191, 
+      "TAZ_id": 1176, 
+      "ImmPer": 0.712032
+    }, 
+    {
+      "Metro_dist": 64.7348157828, 
+      "TAZ_id": 1177, 
+      "ImmPer": 0.833962
+    }, 
+    {
+      "Metro_dist": 284.780150857, 
+      "TAZ_id": 1178, 
+      "ImmPer": 0.823322
+    }, 
+    {
+      "Metro_dist": 311.972153928, 
+      "TAZ_id": 1179, 
+      "ImmPer": 0.732334
+    }, 
+    {
+      "Metro_dist": 204.046116684, 
+      "TAZ_id": 1180, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 182.145633155, 
+      "TAZ_id": 1181, 
+      "ImmPer": 0.818182
+    }, 
+    {
+      "Metro_dist": 511.602694485, 
+      "TAZ_id": 1182, 
+      "ImmPer": 0.835491
+    }, 
+    {
+      "Metro_dist": 366.787497748, 
+      "TAZ_id": 1183, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 616.226340166, 
+      "TAZ_id": 1184, 
+      "ImmPer": 0.822222
+    }, 
+    {
+      "Metro_dist": 577.731161125, 
+      "TAZ_id": 1185, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 434.207423758, 
+      "TAZ_id": 1186, 
+      "ImmPer": 0.846154
+    }, 
+    {
+      "Metro_dist": 500.409556268, 
+      "TAZ_id": 1187, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 234.746315761, 
+      "TAZ_id": 1188, 
+      "ImmPer": 0.8
+    }, 
+    {
+      "Metro_dist": 361.994122657, 
+      "TAZ_id": 1189, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 730.100255015, 
+      "TAZ_id": 1190, 
+      "ImmPer": 0.888808
+    }, 
+    {
+      "Metro_dist": 224.439981302, 
+      "TAZ_id": 1191, 
+      "ImmPer": 0.906137
+    }, 
+    {
+      "Metro_dist": 463.491812488, 
+      "TAZ_id": 1192, 
+      "ImmPer": 0.787848
+    }, 
+    {
+      "Metro_dist": 752.262747372, 
+      "TAZ_id": 1193, 
+      "ImmPer": 0.785714
+    }, 
+    {
+      "Metro_dist": 275.194633633, 
+      "TAZ_id": 1194, 
+      "ImmPer": 0.90694
+    }, 
+    {
+      "Metro_dist": 654.058751684, 
+      "TAZ_id": 1195, 
+      "ImmPer": 0.799168
+    }, 
+    {
+      "Metro_dist": 870.228628281, 
+      "TAZ_id": 1196, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 705.737998651, 
+      "TAZ_id": 1197, 
+      "ImmPer": 0.797235
+    }, 
+    {
+      "Metro_dist": 563.884238758, 
+      "TAZ_id": 1198, 
+      "ImmPer": 0.878136
+    }, 
+    {
+      "Metro_dist": 1002.72320011, 
+      "TAZ_id": 1199, 
+      "ImmPer": 0.395833
+    }, 
+    {
+      "Metro_dist": 666.63735656, 
+      "TAZ_id": 1200, 
+      "ImmPer": 0.86155
+    }, 
+    {
+      "Metro_dist": 803.306987397, 
+      "TAZ_id": 1201, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 1128.46417715, 
+      "TAZ_id": 1202, 
+      "ImmPer": 0.896797
+    }, 
+    {
+      "Metro_dist": 1098.31684193, 
+      "TAZ_id": 1203, 
+      "ImmPer": 0.825243
+    }, 
+    {
+      "Metro_dist": 312.081530381, 
+      "TAZ_id": 1204, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 171.282048777, 
+      "TAZ_id": 1205, 
+      "ImmPer": 0.791271
+    }, 
+    {
+      "Metro_dist": 1159.17235197, 
+      "TAZ_id": 1206, 
+      "ImmPer": 0.861423
+    }, 
+    {
+      "Metro_dist": 413.857366259, 
+      "TAZ_id": 1207, 
+      "ImmPer": 0.805897
+    }, 
+    {
+      "Metro_dist": 999.482214938, 
+      "TAZ_id": 1208, 
+      "ImmPer": 0.797502
+    }, 
+    {
+      "Metro_dist": 217.766065099, 
+      "TAZ_id": 1209, 
+      "ImmPer": 0.853821
+    }, 
+    {
+      "Metro_dist": 767.185331945, 
+      "TAZ_id": 1210, 
+      "ImmPer": 0.80662
+    }, 
+    {
+      "Metro_dist": 1034.21157587, 
+      "TAZ_id": 1211, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 563.893108186, 
+      "TAZ_id": 1212, 
+      "ImmPer": 0.629135
+    }, 
+    {
+      "Metro_dist": 1002.69472831, 
+      "TAZ_id": 1213, 
+      "ImmPer": 0.857143
+    }, 
+    {
+      "Metro_dist": 1272.44065632, 
+      "TAZ_id": 1214, 
+      "ImmPer": 0.559872
+    }, 
+    {
+      "Metro_dist": 470.032820534, 
+      "TAZ_id": 1215, 
+      "ImmPer": 0.792263
+    }, 
+    {
+      "Metro_dist": 456.174701945, 
+      "TAZ_id": 1216, 
+      "ImmPer": 0.778698
+    }, 
+    {
+      "Metro_dist": 375.37947145, 
+      "TAZ_id": 1217, 
+      "ImmPer": 0.812098
+    }, 
+    {
+      "Metro_dist": 251.037717398, 
+      "TAZ_id": 1218, 
+      "ImmPer": 0.829845
+    }, 
+    {
+      "Metro_dist": 632.149939808, 
+      "TAZ_id": 1219, 
+      "ImmPer": 0.832898
+    }, 
+    {
+      "Metro_dist": 733.374083059, 
+      "TAZ_id": 1220, 
+      "ImmPer": 0.957944
+    }, 
+    {
+      "Metro_dist": 676.685230217, 
+      "TAZ_id": 1221, 
+      "ImmPer": 0.958824
+    }, 
+    {
+      "Metro_dist": 524.619158029, 
+      "TAZ_id": 1222, 
+      "ImmPer": 0.98674
+    }, 
+    {
+      "Metro_dist": 105.730321898, 
+      "TAZ_id": 1223, 
+      "ImmPer": 1
+    }, 
+    {
+      "Metro_dist": 428.791201561, 
+      "TAZ_id": 1224, 
+      "ImmPer": 0.986726
+    }, 
+    {
+      "Metro_dist": 240.815639478, 
+      "TAZ_id": 1225, 
+      "ImmPer": 0.986702
+    }, 
+    {
+      "Metro_dist": 517.621000553, 
+      "TAZ_id": 1226, 
+      "ImmPer": 0.986652
+    }, 
+    {
+      "Metro_dist": 224.296030486, 
+      "TAZ_id": 1227, 
+      "ImmPer": 0.987267
+    }, 
+    {
+      "Metro_dist": 327.255666245, 
+      "TAZ_id": 1228, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 295.163159929, 
+      "TAZ_id": 1229, 
+      "ImmPer": 1
+    }, 
+    {
+      "Metro_dist": 292.713969111, 
+      "TAZ_id": 1230, 
+      "ImmPer": 0.987427
+    }, 
+    {
+      "Metro_dist": 392.51405672, 
+      "TAZ_id": 1231, 
+      "ImmPer": 0.953445
+    }, 
+    {
+      "Metro_dist": 605.474460271, 
+      "TAZ_id": 1232, 
+      "ImmPer": 0.952857
+    }, 
+    {
+      "Metro_dist": 155.616229534, 
+      "TAZ_id": 1233, 
+      "ImmPer": 0.953893
+    }, 
+    {
+      "Metro_dist": 350.988691309, 
+      "TAZ_id": 1234, 
+      "ImmPer": 0.95353
+    }, 
+    {
+      "Metro_dist": 182.072062719, 
+      "TAZ_id": 1235, 
+      "ImmPer": 0.953865
+    }, 
+    {
+      "Metro_dist": 698.596328997, 
+      "TAZ_id": 1236, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 840.346358678, 
+      "TAZ_id": 1237, 
+      "ImmPer": 0.953538
+    }, 
+    {
+      "Metro_dist": 748.409455039, 
+      "TAZ_id": 1238, 
+      "ImmPer": 0.908666
+    }, 
+    {
+      "Metro_dist": 969.969697327, 
+      "TAZ_id": 1239, 
+      "ImmPer": 0.921841
+    }, 
+    {
+      "Metro_dist": 710.413264684, 
+      "TAZ_id": 1240, 
+      "ImmPer": 0.792188
+    }, 
+    {
+      "Metro_dist": 677.534113572, 
+      "TAZ_id": 1241, 
+      "ImmPer": 0.794533
+    }, 
+    {
+      "Metro_dist": 316.374321319, 
+      "TAZ_id": 1242, 
+      "ImmPer": 0.944412
+    }, 
+    {
+      "Metro_dist": 646.845457293, 
+      "TAZ_id": 1243, 
+      "ImmPer": 0.949038
+    }, 
+    {
+      "Metro_dist": 389.920290743, 
+      "TAZ_id": 1244, 
+      "ImmPer": 0.950255
+    }, 
+    {
+      "Metro_dist": 397.230767813, 
+      "TAZ_id": 1245, 
+      "ImmPer": 0.944099
+    }, 
+    {
+      "Metro_dist": 629.20412005, 
+      "TAZ_id": 1246, 
+      "ImmPer": 0.949782
+    }, 
+    {
+      "Metro_dist": 441.70589535, 
+      "TAZ_id": 1247, 
+      "ImmPer": 0.948454
+    }, 
+    {
+      "Metro_dist": 307.412999368, 
+      "TAZ_id": 1248, 
+      "ImmPer": 0.946539
+    }, 
+    {
+      "Metro_dist": 426.355205151, 
+      "TAZ_id": 1249, 
+      "ImmPer": 0.948304
+    }, 
+    {
+      "Metro_dist": 258.621307127, 
+      "TAZ_id": 1250, 
+      "ImmPer": 0.950873
+    }, 
+    {
+      "Metro_dist": 159.466405882, 
+      "TAZ_id": 1251, 
+      "ImmPer": 0.945619
+    }, 
+    {
+      "Metro_dist": 80.8233840261, 
+      "TAZ_id": 1252, 
+      "ImmPer": 0.948107
+    }, 
+    {
+      "Metro_dist": 221.868419836, 
+      "TAZ_id": 1253, 
+      "ImmPer": 0.948473
+    }, 
+    {
+      "Metro_dist": 281.705644293, 
+      "TAZ_id": 1254, 
+      "ImmPer": 0.949885
+    }, 
+    {
+      "Metro_dist": 403.810334502, 
+      "TAZ_id": 1255, 
+      "ImmPer": 0.945545
+    }, 
+    {
+      "Metro_dist": 253.381359227, 
+      "TAZ_id": 1256, 
+      "ImmPer": 0.95122
+    }, 
+    {
+      "Metro_dist": 172.983951623, 
+      "TAZ_id": 1257, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 183.476529205, 
+      "TAZ_id": 1258, 
+      "ImmPer": 0.94835
+    }, 
+    {
+      "Metro_dist": 393.21976509, 
+      "TAZ_id": 1259, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 266.251799595, 
+      "TAZ_id": 1260, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 536.141958986, 
+      "TAZ_id": 1261, 
+      "ImmPer": 0.880285
+    }, 
+    {
+      "Metro_dist": 375.950094007, 
+      "TAZ_id": 1262, 
+      "ImmPer": 0.879078
+    }, 
+    {
+      "Metro_dist": 268.966920978, 
+      "TAZ_id": 1263, 
+      "ImmPer": 0.879361
+    }, 
+    {
+      "Metro_dist": 494.119597221, 
+      "TAZ_id": 1264, 
+      "ImmPer": 0.789171
+    }, 
+    {
+      "Metro_dist": 292.256550312, 
+      "TAZ_id": 1265, 
+      "ImmPer": 0.791667
+    }, 
+    {
+      "Metro_dist": 663.557767219, 
+      "TAZ_id": 1266, 
+      "ImmPer": 0.788568
+    }, 
+    {
+      "Metro_dist": 649.563909033, 
+      "TAZ_id": 1267, 
+      "ImmPer": 0.482438
+    }, 
+    {
+      "Metro_dist": 668.119246938, 
+      "TAZ_id": 1268, 
+      "ImmPer": 0.413171
+    }, 
+    {
+      "Metro_dist": 945.149655583, 
+      "TAZ_id": 1269, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 918.144689746, 
+      "TAZ_id": 1270, 
+      "ImmPer": 0.436004
+    }, 
+    {
+      "Metro_dist": 733.051862117, 
+      "TAZ_id": 1271, 
+      "ImmPer": 0.432314
+    }, 
+    {
+      "Metro_dist": 727.501574868, 
+      "TAZ_id": 1272, 
+      "ImmPer": 0.466667
+    }, 
+    {
+      "Metro_dist": 750.568558764, 
+      "TAZ_id": 1273, 
+      "ImmPer": 0.421328
+    }, 
+    {
+      "Metro_dist": 1643.10990743, 
+      "TAZ_id": 1274, 
+      "ImmPer": 0.795455
+    }, 
+    {
+      "Metro_dist": 1123.12509831, 
+      "TAZ_id": 1275, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 1225.92724284, 
+      "TAZ_id": 1276, 
+      "ImmPer": 0.766625
+    }, 
+    {
+      "Metro_dist": 1358.85933737, 
+      "TAZ_id": 1277, 
+      "ImmPer": 0.796296
+    }, 
+    {
+      "Metro_dist": 732.012280621, 
+      "TAZ_id": 1278, 
+      "ImmPer": 0.468802
+    }, 
+    {
+      "Metro_dist": 1407.84262397, 
+      "TAZ_id": 1279, 
+      "ImmPer": 0.812022
+    }, 
+    {
+      "Metro_dist": 995.161395583, 
+      "TAZ_id": 1280, 
+      "ImmPer": 0.81311
+    }, 
+    {
+      "Metro_dist": 908.162474084, 
+      "TAZ_id": 1281, 
+      "ImmPer": 0.810778
+    }, 
+    {
+      "Metro_dist": 987.512301844, 
+      "TAZ_id": 1282, 
+      "ImmPer": 0.814755
+    }, 
+    {
+      "Metro_dist": 553.121109385, 
+      "TAZ_id": 1283, 
+      "ImmPer": 0.745636
+    }, 
+    {
+      "Metro_dist": 877.510502808, 
+      "TAZ_id": 1284, 
+      "ImmPer": 0.747492
+    }, 
+    {
+      "Metro_dist": 551.210402517, 
+      "TAZ_id": 1285, 
+      "ImmPer": 0.723818
+    }, 
+    {
+      "Metro_dist": 833.209187741, 
+      "TAZ_id": 1286, 
+      "ImmPer": 0.745652
+    }, 
+    {
+      "Metro_dist": 771.821804077, 
+      "TAZ_id": 1287, 
+      "ImmPer": 0.761457
+    }, 
+    {
+      "Metro_dist": 501.576362437, 
+      "TAZ_id": 1288, 
+      "ImmPer": 0.667579
+    }, 
+    {
+      "Metro_dist": 778.071935035, 
+      "TAZ_id": 1289, 
+      "ImmPer": 0.618375
+    }, 
+    {
+      "Metro_dist": 1018.34050502, 
+      "TAZ_id": 1290, 
+      "ImmPer": 0.65808
+    }, 
+    {
+      "Metro_dist": 1314.85675288, 
+      "TAZ_id": 1291, 
+      "ImmPer": 0.64311
+    }, 
+    {
+      "Metro_dist": 1379.13368584, 
+      "TAZ_id": 1292, 
+      "ImmPer": 0.632514
+    }, 
+    {
+      "Metro_dist": 1086.84133543, 
+      "TAZ_id": 1293, 
+      "ImmPer": 0.642491
+    }, 
+    {
+      "Metro_dist": 513.514914293, 
+      "TAZ_id": 1294, 
+      "ImmPer": 0.69883
+    }, 
+    {
+      "Metro_dist": 221.192559557, 
+      "TAZ_id": 1295, 
+      "ImmPer": 0.765692
+    }, 
+    {
+      "Metro_dist": 932.446506665, 
+      "TAZ_id": 1296, 
+      "ImmPer": 0.747825
+    }, 
+    {
+      "Metro_dist": 623.226443526, 
+      "TAZ_id": 1297, 
+      "ImmPer": 0.752557
+    }, 
+    {
+      "Metro_dist": 741.466508148, 
+      "TAZ_id": 1298, 
+      "ImmPer": 0.75
+    }, 
+    {
+      "Metro_dist": 492.447423899, 
+      "TAZ_id": 1299, 
+      "ImmPer": 0.761261
+    }, 
+    {
+      "Metro_dist": 491.579248816, 
+      "TAZ_id": 1300, 
+      "ImmPer": 0.763862
+    }, 
+    {
+      "Metro_dist": 319.136354754, 
+      "TAZ_id": 1301, 
+      "ImmPer": 0.760766
+    }, 
+    {
+      "Metro_dist": 1195.7318897, 
+      "TAZ_id": 1302, 
+      "ImmPer": 0.539956
+    }, 
+    {
+      "Metro_dist": 617.495598285, 
+      "TAZ_id": 1303, 
+      "ImmPer": 0.498404
+    }, 
+    {
+      "Metro_dist": 955.725084777, 
+      "TAZ_id": 1304, 
+      "ImmPer": 0.446707
+    }, 
+    {
+      "Metro_dist": 394.55625758, 
+      "TAZ_id": 1305, 
+      "ImmPer": 0.580398
+    }, 
+    {
+      "Metro_dist": 761.171299385, 
+      "TAZ_id": 1306, 
+      "ImmPer": 0.789077
+    }, 
+    {
+      "Metro_dist": 787.669890105, 
+      "TAZ_id": 1307, 
+      "ImmPer": 0.390244
+    }, 
+    {
+      "Metro_dist": 1289.9240227, 
+      "TAZ_id": 1308, 
+      "ImmPer": 0.302918
+    }, 
+    {
+      "Metro_dist": 921.212470367, 
+      "TAZ_id": 1309, 
+      "ImmPer": 0.607143
+    }, 
+    {
+      "Metro_dist": 867.052904871, 
+      "TAZ_id": 1310, 
+      "ImmPer": 0.449011
+    }, 
+    {
+      "Metro_dist": 921.248881504, 
+      "TAZ_id": 1311, 
+      "ImmPer": 0.511928
+    }, 
+    {
+      "Metro_dist": 1665.54611361, 
+      "TAZ_id": 1312, 
+      "ImmPer": 0.418176
+    }, 
+    {
+      "Metro_dist": 1243.92715981, 
+      "TAZ_id": 1313, 
+      "ImmPer": 0.43254
+    }, 
+    {
+      "Metro_dist": 1193.34838354, 
+      "TAZ_id": 1314, 
+      "ImmPer": 0.560917
+    }, 
+    {
+      "Metro_dist": 2652.16433613, 
+      "TAZ_id": 1315, 
+      "ImmPer": 0.276211
+    }, 
+    {
+      "Metro_dist": 677.219001834, 
+      "TAZ_id": 1316, 
+      "ImmPer": 0.609938
+    }, 
+    {
+      "Metro_dist": 1670.65645573, 
+      "TAZ_id": 1317, 
+      "ImmPer": 0.495873
+    }, 
+    {
+      "Metro_dist": 1435.60936703, 
+      "TAZ_id": 1318, 
+      "ImmPer": 0.610494
+    }, 
+    {
+      "Metro_dist": 3112.58879817, 
+      "TAZ_id": 1319, 
+      "ImmPer": 0.315534
+    }, 
+    {
+      "Metro_dist": 2270.36065956, 
+      "TAZ_id": 1320, 
+      "ImmPer": 0.510854
+    }, 
+    {
+      "Metro_dist": 576.054147889, 
+      "TAZ_id": 1321, 
+      "ImmPer": 0.608856
+    }, 
+    {
+      "Metro_dist": 1118.487932, 
+      "TAZ_id": 1322, 
+      "ImmPer": 0.610194
+    }, 
+    {
+      "Metro_dist": 4712.8047993, 
+      "TAZ_id": 1323, 
+      "ImmPer": 0.518182
+    }, 
+    {
+      "Metro_dist": 2370.2220612, 
+      "TAZ_id": 1324, 
+      "ImmPer": 0.341435
+    }, 
+    {
+      "Metro_dist": 3105.71959973, 
+      "TAZ_id": 1325, 
+      "ImmPer": 0.291531
+    }, 
+    {
+      "Metro_dist": 3876.42225864, 
+      "TAZ_id": 1326, 
+      "ImmPer": 0.186954
+    }, 
+    {
+      "Metro_dist": 3125.23882462, 
+      "TAZ_id": 1327, 
+      "ImmPer": 0.145098
+    }, 
+    {
+      "Metro_dist": 2276.54159187, 
+      "TAZ_id": 1328, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 1782.18935214, 
+      "TAZ_id": 1329, 
+      "ImmPer": 0.10398
+    }, 
+    {
+      "Metro_dist": 1978.2608729, 
+      "TAZ_id": 1330, 
+      "ImmPer": 0.096702
+    }, 
+    {
+      "Metro_dist": 2807.39871632, 
+      "TAZ_id": 1331, 
+      "ImmPer": 0.24453
+    }, 
+    {
+      "Metro_dist": 725.551262139, 
+      "TAZ_id": 1332, 
+      "ImmPer": 0.125
+    }, 
+    {
+      "Metro_dist": 1472.87682264, 
+      "TAZ_id": 1333, 
+      "ImmPer": 0.283267
+    }, 
+    {
+      "Metro_dist": 2523.26756243, 
+      "TAZ_id": 1334, 
+      "ImmPer": 0.27193
+    }, 
+    {
+      "Metro_dist": 590.042614973, 
+      "TAZ_id": 1335, 
+      "ImmPer": 0.958741
+    }, 
+    {
+      "Metro_dist": 438.66201031, 
+      "TAZ_id": 1336, 
+      "ImmPer": 0.959759
+    }, 
+    {
+      "Metro_dist": 614.382224562, 
+      "TAZ_id": 1337, 
+      "ImmPer": 0.955774
+    }, 
+    {
+      "Metro_dist": 328.557490118, 
+      "TAZ_id": 1338, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 313.893332009, 
+      "TAZ_id": 1339, 
+      "ImmPer": 0.980183
+    }, 
+    {
+      "Metro_dist": 152.485981024, 
+      "TAZ_id": 1340, 
+      "ImmPer": 0.979465
+    }, 
+    {
+      "Metro_dist": 387.021540585, 
+      "TAZ_id": 1341, 
+      "ImmPer": 0.834002
+    }, 
+    {
+      "Metro_dist": 556.899779732, 
+      "TAZ_id": 1342, 
+      "ImmPer": 0.863536
+    }, 
+    {
+      "Metro_dist": 97.5265226676, 
+      "TAZ_id": 1343, 
+      "ImmPer": 0.835664
+    }, 
+    {
+      "Metro_dist": 291.181982856, 
+      "TAZ_id": 1344, 
+      "ImmPer": 0.918159
+    }, 
+    {
+      "Metro_dist": 225.919786177, 
+      "TAZ_id": 1345, 
+      "ImmPer": 0.830291
+    }, 
+    {
+      "Metro_dist": 134.185945733, 
+      "TAZ_id": 1346, 
+      "ImmPer": 0.43949
+    }, 
+    {
+      "Metro_dist": 326.440098542, 
+      "TAZ_id": 1347, 
+      "ImmPer": 0.862595
+    }, 
+    {
+      "Metro_dist": 520.399610156, 
+      "TAZ_id": 1348, 
+      "ImmPer": 0.863922
+    }, 
+    {
+      "Metro_dist": 544.658129018, 
+      "TAZ_id": 1349, 
+      "ImmPer": 0.863376
+    }, 
+    {
+      "Metro_dist": 420.556833443, 
+      "TAZ_id": 1350, 
+      "ImmPer": 0.864238
+    }, 
+    {
+      "Metro_dist": 216.864301894, 
+      "TAZ_id": 1351, 
+      "ImmPer": 0.763141
+    }, 
+    {
+      "Metro_dist": 166.453858381, 
+      "TAZ_id": 1352, 
+      "ImmPer": 0.759925
+    }, 
+    {
+      "Metro_dist": 199.355969587, 
+      "TAZ_id": 1353, 
+      "ImmPer": 0.762003
+    }, 
+    {
+      "Metro_dist": 358.843888347, 
+      "TAZ_id": 1354, 
+      "ImmPer": 0.760878
+    }, 
+    {
+      "Metro_dist": 588.692792764, 
+      "TAZ_id": 1355, 
+      "ImmPer": 0.761323
+    }, 
+    {
+      "Metro_dist": 1239.87459759, 
+      "TAZ_id": 1356, 
+      "ImmPer": 0.559644
+    }, 
+    {
+      "Metro_dist": 720.964378003, 
+      "TAZ_id": 1357, 
+      "ImmPer": 0.56955
+    }, 
+    {
+      "Metro_dist": 905.201815156, 
+      "TAZ_id": 1358, 
+      "ImmPer": 0.530412
+    }, 
+    {
+      "Metro_dist": 1541.23027553, 
+      "TAZ_id": 1359, 
+      "ImmPer": 0.530032
+    }, 
+    {
+      "Metro_dist": 2114.93998485, 
+      "TAZ_id": 1360, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 1820.53101408, 
+      "TAZ_id": 1361, 
+      "ImmPer": 0.557201
+    }, 
+    {
+      "Metro_dist": 648.883274298, 
+      "TAZ_id": 1362, 
+      "ImmPer": 0.738462
+    }, 
+    {
+      "Metro_dist": 1371.39805115, 
+      "TAZ_id": 1363, 
+      "ImmPer": 0.590909
+    }, 
+    {
+      "Metro_dist": 617.812479665, 
+      "TAZ_id": 1364, 
+      "ImmPer": 0.788764
+    }, 
+    {
+      "Metro_dist": 487.858317693, 
+      "TAZ_id": 1365, 
+      "ImmPer": 0.787201
+    }, 
+    {
+      "Metro_dist": 15502.9277342, 
+      "TAZ_id": 1366, 
+      "ImmPer": 1
+    }, 
+    {
+      "Metro_dist": 20766.1694143, 
+      "TAZ_id": 1367, 
+      "ImmPer": 0.447154
+    }, 
+    {
+      "Metro_dist": 19858.2045293, 
+      "TAZ_id": 1368, 
+      "ImmPer": 0.242884
+    }, 
+    {
+      "Metro_dist": 711.446633912, 
+      "TAZ_id": 1369, 
+      "ImmPer": 0.092938
+    }, 
+    {
+      "Metro_dist": 420.946438998, 
+      "TAZ_id": 1370, 
+      "ImmPer": 0.078137
+    }, 
+    {
+      "Metro_dist": 871.9732531, 
+      "TAZ_id": 1371, 
+      "ImmPer": 0.090607
+    }, 
+    {
+      "Metro_dist": 1507.88920186, 
+      "TAZ_id": 1372, 
+      "ImmPer": 0.073006
+    }, 
+    {
+      "Metro_dist": 1092.90865016, 
+      "TAZ_id": 1373, 
+      "ImmPer": 0.065232
+    }, 
+    {
+      "Metro_dist": 1672.16502408, 
+      "TAZ_id": 1374, 
+      "ImmPer": 0.405229
+    }, 
+    {
+      "Metro_dist": 1319.49802538, 
+      "TAZ_id": 1375, 
+      "ImmPer": 0.189619
+    }, 
+    {
+      "Metro_dist": 434.290856279, 
+      "TAZ_id": 1376, 
+      "ImmPer": 0.098485
+    }, 
+    {
+      "Metro_dist": 802.068955999, 
+      "TAZ_id": 1377, 
+      "ImmPer": 0.095702
+    }, 
+    {
+      "Metro_dist": 932.188945018, 
+      "TAZ_id": 1378, 
+      "ImmPer": 0.217901
+    }, 
+    {
+      "Metro_dist": 320.783008303, 
+      "TAZ_id": 1379, 
+      "ImmPer": 0.386047
+    }, 
+    {
+      "Metro_dist": 1257.6695498, 
+      "TAZ_id": 1380, 
+      "ImmPer": 0.102907
+    }, 
+    {
+      "Metro_dist": 420.508713467, 
+      "TAZ_id": 1381, 
+      "ImmPer": 0.086099
+    }, 
+    {
+      "Metro_dist": 400.01367301, 
+      "TAZ_id": 1382, 
+      "ImmPer": 0.111651
+    }, 
+    {
+      "Metro_dist": 794.989091189, 
+      "TAZ_id": 1383, 
+      "ImmPer": 0.078343
+    }, 
+    {
+      "Metro_dist": 1175.4460885, 
+      "TAZ_id": 1384, 
+      "ImmPer": 0.09682
+    }, 
+    {
+      "Metro_dist": 440.014696282, 
+      "TAZ_id": 1385, 
+      "ImmPer": 0.086971
+    }, 
+    {
+      "Metro_dist": 849.721566495, 
+      "TAZ_id": 1386, 
+      "ImmPer": 0.081573
+    }, 
+    {
+      "Metro_dist": 729.469316015, 
+      "TAZ_id": 1387, 
+      "ImmPer": 0.253798
+    }, 
+    {
+      "Metro_dist": 202.836299604, 
+      "TAZ_id": 1388, 
+      "ImmPer": 0.287368
+    }, 
+    {
+      "Metro_dist": 1534.23659128, 
+      "TAZ_id": 1389, 
+      "ImmPer": 0.060543
+    }, 
+    {
+      "Metro_dist": 1628.9066176, 
+      "TAZ_id": 1390, 
+      "ImmPer": 0.063207
+    }, 
+    {
+      "Metro_dist": 933.529499089, 
+      "TAZ_id": 1391, 
+      "ImmPer": 0.059334
+    }, 
+    {
+      "Metro_dist": 947.77941709, 
+      "TAZ_id": 1392, 
+      "ImmPer": 0.064072
+    }, 
+    {
+      "Metro_dist": 402.963690472, 
+      "TAZ_id": 1393, 
+      "ImmPer": 0.078549
+    }, 
+    {
+      "Metro_dist": 1884.00328822, 
+      "TAZ_id": 1394, 
+      "ImmPer": 0.251307
+    }, 
+    {
+      "Metro_dist": 255.232072401, 
+      "TAZ_id": 1395, 
+      "ImmPer": 0.217252
+    }, 
+    {
+      "Metro_dist": 708.140347614, 
+      "TAZ_id": 1396, 
+      "ImmPer": 0.155139
+    }, 
+    {
+      "Metro_dist": 1298.89076595, 
+      "TAZ_id": 1397, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 1068.98051858, 
+      "TAZ_id": 1398, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 1832.58107013, 
+      "TAZ_id": 1399, 
+      "ImmPer": 0.164807
+    }, 
+    {
+      "Metro_dist": 3541.19643667, 
+      "TAZ_id": 1400, 
+      "ImmPer": 0.332422
+    }, 
+    {
+      "Metro_dist": 2531.5881535, 
+      "TAZ_id": 1401, 
+      "ImmPer": 0.696356
+    }, 
+    {
+      "Metro_dist": 3173.26400422, 
+      "TAZ_id": 1402, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 2963.12541135, 
+      "TAZ_id": 1403, 
+      "ImmPer": 0.516568
+    }, 
+    {
+      "Metro_dist": 3114.58284823, 
+      "TAZ_id": 1404, 
+      "ImmPer": 0.59552
+    }, 
+    {
+      "Metro_dist": 3573.02340465, 
+      "TAZ_id": 1405, 
+      "ImmPer": 0.805556
+    }, 
+    {
+      "Metro_dist": 3738.48426533, 
+      "TAZ_id": 1406, 
+      "ImmPer": 0.857143
+    }, 
+    {
+      "Metro_dist": 1262.98602452, 
+      "TAZ_id": 1407, 
+      "ImmPer": 0.695846
+    }, 
+    {
+      "Metro_dist": 324.401009955, 
+      "TAZ_id": 1408, 
+      "ImmPer": 0.59919
+    }, 
+    {
+      "Metro_dist": 284.922060974, 
+      "TAZ_id": 1409, 
+      "ImmPer": 0.602163
+    }, 
+    {
+      "Metro_dist": 637.032678023, 
+      "TAZ_id": 1410, 
+      "ImmPer": 0.401414
+    }, 
+    {
+      "Metro_dist": 3668.50883137, 
+      "TAZ_id": 1411, 
+      "ImmPer": 0.241852
+    }, 
+    {
+      "Metro_dist": 7709.58672219, 
+      "TAZ_id": 1412, 
+      "ImmPer": 0.117647
+    }, 
+    {
+      "Metro_dist": 7638.77434496, 
+      "TAZ_id": 1413, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 8588.66629334, 
+      "TAZ_id": 1414, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 5296.10519884, 
+      "TAZ_id": 1415, 
+      "ImmPer": 0.146382
+    }, 
+    {
+      "Metro_dist": 5858.32770076, 
+      "TAZ_id": 1416, 
+      "ImmPer": 0.091406
+    }, 
+    {
+      "Metro_dist": 3691.66025234, 
+      "TAZ_id": 1417, 
+      "ImmPer": 0.03937
+    }, 
+    {
+      "Metro_dist": 5553.29383123, 
+      "TAZ_id": 1418, 
+      "ImmPer": 0.102299
+    }, 
+    {
+      "Metro_dist": 4518.54521919, 
+      "TAZ_id": 1419, 
+      "ImmPer": 0.389909
+    }, 
+    {
+      "Metro_dist": 3968.53159592, 
+      "TAZ_id": 1420, 
+      "ImmPer": 0.455437
+    }, 
+    {
+      "Metro_dist": 6920.22679052, 
+      "TAZ_id": 1421, 
+      "ImmPer": 0.134388
+    }, 
+    {
+      "Metro_dist": 6469.39266361, 
+      "TAZ_id": 1422, 
+      "ImmPer": 0.177194
+    }, 
+    {
+      "Metro_dist": 6134.85730485, 
+      "TAZ_id": 1423, 
+      "ImmPer": 0.225463
+    }, 
+    {
+      "Metro_dist": 4290.79270662, 
+      "TAZ_id": 1424, 
+      "ImmPer": 0.238841
+    }, 
+    {
+      "Metro_dist": 4255.34825585, 
+      "TAZ_id": 1425, 
+      "ImmPer": 0.160804
+    }, 
+    {
+      "Metro_dist": 5855.02678007, 
+      "TAZ_id": 1426, 
+      "ImmPer": 0.25418
+    }, 
+    {
+      "Metro_dist": 5765.20716313, 
+      "TAZ_id": 1427, 
+      "ImmPer": 0.169179
+    }, 
+    {
+      "Metro_dist": 4802.23824097, 
+      "TAZ_id": 1428, 
+      "ImmPer": 0.1118
+    }, 
+    {
+      "Metro_dist": 4931.54293384, 
+      "TAZ_id": 1429, 
+      "ImmPer": 0.127575
+    }, 
+    {
+      "Metro_dist": 4994.98566546, 
+      "TAZ_id": 1430, 
+      "ImmPer": 0.234281
+    }, 
+    {
+      "Metro_dist": 3646.59547159, 
+      "TAZ_id": 1431, 
+      "ImmPer": 0.203423
+    }, 
+    {
+      "Metro_dist": 1971.70452129, 
+      "TAZ_id": 1432, 
+      "ImmPer": 0.219828
+    }, 
+    {
+      "Metro_dist": 3735.27663021, 
+      "TAZ_id": 1433, 
+      "ImmPer": 0.287898
+    }, 
+    {
+      "Metro_dist": 2761.45325825, 
+      "TAZ_id": 1434, 
+      "ImmPer": 0.206083
+    }, 
+    {
+      "Metro_dist": 888.88699992, 
+      "TAZ_id": 1435, 
+      "ImmPer": 1
+    }, 
+    {
+      "Metro_dist": 1998.39353577, 
+      "TAZ_id": 1436, 
+      "ImmPer": 0.969912
+    }, 
+    {
+      "Metro_dist": 1165.67412875, 
+      "TAZ_id": 1437, 
+      "ImmPer": 0.96875
+    }, 
+    {
+      "Metro_dist": 6077.47225089, 
+      "TAZ_id": 1438, 
+      "ImmPer": 0.147887
+    }, 
+    {
+      "Metro_dist": 6060.29383992, 
+      "TAZ_id": 1439, 
+      "ImmPer": 0.11174
+    }, 
+    {
+      "Metro_dist": 7283.02424114, 
+      "TAZ_id": 1440, 
+      "ImmPer": 0.135436
+    }, 
+    {
+      "Metro_dist": 9307.74546791, 
+      "TAZ_id": 1441, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 8688.78644524, 
+      "TAZ_id": 1442, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 7959.14050861, 
+      "TAZ_id": 1443, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 7823.9735993, 
+      "TAZ_id": 1444, 
+      "ImmPer": 0.042553
+    }, 
+    {
+      "Metro_dist": 7497.79486904, 
+      "TAZ_id": 1445, 
+      "ImmPer": 0.375
+    }, 
+    {
+      "Metro_dist": 7209.39927324, 
+      "TAZ_id": 1446, 
+      "ImmPer": 0.169675
+    }, 
+    {
+      "Metro_dist": 8298.87687659, 
+      "TAZ_id": 1447, 
+      "ImmPer": 0.033473
+    }, 
+    {
+      "Metro_dist": 6536.19888932, 
+      "TAZ_id": 1448, 
+      "ImmPer": 0.5
+    }, 
+    {
+      "Metro_dist": 5948.69266547, 
+      "TAZ_id": 1449, 
+      "ImmPer": 0.195139
+    }, 
+    {
+      "Metro_dist": 5887.14947656, 
+      "TAZ_id": 1450, 
+      "ImmPer": 0.256632
+    }, 
+    {
+      "Metro_dist": 4691.93517445, 
+      "TAZ_id": 1451, 
+      "ImmPer": 0.1125
+    }, 
+    {
+      "Metro_dist": 5080.11858574, 
+      "TAZ_id": 1452, 
+      "ImmPer": 0.303529
+    }, 
+    {
+      "Metro_dist": 5845.65305985, 
+      "TAZ_id": 1453, 
+      "ImmPer": 0.063604
+    }, 
+    {
+      "Metro_dist": 5002.02436324, 
+      "TAZ_id": 1454, 
+      "ImmPer": 0.071698
+    }, 
+    {
+      "Metro_dist": 3606.52360012, 
+      "TAZ_id": 1455, 
+      "ImmPer": 0.055874
+    }, 
+    {
+      "Metro_dist": 3038.95245451, 
+      "TAZ_id": 1456, 
+      "ImmPer": 0.1875
+    }, 
+    {
+      "Metro_dist": 3953.25236444, 
+      "TAZ_id": 1457, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 2101.52438521, 
+      "TAZ_id": 1458, 
+      "ImmPer": 0.190842
+    }, 
+    {
+      "Metro_dist": 1967.33048762, 
+      "TAZ_id": 1459, 
+      "ImmPer": 0.256235
+    }, 
+    {
+      "Metro_dist": 3157.49799439, 
+      "TAZ_id": 1460, 
+      "ImmPer": 0.232577
+    }, 
+    {
+      "Metro_dist": 2250.31703847, 
+      "TAZ_id": 1461, 
+      "ImmPer": 0.403884
+    }, 
+    {
+      "Metro_dist": 3029.45681994, 
+      "TAZ_id": 1462, 
+      "ImmPer": 0.307842
+    }, 
+    {
+      "Metro_dist": 2508.03192458, 
+      "TAZ_id": 1463, 
+      "ImmPer": 0.318957
+    }, 
+    {
+      "Metro_dist": 1868.62727124, 
+      "TAZ_id": 1464, 
+      "ImmPer": 0.367495
+    }, 
+    {
+      "Metro_dist": 1289.76701535, 
+      "TAZ_id": 1465, 
+      "ImmPer": 0.886318
+    }, 
+    {
+      "Metro_dist": 991.65727684, 
+      "TAZ_id": 1466, 
+      "ImmPer": 0.9
+    }, 
+    {
+      "Metro_dist": 651.670824008, 
+      "TAZ_id": 1467, 
+      "ImmPer": 0.909091
+    }, 
+    {
+      "Metro_dist": 1016.29750593, 
+      "TAZ_id": 1468, 
+      "ImmPer": 0.890188
+    }, 
+    {
+      "Metro_dist": 508.108358553, 
+      "TAZ_id": 1469, 
+      "ImmPer": 0.86055
+    }, 
+    {
+      "Metro_dist": 452.772453022, 
+      "TAZ_id": 1470, 
+      "ImmPer": 0.859095
+    }, 
+    {
+      "Metro_dist": 3652.54312365, 
+      "TAZ_id": 1471, 
+      "ImmPer": 0.666394
+    }, 
+    {
+      "Metro_dist": 5165.40288701, 
+      "TAZ_id": 1472, 
+      "ImmPer": 0.988435
+    }, 
+    {
+      "Metro_dist": 5012.46053127, 
+      "TAZ_id": 1473, 
+      "ImmPer": 0.989744
+    }, 
+    {
+      "Metro_dist": 7335.67489061, 
+      "TAZ_id": 1474, 
+      "ImmPer": 0.988439
+    }, 
+    {
+      "Metro_dist": 6804.19069555, 
+      "TAZ_id": 1475, 
+      "ImmPer": 0.991713
+    }, 
+    {
+      "Metro_dist": 138.844845556, 
+      "TAZ_id": 1476, 
+      "ImmPer": 0.690876
+    }, 
+    {
+      "Metro_dist": 181.425015611, 
+      "TAZ_id": 1477, 
+      "ImmPer": 0.772242
+    }, 
+    {
+      "Metro_dist": 517.103173784, 
+      "TAZ_id": 1478, 
+      "ImmPer": 0.774089
+    }, 
+    {
+      "Metro_dist": 538.532913607, 
+      "TAZ_id": 1479, 
+      "ImmPer": 0.762143
+    }, 
+    {
+      "Metro_dist": 3365.07998146, 
+      "TAZ_id": 1480, 
+      "ImmPer": 0.336818
+    }, 
+    {
+      "Metro_dist": 867.449641744, 
+      "TAZ_id": 1481, 
+      "ImmPer": 0.816386
+    }, 
+    {
+      "Metro_dist": 310.989213342, 
+      "TAZ_id": 1482, 
+      "ImmPer": 0.846377
+    }, 
+    {
+      "Metro_dist": 2192.50083513, 
+      "TAZ_id": 1483, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 316.49561736, 
+      "TAZ_id": 1484, 
+      "ImmPer": 0.789999
+    }, 
+    {
+      "Metro_dist": 636.74119058, 
+      "TAZ_id": 1485, 
+      "ImmPer": 0.789823
+    }, 
+    {
+      "Metro_dist": 2748.72600199, 
+      "TAZ_id": 1486, 
+      "ImmPer": 0.087903
+    }, 
+    {
+      "Metro_dist": 2465.2194487, 
+      "TAZ_id": 1487, 
+      "ImmPer": 0.107646
+    }, 
+    {
+      "Metro_dist": 1033.36076615, 
+      "TAZ_id": 1488, 
+      "ImmPer": 0.040576
+    }, 
+    {
+      "Metro_dist": 5105.19528189, 
+      "TAZ_id": 1489, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 5177.11946487, 
+      "TAZ_id": 1490, 
+      "ImmPer": 0.040214
+    }, 
+    {
+      "Metro_dist": 11766.2586548, 
+      "TAZ_id": 1491, 
+      "ImmPer": 0
+    }, 
+    {
+      "Metro_dist": 11345.9230176, 
+      "TAZ_id": 1492, 
+      "ImmPer": 0
+    }
+  ], 
+  "links": [
+    {
+      "source": 977, 
+      "target": 977, 
+      "value": 0
+    }, 
+    {
+      "source": 1000, 
+      "target": 977, 
+      "value": 1.78
+    }, 
+    {
+      "source": 1002, 
+      "target": 977, 
+      "value": 1.41
+    }, 
+    {
+      "source": 1003, 
+      "target": 977, 
+      "value": 1.73
+    }, 
+    {
+      "source": 1004, 
+      "target": 977, 
+      "value": 14.05
+    }, 
+    {
+      "source": 1006, 
+      "target": 977, 
+      "value": 0.74
+    }, 
+    {
+      "source": 1007, 
+      "target": 977, 
+      "value": 2.93
+    }, 
+    {
+      "source": 1009, 
+      "target": 977, 
+      "value": 1.77
+    }, 
+    {
+      "source": 1010, 
+      "target": 977, 
+      "value": 0.06
+    }, 
+    {
+      "source": 1011, 
+      "target": 977, 
+      "value": 1.65
+    }, 
+    {
+      "source": 1016, 
+      "target": 977, 
+      "value": 0.41
+    }, 
+    {
+      "source": 1051, 
+      "target": 977, 
+      "value": 1.23
+    }, 
+    {
+      "source": 1136, 
+      "target": 977, 
+      "value": 1.27
+    }, 
+    {
+      "source": 124, 
+      "target": 977, 
+      "value": 0.78
+    }, 
+    {
+      "source": 1262, 
+      "target": 977, 
+      "value": 0.03
+    }, 
+    {
+      "source": 128, 
+      "target": 977, 
+      "value": 0.46
+    }, 
+    {
+      "source": 1326, 
+      "target": 977, 
+      "value": 2.16
+    }, 
+    {
+      "source": 1357, 
+      "target": 977, 
+      "value": 0.2
+    }, 
+    {
+      "source": 1405, 
+      "target": 977, 
+      "value": 2.58
+    }, 
+    {
+      "source": 1411, 
+      "target": 977, 
+      "value": 0.11
+    }, 
+    {
+      "source": 144, 
+      "target": 977, 
+      "value": 0.34
+    }, 
+    {
+      "source": 1471, 
+      "target": 977, 
+      "value": 0.56
+    }, 
+    {
+      "source": 1472, 
+      "target": 977, 
+      "value": 0.02
+    }, 
+    {
+      "source": 1474, 
+      "target": 977, 
+      "value": 0.02
+    }, 
+    {
+      "source": 1475, 
+      "target": 977, 
+      "value": 0.62
+    }, 
+    {
+      "source": 168, 
+      "target": 977, 
+      "value": 0.73
+    }, 
+    {
+      "source": 221, 
+      "target": 977, 
+      "value": 0.23
+    }, 
+    {
+      "source": 233, 
+      "target": 977, 
+      "value": 0.46
+    }, 
+    {
+      "source": 241, 
+      "target": 977, 
+      "value": 1.47
+    }, 
+    {
+      "source": 249, 
+      "target": 977, 
+      "value": 0.01
+    }, 
+    {
+      "source": 255, 
+      "target": 977, 
+      "value": 2.87
+    }, 
+    {
+      "source": 262, 
+      "target": 977, 
+      "value": 4.51
+    }, 
+    {
+      "source": 268, 
+      "target": 977, 
+      "value": 0.57
+    }, 
+    {
+      "source": 27, 
+      "target": 977, 
+      "value": 1.04
+    }, 
+    {
+      "source": 282, 
+      "target": 977, 
+      "value": 0.2
+    }, 
+    {
+      "source": 301, 
+      "target": 977, 
+      "value": 0.1
+    }, 
+    {
+      "source": 302, 
+      "target": 977, 
+      "value": 1.12
+    }, 
+    {
+      "source": 309, 
+      "target": 977, 
+      "value": 0.17
+    }, 
+    {
+      "source": 321, 
+      "target": 977, 
+      "value": 0.31
+    }, 
+    {
+      "source": 326, 
+      "target": 977, 
+      "value": 0.15
+    }, 
+    {
+      "source": 341, 
+      "target": 977, 
+      "value": 0.35
+    }, 
+    {
+      "source": 354, 
+      "target": 977, 
+      "value": 1.1
+    }, 
+    {
+      "source": 356, 
+      "target": 977, 
+      "value": 1.08
+    }, 
+    {
+      "source": 359, 
+      "target": 977, 
+      "value": 2.33
+    }, 
+    {
+      "source": 362, 
+      "target": 977, 
+      "value": 1.7
+    }, 
+    {
+      "source": 363, 
+      "target": 977, 
+      "value": 1.12
+    }, 
+    {
+      "source": 364, 
+      "target": 977, 
+      "value": 1.17
+    }, 
+    {
+      "source": 365, 
+      "target": 977, 
+      "value": 71.94
+    }, 
+    {
+      "source": 367, 
+      "target": 977, 
+      "value": 0.59
+    }, 
+    {
+      "source": 368, 
+      "target": 977, 
+      "value": 1.46
+    }, 
+    {
+      "source": 369, 
+      "target": 977, 
+      "value": 0.28
+    }, 
+    {
+      "source": 370, 
+      "target": 977, 
+      "value": 0.02
+    }, 
+    {
+      "source": 372, 
+      "target": 977, 
+      "value": 3.49
+    }, 
+    {
+      "source": 373, 
+      "target": 977, 
+      "value": 0.04
+    }, 
+    {
+      "source": 374, 
+      "target": 977, 
+      "value": 2.23
+    }, 
+    {
+      "source": 376, 
+      "target": 977, 
+      "value": 0.58
+    }, 
+    {
+      "source": 379, 
+      "target": 977, 
+      "value": 0.02
+    }, 
+    {
+      "source": 38, 
+      "target": 977, 
+      "value": 0.15
+    }, 
+    {
+      "source": 400, 
+      "target": 977, 
+      "value": 0.02
+    }, 
+    {
+      "source": 401, 
+      "target": 977, 
+      "value": 0.02
+    }, 
+    {
+      "source": 403, 
+      "target": 977, 
+      "value": 0.39
+    }, 
+    {
+      "source": 404, 
+      "target": 977, 
+      "value": 0.05
+    }, 
+    {
+      "source": 423, 
+      "target": 977, 
+      "value": 0.02
+    }, 
+    {
+      "source": 43, 
+      "target": 977, 
+      "value": 0.33
+    }, 
+    {
+      "source": 448, 
+      "target": 977, 
+      "value": 0.02
+    }, 
+    {
+      "source": 489, 
+      "target": 977, 
+      "value": 0.02
+    }, 
+    {
+      "source": 491, 
+      "target": 977, 
+      "value": 0.5
+    }, 
+    {
+      "source": 510, 
+      "target": 977, 
+      "value": 0.03
+    }, 
+    {
+      "source": 521, 
+      "target": 977, 
+      "value": 0.02
+    }, 
+    {
+      "source": 526, 
+      "target": 977, 
+      "value": 0.53
+    }, 
+    {
+      "source": 559, 
+      "target": 977, 
+      "value": 0.02
+    }, 
+    {
+      "source": 566, 
+      "target": 977, 
+      "value": 0.02
+    }, 
+    {
+      "source": 57, 
+      "target": 977, 
+      "value": 0.09
+    }, 
+    {
+      "source": 578, 
+      "target": 977, 
+      "value": 0.02
+    }, 
+    {
+      "source": 589, 
+      "target": 977, 
+      "value": 0.02
+    }, 
+    {
+      "source": 598, 
+      "target": 977, 
+      "value": 0.2
+    }, 
+    {
+      "source": 607, 
+      "target": 977, 
+      "value": 0.01
+    }, 
+    {
+      "source": 628, 
+      "target": 977, 
+      "value": 0.17
+    }, 
+    {
+      "source": 629, 
+      "target": 977, 
+      "value": 0.02
+    }, 
+    {
+      "source": 644, 
+      "target": 977, 
+      "value": 0.03
+    }, 
+    {
+      "source": 660, 
+      "target": 977, 
+      "value": 5.29
+    }, 
+    {
+      "source": 676, 
+      "target": 977, 
+      "value": 0.02
+    }, 
+    {
+      "source": 696, 
+      "target": 977, 
+      "value": 0.26
+    }, 
+    {
+      "source": 698, 
+      "target": 977, 
+      "value": 0.49
+    }, 
+    {
+      "source": 711, 
+      "target": 977, 
+      "value": 0.02
+    }, 
+    {
+      "source": 718, 
+      "target": 977, 
+      "value": 0.34
+    }, 
+    {
+      "source": 726, 
+      "target": 977, 
+      "value": 0.18
+    }, 
+    {
+      "source": 764, 
+      "target": 977, 
+      "value": 0.02
+    }, 
+    {
+      "source": 776, 
+      "target": 977, 
+      "value": 0.02
+    }, 
+    {
+      "source": 805, 
+      "target": 977, 
+      "value": 0.69
+    }, 
+    {
+      "source": 807, 
+      "target": 977, 
+      "value": 0.27
+    }, 
+    {
+      "source": 811, 
+      "target": 977, 
+      "value": 0.2
+    }, 
+    {
+      "source": 820, 
+      "target": 977, 
+      "value": 0.58
+    }, 
+    {
+      "source": 858, 
+      "target": 977, 
+      "value": 0.37
+    }, 
+    {
+      "source": 886, 
+      "target": 977, 
+      "value": 0.23
+    }, 
+    {
+      "source": 901, 
+      "target": 977, 
+      "value": 0.23
+    }, 
+    {
+      "source": 904, 
+      "target": 977, 
+      "value": 0.22
+    }, 
+    {
+      "source": 907, 
+      "target": 977, 
+      "value": 0.34
+    }, 
+    {
+      "source": 914, 
+      "target": 977, 
+      "value": 0.02
+    }, 
+    {
+      "source": 918, 
+      "target": 977, 
+      "value": 0.12
+    }, 
+    {
+      "source": 919, 
+      "target": 977, 
+      "value": 0.05
+    }, 
+    {
+      "source": 921, 
+      "target": 977, 
+      "value": 1.78
+    }, 
+    {
+      "source": 922, 
+      "target": 977, 
+      "value": 1.41
+    }, 
+    {
+      "source": 929, 
+      "target": 977, 
+      "value": 0.57
+    }, 
+    {
+      "source": 930, 
+      "target": 977, 
+      "value": 0.24
+    }, 
+    {
+      "source": 945, 
+      "target": 977, 
+      "value": 0.02
+    }, 
+    {
+      "source": 947, 
+      "target": 977, 
+      "value": 0.23
+    }, 
+    {
+      "source": 956, 
+      "target": 977, 
+      "value": 0.81
+    }, 
+    {
+      "source": 957, 
+      "target": 977, 
+      "value": 0.2
+    }, 
+    {
+      "source": 964, 
+      "target": 977, 
+      "value": 1.35
+    }, 
+    {
+      "source": 966, 
+      "target": 977, 
+      "value": 0.28
+    }, 
+    {
+      "source": 967, 
+      "target": 977, 
+      "value": 3.5
+    }, 
+    {
+      "source": 968, 
+      "target": 977, 
+      "value": 0.74
+    }, 
+    {
+      "source": 971, 
+      "target": 977, 
+      "value": 4.24
+    }, 
+    {
+      "source": 973, 
+      "target": 977, 
+      "value": 1.06
+    }, 
+    {
+      "source": 977, 
+      "target": 0, 
+      "value": 0.3
+    }, 
+    {
+      "source": 977, 
+      "target": 1000, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 1004, 
+      "value": 4.37
+    }, 
+    {
+      "source": 977, 
+      "target": 1005, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 1007, 
+      "value": 0.1
+    }, 
+    {
+      "source": 977, 
+      "target": 1009, 
+      "value": 0.05
+    }, 
+    {
+      "source": 977, 
+      "target": 1010, 
+      "value": 0.14
+    }, 
+    {
+      "source": 977, 
+      "target": 1011, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 1016, 
+      "value": 0.16
+    }, 
+    {
+      "source": 977, 
+      "target": 1025, 
+      "value": 0.1
+    }, 
+    {
+      "source": 977, 
+      "target": 112, 
+      "value": 0.28
+    }, 
+    {
+      "source": 977, 
+      "target": 1124, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 1136, 
+      "value": 0.13
+    }, 
+    {
+      "source": 977, 
+      "target": 1147, 
+      "value": 0.11
+    }, 
+    {
+      "source": 977, 
+      "target": 1155, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 1182, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 1185, 
+      "value": 0.17
+    }, 
+    {
+      "source": 977, 
+      "target": 12, 
+      "value": 0.17
+    }, 
+    {
+      "source": 977, 
+      "target": 1225, 
+      "value": 0.28
+    }, 
+    {
+      "source": 977, 
+      "target": 1232, 
+      "value": 1.03
+    }, 
+    {
+      "source": 977, 
+      "target": 1261, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 1262, 
+      "value": 0.13
+    }, 
+    {
+      "source": 977, 
+      "target": 1265, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 1310, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 1311, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 1314, 
+      "value": 0.03
+    }, 
+    {
+      "source": 977, 
+      "target": 1322, 
+      "value": 0.16
+    }, 
+    {
+      "source": 977, 
+      "target": 1325, 
+      "value": 0.31
+    }, 
+    {
+      "source": 977, 
+      "target": 1329, 
+      "value": 0.28
+    }, 
+    {
+      "source": 977, 
+      "target": 134, 
+      "value": 0.09
+    }, 
+    {
+      "source": 977, 
+      "target": 1346, 
+      "value": 0.05
+    }, 
+    {
+      "source": 977, 
+      "target": 136, 
+      "value": 0.05
+    }, 
+    {
+      "source": 977, 
+      "target": 1366, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 138, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 14, 
+      "value": 0.26
+    }, 
+    {
+      "source": 977, 
+      "target": 1404, 
+      "value": 0.04
+    }, 
+    {
+      "source": 977, 
+      "target": 1410, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 143, 
+      "value": 0.17
+    }, 
+    {
+      "source": 977, 
+      "target": 1433, 
+      "value": 0.23
+    }, 
+    {
+      "source": 977, 
+      "target": 144, 
+      "value": 0.34
+    }, 
+    {
+      "source": 977, 
+      "target": 1463, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 1469, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 1472, 
+      "value": 0.37
+    }, 
+    {
+      "source": 977, 
+      "target": 1474, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 1487, 
+      "value": 0.11
+    }, 
+    {
+      "source": 977, 
+      "target": 233, 
+      "value": 0.23
+    }, 
+    {
+      "source": 977, 
+      "target": 237, 
+      "value": 0.03
+    }, 
+    {
+      "source": 977, 
+      "target": 238, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 240, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 241, 
+      "value": 0.98
+    }, 
+    {
+      "source": 977, 
+      "target": 249, 
+      "value": 0.23
+    }, 
+    {
+      "source": 977, 
+      "target": 252, 
+      "value": 0.14
+    }, 
+    {
+      "source": 977, 
+      "target": 255, 
+      "value": 0.53
+    }, 
+    {
+      "source": 977, 
+      "target": 262, 
+      "value": 1.29
+    }, 
+    {
+      "source": 977, 
+      "target": 266, 
+      "value": 0.19
+    }, 
+    {
+      "source": 977, 
+      "target": 268, 
+      "value": 0.48
+    }, 
+    {
+      "source": 977, 
+      "target": 273, 
+      "value": 0.07
+    }, 
+    {
+      "source": 977, 
+      "target": 280, 
+      "value": 0.19
+    }, 
+    {
+      "source": 977, 
+      "target": 281, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 287, 
+      "value": 0.08
+    }, 
+    {
+      "source": 977, 
+      "target": 297, 
+      "value": 0.05
+    }, 
+    {
+      "source": 977, 
+      "target": 320, 
+      "value": 0.03
+    }, 
+    {
+      "source": 977, 
+      "target": 322, 
+      "value": 0.24
+    }, 
+    {
+      "source": 977, 
+      "target": 326, 
+      "value": 0.1
+    }, 
+    {
+      "source": 977, 
+      "target": 341, 
+      "value": 0.82
+    }, 
+    {
+      "source": 977, 
+      "target": 343, 
+      "value": 0.03
+    }, 
+    {
+      "source": 977, 
+      "target": 345, 
+      "value": 1.11
+    }, 
+    {
+      "source": 977, 
+      "target": 348, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 349, 
+      "value": 0.04
+    }, 
+    {
+      "source": 977, 
+      "target": 350, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 351, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 359, 
+      "value": 0.89
+    }, 
+    {
+      "source": 977, 
+      "target": 360, 
+      "value": 0.03
+    }, 
+    {
+      "source": 977, 
+      "target": 362, 
+      "value": 2.34
+    }, 
+    {
+      "source": 977, 
+      "target": 367, 
+      "value": 0.11
+    }, 
+    {
+      "source": 977, 
+      "target": 368, 
+      "value": 0.51
+    }, 
+    {
+      "source": 977, 
+      "target": 369, 
+      "value": 0.56
+    }, 
+    {
+      "source": 977, 
+      "target": 370, 
+      "value": 0.35
+    }, 
+    {
+      "source": 977, 
+      "target": 372, 
+      "value": 1.27
+    }, 
+    {
+      "source": 977, 
+      "target": 373, 
+      "value": 0.34
+    }, 
+    {
+      "source": 977, 
+      "target": 374, 
+      "value": 5.43
+    }, 
+    {
+      "source": 977, 
+      "target": 376, 
+      "value": 0.39
+    }, 
+    {
+      "source": 977, 
+      "target": 378, 
+      "value": 0.07
+    }, 
+    {
+      "source": 977, 
+      "target": 379, 
+      "value": 0.09
+    }, 
+    {
+      "source": 977, 
+      "target": 390, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 398, 
+      "value": 0.24
+    }, 
+    {
+      "source": 977, 
+      "target": 400, 
+      "value": 0.15
+    }, 
+    {
+      "source": 977, 
+      "target": 401, 
+      "value": 0.54
+    }, 
+    {
+      "source": 977, 
+      "target": 402, 
+      "value": 0.09
+    }, 
+    {
+      "source": 977, 
+      "target": 404, 
+      "value": 0.07
+    }, 
+    {
+      "source": 977, 
+      "target": 421, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 422, 
+      "value": 0.1
+    }, 
+    {
+      "source": 977, 
+      "target": 423, 
+      "value": 0.03
+    }, 
+    {
+      "source": 977, 
+      "target": 43, 
+      "value": 0.1
+    }, 
+    {
+      "source": 977, 
+      "target": 439, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 448, 
+      "value": 0.17
+    }, 
+    {
+      "source": 977, 
+      "target": 449, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 450, 
+      "value": 0.28
+    }, 
+    {
+      "source": 977, 
+      "target": 486, 
+      "value": 0.08
+    }, 
+    {
+      "source": 977, 
+      "target": 489, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 490, 
+      "value": 0.06
+    }, 
+    {
+      "source": 977, 
+      "target": 502, 
+      "value": 0.04
+    }, 
+    {
+      "source": 977, 
+      "target": 510, 
+      "value": 0.01
+    }, 
+    {
+      "source": 977, 
+      "target": 521, 
+      "value": 0.05
+    }, 
+    {
+      "source": 977, 
+      "target": 538, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 540, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 546, 
+      "value": 0.09
+    }, 
+    {
+      "source": 977, 
+      "target": 559, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 566, 
+      "value": 0.03
+    }, 
+    {
+      "source": 977, 
+      "target": 57, 
+      "value": 0.54
+    }, 
+    {
+      "source": 977, 
+      "target": 589, 
+      "value": 0.09
+    }, 
+    {
+      "source": 977, 
+      "target": 592, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 607, 
+      "value": 0.03
+    }, 
+    {
+      "source": 977, 
+      "target": 609, 
+      "value": 0.07
+    }, 
+    {
+      "source": 977, 
+      "target": 628, 
+      "value": 0.45
+    }, 
+    {
+      "source": 977, 
+      "target": 629, 
+      "value": 0.05
+    }, 
+    {
+      "source": 977, 
+      "target": 644, 
+      "value": 0.03
+    }, 
+    {
+      "source": 977, 
+      "target": 645, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 650, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 66, 
+      "value": 0.04
+    }, 
+    {
+      "source": 977, 
+      "target": 660, 
+      "value": 1.24
+    }, 
+    {
+      "source": 977, 
+      "target": 662, 
+      "value": 0.03
+    }, 
+    {
+      "source": 977, 
+      "target": 671, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 675, 
+      "value": 0.03
+    }, 
+    {
+      "source": 977, 
+      "target": 676, 
+      "value": 0.16
+    }, 
+    {
+      "source": 977, 
+      "target": 687, 
+      "value": 0.21
+    }, 
+    {
+      "source": 977, 
+      "target": 696, 
+      "value": 0.35
+    }, 
+    {
+      "source": 977, 
+      "target": 698, 
+      "value": 0.11
+    }, 
+    {
+      "source": 977, 
+      "target": 725, 
+      "value": 0.37
+    }, 
+    {
+      "source": 977, 
+      "target": 742, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 745, 
+      "value": 0.39
+    }, 
+    {
+      "source": 977, 
+      "target": 747, 
+      "value": 0.05
+    }, 
+    {
+      "source": 977, 
+      "target": 758, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 759, 
+      "value": 0.65
+    }, 
+    {
+      "source": 977, 
+      "target": 764, 
+      "value": 0.04
+    }, 
+    {
+      "source": 977, 
+      "target": 768, 
+      "value": 0.09
+    }, 
+    {
+      "source": 977, 
+      "target": 776, 
+      "value": 0.03
+    }, 
+    {
+      "source": 977, 
+      "target": 790, 
+      "value": 0.17
+    }, 
+    {
+      "source": 977, 
+      "target": 8, 
+      "value": 0.03
+    }, 
+    {
+      "source": 977, 
+      "target": 808, 
+      "value": 0.05
+    }, 
+    {
+      "source": 977, 
+      "target": 811, 
+      "value": 0.03
+    }, 
+    {
+      "source": 977, 
+      "target": 831, 
+      "value": 0.16
+    }, 
+    {
+      "source": 977, 
+      "target": 858, 
+      "value": 1.12
+    }, 
+    {
+      "source": 977, 
+      "target": 88, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 904, 
+      "value": 0.22
+    }, 
+    {
+      "source": 977, 
+      "target": 907, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 913, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 914, 
+      "value": 0.48
+    }, 
+    {
+      "source": 977, 
+      "target": 918, 
+      "value": 0.25
+    }, 
+    {
+      "source": 977, 
+      "target": 919, 
+      "value": 0.03
+    }, 
+    {
+      "source": 977, 
+      "target": 920, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 921, 
+      "value": 0.44
+    }, 
+    {
+      "source": 977, 
+      "target": 922, 
+      "value": 0.18
+    }, 
+    {
+      "source": 977, 
+      "target": 925, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 929, 
+      "value": 0.59
+    }, 
+    {
+      "source": 977, 
+      "target": 937, 
+      "value": 0.25
+    }, 
+    {
+      "source": 977, 
+      "target": 943, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 944, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 947, 
+      "value": 0.76
+    }, 
+    {
+      "source": 977, 
+      "target": 950, 
+      "value": 0.03
+    }, 
+    {
+      "source": 977, 
+      "target": 955, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 956, 
+      "value": 0.07
+    }, 
+    {
+      "source": 977, 
+      "target": 957, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 960, 
+      "value": 0.03
+    }, 
+    {
+      "source": 977, 
+      "target": 964, 
+      "value": 1.62
+    }, 
+    {
+      "source": 977, 
+      "target": 966, 
+      "value": 0.56
+    }, 
+    {
+      "source": 977, 
+      "target": 967, 
+      "value": 0.95
+    }, 
+    {
+      "source": 977, 
+      "target": 968, 
+      "value": 0.18
+    }, 
+    {
+      "source": 977, 
+      "target": 970, 
+      "value": 0.01
+    }, 
+    {
+      "source": 977, 
+      "target": 971, 
+      "value": 1.28
+    }, 
+    {
+      "source": 977, 
+      "target": 979, 
+      "value": 4.04
+    }, 
+    {
+      "source": 977, 
+      "target": 981, 
+      "value": 0.26
+    }, 
+    {
+      "source": 977, 
+      "target": 982, 
+      "value": 0.15
+    }, 
+    {
+      "source": 977, 
+      "target": 983, 
+      "value": 2.53
+    }, 
+    {
+      "source": 977, 
+      "target": 984, 
+      "value": 1.87
+    }, 
+    {
+      "source": 977, 
+      "target": 985, 
+      "value": 1.81
+    }, 
+    {
+      "source": 977, 
+      "target": 988, 
+      "value": 0.14
+    }, 
+    {
+      "source": 977, 
+      "target": 990, 
+      "value": 4.11
+    }, 
+    {
+      "source": 977, 
+      "target": 992, 
+      "value": 1.42
+    }, 
+    {
+      "source": 977, 
+      "target": 995, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 998, 
+      "value": 0.02
+    }, 
+    {
+      "source": 977, 
+      "target": 999, 
+      "value": 0.05
+    }, 
+    {
+      "source": 979, 
+      "target": 977, 
+      "value": 15.65
+    }, 
+    {
+      "source": 981, 
+      "target": 977, 
+      "value": 0.2
+    }, 
+    {
+      "source": 982, 
+      "target": 977, 
+      "value": 0.65
+    }, 
+    {
+      "source": 983, 
+      "target": 977, 
+      "value": 4.43
+    }, 
+    {
+      "source": 984, 
+      "target": 977, 
+      "value": 4.49
+    }, 
+    {
+      "source": 985, 
+      "target": 977, 
+      "value": 2.84
+    }, 
+    {
+      "source": 988, 
+      "target": 977, 
+      "value": 0.16
+    }, 
+    {
+      "source": 990, 
+      "target": 977, 
+      "value": 1.43
+    }, 
+    {
+      "source": 992, 
+      "target": 977, 
+      "value": 1.44
+    }, 
+    {
+      "source": 996, 
+      "target": 977, 
+      "value": 0.85
+    }, 
+    {
+      "source": 998, 
+      "target": 977, 
+      "value": 0.26
+    }, 
+    {
+      "source": 999, 
+      "target": 977, 
+      "value": 2.57
+    }
+  ]
+}

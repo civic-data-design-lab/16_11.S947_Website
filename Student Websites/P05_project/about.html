@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>About Women on the Move</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/landing-page.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+	<!-- Data links -->
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="http://d3js.org/queue.v1.min.js"></script>
+    <script src="hotspot_data/roads.geojson"></script>
+    <script src="hotspot_data/metro.geojson"></script>
+    
+    <style>
+     .box {
+     	width:500px
+     	height: 500px
+     	justify: left;
+     }
+     .hotspothover {
+            fill: #ffe28a; 
+        }
+
+    .hotspot {
+            opacity: .7;
+        }
+
+    .buffer {
+        fill: "#5F9EA0"
+        stroke: "#5F9EA0"
+    }
+
+    h2 {
+        top: 300px;
+    }
+
+    h4 {
+  	color : #feb24c;
+    }
+        </style>
+    }
+</head>
+<body>
+
+ <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                                      <a class="navbar-brand topnav" href="/project">WOMEN ON THE MOVE</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/project/movement.html">MOVEMENT</a>
+                    </li>
+                    <li>
+                        <a href="/project/access.html">ACCESS</a>
+                    </li>
+                    <li>
+                        <a href="/project/about.html">ABOUT</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+        <div class="content-section-a">
+
+        <div class="container">
+        <H1><strong>ABOUT WOMEN ON THE MOVE</strong></H1>
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                     <h2><strong>The Data</strong></h2>
+                     <h3> Aggregated Cell Data</h3>
+                    <p> For our analysis, we used simplified, aggregated origin-destination (OD) flow information that has been derived from previous analyses of 'Call Detail Record' (CDR) data. The origin-destination flow dataset we used showed the approximate person flows between each pair of cell-towers in Riyadh, within hourly slices of the day.<br> 
+                    We received a full day's worth of aggregated data, for all 1,712 cell towers in Riyadh, and sieved out OD flow information the cell towers closest to Princess Noura University (PNU). This we used to map the approximate student flow to and from PNU. 
+
+                    <h3> Road Network </h3>
+                    To derive the approximate flow direction and patterns of the PNU students, we used Riyadh's existing road network. <br>
+                    <h3> Metro Stops </h3>
+                    We also had access to shapefiles of the proposed metro stops, which we used to conduct our buffer analysis. </p>
+                    <h2><strong>The Team</strong></h2>
+                    <h3> Who?</h3>
+   					<p> Three graduate students in the <a href="http://dusp.mit.edu/" target="blank">Department of Urban Studies and Planning</a> at the Massachusetts Instutite of Technology worked together to develop this project, from data analysis to visualizations to web development.<br>
+    				<h3>Why?</h3>
+    				This project was developed for course 11.S947 <a href="http://dusp.mit.edu/subject/spring-2016-11s947" target="blank">Big Data, Visualization, and Society</a> with Professor Sarah Williams.<br>
+    				<h3>How?</h3>
+    				From start to finish the team utilized Python, Matplotlib, ArcGIS, NetworkX, QGIS, D3, and CartoDB. </p>
+    				<br>
+    				<br>
+    				<p><a href="http://mit.edu/" target="blank"><img src="img/MIT-logo-black-gray-large.png"></a></p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-1 col-sm-6">
+                <br>
+                <br>
+                <br>
+                <br>
+                    <img src="img/Riyadh_Logo_White.png" width="402px" height="400px">
+                </div>
+            </div>
+
+        </div>
+    
+     
+
+
+</div>
+
+</body>
+</html>

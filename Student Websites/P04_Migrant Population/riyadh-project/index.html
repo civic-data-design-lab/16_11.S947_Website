@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Riyadh Project" content="">
+    <meta name="Wayne and Sergio" content="">
+
+    <title>Riyadh-Project</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+	<link href="css/custom.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+    <!-- JavaScripts -->
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="http://duspviz.mit.edu/_assets/data/riyadh_traffic_voc.json"></script>
+    <script src="//d3js.org/queue.v1.min.js"></script>
+    <script src="//d3js.org/topojson.v1.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <style>
+/*
+        body {
+    position: absolute;
+    text-align: center;
+    font-family: "Proxima Nova", "Montserrat", sans-serif;
+    }   */ 
+    
+    #title h1 {
+    margin-bottom: 0px;
+    }
+    
+    #title p {
+    margin-top: 2px;
+    margin-bottom: 0px;
+    }
+    .overlay {
+    fill: none;
+    pointer-events: all;
+    }
+    #taz_brush {
+    top: 10px;
+    z-index: 100;
+    }
+    .brush {
+        fill-opacity: 0;
+        stroke: black;
+    }
+	  .lines {
+        fill:none;
+        stroke: orange;
+        stroke-width: 1.5;
+    }
+    g.tick text{
+        font-size: 8px;
+    }
+    a {
+    	color: orange;
+      font: Helvetica;
+      font-size: 11px;
+    }
+    b {
+      font-weight: bold;
+      font: Helvetica;
+    }
+    p {
+      font: Helvetica;
+      font-size: 11px;
+    }
+    i {
+    font-style: italic;
+    } 
+    </style>
+
+
+</head>
+
+<body>
+
+    <!-- Page Content -->
+    <div class="container">
+
+
+
+        <hr>    
+        <!-- Projects Row -->
+        <div class="row">
+            <div class="col-md-5">
+                <div id="taz_map"></div>
+                    <div class="row">
+                    <div class="col-md-2 col-md-offset-1">
+                <div id="taz_brush"></div>
+            </div>
+        </div>
+            </div>
+            <div class="col-md-7 text-center">
+                <div id="arc_diagram"></div>
+				        <div class="btn-group">
+        				  <button type="button" onclick="updateMorning()" class="btn btn-default btn-xs">morning</button>
+        				  <button type="button" onclick="updateAfternoon()" class="btn btn-default btn-xs">afternoon</button>    
+        				  <button type="button" onclick="updateEvening()" class="btn btn-default btn-xs">evening</button>
+        				  <button type="button" onclick="updateLateNight()" class="btn btn-default btn-xs">late night</button>
+        				</div>
+            </p>
+            </div>
+
+        </div>
+
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-10">
+                    <p>Copyright &copy; Wayne Liu & Sergio Galaz Garcia 2016</p>
+                </div>
+                <div class="col-lg-2 text-right">
+                  <a data-toggle="modal" href="#myModal">Info Page</a>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+
+    <!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">About this project</h4>
+      </div>
+      <div class="modal-body">
+        <b>About</b> 
+        <p></p>
+        <p>Current estimates suggest that a third of Riyadh’s inhabitants are migrants. The bulk of this population consists of an array of distinctive communities whose origins are located not only in neighboring Arab countries, but in from regions as far away from Saudi Arabia as the Pacific Rim and South Asia. Consistent with trends observed in other large urban agglomerations, the residential location of this sizeable migrant population is spatially segregated. Migrants make up a bigger share of neighbor-level populations in the city’s central area. In the city´s periphery, especially in the west and the east, migrant inhabitants are relatively less scarce.</p> 
+
+<p>In Riyadh, to this conventional residential segregation it should also be added a peculiar heterogeneity in the way migrants insert themselves in Riyadh’s economy. Most of Riyadh’s inhabitants work in the private enterprises, and make up 90% of the total workforce of the country’s private sector. </p>
+
+<p>Due to these demographic, residential and labor characteristics, visualizing the way Riyadh’s migrant population relates to the city’s overall transportation workflows is significant for a number of reasons: </p>
+
+<p>First, it serves as a vehicle to map the mobility experience of a significant part of Riyadh´s population. How do the approximately 2 million migrants living in the city move through Riyadh’s urban tissue?</p>
+
+<p>Second, it provides valuable information to understand the potential changes in mobility patterns that would ensue from an increasing amount of Saudis changing their labor sites from public to private.  As current public programs aspire to bring and increasing share of the Saudi population to the private sector, understanding the way in which migrant, private-sector working population works might be instrumental to provide some insights to the changes in transportation flows we might expect from this economic reconversion. </p>
+
+<p>Third, it allows to understand in migratory terms the type of users that will be more prone to take the projected Riyadh subway, therefore allowing to have a better of understanding of its potential user demography. </p>
+
+<p>Finally, it allows us to have with a quick way to analyze sociability patterns across Riyadh.  How frequent are transportation flows between migrant and non-migrant zones?  Are Riyadh’s neighborhoods primordially  “enclaves” that receive and send people to zones with a similar proportion of migrant population, or rather, do they function as “hinges” that commonly unite two heterogeneous zones in terms of their population density?  </p>
+
+<p>All in all, these features provide a solid substantive basis to conduct an exploration of the way migration status bears upon the general traffic patterns of the Saudi capital. </p>
+
+<p></p>
+<b>METHODS</b>
+<p></p>
+<i>Data</i>
+<p></p>
+<p>An ideal data structure to visualize the way in which migration affects transportation in Riyadh would be related to an individual-level panel data structure containing individual-level observations regarding origin and destination of trips without the Saudi capital. However, for logistic and data privacy reasons, this information was unavailable. Instead, we used Transportation Area Zone (TAZ) –level data. At this level of analysis, information was available regarding </p>
+
+<p>(1) The area and location of the TAZ within Riyadh –available through a shape file; </p>
+<p>(2) Basic demographic information of each –available through a database containing basic socio-demographic information obtained from the Saudi census, and </p>
+<p>(3) Information regarding transportation patterns between TAZ, which were codified in several origin/destination databases built out of cell  phone data. </p>
+
+
+<i>Outputs</i>
+<p></p>
+<p>The project featured three main outputs: </p>
+
+<i>A. Choropleth Map</i>
+<p></p>
+<p>Using the database on demographic characteristics of Riyadh’s TAZ’s, the first output sought to visualize differences across TAZ’s in terms of the proportion of migrant population each one had through cartographic means.  This element included the following components:</p>
+
+<p>A zoomable, TAZ-level map of Riyadh that colors each TAZ according to their migrant population; </p>
+<p>A visualization of the projected course of the Riyadh subway system;</p>
+<p>a brushing tool that allowed the user to make the map color only those TAZ’s whose proportion of migrant population fell under a specific interest range.</p>
+<img src="data/imageA.jpg" id="theImgId"/>
+<p></p>
+<i>B. Arc Diagram</i>
+<p></p>
+<p>The second output of the project sought to represent in a succinct, clear and readable way the transportation flows occurring to and from each of Riyadh’s TAZ’s.  For this task, the project used the origin/destination matrix across TAZ to generate, for each TAZ, an arc diagram that would make visible the transportation flows originating from/culminating to each specific TAZ.  By virtue of being a graphical device that relates elements arrayed along a one dimensional axis, an arc diagram was an ideal visualization strategy for the purposes of the project, as it allowed to map relationships between TAZ’s while still providing an orderly presentation according to the percentage of migrant population each had.</p>  
+
+<p>The arc diagram was composed by the following elements:</p>
+
+<p>A sorting axis that ordered TAZ’s according to the proportion of their migrant population</p>
+<p>A TAZ mark that indicated the specific TAZ whose transportation flows were visualized. This mark was positioned in the sorting axis according to the proportion of migrant population of the TAZ. Its color is related to its proximity to subway stations, with lighter colors indicating closer distance to the subway station. </p>
+<p>A series of arcs that visualized transportation flows related to the Target TAZ. Arcs occurring in the upper half of the diagram represented outward flows; arcs represented in the bottom half of the diagram was related to inward flows. The thickness of the arcs represented the volume of transportation between the target TAZ and all other TAZ’s. </p> 
+<p>A series of buttons that allowed the user to visualize data according to four times during the day: morning, afternoon, evening, and late night.</p> 
+<img src="data/imageB.jpg" id="theImgId2"/>
+<p></p>
+<i>C. Interphasing between the Map and the Diagram. </i>
+<p></p>
+<p>Finally, a third output consisted in interphasing the map and the arc diagram, allowing the user to select in the map a specific TAZ and generating its corresponding arc diagram.</p>
+<p></p>
+<p></p>
+<b>TEAM</b>
+<p></p>
+<p>Sergio Galaz Garcia is an M.Arch candidate at MIT and a doctor in sociology candidate at Princeton University. His interests lie in the analysis and design exploration of the relationships between power, space and the everyday life in contemporary urban experienes. </p>
+<p>Wayne Liu is currently in M.Arch ADV program at MIT. He is interested in how design and policy can together influence built environment. He also holds a BS in Architecture from Washington University in St. Louis.</p>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+    <script>
+        var theImg = document.getElementById('theImgId');
+          theImg.height = 459;
+          theImg.width = 550;
+
+        var theImg = document.getElementById('theImgId2');
+          theImg.height = 426;
+          theImg.width = 550;
+
+        function updateMorning(){
+            console.log("clicked - Morning");
+            if (timep != 1) { d3.json("data/Morning/Morning_" + S_TAZ_id.toString() + ".json", UpdateArc);
+            timep = 1 }
+          };
+
+        function updateAfternoon(){
+            console.log("clicked - Afternoon");
+            if (timep != 2) { d3.json("data/Afternoon/Afternoon_" + S_TAZ_id.toString() + ".json", UpdateArc);
+            timep = 2 }
+          };
+
+        function updateEvening(){
+            console.log("clicked - Evening");
+            if (timep != 3) { d3.json("data/Evening/Evening_" + S_TAZ_id.toString() + ".json", UpdateArc);
+            timep = 3 }
+          };
+
+        function updateLateNight(){
+            console.log("clicked - LateNight");
+            if (timep != 4) { d3.json("data/LateNight/LateNight_" + S_TAZ_id.toString() + ".json", UpdateArc);
+            timep = 4 }
+          };
+
+        var width = 500;
+        var height = 500;
+        var S_TAZ_id = 100;
+        var scale0 = (200* width - 1) / 2 / Math.PI;
+        var number_of_obs = d3.map();
+        var temp_data = []; 
+        var timep = 1;
+        
+        // var color = d3.scale.threshold()
+        //     .domain([0.05, 0.1, 0.15, 0.2, 0.25])
+        //     .range(["#f7f7f7", "#d9d9d9", "#bdbdbd", "#969696", "#636363", "#252525"]);
+
+        var color =  d3.scale.linear()
+                     .range(["#dae7f1", "#1d3549"])
+                     .domain([0.1, 1.0])
+                     .interpolate(d3.interpolateHcl);
+                     
+        var albersProjection = d3.geo.albers()
+                                .rotate( [-46.670616,0] )
+                                .center( [0, 24.716042] )
+
+        var zoom =  d3.behavior.zoom()
+                    .translate([width / 2, height / 2])
+                    .scale(scale0)
+                    .scaleExtent([scale0, 8 * scale0])
+                    .on("zoom", zoomed);
+        
+        var geoPath = d3.geo.path()
+                        .projection( albersProjection );
+
+        var svg =   d3.select("#taz_map")
+                    .append( "svg" )
+                    .attr( "width", width )
+                    .attr( "height", height ).append("g");
+        
+        var g =     svg.append("g");
+                    // svg.append("rect")
+                    // .attr("class", "overlay")
+                    // .attr("width", width)
+                    // .attr("height", height);
+        
+        svg.call(zoom)
+        .call(zoom.event);
+
+        queue()
+        .defer(d3.json, "data/mikes_topo.json")
+        .defer(d3.csv, "data/mikes.csv")
+        .defer(d3.json, "data/lines.json")
+        .await(ready);
+
+
+       function zoomed() 
+            {
+            console.log("zoomed gets triggerd")   
+            albersProjection
+            .translate(zoom.translate())
+            .scale(zoom.scale());
+            g.selectAll("path")
+            .attr("d", geoPath);
+            }
+       
+		function ready(error, riyadh, migrant, riyadh_topo)  
+           {
+           if (error) throw error; 
+          
+           var rateById = {};
+           
+           migrant.forEach(function(d) 
+              { 
+              rateById[d.id] = +d.sergios_data_Perc_Cont;
+              });
+              
+           topojson.feature(riyadh, riyadh.objects.collection).features.forEach(function(m)
+              {
+              if (+m.properties.sergios_data_Perc_Cont < 0.1)
+                  {
+                  var obs = number_of_obs.get('0.1');
+                  if (obs==undefined)
+                     {
+                     obs = 0;
+                      }
+                   obs = obs + 1;
+                   number_of_obs.set('0.1', obs);
+               }
+               else if (+m.properties.sergios_data_Perc_Cont < 0.2)
+                     {
+                     var obs = number_of_obs.get('0.2');
+                     if (obs==undefined)
+                        {
+                        obs = 0;
+                        }
+                     obs = obs + 1;
+                     number_of_obs.set('0.2', obs);
+               } else if (+m.properties.sergios_data_Perc_Cont < 0.3){
+                    var obs = number_of_obs.get('0.3');
+                    if (obs==undefined){
+                        obs = 0;
+                    }
+                    obs = obs + 1;
+                    number_of_obs.set('0.3', obs)
+               } else if (+m.properties.sergios_data_Perc_Cont < 0.4){
+                    var obs = number_of_obs.get('0.4');
+                    if (obs==undefined){
+                        obs = 0;
+                    }
+                    obs = obs + 1;
+                    number_of_obs.set('0.4', obs)
+               }else if (+m.properties.sergios_data_Perc_Cont < 0.5){
+                    var obs = number_of_obs.get('0.5');
+                    if (obs==undefined){
+                        obs = 0;
+                    }
+                    obs = obs + 1;
+                    number_of_obs.set('0.5', obs)
+               }else if (+m.properties.sergios_data_Perc_Cont < 0.6){
+                    var obs = number_of_obs.get('0.6');
+                    if (obs==undefined){
+                        obs = 0;
+                    }
+                    obs = obs + 1;
+                    number_of_obs.set('0.6', obs)
+               }else if (+m.properties.sergios_data_Perc_Cont < 0.7){
+                    var obs = number_of_obs.get('0.7');
+                    if (obs==undefined){
+                        obs = 0;
+                    }
+                    obs = obs + 1;
+                    number_of_obs.set('0.7', obs)
+               }else if (+m.properties.sergios_data_Perc_Cont < 0.8){
+                    var obs = number_of_obs.get('0.8');
+                    if (obs==undefined){
+                        obs = 0;
+                    }
+                    obs = obs + 1;
+                    number_of_obs.set('0.8', obs)
+               }else if (+m.properties.sergios_data_Perc_Cont < 0.9){
+                    var obs = number_of_obs.get('0.9');
+                    if (obs==undefined){
+                        obs = 0;
+                    }
+                    obs = obs + 1;
+                    number_of_obs.set('0.9', obs)
+               }else if (+m.properties.sergios_data_Perc_Cont <= 1.0){
+                    var obs = number_of_obs.get('1.0');
+                    if (obs==undefined){
+                        obs = 0;
+                    }
+                    obs = obs + 1;
+                    number_of_obs.set('1.0', obs)
+                }
+               temp_data.push( +m.properties.sergios_data_Perc_Cont);
+               return
+            })
+            
+           console.log("number_of_obs",number_of_obs)
+           map = g.selectAll(".mappath")
+           .data(topojson.feature(riyadh, riyadh.objects.collection).features)
+          
+          map_enter = map.enter()
+           .append("path")
+           .attr("d", geoPath)
+           .attr('class', 'mappath')
+           map.attr("stroke-width", 5)
+           .style("fill", function(d) { 
+           return color(d.properties.sergios_data_Perc_Cont);
+           })
+
+           d3.selectAll(".mappath")
+ 	         .on('click', function(d) {
+                 S_TAZ_id = d.properties.TAZ ;
+                 // clear out everything
+                 d3.selectAll(".mappath").style("stroke", "none")
+                 // hightlight this one
+                 d3.select(this).style("stroke", "orange").style("stroke-width", "3px")
+                 console.log("id",S_TAZ_id);
+                 if (timep == 1) {
+                 d3.json("data/Morning/Morning_" + S_TAZ_id.toString() + ".json", UpdateArc);}
+                 if (timep == 2) {
+                 d3.json("data/Afternoon/Afternoon_" + S_TAZ_id.toString() + ".json", UpdateArc);}
+                 if (timep == 3) {
+                 d3.json("data/Evening/Evening_" + S_TAZ_id.toString() + ".json", UpdateArc);}
+                 if (timep == 4) {
+                 d3.json("data/LateNight/LateNight_" + S_TAZ_id.toString() + ".json", UpdateArc);}
+            });
+
+
+        // map;  
+        /////////////////
+        /// METRO LINE //
+        /////////////////
+        console.log(riyadh_topo)
+         
+        g.selectAll(".lines").data(riyadh_topo.features).enter().append("path").attr("class", "lines").attr("d", geoPath)
+
+    var data = [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ,0.8, 0.9, 1.0]
+    
+    var margin = {top: 194, right: 40, bottom: 214, left: 50},
+        width = 400 - margin.left - margin.right,
+        height = 420 - margin.top - margin.bottom;
+
+    var x = d3.scale.linear()
+        .range([0, width]);
+    
+    var brushY = d3.scale.linear().domain([0,100])
+        .range([height, 0]);
+    
+    var y = d3.random.normal(height / 10, height / 8);
+
+    var brush = d3.svg.brush()
+        .x(x)
+        .extent([.5, .9])
+        .on("brushstart", brushstart)
+        .on("brush", brushmove)
+        .on("brushend", brushend);
+
+    var arc = d3.svg.arc()
+        .outerRadius(height / 10)
+        .startAngle(0)
+        .endAngle(function(d, i) { return i ? -Math.PI : Math.PI; });
+
+  var svg = d3.select("#taz_brush")
+        .append( "svg" )
+        .attr('z-index', 200)
+        .attr('top', 400)
+        //.attr('position', 'absolute')
+        .attr( "width", 350 )
+        .attr( "height", 100 )
+        .style("padding-left", 10)
+        .append("g");
+        console.log(data)
+     
+     var circle = svg.append("g")
+     .attr("transform", "translate(0," + 3 * height + ")")
+     .selectAll("rect")
+        .data(data)
+        .enter().append("rect")
+        .attr("x", function(d){
+            return x(d);  
+        })
+        .attr("y", function(d){
+            var x2 = x(d);
+            return  brushY(number_of_obs.get(d));
+        })
+        .attr("width", function(d){
+            return width / 10  
+        })
+        .attr("height", function(d){
+            var x2 = x(d);
+            return  height-brushY(number_of_obs.get(d)) ;
+        })
+        .style("fill-opacity", 0.2); 
+
+    var xAxis = d3.svg.axis()
+        .scale(x)
+        .tickFormat(function(d){
+            return d*100 + "%";
+        })
+        .orient("bottom");
+
+
+    svg.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + 4 *height + ")")
+        .call(xAxis)
+        .style("fill", "Grey");
+
+    var textL = svg.append("text")
+      .text("Migrant Population")
+      .attr("transform", "translate(" + width/2 + "," + 6.2 *height + ")")      
+      .style('font-size', 9)
+      .style("fill", "grey")
+      .style("opacity", .7)
+      .style('font', "Arial")
+      .style("text-anchor", "middle")
+
+ 
+    var brushg = svg.append("g")
+    .attr("transform", "translate(0," + 0.5 *height + ")")
+        .attr("class", "brush")
+        .call(brush);
+
+    brushg.selectAll(".resize").append("path")
+        .attr("transform", "translate(0," +  height / 2 + ")")
+        .attr("d", arc);
+
+    brushg.selectAll("rect")
+        .attr("height", 3 * height);
+
+    brushstart();
+    brushmove();
+
+    function brushstart() {
+        svg.classed("selecting", true);
+    }
+   
+   
+var value1;
+
+var value2;
+
+function brushmove() 
+   {
+   var s = brush.extent();
+
+   }  
+
+function brushend() 
+  {
+   var s = brush.extent();
+   circle.classed("selected", function(d) { return s[0] <= d && d <= s[1]; });
+   value1 = s[0];
+   value2 = s[1];
+   update(value1, value2)
+  }
+
+function update(val1, val2)
+  { 
+      filterd = d3.selectAll('.mappath').filter(function(each){
+        return (+each.properties.sergios_data_Perc_Cont >= val1) && (+each.properties.sergios_data_Perc_Cont <= val2)
+      })
+        .style("fill", function(d) { 
+            return color(d.properties.sergios_data_Perc_Cont);
+        });
+      var not_filtered 
+      not_filtered = d3.selectAll('.mappath').filter(function(each){
+        return (+each.properties.sergios_data_Perc_Cont<val1) || (+each.properties.sergios_data_Perc_Cont > val2) 
+      })
+        .style("fill", "Lightgrey")
+  };
+
+
+ }
+
+d3.selectAll("path")
+  .on('click', function(d) {
+                 // S_TAZ_id = d.properties.TAZ ; 
+                 console.log("clicked");
+                 // d3.json("data/ActualDataNewNew.json", UpdateArc);
+  })  
+
+/* GLOBALS */
+
+var width  = 500;           // width of svg image
+var height = 500;           // height of svg image
+var margin = 20;            // amount of margin around plot area
+var pad = margin / 2;       // actual padding amount
+var radius = 5;             // fixed node radius
+var yfixed = height / 2;  // y position for all node
+var border = 1;
+var bordercolor = 'black';
+var S_index = 0;
+var maxc = 3000;
+
+/* HELPER FUNCTIONS */
+
+// Generates a tooltip for a SVG circle element based on its ID
+function addTooltip(circle) {
+    var x = parseFloat(circle.attr("cx"));
+    var y = parseFloat(circle.attr("cy"));
+    var r = parseFloat(circle.attr("r"));
+    var mc1 = circle.attr("TAZ_ID");
+    var mc2 = circle.attr("ImmPer");
+
+    var tooltip = d3.select("#plot")
+        .append("text")
+        .text("TAZ_id: " + mc1 + "; Imm_Per: " + (mc2 * 100).toFixed(2) + "%")
+        .attr("x", x)
+        .attr("y", y)
+        .attr("dy", -r * 2)
+        .attr("id", "tooltip");
+
+    var offset = tooltip.node().getBBox().width / 2;
+
+    if ((x - offset) < 0) {
+        tooltip.attr("text-anchor", "start");
+        tooltip.attr("dx", -r);
+    }
+    else if ((x + offset) > (width - margin)) {
+        tooltip.attr("text-anchor", "end");
+        tooltip.attr("dx", r);
+    }
+    else {
+        tooltip.attr("text-anchor", "middle");
+        tooltip.attr("dx", 0);
+    }
+}
+
+    var colorCC = d3.scale.linear()
+        .domain([150, maxc])
+        .range(["#ffcc99", "darkred"])
+        .interpolate(d3.interpolateLab); 
+
+
+function UpdateArc(graph) {
+    // create svg image
+
+    d3.selectAll("#arclinks")
+    	.remove();
+
+    // fix graph links to map to objects instead of indices
+    graph.links.forEach(function(d, i) {
+        d.source = isNaN(d.source) ? d.source : graph.nodes[d.source];
+        d.target = isNaN(d.target) ? d.target : graph.nodes[d.target];
+    });
+
+    // must be done AFTER links are fixed
+    linearLayout(graph.nodes);
+
+	    // draw nodes last
+	drawNodes(graph.nodes);
+
+  
+
+    //console.log(graph.nodes[S_index]);
+    
+    setTimeout(function(){     drawLinks(graph.links) }, 1500);
+
+	d3.selectAll("#cc")
+        .attr("TAZ_ID", graph.nodes[S_index].TAZ_id)
+        .attr("ImmPer", graph.nodes[S_index].ImmPer)
+        .style("stroke-width", 1)
+        .style("opacity", 1)
+        .on("mouseover", function(d, i) { addTooltip(d3.select(this)); })
+        .on("mouseout", function(d, i) { d3.select("#tooltip").remove(); })
+        .transition()
+        .duration(1500)
+        .attr("cx", graph.nodes[S_index].x)
+        .attr("cy", graph.nodes[S_index].y)
+        .style("fill", function(d, i) { var p = graph.nodes[S_index].Metro_dist;
+            if (p > maxc) { p = maxc }; return colorCC(p)});
+
+    d3.selectAll("#text_per")
+    	.remove();
+
+    setTimeout(function(){         
+    	d3.selectAll("#plot")
+    	.append("text")
+    	.attr("id", "text_per")
+   		.text((graph.nodes[S_index].ImmPer * 100).toFixed(1) + "%")
+    	.attr("x", graph.nodes[S_index].x)
+    	.attr("y", (graph.nodes[S_index].y + radius + 8))
+    	.style("font-size", 7)
+    	.style("fill", "grey")
+    	.style("opacity", 1)
+    	.style("text-anchor", "middle")
+    	.style("font", "Arial");  }, 1500);
+
+    d3.selection.prototype.moveToFront = function() {  
+      return this.each(function(){
+        this.parentNode.appendChild(this);
+      });
+    };
+
+
+
+}
+
+// Draws an arc diagram for the provided undirected graph
+function arcDiagram(graph) {
+    // create svg image
+
+    var svg2 = d3.select("#arc_diagram")
+        .append("svg")
+        .attr("id", "arc")
+        .attr("width", width)
+        .attr("height", height)
+        //.style("stroke", bordercolor)
+        //.style("fill", "none")
+        //.style("stroke-width", 1);
+
+    // create plot area within svg image
+    var plot = svg2.append("g")
+        .attr("id", "plot")
+        .attr("transform", "translate(" + pad + ", " + pad + ")");
+
+    var line = svg2.append("line")
+ 		.attr("x1", 0)
+ 		.attr("x2", width)
+ 		.attr("y1", yfixed)
+ 		.attr("y2", yfixed)
+ 		.style("opacity", .1)
+ 		.style("stroke", "black")
+        .attr("transform", "translate(" + pad + ", " + pad + ")");
+
+    var text1 = svg2.append("text")
+    	.text("Out")
+    	.attr("x", pad)
+    	.attr('y', (yfixed + 7))
+    	.style('font-size', 7)
+    	.style("fill", "grey")
+    	.style("opacity", .3)
+    	.style('font', "Arial");
+
+    var text2 = svg2.append("text")
+    	.text("In")
+    	.attr("x", pad)
+    	.attr('y', (yfixed + 18))
+    	.style('font-size', 7)
+    	.style("fill", "grey")
+    	.style("opacity", .3)
+    	.style('font', "Arial");    
+
+    var text3 = svg2.append("text")
+    	.text("Out")
+    	.attr("x", width)
+    	.attr('y', (yfixed + 7))
+    	.style('font-size', 7)
+    	.style("fill", "grey")
+    	.style("opacity", .3)
+    	.style('text-anchor', "end")
+    	.style('font', "Arial");
+
+    var text4 = svg2.append("text")
+    	.text("In")
+    	.attr("x", width)
+    	.attr('y', (yfixed + 18))
+    	.style('font-size', 7)
+    	.style("fill", "grey")
+    	.style("opacity", .3)
+    	.style('text-anchor', "end")
+    	.style('font', "Arial");  
+
+  //  console.log(graph);
+
+
+    // fix graph links to map to objects instead of indices
+    graph.links.forEach(function(d, i) {
+        d.source = isNaN(d.source) ? d.source : graph.nodes[d.source];
+        d.target = isNaN(d.target) ? d.target : graph.nodes[d.target];
+    });
+
+    // must be done AFTER links are fixed
+    linearLayout(graph.nodes);
+
+    // draw nodes last
+    drawNodes(graph.nodes);
+
+ //   console.log(graph.nodes[S_index]);
+    drawLinks(graph.links);
+    //setTimeout(function(){     drawLinks(graph.links) }, 1000);
+
+    var color = d3.scale.linear()
+        .domain([40, maxc])
+        .range(["#ffcc99", "darkred"])
+        .interpolate(d3.interpolateLab);    
+
+    var circle = plot.append("circle")
+        .attr("id", "cc")
+        .attr("TAZ_ID", graph.nodes[S_index].TAZ_id)
+        .attr("ImmPer", graph.nodes[S_index].ImmPer)
+        .attr("cx", graph.nodes[S_index].x)
+        .attr("cy", graph.nodes[S_index].y)
+        .attr("r", radius)
+        .style("fill", function(d, i) { var p = graph.nodes[S_index].Metro_dist;
+            if (p > maxc) { p = maxc }; return color(p)})
+        .style("stroke-width", 1)
+        .style("opacity", 1)
+        .on("mouseover", function(d, i) { addTooltip(d3.select(this)); })
+        .on("mouseout", function(d, i) { d3.select("#tooltip").remove(); });
+
+    //console.log(circle);
+
+   	var text5 = plot.append("text")
+   		.attr("id", "text_per")
+   		.text((graph.nodes[S_index].ImmPer * 100).toFixed(1) + "%")
+    	.attr("x", graph.nodes[S_index].x)
+    	.attr("y", (graph.nodes[S_index].y + radius + 8))
+    	.style("font-size", 7)
+    	.style("fill", "grey")
+    	.style("opacity", 1)
+    	.style("text-anchor", "middle")
+    	.style("font", "Arial")
+
+}
+
+// Layout nodes linearly, sorted by ImmPer
+function linearLayout(nodes) {
+    // sort nodes by ImmPer
+    nodes.sort(function(a, b) {
+        return b.ImmPer - a.ImmPer;
+    })
+
+    // used to scale node index to x position
+    var xscale = d3.scale.linear()
+        .domain([0, nodes.length - 1])
+        .range([radius, width - margin - radius]);
+
+    // calculate pixel location for each node
+    nodes.forEach(function(d, i) {
+        d.x = xscale(i);
+        d.y = yfixed;
+    });
+}
+
+// Draws nodes on plot
+function drawNodes(nodes) {
+    // used to assign nodes color by ImmPer
+
+    // console.log(nodes)
+
+    d3.select("#plot").selectAll(".node")
+        .data(nodes)
+        .enter()
+        .append("circle")
+        .attr("class", "node")
+        .attr("id", function(d, i) { if (d.TAZ_id == S_TAZ_id) { S_index = i; return d.TAZ_id;}})
+        .remove();
+
+    //console.log(S_index);
+
+}
+
+// Draws nice arcs for each link on plot
+function drawLinks(links) {
+
+    // path generator for arcs (uses polar coordinates)
+    var arclink = d3.svg.arc()
+
+    d3.selection.prototype.moveToBack = function() {  
+        return this.each(function() { 
+            var firstChild = this.parentNode.firstChild; 
+            if (firstChild) { 
+                this.parentNode.insertBefore(this, firstChild); 
+            } 
+        });
+    };
+
+    d3.selectAll("#arclinks")
+    	.moveToBack();
+    // add links
+    d3.select("#plot").selectAll(".link")
+        .data(links)
+        .enter()
+        .append("path")
+        .attr("class", "arc")
+        .attr("id", "arclinks")
+        .attr("transform", function(d, i) { //console.log(d);
+            // arc will always be drawn around (0, 0)
+            // shift so (0, 0) will be between source and target
+            var xshift = d.source.x + (d.target.x - d.source.x) / 2;
+            var yshift = yfixed;
+            return "translate(" + xshift + ", " + yshift + ")";
+        })
+        .attr("d", function(d, i) {
+            var xdist = Math.abs(d.source.x - d.target.x);
+            var hd = d.value / 10;
+
+            if (hd > 50) { hd = 50};
+            // set arc radius based on x distance
+            arclink.innerRadius(xdist / 2 - hd);
+            arclink.outerRadius(xdist / 2 + hd);
+
+            // if the link is going in, the arc will be above
+            if (d.target.TAZ_id == S_TAZ_id) {
+            arclink.startAngle(-Math.PI / 2);
+            arclink.endAngle(Math.PI / 2); }
+
+            // if the link is going out, the arc will be below
+            if (d.source.TAZ_id == S_TAZ_id) {
+            arclink.startAngle(Math.PI / 2);
+            arclink.endAngle(3 * Math.PI / 2); }
+
+            // want to generate 1/3 as many points per pixel in x direction
+            var points = d3.range(0, Math.ceil(xdist / 3));
+
+            // set radian scale domain
+            // radians.domain([0, points.length - 1]);
+
+            // return path for arc
+            return arclink(points);
+            //}
+        })
+        .attr('fill', 'white')
+        .attr('opacity', .3)
+        .moveToBack()
+        .transition()
+    	  .duration(1500)
+        .attr('fill', 'steelblue')
+
+}
+
+d3.json("data/Morning/Morning_" + S_TAZ_id.toString() + ".json", arcDiagram);
+</script>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

@@ -10,6 +10,22 @@
     -webkit-transition: all 0.2s ease-in;
 }
 
+::-webkit-scrollbar
+{
+  width: 6px;  /* for vertical scrollbars */
+  height: 6px; /* for horizontal scrollbars */
+}
+
+::-webkit-scrollbar-track
+{
+  background: rgba(255, 255, 255, 0.5);
+}
+
+::-webkit-scrollbar-thumb
+{
+  background: rgba(0, 0, 0, 0.5);
+}
+
 
 .footer {
     position: relative;
@@ -354,4 +370,46 @@
 
 .sm_icon {
     width:50px;
+}
+
+.project_mount {
+    position: absolute;
+    left:0px;
+    right:0px;
+    top:0px;
+    bottom:0px;
+    background: rgb(150,150,150);
+}
+
+.mount_go_back {
+    position: absolute;
+    top: 8px;
+    left: 20px;
+    color: rgb(255,255,255);
+    padding: 5px;
+    border: 1px solid white;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 6px;
+}
+
+.mount_go_back:hover {
+    background-color: white;
+    color:rgb(150,150,150);
+    cursor: pointer;
+    
+}
+
+.mount_go_back p {
+    margin:0px !important;
+}
+
+.mount_window {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    box-shadow: 10px 10px 5px rgba(0,0,0,0.4);
+    background-color: white;
 }

@@ -1,0 +1,15 @@
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+    outline: 0;
+}
+
+.btn-default {
+  color: grey;
+  background-color: #fff;
+  border-color: #ccc;
+}
+
+.btn-default.focus {
+  color: #333;
+  background-color: red;
+  border-color: #8c8c8c;
+}

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Voices of Riyadh</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/full-width-pics.css" rel="stylesheet">
+	<link href="css/custom.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+	<div class="container">
+        <div class="row">
+		<div id="navigation" style="height:50px; left:10px">
+			<a href='index.html' style="font-weight:bold">Voices of Riyadh</a>
+			<a href='index.html#about'>About the Project</a>
+			<a href="viz_content.html">Content Visualization</a>
+			<a href="viz_users.html">User Visualization</a>
+		</div>
+		</div>
+	</div>
+
+    <!-- Full Width Image Header with Logo -->
+    <!-- Image backgrounds are set within the full-width-pics.css file. -->
+    <header class="image-bg-fluid-height">
+	<h1 id="main_title">Voices of Riyadh</h1>
+    <!--<img class="img-responsive img-center" src="img/VoicesOfRiyadh.png" style="height:200px; width:200px; opacity:1" alt="">-->
+    </header>
+
+    <!-- Content Section -->
+    <section>
+        <div class="container">
+            <div class="row" id="about">
+                <div class="col-lg-12">
+                    <h1>Visualizing Big Data for Urban Planning</h1>
+                    <p class="lead section-lead"></p>
+                    <p class="section-paragraph">Welcome to Voices of Riyadh, an MIT class project by Luke Mich and Scott Margeson. We're  Master's students in Urban Planning, and we've used a wide variety of our new coding skills to scrape, process and analyze a ton of social media data. We then created interactive web visualizations to reveal the underlying patterns. Click on the links above to try it yourself! We hope that our project will contribute to the transit planning conversation now taking place in the capital of Saudi Arabia.</p>
+                </div>
+            </div>
+        </div>
+
+    <!-- Fixed Height Image Aside -->
+    <!-- Image backgrounds are set within the full-width-pics.css file. -->
+<!--    <aside class="image-bg-fixed-height"></aside> -->
+
+        <div class="container">
+            <div class="row" id="negative_title" >
+                <div class="col-lg-12" style="text-align:center">
+                    <h1>Our Project By the Numbers</h1>
+                </div>
+            </div>
+			<div class="row">
+                <div class="col-md-3" id="negative_text">
+                    <h2 id="negative_title">125,390</h2>
+                    <p class="lead section-lead" style="text-align:center">Tweets<br>Analyzed</p>
+                    <p class="section-paragraph">In class, we learned to use Python for scraping social media. We also accessed an existing 3-month collection of geo-located tweets harvested from Riyadh.</p>
+                </div>
+				<div class="col-md-3" id="negative_text">
+                    <h2 id="negative_title">1,687</h2>
+                    <p class="lead section-lead" style="text-align:center">Lines of Code<br>Written</p>
+                    <p class="section-paragraph">Not counting the many thousands of lines of experimental code that didn't make it into the final product.</p>
+                </div>
+				<div class="col-md-3" id="negative_text">
+                    <h2 id="negative_title">6</h2>
+                    <p class="lead section-lead" style="text-align:center">Coding Languages<br>Learned</p>
+                    <p class="section-paragraph">We used Python, JavaScript, HTML, and CSS, with a special focus on the Pandas library (for Python) and the D3 library (for JS). We knew none of these before starting the class.</p>
+                </div>
+				<div class="col-md-3" id="negative_text">
+                    <h2 id='negative_title'>2</h2>
+                    <p class="lead section-lead" style="text-align:center;">Big Data Tools<br>Created</p>
+                    <p class="section-paragraph">We visualized both tweet content and user origins. Our linked graph+map visuals allow exploration of both spatial and temporal patterns in the data.</p>
+                </div>
+            </div>
+
+		</div>
+	</section>	
+    <!-- Content Section -->
+	<section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>Policy Context</h1>
+                    <p class="lead section-lead">Talking Transit</p>
+                    <p class="section-paragraph">Planners in Riyadh are preparing to deploy a brand new public transit system. We wondered if we could tap into local sentiment about transportation by using our new data scraping skills. By revealing patterns in peoples' conversations about traffic and other aspects of city life, we hoped to provide a social context for those hoping to create a thoughtful transportation plan for the city.</p>
+                </div>
+				<div class="col-md-6">
+                    <h1>Our Approach</h1>
+                    <p class="lead section-lead">Finding Patterns</p>
+                    <p class="section-paragraph">We wrote Python code to search for keywords in the content of over a hundred thousand tweets from a 3-month period in the vicinity of Riyadh. We extracted the posts related to traffic. Out of curiosity, we also searched for posts related to religion and to entertainment, and then we sorted tweets according to the author's home location as well. Finally, we used D3 to visualize all the data on the web. Our project allows users to explore this trove of data to find both temporal and spatial patterns.</p>
+                </div>
+            </div>
+			<div class="row">
+				<div class="col-md-6">
+					<h1>Visualizing Content</h1>
+					<p class="section-paragraph">This map / graph combo lets you explore what people in Riyadh talk about on Twitter, along with when and where. Traffic was our primary interest. Click the image to try it for yourself.</p>
+					<a href="viz_content.html"><img src='img/content_cap.JPG' class="img-responsive"></a>
+				</div>
+				<div class="col-md-6">
+					<h1>Visualizing Users</h1>
+					<p class="section-paragraph">This map / graph combo lets you explore the home location of people who are tweeting in Riyadh. Most are locals, but you can also see where visitors go. Click the image to try it out.</p>
+					<a href="viz_users.html"><img src='img/user_cap.JPG' class="img-responsive"></a>
+ 				</div>
+			</div>
+		</div>
+		<!-- end of container-->
+	</section>
+	<hr>
+		<!-- Precedents and credits -->	
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1>Precedents and Inspiration</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-8">
+					<iframe width="600" height="300" src="https://www.youtube.com/embed/8J3T3UjHbrE" frameborder="0" allowfullscreen>
+						</iframe>
+				</div>
+				<div class="col-md-4">
+					<h3>
+					Credit Transactions in Spain
+					</h3>
+					<p>This <a href="http://senseable.mit.edu/bbva/">beautiful animation of credit card transactions</a> comes from MIT's Senseable Cities Lab. The visualization is colored by transaction category and covers the week before Easter 2011. Spatial and temporal patterns are clearly visible. For example, you can see the spikes in grocery shopping as the holiday approaches.</p>
+				</div>
+									  
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-md-8">
+						<img width="600" height="300" src="img/choropleth.jpg" alt="NYC Sandy Tweets Choropleth">
+				</div>
+				<div class="col-md-4">
+					<h3>
+					Tweets During Hurricane Sandy
+					</h3>
+					<p>This <a href="http://geo-odyssey.com/links/sandy/">interactive choropleth map</a> illustrates the distribution of various tweet hashtags across New York City in the aftermath of Hurrican Sandy. This is an effective way to show the relative popularity of a given term throughout the city.</p>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-md-8">
+					<img width="600" height="300" src="img/RiyadhMap.jpg" alt="Uber use in Riyadh">
+				</div>
+				<div class="col-md-4">
+					<h3>Uber Use in Riyadh</h3>
+					<p>This <a href="http://flowingcity.com/visualization/uber-around-the-world/">series of maps</a> shows the frequency of Uber routes over the street network of various cities - including Riyadh (pictured).</p>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-12">
+					<h1>Credits</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<p>This website, the data visualizations, and the final code are &copy; Luke Mich and Scott Margeson.</p>
+					<p>The code was inspired in part by <a href="bl.ocks.org">Mike Bostock</a> and other Bl.ocks coders like <a href="http://bl.ocks.org/asielen/50a527004cb79facf219">ASielen.</a></p>
+					<p>The dataset used was originally collected by Sarah Williams, Mike Foster and Carlos Sandoval.</p>
+					<p>The cover image is courtesy of flickr user <a href="https://www.flickr.com/photos/habeebclicks/3877847590/"> Habeeb</a>, released under a CC2.0 license.</p>
+				</div>
+			</div>
+		</div>
+		<!-- end of container-->
+	</section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Luke Mich, Scott Margeson 2016</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

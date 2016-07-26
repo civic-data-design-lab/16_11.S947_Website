@@ -1,0 +1,337 @@
+<html>
+<head>
+    <title>RiyadhGo</title>
+    <script src="js/d3.v3.min.js" charset="utf-8"></script>
+    <link href="css/main.css" rel="stylesheet" />
+    <script src="data/json/fsq_checkin.json"></script>
+    <script src="data/json/all_nodes.json"></script>
+    <script src="data/json/riyadh_traffic.json"></script>    
+
+    <style>
+        body {
+        position: absolute;
+        font-family: "'Open Sans',  sans-serif";
+        }
+        h1, h2, h3, h4, span {
+            position: absolute;
+            left: 10px; 
+            font-size: 0.6em;
+            font-weight: 100;
+            z-index: 9;
+        }
+        h1 {
+            font-size: 2.4em;
+        }
+
+        h2 {
+            top: 50px;
+            font-size: 1.2em;
+        }
+        h3 {
+            position: absolute;
+            top: 100px;
+            font-size: 1em;
+        }
+        h4 {
+            position: absolute;
+            top: 155px;                      
+            font-size: 1em;
+        }
+        #On {
+            position: absolute; 
+            margin-left: 5px; 
+            margin-top: 135px;
+            z-index: 10;
+            font-size: 0.7em;
+        }
+        #Off {
+            position: absolute; 
+            margin-left: 120px; 
+            margin-top: 135px;
+            z-index: 10;
+            font-size: 0.7em;
+        }
+        #cost_radio {
+            position: absolute;
+            top:190px;
+            width: 940px;
+            padding: 5px;
+            z-index: 10;
+            font-size: 0.6em;
+        }
+        .hover {
+            fill: red;
+            stroke: red;  
+        }
+        .FSQ_checkin {
+            z-index: 8;
+        }
+        .Shortest_Path {
+            z-index: 7;
+        }
+        .RiyadhVoc {
+            z-index: 6;
+        }
+        #sliderContainer2 {
+            text-align: relative;
+            position: absolute;
+            font-family:Alegreya Sans SC;
+            font-size: 8pt;
+            top: 175px;
+        }        
+        
+        svg {
+            position: relative;
+            top: 100px;
+            z-index: 1
+        }   
+    </style>
+</head>
+<body>
+    <h1 style="font-family:Alegreya Sans SC; font-size: 24pt;"><b> <a href="http://www.qiuwaishan.com/#!riyadhgo/fpq9p">RIYADH <font color = "ec008b">GO</font></a></b>.</h1>
+    <h2> Click to Explore Your Travel Cost from Riyadh Hotspots </h2> 
+    <h3> Basemap </h3> 
+    <h4> Type of Cost </h4> 
+    <div id="cost_radio">
+        <input name="mode" type="radio" value="Money" id="money" checked><label for="money"> Money</label>
+        <input name="mode" type="radio" value="Time" id="time"><label for="time"> Time</label>
+        <input name="mode" type="radio" value="Distance" id="dist"><label for="dist"> Distance</label>
+    </div>
+    <button id= "On" > Peak Hour Traffic </button>
+    <button id= "Off" > Off </button>
+    <div id="sliderContainer2"> <!-- a slider -->
+        <img style="margin-top: 60px;position: absolute; max-width: 250px"src="image/legends1.png"/>
+    </div>
+
+<script>
+    var width = 1440;
+    var height = 800;
+    var scale0 = (width - 1) *200/ Math.PI;
+    var albersProjection = d3.geo.albers()
+        .rotate( [-46.6706,0] )
+        .center( [0, 24.7160] )
+        .translate( [width/2,height/2] );
+    var zoom = d3.behavior.zoom()
+        .translate([width / 2, height / 2])
+        .scale(scale0)
+        .scaleExtent([scale0, 20 * scale0])
+        .on("zoom", zoomed);
+    var geoPath = d3.geo.path()
+        .projection( albersProjection );       
+    var inputValue = null
+    var typeofcost = ["Money","Time","Distance"]
+    var color_roads = d3.scale.linear()
+        .domain([0, 0.5, 4])
+        .range(["#dadaeb", "#bcbddc","#9e9ac8"]);
+    var color_gradient = d3.scale.linear()
+        .domain([4, 20, 36])
+        .range(['#88d8b0', '#ffcc5c','#ff6f69']);
+    var color_checkin = d3.scale.threshold()
+        .domain([10, 10000, 35000, 70000, 95000])
+        .range(["#e2f4c7", "#eae374", "#f9d62e", "#fc913a", "#ff4e50"]);
+    var color_checkin_warm = d3.scale.threshold()
+        .domain([10, 5000, 20000, 50000, 70000, 95000])
+        .range(["#dc6900", "#eb8c00 ", "#eeba30","#e0301e", "#a32020", "#602320"]);
+    var color_time = d3.scale.threshold()
+        .domain([0, 5, 10, 20, 30])
+        .range(["#a8e6cf", "#dcedc1", "#ffd3b6", "#ffaaa5", "#ff8b94"]);
+    var color_dist = d3.scale.threshold()
+        .domain([0, 1, 5, 10, 20])
+        .range(["#83d0c9", "#65c3ba", "#54b2a9", "#35a79c", "#009688"]);
+    var color_money = d3.scale.threshold()
+        .domain([1, 5, 10, 15, 20])
+        .range(["#96ceb4", "88d8b0", "ffeead", "ffcc5c", "ff6f69"]);
+    var svg = d3.select( "body" )
+        .append( "svg" )
+        .attr('class', 'road_network')
+        .attr( "width", width )
+        .attr( "height", height )
+        .attr("top",200);
+    svg
+        .call(zoom)
+        .call(zoom.event);    
+    function zoomed() {
+      albersProjection
+          .translate(zoom.translate())
+          .scale(zoom.scale());
+      d3.selectAll("path")
+          .attr("d", geoPath);
+    }
+    var city_network = svg.append( "g" )
+        .attr('class', 'RiyadhVoc');
+    city_network.selectAll( "path" )
+        .data( traffic_json.features )
+        .enter()
+        .append( "path" )
+        .attr("fill","none")
+        .attr("stroke", function (x) { return color_roads(x.properties.voc_md)})
+        .attr("stroke-width", function (x) {return x.properties.voc_md *0.9+0.3})
+        .attr( "d", geoPath ) // "d" is D3.attribute stands for coordinates of a path
+        .attr("class","incident");
+    d3.select("#On").on("click", function() {
+        d3.select(".RiyadhVoc").remove();
+        var city_network = svg.append( "g" )
+            .attr('class', 'RiyadhVoc');
+        city_network.selectAll( "path" )
+            .data( traffic_json.features )
+            .enter()
+            .append( "path" )
+            .attr("stroke", "white")
+            .attr("fill", "none")
+            .transition()
+            .duration(1500)
+            .attr("fill","none")
+            .attr("stroke", function (x) { return color_roads(x.properties.voc_md)})
+            .attr("stroke-width", function (x) {return x.properties.voc_md *0.9+0.3})
+            .attr( "d", geoPath ) // "d" is D3.attribute stands for coordinates of a path
+            .attr("class","incident");
+    })
+    d3.select("#Off").on("click", function() {
+        d3.select(".RiyadhVoc").remove();
+        d3.select(".Shortest_Path").remove();
+    })
+    var check_in = svg.append( "g" )
+        .attr('class','FSQ_checkin');
+    check_in.selectAll( "path" )
+        .data( checkin.features )
+        .enter()
+        .append( "path" )
+        .attr( "stroke", function(x) { return color_checkin_warm(x.properties.checkin);})
+        .attr( "d", geoPath )
+        .attr("class","incident")
+        .attr("opacity", 0.7)
+        .attr("stroke-width", function(x) {return (x.properties.checkin*0.0002+0.1);})
+        .attr("fill", function(x) { return color_checkin_warm(x.properties.checkin);})
+        .on("mouseover", function(d){
+            tooltip.style("visibility", "visible").text(d.properties.category+" | CHECKINs: " +d.properties.checkin);
+            d3.select(this).attr("class","incident hover");
+        })
+        .on("mousemove", function(d){
+            tooltip.style("top", (event.pageY-10)+"px").style("left",(event.pageX+10)+"px").text(d.properties.category+" | CHECKINs: " +d.properties.checkin);
+            d3.select(this).attr("class","incident hover");
+        })
+        .on("mouseout", function(d){
+            tooltip.style("visibility", "hidden");
+            d3.select(this).attr("class","incident");
+        })   
+        .on('click', function(x) {
+            var node_id = x.properties.closest_node;
+            d3.select(".Shortest_Path").remove();
+            create_shortpath(node_id);
+        });
+    //Define the tootip which realize hover show text function
+    var tooltip = d3.select("body")
+        .append("div")
+        .style("position", "absolute")
+        .style("font-family", "'Open Sans', sans-serif")
+        .style("font-size", "16px")
+        .style("z-index", "10")
+        .style("visibility", "hidden");
+
+    function map(node_id,inputValue){
+            var current_paths = svg.append( "g" )
+                .attr('class','Shortest_Path'); //"id" can be change to whatever for example "class", but if it is not "id", it cannot be selected by d3.select().romove
+            if (inputValue == "Distance") {
+                current_paths.selectAll(".incident2")
+                    .data(all_json[node_id].features)  
+                    .enter()
+                    .append( "path" )
+                    .attr("stroke", "white")
+                    .attr("fill", "none")
+                    .attr("stroke-width",0.1)
+                    .on("mouseover", function(d){
+                        tooltip.style("visibility", "visible").text("Money Cost(SAR): "+Math.round((4+0.35*d.properties.sum_time+1.05*d.properties.sum_dist)*100)/100+" | Distance(KM): " +d.properties.sum_dist+" | "+"Time(Minutes) "+d.properties.sum_time);
+                    })
+                    .on("mousemove", function(d){
+                        tooltip.style("top", (event.pageY-10)+"px").style("left",(event.pageX+10)+"px").text("Money Cost(SAR): "+Math.round((4+0.35*d.properties.sum_time+1.05*d.properties.sum_dist)*100)/100+" | Distance(KM): " +d.properties.sum_dist+" | "+"Time(Minutes) "+d.properties.sum_time);
+                    })               
+                    .on("mouseout", function(d){
+                        tooltip.style("visibility","hidden");
+                    })
+                    .transition()
+                    .duration(2000)
+                    .attr( "fill", "#900" )
+                    .attr( "d", geoPath ) 
+                    .attr("class","incident2")
+                    .attr("stroke", function(d) { return color_dist(d.properties.sum_dist);})
+                    .attr("stroke-width", function(x) {return (x.properties.sum_dist*0.2);});
+
+            } else if (inputValue == "Time") {
+                current_paths.selectAll(".incident2")
+                    .data(all_json[node_id].features)  
+                    .enter()
+                    .append( "path" )
+                    .attr("stroke", "white")
+                    .attr("fill", "none")
+                    .attr("stroke-width",0.1)
+                    .on("mouseover", function(d){
+                        tooltip.style("visibility", "visible").text("Money Cost(SAR): "+Math.round((4+0.35*d.properties.sum_time+1.05*d.properties.sum_dist)*100)/100+" | Distance(KM): " +d.properties.sum_dist+" | "+"Time(Minutes) "+d.properties.sum_time);
+                    })
+                    .on("mousemove", function(d){
+                        tooltip.style("top", (event.pageY-10)+"px").style("left",(event.pageX+10)+"px").text("Money Cost(SAR): "+Math.round((4+0.35*d.properties.sum_time+1.05*d.properties.sum_dist)*100)/100+" | Distance(KM): " +d.properties.sum_dist+" | "+"Time(Minutes) "+d.properties.sum_time);
+                    })
+                    .on("mouseout", function(d){
+                        tooltip.style("visibility","hidden");
+                    })
+                    .transition()
+                    .duration(2000)
+                    .attr( "fill", "#900" )
+                    .attr( "d", geoPath ) 
+                    .attr("class","incident")
+                    .attr("stroke", function(d) { return color_time(d.properties.sum_time);})
+                    .attr("stroke-width", function(x) {return (x.properties.sum_time*0.2);}); 
+            } else {
+                current_paths.selectAll(".incident2")
+                    .data(all_json[node_id].features)  
+                    .enter()
+                    .append( "path" )
+                    .attr("stroke", "white")
+                    .attr("fill", "none")
+                    .attr("stroke-width",0)
+                    .on("mouseover", function(d){
+                        tooltip.style("visibility", "visible").text("Money Cost(SAR): "+Math.round((4+0.35*d.properties.sum_time+1.05*d.properties.sum_dist)*100)/100+" | Distance(KM): " +d.properties.sum_dist+" | "+"Time(Minutes) "+d.properties.sum_time);
+                    })
+                    .on("mousemove", function(d){
+                        tooltip.style("top", (event.pageY-10)+"px").style("left",(event.pageX+10)+"px").text("Money Cost(SAR): "+Math.round((4+0.35*d.properties.sum_time+1.05*d.properties.sum_dist)*100)/100+" | Distance(KM): " +d.properties.sum_dist+" | "+"Time(Minutes) "+d.properties.sum_time);
+                    })
+                    .on("mouseout", function(d){
+                        tooltip.style("visibility","hidden");
+                    })
+                    .transition()
+                    .duration(2000)
+                    .attr( "fill", "#900" )
+                    .attr( "d", geoPath ) 
+                    .attr("class","incident2")
+                    .attr("stroke", function(d) { return color_gradient(4+0.35*d.properties.sum_time+1.05*d.properties.sum_dist);})
+                    .attr("stroke-width", function(x) {return ((4+0.35*x.properties.sum_time+1.05*x.properties.sum_dist)*0.15+0.05);});
+            }
+    }
+    function changeRadio(node_id){
+        d3.selectAll("#cost_radio input[name=mode]").on("change", function() {
+            d3.select(".Shortest_Path").remove();
+            inputValue = (this.value);
+            // alert("You select "+this.value+ " as travel cost.");
+            map(node_id,inputValue);
+        });
+    }
+    function create_shortpath(node_id) {
+            var inputValue;
+            var radio=document.getElementsByName('mode');   
+            for(i=0;i<radio.length;i++){
+                if(radio[i].checked)
+                  inputValue=radio[i].value;
+            }           
+            map(node_id, inputValue);
+            changeRadio(node_id);
+            // Crepate SVG for Tooltip on Mouseover
+        var tooltip = d3.select("body")
+            .append("div")
+            .style("position", "absolute")
+            .style("font-family", "'Open Sans', sans-serif")
+            .style("font-size", "10px")
+            .style("z-index", "10")
+            .style("visibility", "hidden")
+    }   
+</script>
+</body>
+</html>

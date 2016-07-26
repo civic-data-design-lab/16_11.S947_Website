@@ -1,0 +1,462 @@
+
+<html>
+<head>
+    <title>Moving Through Riyadh</title>
+     <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.css " rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/landing-page.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="http://cortnik.github.io/project/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="flow/data/roads.geojson"></script>
+    <script src="flow/data/PNOhotspots_total.json"></script>
+    <script src="flow/data/PNDhotspot_total.json"></script>
+    <script src="flow/geojsons/PNOedgeflow0607.geojson"></script>
+    <script src="flow/geojsons/PNOedgeflow0708.geojson"></script>
+    <script src="flow/geojsons/PNOedgeflow0809.geojson"></script>
+    <script src="flow/geojsons/PNOedgeflow0910.geojson"></script>    
+    <script src="flow/geojsons/PNOedgeflow1011.geojson"></script>
+    <script src="flow/geojsons/PNOedgeflow1112.geojson"></script>
+    <script src="flow/geojsons/PNOedgeflow1213.geojson"></script>
+    <script src="flow/geojsons/PNOedgeflow1314.geojson"></script>
+    <script src="flow/geojsons/PNOedgeflow1415.geojson"></script>
+    <script src="flow/geojsons/PNOedgeflow1516.geojson"></script>
+    <script src="flow/geojsons/PNOedgeflow1617.geojson"></script>
+    <script src="flow/geojsons/PNOedgeflow1718.geojson"></script>
+    <script src="flow/geojsons/PNOedgeflow1819.geojson"></script>
+    <script src="flow/geojsons/PNOedgeflow1920.geojson"></script>   
+    <script src="flow/geojsons/PNOedgeflow2021.geojson"></script>
+    <script src="flow/geojsons/PNOedgeflow2122.geojson"></script>
+    <script src="flow/geojsons/PNOedgeflow2223.geojson"></script>
+    <script src="flow/geojsons/PNOedgeflow2324.geojson"></script>
+    <script src="flow/geojsons/PNDedgeflow0607.geojson"></script>
+    <script src="flow/geojsons/PNDedgeflow0708.geojson"></script>
+    <script src="flow/geojsons/PNDedgeflow0809.geojson"></script>
+    <script src="flow/geojsons/PNDedgeflow0910.geojson"></script>    
+    <script src="flow/geojsons/PNDedgeflow1011.geojson"></script>
+    <script src="flow/geojsons/PNDedgeflow1112.geojson"></script>
+    <script src="flow/geojsons/PNDedgeflow1213.geojson"></script>
+    <script src="flow/geojsons/PNDedgeflow1314.geojson"></script>
+    <script src="flow/geojsons/PNDedgeflow1415.geojson"></script>
+    <script src="flow/geojsons/PNDedgeflow1516.geojson"></script>
+    <script src="flow/geojsons/PNDedgeflow1617.geojson"></script>
+    <script src="flow/geojsons/PNDedgeflow1718.geojson"></script>
+    <script src="flow/geojsons/PNDedgeflow1819.geojson"></script>
+    <script src="flow/geojsons/PNDedgeflow1920.geojson"></script>   
+    <script src="flow/geojsons/PNDedgeflow2021.geojson"></script>
+    <script src="flow/geojsons/PNDedgeflow2122.geojson"></script>
+    <script src="flow/geojsons/PNDedgeflow2223.geojson"></script>
+    <script src="flow/geojsons/PNDedgeflow2324.geojson"></script>
+    <script src="hotspot_data/metro.geojson"></script>
+    <style> 
+        @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
+
+        body {
+            position: absolute;
+            top: 30px;
+            font-family: 'Roboto Condensed', sans-serif;
+            /*background-color: #FFFAFA;
+            color: #708090;*/
+        }
+        h3 {
+/*          position: absolute;
+            left: 20px;*/
+            font-size: 1.3em;
+            font-weight: 100;
+            /*color: #708090;*/
+        }
+        h2 {
+            font-size: 1em;
+           /* color: #708090;*/
+        }
+        .hotspot {
+            stroke: #ffffff;
+            fill: #5F9EA0;
+            opacity: .7;
+        }
+        .hotspothover {
+            fill: #ffe28a; 
+        }
+        .Paths {
+            opacity: .6;
+            fill: none;
+            stroke: #ff812d;
+            stroke-linecap:round;
+        }
+        #slider {
+            width: 5px;
+            height: 400px;
+            text-align: center;
+            float: left;
+            /* position: absolute;    */     
+            }
+       #slider > input[type=range]{
+       		width: 400;       		
+       		height: 20;
+       		display:block;
+       		position: relative;
+       		text: center;
+       		transform: rotate(90deg);
+       		-webkit-transform: rotate(90deg);
+    		-moz-transform: rotate(90deg);
+    		-ms-transform: rotate(90deg);
+    		-o-transform: rotate(90deg);
+    		transform-origin: left;
+    		text-align: center;
+    		top: 80px;
+    		left: 10px;
+       }
+
+        #wrap{
+            width:1200px;
+            height:550px;
+            margin-left: 60px;
+            margin-top:30px;
+        }
+        #origin_map {
+            width:550px;
+            height:550px;
+            float:left;
+            /* float:bottom; */
+        }
+        #destination_map{
+            width:550px;
+            height:550px;
+            float:right;
+        }
+}
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                     <a class="navbar-brand topnav" href="/project">WOMEN ON THE MOVE</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/project/movement.html">MOVEMENT</a>
+                    </li>
+                    <li>
+                        <a href="/project/access.html">ACCESS</a>
+                    </li>
+                    <li>
+                        <a href="/project/about.html">ABOUT</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        </nav>
+        <!-- /.container -->
+     <div class="container">
+    <br>
+    <br>
+    <h1 align="center"><strong>WHERE DO UNIVERSITY WOMEN TRAVEL IN RIYADH?</strong></h1>
+    <br><h3> Move the slider to animate the paths of commuters during each hour of a typical day. Orange lines represent the shortest paths between the Princess Noura campus and the commuter origin/destination hotspots. The size of the blue hotspots is based on the number of commuters flowing through each day. </h3>
+        </div>
+    </div>
+
+<div class="container">
+<div id="wrap">
+    <div id="origin_map">
+        <h3>COMMUTING FROM PRINCESS NOURA UNIVERSITY</h3>
+        <h2_o></h2_o>
+        <br>
+    </div>
+    
+    <div id="slider">
+        <input id="timeslide" type="range" min="0" max="17" value="0" step="1" list="ticks"><br>
+        <datalist id="ticks">
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+            <option>13</option>
+            <option>14</option>
+            <option>15</option>
+            <option>16</option>
+            <option>17</option>
+        </datalist><br>
+        <span id="range">6:00</span>
+    </div>
+    
+    <div id="destination_map">
+        <h3>COMMUTING TO PRINCESS NOURA UNIVERSITY</h3>
+        <h2_d></h2_d>
+        <br>
+    </div>
+<br>
+</div>
+ <div class="container">
+<p> 
+	<li>The visualizations show "hotspots of the origins/ destinations, the size of which represents the estimated number of commuters that start, and end, at each location. </li>
+	<li>These two complementary visualizations map out the hour-by-hour travel flows of the women university students to and from the Princess Noura University, based on aggregated Call Detail Records (CDR).</li>
+
+	<li>The visualizations show "hotspots of the origins/ destinations, the size of which represents the estimated number of commuters that start, and end, at each location. </li>
+
+	<li>A "shortest path" analysis was used to map out the approximate route that most commuters may choose. The thickness of the lines represents the corresponding number of estimated commuters travelling towards and from the University along those routes.</li>
+	</p>
+	</div>
+
+<div class="container">                                   
+        <p align="center"><a href="/project/access.html" align="center" class="btn btn-default btn-lg"> How will the new metro serve these hotspots?</a> </p>
+</div>
+
+    <script>
+        // var sliderContainer = d3.slider().min(0).max(17).ticks(16);
+    var inputValue = null;
+    var time = ["6:00","7:00","8:00","9:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00","22:00","23:00","24:00"];
+
+    var width = 500;
+    var height = 500;
+
+    var origin_map = d3.select( "#origin_map" )
+        .append("svg")
+        .attr( "width", width )
+        .attr( "height", height );
+
+    var g = origin_map.append( "g" );
+
+    // Set Projection Parameters
+    // Mercator
+    var projection = d3.geo.mercator()
+        .scale( 35000 )
+        .center( [46.765, 24.713] )
+        .translate( [width/2,height/2] );
+
+    var geoPath = d3.geo.path()
+        .projection( projection );
+
+    var road_network = origin_map.append( "g" );
+        road_network.selectAll( "path" )
+        .data( roads.features )
+        .enter()
+        .append( "path" )
+        .attr("fill", "none")
+        .attr( "stroke", "#d3d3d3" )
+        .attr("opacity", .7)
+        .attr("stroke-width", .5)
+        .attr( "d", geoPath )
+        .attr("class", "roads");
+
+    var PNOhotspots_total = origin_map.append("g")
+    var chosenhour_origin = PNOedgeflow6.features
+    var PNO_routes = origin_map.append("g")
+    var enter_duration = 10
+    
+    var pnu = projection([46.723616, 24.852326])
+    origin_map.append("circle")
+    	.attr("cx", pnu[0])
+    	.attr("cy", pnu[1])
+    	.attr("r",4)
+    	.style("fill", "#a11e1e");
+        var metroLines = origin_map.append( "g" );
+        metroLines.selectAll( "path" )
+        .data(metro.features )
+        .enter()
+        .append( "path" )
+        .attr("fill", "none")
+        .attr( "stroke", "#828282" )
+        .attr("stroke-width", 1.5)
+        .attr( "d", geoPath )
+        .attr("class", "metro");
+
+
+    // when the input range changes update the value 
+    d3.select("#timeslide").on("input", function() {
+        update_pno(+this.value);
+        update_pnd(+this.value);
+    });
+
+    // TIMESLIDER
+        function update_pno(value) {
+            document.getElementById("range").innerHTML=time[value];
+            inputValue = time[value];
+
+            chosenhour_origin = eval("PNOedgeflow" + String(inputValue.replace(":00", "")) + ".features");
+            PNO_routes.selectAll("path").remove();
+            PNO_routes.selectAll("path")
+            .data(chosenhour_origin)
+            .enter()
+            .append("path")
+            .attr("stroke", "#000000")
+            .transition()
+            .delay(function (d,i){ 
+                return (d.properties.animation)* enter_duration;})
+            .attr("stroke-width", function(d) {
+                var flow2 = Math.sqrt(+d.properties.flow);
+                return flow2;})
+            .attr( "d", geoPath )
+            .attr("class", "Paths")
+
+            PNOhotspots_total.selectAll("circle").remove();
+
+            PNOhotspots_total.selectAll("circle")
+                .data(hotspots_o.features)
+                .enter()
+                .append("circle")
+                .attr( "stroke", "#ffe28a" )
+                .attr("transform", function(d) {
+                    return "translate(" + projection([+d.properties.long_dest,+d.properties.lat_dest]) + ")";
+                })
+                .attr("class", "hotspot")
+                .attr("r", 1)
+                .transition().delay(1100).duration(800)
+                .attr("r", function(d){return d.properties.flow*3;})
+                .attr("display", timeMatch)
+
+            PNOhotspots_total.selectAll("circle")
+                .on("mouseover", function(d){
+                    d3.select("h2_o").text("PERSON FLOW IN THIS HOUR: " + d.properties.flow);
+                    d3.select(this).attr("class","hotspothover");
+                })
+                .on("mouseout", function(d){
+                    d3.select("h2_o").text("");
+                    d3.select(this).attr("class","hotspot");
+                });
+
+            function timeMatch(data, value) {
+            var d = data.properties.hour;
+            var m = "9";
+            if (inputValue == d) {
+                this.parentElement.appendChild(this);
+                return "display";
+            } else {
+                return "none";
+            };
+        }
+    }
+
+    var destination_map = d3.select( "#destination_map" )
+        .append( "svg" )
+        .attr( "width", width )
+        .attr( "height", height );
+
+    var g = destination_map.append( "g" );
+
+    var road_network = destination_map.append( "g" );
+        road_network.selectAll( "path" )
+        .data( roads.features )
+        .enter()
+        .append( "path" )
+        .attr("fill", "none")
+        .attr( "stroke", "#d3d3d3" )
+        .attr("opacity", .7)
+        .attr("stroke-width", .5)
+        .attr( "d", geoPath )
+        .attr("class", "roads");
+
+    var PNDhotspots_total = destination_map.append("g")
+    var chosenhour_dest = PNDedgeflow6.features
+    var PND_routes = destination_map.append("g")
+    var enter_duration = 10
+    
+    var pnu1 = projection([46.723616, 24.852326])
+    	destination_map.append("circle")
+    	.attr("cx", pnu[0])
+    	.attr("cy", pnu[1])
+    	.attr("r",4)
+    	.style("fill", "#a11e1e");
+     var metroLines = destination_map.append( "g" );
+        metroLines.selectAll( "path" )
+        .data(metro.features )
+        .enter()
+        .append( "path" )
+        .attr("fill", "none")
+        .attr( "stroke", "#bdbdbd" )
+        .attr("stroke-width", 1.5)
+        .attr( "d", geoPath )
+        .attr("class", "metro");
+    // TIMESLIDER
+        function update_pnd(value) {
+            document.getElementById("range").innerHTML=time[value];
+            inputValue = time[value];
+
+            d3.selectAll(".hotspot")
+            .attr("display", timeMatch);
+
+            chosenhour_dest = eval("PNDedgeflow" + String(inputValue.replace(":00", "")) + ".features");
+            PND_routes.selectAll("path").remove();
+            PND_routes.selectAll( "path" )
+            .data(chosenhour_dest)
+            .enter()
+            .append("path")
+            .attr("stroke", "#000000")
+            .transition()
+            .delay(function (d,i){ 
+                return (d.properties.animation)* enter_duration + 800;})
+            .attr("stroke-width", function(d) {
+                var flow2 = Math.sqrt(+d.properties.flow);
+                return flow2;})
+            .attr( "d", geoPath )
+            .attr("class", "Paths")
+
+            PNDhotspots_total.selectAll("circle").remove();
+            PNDhotspots_total.selectAll("circle")
+            .data(hotspots_d.features)
+            .enter()
+            .append("circle")
+            .attr( "stroke", "#ffe28a" )
+            .attr("transform", function(d) {
+                return "translate(" + projection([d.properties.long_origin, d.properties.lat_origin]) + ")";
+            })
+            .attr("class", "hotspot")
+            .attr("r", 1)
+            .transition().duration(800)
+            .attr("r", function(d){return d.properties.flow*3;})
+            .attr("display", timeMatch)
+
+            PNDhotspots_total.selectAll("circle")
+            .on("mouseover", function(d){
+                d3.select("h2_d").text("PERSON FLOW IN THIS HOUR: " + d.properties.flow);
+                d3.select(this).attr("class","hotspothover");
+            })
+            .on("mouseout", function(d){
+                d3.select("h2_d").text("");
+                d3.select(this).attr("class","hotspot");
+            });
+
+        function timeMatch(data, value) {
+            var d = data.properties.hour;
+            var m = "9";
+            if (inputValue == d) {
+                this.parentElement.appendChild(this);
+                return "display";
+            } else {
+                return "none";
+            };
+        }
+    }
+
+</script>
+
+
+  </div>
+</body>
+</html>

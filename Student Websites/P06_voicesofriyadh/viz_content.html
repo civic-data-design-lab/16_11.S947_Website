@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+ <!--<link href="css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="css/full-width-pics.css" rel="stylesheet">
+	<link href="css/custom.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/multiline.css">
+	
+    <title>Voices of Riyadh</title>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+	<div class="container">
+        <div class="row">
+		<div id="navigation">
+			<a href='index.html' style="font-weight:bold">Voices of Riyadh</a>
+			<a href='index.html#about'>About the Project</a>
+			<a href="viz_content.html">Content Visualization</a>
+			<a href="viz_users.html">User Visualization</a>
+		</div>
+		</div>
+	</div>
+
+    <div class="container" style="padding-left:20px; padding-right:20px">
+        <div class="row">
+			<div class="col-lg-12 text-center">
+				<h2 style="text-align:center; margin-left:40px;">Visualizing Twitter Content</h2>
+				<h3>How It Works</h3>
+				<p>The line chart below represents one abstract week. The lines each represent a category of tweet (Traffic, Religion or Entertainment) and show how many tweets from that category were sent at a given time of the week. For example, you can see that people are talking about entertainment (museums, coffee shops, and so on) more frequently in the evenings, especially on Thursday and Friday night. Conversation about traffic spikes during rush hour times, but it is particularly fierce on Monday evenings. (Click on the legend to toggle visibility).</p>
+				<p>Meanwhile, the maps will show you the spatial distribution of the tweets at that time. For example, you can explore the Monday spike in traffic tweets, and see where in the city of Riyadh those tweets were posted. The map hexagons are colored darker to indicate greater tweet density, and you can hover over the hexagons to see the count.</p>
+				<h3>Key Takeaways</h3>
+				<p><font style="font-weight:bold">Transportation: </font>Spikes of transportation talk are clearly visible during morning and evening commuting hours. During these local maximums, the map shows high amounts of activity near King Saud University, Highway 65/King Fahd Road, and Al Madinah Al Munawwarah Road.</p>
+				<p><font style="font-weight:bold">Religion: </font>Prayer-related tweets tended to occur between 7am and 9am on weekdays and around noon on Fridays. Again, the map showed that King Saud University was a hotspot for prayer tweet activity. Interestingly, during localized spikes on weekday evenings, eastern Riyadh, near An Nasim Cemetery saw a fair amount of activity.</p>
+				<p><font style="font-weight:bold">Entertainment: </font>Entertainment-related tweets showed the most consistent temporal grouping, with 8-9pm on weekdays and 4-10pm on weekends being the most popular time for such tweets. Spatially, these spikes were concentrated in two distinct areas: the central part of the city near the Al Nakheel Mall and in the southwest corner of the city near the King Abdullah International Gardens.</p>
+			</div>
+		</div>
+
+
+        <!-- Content Map goes here -->
+
+        <div class="row" style="margin:auto; width:1190px">
+
+			<div class="col-md-4" id="transportationmap">
+			<h3 style="text-align:center"><font size="3">Transportation</font></h3>
+			</div>
+			
+			<div class="col-md-4" id="prayermap">
+			<h3 style="text-align: center" ><font size="3">Religion</font></h3>
+			</div>
+			
+			<div class="col-md-4" id="entertainmentmap">
+			<h3 style="text-align:center"><font size="3" >Entertainment</font></h3>
+			</div>
+		</div>
+	</div>
+    <div class="container">
+		<div class="row">
+			<div class="chart-wrapper" id="chart-line1" style="position:relative; left:10px; top:350px;"></div>
+		</div>
+
+	</div>
+
+
+    <!-- /.container -->
+
+
+
+</body>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="http://d3js.org/d3.v3.js" charset="utf-8"></script>
+	<script src="http://d3js.org/queue.v1.min.js"></script>
+	<script src="http://d3js.org/topojson.v1.min.js"></script>
+
+	<script src="js/date.js" type="text/javascript"></script>
+
+	<script src="js/multiline.js" charset="utf-8"></script>
+	<script src="js/catmapper.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	var formatter = d3.time.format("%A, %B %d, %I %p");
+	var formatter2 = d3.time.format("%A %I %p");
+	var formatter3 = d3.time.format("%A %B %e %Y %I %p")
+
+
+d3.csv('category_location_counters.csv', function(error, data) {
+    data.forEach(function (d) {
+		d.timestamp = formatter3.parse(d.Timestamp);
+        d.sequence = +d.Number;
+        d.variableA = +d.fun;
+        d.variableB = +d.all_transport;
+        d.variableC = +d.prayer;
+		d.variableD = +d.category_total;
+    });
+
+    var chart = makeLineChart(data, 'timestamp', {
+        'Transportation': {column: 'variableB'},
+        'Prayer': {column: 'variableC'},
+		'Entertainment': {column: 'variableA'},
+
+
+    });
+	
+    chart.bind({selector:"#chart-line1",chartSize:{height:300, width:1160}, axisLabels: {xAxis:'Time', yAxis: '# Tweets'},
+		colors: ['#82389b','#379e84','#18c4db']});
+    chart.render();
+
+});
+</script>
+</html>
