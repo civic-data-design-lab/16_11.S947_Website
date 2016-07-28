@@ -72,15 +72,15 @@ MyUI.prototype = {
         if(e.projectid == 1)
             mysrc = "../Student%20Websites/P01_pedestrianvscar/";
         else if(e.projectid == 2)
-            mysrc = "../Student%20Websites/P02_womenonthemove/project/movement.html";
+            mysrc = "../Student%20Websites/P02_womenonthemove/viz.html";
         else if(e.projectid == 3)
-            mysrc = "../Student%20Websites/P03_RiyadhGo/RiyadhGo/";
+            mysrc = "../Student%20Websites/P03_RiyadhGo/RiyadhGo/viz.html";
         else if(e.projectid == 4)
             mysrc = "../Student%20Websites/P04_Migrant%20Population/riyadh-project/";
         else if(e.projectid == 5)
-            mysrc = "";
+            mysrc = "../Student%20Websites/P05_Riyadh_together/viz.html";
         else if(e.projectid == 6)
-            mysrc = "../Student%20Websites/P06_voicesofriyadh/viz_content.html";
+            mysrc = "../Student%20Websites/P06_voicesofriyadh/viz.html";
         
         e.obj.append("iframe").attr("src",mysrc)
             .attr("height","100%")

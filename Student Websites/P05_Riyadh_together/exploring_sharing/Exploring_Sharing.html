@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exploring Shared Last-Mile Trips in NYC</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link rel="shortcut icon" href="http://cartodb.com/assets/favicon.ico" />
+
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+    <link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css">
+    <link rel="stylesheet" href="http://academy.cartodb.com/css/cdbui.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">  
+    <style>
+      html, body {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+      }
+      #map {
+        height: 80%;
+        padding: 0;
+        margin: 0;
+      }
+      #dashboard {
+        height: 20%;
+        padding: 25px;
+        margin: 0;
+        border-top: 2px solid #333;
+      }
+      #dash {
+        margin: 25px 0;
+        width: 400px;
+      }
+      button {
+        margin-right: 10px;
+        font-family: "Proxima Nova W01", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        background: transparent;
+      }
+      p {
+        font-size: 17px;
+        margin-bottom: 10px;
+      }
+        .btn-group {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }    
+    </style>
+
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="http://fast.fonts.net/jsapi/b6470a43-5105-49d3-95ae-75217a436bf8.js"></script>
+
+  </head>
+  <body>
+    <div id="map"></div>
+    <div id="dashboard">
+        <h3 class="Title Title--xs">Select a sharing scenario.</h3>
+        <div class="btn-group" role="group" aria-label="...">
+          <button type="button" id= "sublayer0" class="btn btn-default">No Shared Trips</button>
+          <button type="button" id= "sublayer1" class="btn btn-default">15% Shared Trips</button>
+          <button type="button" id= "sublayer2" class="btn btn-default">25% Shared Trips</button>
+          <button type="button" id= "sublayer3" class="btn btn-default">50% Shared Trips (Max)</button>    
+        </div>
+        <br>
+        <p>Then you can explore the map to see how shared taxi trips can reduce vehicles on the road. Hover your cursor over a section of road to see how use of that road segment changes under that sharing scenario.</p>
+    </div>
+
+    <!-- include cartodb.js library -->
+    <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Place your code in the script tags below -->
+    <script>
+        window.onload = function() {
+            // Instantiate new map object, place it in 'map' element
+          var map_object = new L.Map('map', {
+            center: [40.7596076, -73.8299297], //Center on Flushing Main-St
+            zoom: 13
+          });
+
+          // Put layer data into a JS object
+          var layerSource = {
+              user_name: 'jacampbe',
+              type: 'cartodb',
+              sublayers: [{
+                sql: "SELECT * FROM unshared_segments Order by trips", //unshared trips
+                cartocss: '#pickup_route_segments{polygon-opacity: 0;line-color: #FFFFB2;line-width: 12;line-opacity: 1;line-cap: square;line-join: round;}#pickup_route_segments [ trips <= 500] {line-width: 10;}#pickup_route_segments [ trips <= 150] {line-width: 7.5;}#pickup_route_segments [ trips <= 125] {line-width: 5;}#pickup_route_segments [ trips <= 100] {line-width: 4;}#pickup_route_segments [ trips <= 75] {line-width: 3;}#pickup_route_segments [ trips <= 50] {line-width: 2.5;}#pickup_route_segments [ trips <= 25] {line-width: 2;}#pickup_route_segments [ trips <= 20] {line-width: 1.5;}#pickup_route_segments [ trips <= 10] {line-width: 1;}#pickup_route_segments [ trips <= 5] {line-width: 0.5;}#pickup_route_segments [ trips <= 500] {line-color: #e6e19a;}#pickup_route_segments [ trips <= 100] {line-color: #D6CD58;}#pickup_route_segments [ trips <= 50] {line-color: #7CBF6F;}#pickup_route_segments [ trips <= 20] {line-color: #37A58E;}#pickup_route_segments [ trips <= 10] {line-color: #3E8496;}#pickup_route_segments [ trips <= 5] {line-color: #155363;}',
+                interactivity: ['cartodb_id', 'trips']
+              },
+              {
+                sql: "SELECT * FROM shared_15_segments Order by trips", //15% shared trips
+                cartocss: '#pickup_route_segments{polygon-opacity: 0;line-color: #FFFFB2;line-width: 12;line-opacity: 1;line-cap: square;line-join: round;}#pickup_route_segments [ trips <= 500] {line-width: 10;}#pickup_route_segments [ trips <= 150] {line-width: 7.5;}#pickup_route_segments [ trips <= 125] {line-width: 5;}#pickup_route_segments [ trips <= 100] {line-width: 4;}#pickup_route_segments [ trips <= 75] {line-width: 3;}#pickup_route_segments [ trips <= 50] {line-width: 2.5;}#pickup_route_segments [ trips <= 25] {line-width: 2;}#pickup_route_segments [ trips <= 20] {line-width: 1.5;}#pickup_route_segments [ trips <= 10] {line-width: 1;}#pickup_route_segments [ trips <= 5] {line-width: 0.5;}#pickup_route_segments [ trips <= 500] {line-color: #e6e19a;}#pickup_route_segments [ trips <= 100] {line-color: #D6CD58;}#pickup_route_segments [ trips <= 50] {line-color: #7CBF6F;}#pickup_route_segments [ trips <= 20] {line-color: #37A58E;}#pickup_route_segments [ trips <= 10] {line-color: #3E8496;}#pickup_route_segments [ trips <= 5] {line-color: #155363;}',
+                interactivity: ['cartodb_id', 'trips']  
+              },
+              {
+                sql: "SELECT * FROM shared_25_segments Order by trips", //15% shared trips
+                cartocss: '#pickup_route_segments{polygon-opacity: 0;line-color: #FFFFB2;line-width: 12;line-opacity: 1;line-cap: square;line-join: round;}#pickup_route_segments [ trips <= 500] {line-width: 10;}#pickup_route_segments [ trips <= 150] {line-width: 7.5;}#pickup_route_segments [ trips <= 125] {line-width: 5;}#pickup_route_segments [ trips <= 100] {line-width: 4;}#pickup_route_segments [ trips <= 75] {line-width: 3;}#pickup_route_segments [ trips <= 50] {line-width: 2.5;}#pickup_route_segments [ trips <= 25] {line-width: 2;}#pickup_route_segments [ trips <= 20] {line-width: 1.5;}#pickup_route_segments [ trips <= 10] {line-width: 1;}#pickup_route_segments [ trips <= 5] {line-width: 0.5;}#pickup_route_segments [ trips <= 500] {line-color: #e6e19a;}#pickup_route_segments [ trips <= 100] {line-color: #D6CD58;}#pickup_route_segments [ trips <= 50] {line-color: #7CBF6F;}#pickup_route_segments [ trips <= 20] {line-color: #37A58E;}#pickup_route_segments [ trips <= 10] {line-color: #3E8496;}#pickup_route_segments [ trips <= 5] {line-color: #155363;}',
+                interactivity: ['cartodb_id', 'trips']  
+              },
+              {
+                sql: "SELECT * FROM shared_max_segments Order by trips", //15% shared trips
+                cartocss: '#pickup_route_segments{polygon-opacity: 0;line-color: #FFFFB2;line-width: 12;line-opacity: 1;line-cap: square;line-join: round;}#pickup_route_segments [ trips <= 500] {line-width: 10;}#pickup_route_segments [ trips <= 150] {line-width: 7.5;}#pickup_route_segments [ trips <= 125] {line-width: 5;}#pickup_route_segments [ trips <= 100] {line-width: 4;}#pickup_route_segments [ trips <= 75] {line-width: 3;}#pickup_route_segments [ trips <= 50] {line-width: 2.5;}#pickup_route_segments [ trips <= 25] {line-width: 2;}#pickup_route_segments [ trips <= 20] {line-width: 1.5;}#pickup_route_segments [ trips <= 10] {line-width: 1;}#pickup_route_segments [ trips <= 5] {line-width: 0.5;}#pickup_route_segments [ trips <= 500] {line-color: #e6e19a;}#pickup_route_segments [ trips <= 100] {line-color: #D6CD58;}#pickup_route_segments [ trips <= 50] {line-color: #7CBF6F;}#pickup_route_segments [ trips <= 20] {line-color: #37A58E;}#pickup_route_segments [ trips <= 10] {line-color: #3E8496;}#pickup_route_segments [ trips <= 5] {line-color: #155363;}',
+                interactivity: ['cartodb_id', 'trips']
+              },                            
+              {
+                sql: "SELECT * FROM nyctsubwayroutes_100627 where route_id = '7'", //subway line
+                cartocss: '#nyctsubwayroutes_100627{line-color: #adadad;line-width: 3.5;line-opacity: 1;}'
+              },
+              {
+                sql: "SELECT * FROM nycsubway_stations where line like '%7%'", //subway line
+                cartocss: '#nycsubway_stations{marker-fill-opacity: 1;marker-line-color: #FFF;marker-line-width: 1.25;marker-line-opacity: 1;marker-placement: point;marker-type: ellipse;marker-width: 7;marker-fill: #adadad; marker-allow-overlap: true;}'
+              }]
+          }
+
+          // For storing the sublayers
+          var sublayers = [];
+
+          // Pull tiles from OpenStreetMap
+          L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',{
+                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://cartodb.com/attributions">CartoDB</a>'
+            }).addTo(map_object);
+
+          // Add data layer to your map
+          cartodb.createLayer(map_object,layerSource)
+            .addTo(map_object)
+            .done(function(layer) {
+              for (var i = 0; i < layer.getSubLayerCount(); i++) {
+                sublayers[i] = layer.getSubLayer(i);
+                 
+              }
+              sublayers[0].show();
+              sublayers[1].hide();
+              sublayers[2].hide();
+              sublayers[3].hide();
+          })
+            .error(function(err) {
+              console.log("error: " + err);
+            });
+            
+          var sublayer0Shown = true;
+            $("#sublayer0").on('click', function() {
+                sublayers[0].show();
+                sublayers[1].hide();
+                sublayers[2].hide();
+                sublayers[3].hide();
+                sublayer0Shown = true;
+            });
+            
+          var sublayer1Shown = false;
+            $("#sublayer1").on('click', function() {
+                sublayers[0].hide();
+                sublayers[1].show();
+                sublayers[2].hide();
+                sublayers[3].hide();
+                sublayer1Shown = true; 
+            });
+            
+          var sublayer2Shown = false;
+            $("#sublayer2").on('click', function() {
+                sublayers[0].hide();
+                sublayers[1].hide();
+                sublayers[2].show();
+                sublayers[3].hide();
+                sublayer2Shown = true; 
+            });
+            
+          var sublayer3Shown = false;
+            $("#sublayer3").on('click', function() {
+                sublayers[0].hide();
+                sublayers[1].hide();
+                sublayers[2].hide();
+                sublayers[3].show();
+                sublayer3Shown = true; 
+            });
+              
+        }
+    </script>
+  </body>
+</html>

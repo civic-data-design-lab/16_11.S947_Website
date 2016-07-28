@@ -1,0 +1,71 @@
+#chg_max{
+  polygon-opacity: 0;
+  line-color: #c71585;
+  line-width: 10;
+  line-opacity: 1;
+   line-cap: round;
+  line-join: round;
+}
+
+#chg_max [ chg <= 30] {
+   line-width: 7.5;
+   line-color: #d53190;
+}
+#chg_max [ chg <= 15] {
+   line-width: 5;
+   line-color: #e3469c;    
+}
+#chg_max [ chg <= 5] {
+   line-width: 2.5;
+   line-color: #f158a8;    
+}
+#chg_max [ chg <= 2] {
+   line-width: 1;
+   line-color: #FF69B4;
+}
+#chg_max [ chg <= 0] {
+   line-width: 1;
+   line-color: #00ffff;    
+}
+#chg_max [ chg <= -5] {
+   line-width: 2.5;
+   line-color: #00e5e5;
+}
+#chg_max [ chg <= -10] {
+   line-width: 5;
+   line-color: #00cbcb;    
+}
+#chg_max [ chg <= -25] {
+   line-width: 7.5;
+   line-color: #00b0b0;    
+}
+#chg_max [ chg <= -50] {
+   line-width: 10;
+   line-color: #009999;    
+}
+#chg_max [ chg <= -100] {
+   line-width: 12;
+   line-color: #008080;    
+}
+
+#chg_max [ chg <= 2] {
+   
+}
+#chg_max [ chg <= 0] {
+   
+}
+#chg_max [ chg <= -5] {
+   
+}
+#chg_max [ chg <= -10] {
+   
+}
+#chg_max [ chg <= -25] {
+   
+}
+#chg_max [ chg <= -50] {
+   
+}
+#chg_max [ chg <= -100] {
+   
+}

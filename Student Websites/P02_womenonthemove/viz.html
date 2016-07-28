@@ -1,0 +1,137 @@
+<html>
+
+<head>
+    <title>Moving Through Riyadh</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.css " rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/landing-page.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="http://cortnik.github.io/project/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <script language="javascript" type="text/javascript">
+    function resizeIframe(obj) {
+        obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+    }
+    </script>
+
+
+    <style>
+    @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
+        body {
+            position: absolute;
+            top: 30px;
+            font-family: 'Roboto Condensed', sans-serif;
+            /*background-color: #FFFAFA;
+            color: #708090;*/
+        }
+        
+        h3 {
+            /*          position: absolute;
+            left: 20px;*/
+            font-size: 1.3em;
+            font-weight: 100;
+            /*color: #708090;*/
+        }
+        
+        h2 {
+            font-size: 1em;
+            /* color: #708090;*/
+        }
+        
+        .hotspot {
+            stroke: #ffffff;
+            fill: #5F9EA0;
+            opacity: .7;
+        }
+        
+        .hotspothover {
+            fill: #ffe28a;
+        }
+        
+        .Paths {
+            opacity: .6;
+            fill: none;
+            stroke: #ff812d;
+            stroke-linecap: round;
+        }
+        
+        #slider {
+            width: 5px;
+            height: 400px;
+            text-align: center;
+            float: left;
+            /* position: absolute;    */
+        }
+        
+        #slider > input[type=range] {
+            width: 400;
+            height: 20;
+            display: block;
+            position: relative;
+            text: center;
+            transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            transform-origin: left;
+            text-align: center;
+            top: 80px;
+            left: 10px;
+        }
+        
+        #wrap {
+            width: 1200px;
+            height: 550px;
+            margin-left: 60px;
+            margin-top: 30px;
+        }
+        
+        #origin_map {
+            width: 550px;
+            height: 550px;
+            float: left;
+            /* float:bottom; */
+        }
+        
+        #destination_map {
+            width: 550px;
+            height: 550px;
+            float: right;
+        }
+    }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand topnav">WOMEN ON THE MOVE</a>
+            </div>
+
+        </div>
+    </nav>
+
+    <iframe width="100%" frameborder="0" scrolling="no" onload="resizeIframe(this)" src="movement.html" ></iframe>
+    <iframe width="100%" frameborder="0" scrolling="no" onload="resizeIframe(this)" src="access.html" ></iframe>
+
+
+
+    </div>
+</body>
+
+</html>
