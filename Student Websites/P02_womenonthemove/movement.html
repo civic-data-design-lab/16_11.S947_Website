@@ -271,7 +271,7 @@
             chosenhour_origin = eval("PNOedgeflow" + String(inputValue.replace(":00", "")) + ".features");
             PNO_routes.selectAll("path").remove();
             PNO_routes.selectAll("path")
-            .data(chosenhour_origin)
+            .data(chosenhour_origin)//maybe can make this query from database api
             .enter()
             .append("path")
             .attr("stroke", "#000000")

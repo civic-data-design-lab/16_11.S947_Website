@@ -6,12 +6,17 @@
         obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
     }
     </script>
+    <style>
+        body{
+            margin:0px;
+        }
 
+    </style>
 </head>
 
 <body>
 
-    <iframe width="100%" frameborder="0" scrolling="no" onload="resizeIframe(this)" src="index.html" ></iframe>
+    <iframe width="100%" frameborder="0" scrolling="no" height="100%" src="index.html" ></iframe>
 
 </body>
 

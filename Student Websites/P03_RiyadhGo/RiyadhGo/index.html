@@ -83,7 +83,8 @@
         svg {
             position: relative;
             top: 100px;
-            z-index: 1
+            z-index: 1;
+
         }   
     </style>
 </head>
@@ -145,7 +146,7 @@
         .append( "svg" )
         .attr('class', 'road_network')
         .attr( "width", width-20 )
-        .attr( "height", height-130 )
+        .attr( "height", 700 )
         .attr("top",200);
     svg
         .call(zoom)
@@ -168,7 +169,7 @@
         .attr("stroke-width", function (x) {return x.properties.voc_md *0.9+0.3})
         .attr( "d", geoPath ) // "d" is D3.attribute stands for coordinates of a path
         .attr("class","incident");
-    d3.select("#On").on("click", function() {
+    d3.select("#On").on("click", function() {//###should not recalculate if it's on already
         d3.select(".RiyadhVoc").remove();
         var city_network = svg.append( "g" )
             .attr('class', 'RiyadhVoc');
@@ -176,11 +177,9 @@
             .data( traffic_json.features )
             .enter()
             .append( "path" )
-            .attr("stroke", "white")
-            .attr("fill", "none")
-            .transition()
+/*            .transition()
             .duration(1500)
-            .attr("fill","none")
+*/            .attr("fill","none")
             .attr("stroke", function (x) { return color_roads(x.properties.voc_md)})
             .attr("stroke-width", function (x) {return x.properties.voc_md *0.9+0.3})
             .attr( "d", geoPath ) // "d" is D3.attribute stands for coordinates of a path
@@ -229,11 +228,14 @@
         .style("visibility", "hidden");
 
     function map(node_id,inputValue){
+
+            //here all_json can be made into a query from the database
+
             var current_paths = svg.append( "g" )
                 .attr('class','Shortest_Path'); //"id" can be change to whatever for example "class", but if it is not "id", it cannot be selected by d3.select().romove
             if (inputValue == "Distance") {
                 current_paths.selectAll(".incident2")
-                    .data(all_json[node_id].features)  
+                    .data(all_json[node_id].features)
                     .enter()
                     .append( "path" )
                     .attr("stroke", "white")
@@ -314,13 +316,13 @@
             map(node_id,inputValue);
         });
     }
-    function create_shortpath(node_id) {
+    function create_shortpath(node_id) {//create path based on node chosen
             var inputValue;
             var radio=document.getElementsByName('mode');   
             for(i=0;i<radio.length;i++){
                 if(radio[i].checked)
                   inputValue=radio[i].value;
-            }           
+            }
             map(node_id, inputValue);
             changeRadio(node_id);
             // Crepate SVG for Tooltip on Mouseover
