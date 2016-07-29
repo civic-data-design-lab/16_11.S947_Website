@@ -397,7 +397,27 @@ svg {
 	</div>
 
 <script>
+    var prince_abdul = [46.69, 24.699]
+    var al_futah = [46.715, 24.647]
+    var kingdom_center = [46.675, 24.712]
+    var king_saud = [46.624, 24.724]
+    var jabal_park = [46.747, 24.684]
+    var faisal_stadium = [46.739, 24.663]
+    var ad_dirah = [46.717, 24.63]
 
+    var width = window.innerWidth;
+        height = window.innerHeight;
+
+    var projection = d3.geo.mercator()
+        .scale( 120000 )
+        .rotate( [-46.7166,0] )
+        .center( [0, 24.6333] )
+        .translate( [width/2,height/2] );
+
+/*    var zoom = d3.behavior.zoom()
+        .scaleExtent([0, 12])
+        .on("zoom", zoomed);
+*/
     queue()
       .defer(d3.json, 'data/topojson/riyadh_edges_congestion.json')
       .defer(d3.json, 'data/topojson/kernel_am.json')
@@ -410,6 +430,36 @@ svg {
       .defer(d3.json, 'data/topojson/td_rd.json')
       .defer(d3.json, 'data/topojson/t_am.json')
       .await(makeMyMap);
+
+    var path = d3.geo.path()
+        .projection(projection);
+
+    var svg = d3.select("body").append("svg")
+        .append("g");
+
+
+    var g = svg.append("g");
+
+    var geoPath = d3.geo.path()
+        .projection( projection )
+        .pointRadius(function(d) { return .25; });
+
+    svg.append("rect")
+        .attr("class", "overlay")
+        .attr("width", width)
+        .attr("height", height);
+
+    var zoom = d3.behavior.zoom()
+	    .size([width, height])
+	    .on("zoom", zoomed);
+
+    function zoomed() {
+      g.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+    }
+
+    svg
+        .call(zoom)
+        .call(zoom.event);
 
     function makeMyMap(error, edges_cong_json, kernel_am, kernel_md, kernel_pm, kernel_rd, tweet_am, tweet_md, tweet_pm, tweet_rd, t_am) {
 /*      svg.append('path')
@@ -425,31 +475,8 @@ svg {
 */
 
 
-    var width = window.innerWidth;
-        height = window.innerHeight;
-
-    var projection = d3.geo.mercator()
-        .scale( 120000 )
-        .rotate( [-46.7166,0] )
-        .center( [0, 24.6333] )
-        .translate( [width/2,height/2] );
-
-    var zoom = d3.behavior.zoom()
-        .scaleExtent([0, 12])
-        .on("zoom", zoomed);
-
-    var path = d3.geo.path()
-        .projection(projection);
-
-    var svg = d3.select("body").append("svg")
-        .append("g");
 
 
-    var g = svg.append("g");
-
-    var geoPath = d3.geo.path()
-        .projection( projection )
-        .pointRadius(function(d) { return .25; });
 
     var am_add = edges_cong_json.objects.riyadh_edges_congestion.geometries;
     var new_array = [];
@@ -462,20 +489,6 @@ svg {
     var scale = d3.scale.quantile()
        .domain(new_array)
        .range([0, .1, .2, .4, .8, 1.6]);
-
-
-
-    var zoom = d3.behavior.zoom()
-	    .size([width, height])
-	    .on("zoom", zoomed);
-
-    var prince_abdul = [46.69, 24.699]
-    var al_futah = [46.715, 24.647]
-    var kingdom_center = [46.675, 24.712]
-    var king_saud = [46.624, 24.724]
-    var jabal_park = [46.747, 24.684]
-    var faisal_stadium = [46.739, 24.663]
-    var ad_dirah = [46.717, 24.63]
 
 	var scale,
 	    translate,
@@ -491,81 +504,6 @@ svg {
 	  }
 	});
 
-	function zoomTo(location, scale) {
-	  var point = projection(location);
-	  return zoom
-	      .translate([width / 2 - point[0] * scale, height / 2 - point[1] * scale])
-	      .scale(scale);
-	}
-
-	function zoomed(d) {
-	  translate = zoom.translate();
-	  scale = zoom.scale();
-	  visibleArea = 1 / scale / scale;
-	  invisibleArea = 200 * visibleArea;
-	  context.clearRect(0, 0, width, height);
-	  context.beginPath();
-	  path(d);
-	  context.stroke();
-	}
-
-	function location1(){
-	  	var t = d3.select("svg");
-	  	t.transition()
-	    	.call(zoomTo(prince_abdul, 10).event)
-	    	.duration(60 * 2000 / 89 * 2);
-	};
-
-	function location2(){
-	  var t = d3.select("svg");
-	  t.transition()
-	    .call(zoomTo(al_futah, 12).event)
-	    .duration(60 * 2000 / 89 * 2);
-	};
-
-	function location3(){
-	  var t = d3.select("svg");
-	  t.transition()
-	    .call(zoomTo(kingdom_center, 14).event)
-	    .duration(60 * 2000 / 89 * 2);
-	};
-
-	function location4(){
-	  var t = d3.select("svg");
-	  t.transition()
-	    .call(zoomTo(king_saud, 8).event)
-	    .duration(60 * 2000 / 89 * 2);
-	};
-
-	function location5(){
-	  var t = d3.select("svg");
-	  t.transition()
-	    .call(zoomTo(jabal_park, 14).event)
-	    .duration(60 * 2000 / 89 * 2);
-	};
-
-	function location6(){
-	  var t = d3.select("svg");
-	  t.transition()
-	    .call(zoomTo(faisal_stadium, 14).event)
-	    .duration(60 * 2000 / 89 * 2);
-	};
-
-	function location7(){
-	  var t = d3.select("svg");
-	  t.transition()
-	    .call(zoomTo(ad_dirah, 14).event)
-	    .duration(60 * 2000 / 89 * 2);
-	};
-
-    svg.append("rect")
-        .attr("class", "overlay")
-        .attr("width", width)
-        .attr("height", height);
-
-    svg
-        .call(zoom)
-        .call(zoom.event);
 
 //plot twitter density am
   g.selectAll( "path1" )
@@ -705,9 +643,7 @@ svg {
 
 
 
-  function zoomed() {
-    g.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
-  }
+
 
   d3.select(self.frameElement).style("height", height + "px");
 
@@ -954,6 +890,64 @@ svg {
       	node.style.display = "block";
     };
 
+
+	function zoomTo(location, scale) {
+	  var point = projection(location);
+	  return zoom
+	      .translate([width / 2 - point[0] * scale, height / 2 - point[1] * scale])
+	      .scale(scale);
+	}
+
+
+
+	function location1(){
+	  	var t = d3.select("svg");
+	  	t.transition()
+	    	.call(zoomTo(prince_abdul, 10).event)
+	    	.duration(60 * 2000 / 89 * 2);
+	};
+
+	function location2(){
+	  var t = d3.select("svg");
+	  t.transition()
+	    .call(zoomTo(al_futah, 12).event)
+	    .duration(60 * 2000 / 89 * 2);
+	};
+
+	function location3(){
+	  var t = d3.select("svg");
+	  t.transition()
+	    .call(zoomTo(kingdom_center, 14).event)
+	    .duration(60 * 2000 / 89 * 2);
+	};
+
+	function location4(){
+	  var t = d3.select("svg");
+	  t.transition()
+	    .call(zoomTo(king_saud, 8).event)
+	    .duration(60 * 2000 / 89 * 2);
+	};
+
+	function location5(){
+	  var t = d3.select("svg");
+	  t.transition()
+	    .call(zoomTo(jabal_park, 14).event)
+	    .duration(60 * 2000 / 89 * 2);
+	};
+
+	function location6(){
+	  var t = d3.select("svg");
+	  t.transition()
+	    .call(zoomTo(faisal_stadium, 14).event)
+	    .duration(60 * 2000 / 89 * 2);
+	};
+
+	function location7(){
+	  var t = d3.select("svg");
+	  t.transition()
+	    .call(zoomTo(ad_dirah, 14).event)
+	    .duration(60 * 2000 / 89 * 2);
+	};
 
   </script>
 
