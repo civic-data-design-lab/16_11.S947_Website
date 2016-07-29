@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Pedestrian vs. Car</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/creative.css" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<style>
+
+svg {
+  background: #e6e6e6;
+}
+
+.sphere {
+  fill: #fff;
+}
+
+.land {
+  fill: #000;
+}
+
+.boundary {
+  fill: none;
+  stroke: #fff;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  margin: 11px 0;
+  width: 100%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: #333;
+}
+/*slider thumb*/
+input[type=range]::-webkit-slider-thumb {
+  border: 2px solid #000000;
+  height: 26px;
+  width: 10px;
+  border-radius: 5px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -12px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #333;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: #333;
+}
+input[type=range]::-moz-range-thumb {
+  border: 2px solid #000000;
+  height: 28px;
+  width: 8px;
+  border-radius: 4px;
+  background: #ffffff;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  border-width: 2px 0;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #333;
+  border: 0.2px solid #010101;
+  border-radius: 1px;
+}
+input[type=range]::-ms-fill-upper {
+  background: #333;
+  border: 0.2px solid #010101;
+  border-radius: 1px;
+}
+input[type=range]::-ms-thumb {
+  border: 2px solid #000000;
+  height: 26px;
+  width: 10px;
+  border-radius: 5px;
+  background: #ffffff;
+  cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #333;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #333;
+}
+
+.slider-text {
+  float: left;
+  margin-left: 55px;
+  position: relative;
+}
+
+/*__________________________buttons_________________________*/
+.cmn-toggle {
+  position: absolute;
+  margin-left: -9999px;
+  visibility: hidden;
+}
+.cmn-toggle + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+
+.buttonContainer1 {
+	width: 200px;
+	float:left;
+	margin-right: 20px;
+	margin-left: 40px;
+}
+
+.buttonContainer2 {
+	width: 250px;
+	float:left;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+.buttonContainer3 {
+	width: 150px;
+	float:left;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+.sliderContainer {
+	margin-left: 40px;
+}
+
+.button {
+	float: left;
+    padding-right: 6px;
+}
+
+.button-labels {
+	padding-right: 20px;
+}
+
+input.cmn-toggle-round-flat + label {
+  padding: 2px;
+  width: 46px;
+  height: 26px;
+  background-color: #dddddd;
+  border-radius: 30px;
+  transition: background 0.6s;
+}
+input.cmn-toggle-round-flat + label:before,
+input.cmn-toggle-round-flat + label:after {
+  display: block;
+  position: absolute;
+  content: "";
+}
+input.cmn-toggle-round-flat + label:before {
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  right: 2px;
+  background-color: #fff;
+  border-radius: 24px;
+  transition: background 0.6s;
+}
+input.cmn-toggle-round-flat + label:after {
+  top: 4px;
+  left: 4px;
+  bottom: 4px;
+  width: 18px;
+  background-color: #dddddd;
+  border-radius: 20px;
+  transition: margin 0.6s, background 0.6s;
+}
+
+/*red slider*/
+input#cmn-toggle-1:checked + label {
+  background-color: red;
+}
+input#cmn-toggle-1:checked + label:after {
+  margin-left: 20px;
+  background-color: red;
+}
+
+/*blue slider*/
+input#cmn-toggle-2:checked + label {
+  background-color: #3399ff;
+}
+input#cmn-toggle-2:checked + label:after {
+  margin-left: 20px;
+  background-color: #3399ff;
+}
+
+/*black slider*/
+input#cmn-toggle-3:checked + label {
+  background-color: black;
+}
+input#cmn-toggle-3:checked + label:after {
+  margin-left: 20px;
+  background-color: black;
+}
+
+/*black slider2*/
+input#cmn-toggle-4:checked + label {
+  background-color: black;
+}
+input#cmn-toggle-4:checked + label:after {
+  margin-left: 20px;
+  background-color: black;
+}
+
+.button_loc {
+	font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+	background-color: white;
+	border-radius: 20px
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	border:2px solid #dddddd;
+	margin-bottom: 8px;
+}
+
+button:focus {outline:0;}
+
+.button_loc:active {
+	border:2px solid black;
+}
+
+.button_loc:visited {
+	border:2px solid red;
+}
+
+svg {
+    background-color: #E0E0E0;
+    width:100%;
+    height:calc(100% - 120px);
+}
+
+
+</style>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+<script src="http://d3js.org/queue.v1.min.js"></script>
+
+<!--<script src="data/riyadh_edges_congestion.json"></script>
+<script src="data/kernel_am.json"></script>
+<script src="data/kernel_md.json"></script>
+<script src="data/kernel_pm.json"></script>
+<script src="data/kernel_rd.json"></script>
+<script src="data/td_am.json"></script>
+<script src="data/td_md.json"></script>
+<script src="data/td_pm.json"></script>
+<script src="data/td_rd.json"></script>
+<script src="data/t_am.json"></script>-->
+
+
+
+
+<!--|||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
+<!-- <script src="data/t_md.json"></script>
+<script src="data/t_pm.json"></script>
+<script src="data/t_rd.json"></script> -->
+
+<body id="page-top" onload="resize()" onresize="resize()">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid fix_top">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Pedestrian vs. Car</a>
+            </div>
+
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+
+<div id="map-id" class="map">
+    <div id="map-controls-id" class="map-controls">
+    	<div class="buttonContainer1">
+		    <div id="sliderContainer">
+		      <input id="timeslide" type="range" min="0" max="3" value="0" step="1"/><br>
+		      <div class="slider-text"
+		      	<span id="range">7am - 10am</span>
+		      </div>
+		    </div>
+		</div>
+
+		<div class="buttonContainer2">
+		    <div class="button">
+		      <input id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round-flat" type="checkbox" checked>
+		      <label for="cmn-toggle-1"></label>
+		    </div>
+
+		    <div class="button-labels">
+		    	<p>Congestion Heat Map</p>
+		    </div>
+
+		    <div class="button">
+		      <input id="cmn-toggle-2" class="cmn-toggle cmn-toggle-round-flat" type="checkbox" checked>
+		      <label for="cmn-toggle-2"></label>
+		    </div>
+
+		    <div class="button-labels">
+		    	<p>Tweets Heat Map</p>
+		    </div>
+		</div>
+
+		<div class="buttonContainer3">
+		    <div class="button">
+		      <input id="cmn-toggle-3" class="cmn-toggle cmn-toggle-round-flat" type="checkbox" unchecked>
+		      <label for="cmn-toggle-3"></label>
+		    </div>
+
+		    <div class="button-labels">
+		    	<p>Streets</p>
+		    </div>
+
+		    <div class="button">
+		      <input id="cmn-toggle-4" class="cmn-toggle cmn-toggle-round-flat" type="checkbox" unchecked>
+		      <label for="cmn-toggle-4"></label>
+		    </div>
+
+		    <div class="button-labels">
+		    	<p>Tweets</p>
+		    </div>
+		</div>
+
+		<button type="button" class="button_loc" onclick="location1()">Tahlia Road</button>
+		<button type="button" class="button_loc" onclick="location2()">Al Futah District</button>
+		<button type="button" class="button_loc" onclick="location3()">Kingdom Center Tower</button>
+		<button type="button" class="button_loc" onclick="location4()">King Saud University</button>
+		<button type="button" class="button_loc" onclick="location5()">Al Jabal Park</button>
+		<button type="button" class="button_loc" onclick="location7()">Ad Dirah District</button>
+		<button type="button" class="button_loc" onclick="location6()">Prince Faisal Bin Fahd Stadium</button>
+
+	</div>
+
+<script>
+
+    queue()
+      .defer(d3.json, 'data/topojson/riyadh_edges_congestion.json')
+      .defer(d3.json, 'data/topojson/kernel_am.json')
+      .defer(d3.json, 'data/topojson/kernel_md.json')
+      .defer(d3.json, 'data/topojson/kernel_pm.json')
+      .defer(d3.json, 'data/topojson/kernel_rd.json')
+      .defer(d3.json, 'data/topojson/td_am.json')
+      .defer(d3.json, 'data/topojson/td_md.json')
+      .defer(d3.json, 'data/topojson/td_pm.json')
+      .defer(d3.json, 'data/topojson/td_rd.json')
+      .defer(d3.json, 'data/topojson/t_am.json')
+      .await(makeMyMap);
+
+    function makeMyMap(error, edges_cong_json, kernel_am, kernel_md, kernel_pm, kernel_rd, tweet_am, tweet_md, tweet_pm, tweet_rd, t_am) {
+/*      svg.append('path')
+        .datum(topojson.feature(states, states.objects.usStates))
+          .attr('d', path)
+          .attr('class', 'states');
+      svg.selectAll('.cities')
+        .data(cities.features)
+        .enter()
+        .append('path')
+        .attr('d', path.pointRadius(5))
+        .attr('class', 'cities');
+*/
+
+
+    var width = window.innerWidth;
+        height = window.innerHeight;
+
+    var projection = d3.geo.mercator()
+        .scale( 120000 )
+        .rotate( [-46.7166,0] )
+        .center( [0, 24.6333] )
+        .translate( [width/2,height/2] );
+
+    var zoom = d3.behavior.zoom()
+        .scaleExtent([0, 12])
+        .on("zoom", zoomed);
+
+    var path = d3.geo.path()
+        .projection(projection);
+
+    var svg = d3.select("body").append("svg")
+        .append("g");
+
+
+    var g = svg.append("g");
+
+    var geoPath = d3.geo.path()
+        .projection( projection )
+        .pointRadius(function(d) { return .25; });
+
+    var am_add = edges_cong_json.objects.riyadh_edges_congestion.geometries;
+    var new_array = [];
+
+    var arrayLength = am_add.length;
+        for (var i = 0; i < arrayLength; i++) {
+          new_array.push(am_add[i].properties.am_TTI);
+    };
+
+    var scale = d3.scale.quantile()
+       .domain(new_array)
+       .range([0, .1, .2, .4, .8, 1.6]);
+
+
+
+    var zoom = d3.behavior.zoom()
+	    .size([width, height])
+	    .on("zoom", zoomed);
+
+    var prince_abdul = [46.69, 24.699]
+    var al_futah = [46.715, 24.647]
+    var kingdom_center = [46.675, 24.712]
+    var king_saud = [46.624, 24.724]
+    var jabal_park = [46.747, 24.684]
+    var faisal_stadium = [46.739, 24.663]
+    var ad_dirah = [46.717, 24.63]
+
+	var scale,
+	    translate,
+	    visibleArea, // minimum area threshold for points inside viewport
+	    invisibleArea; // minimum area threshold for points outside viewport
+
+	var simplify = d3.geo.transform({
+	  point: function(x, y, z) {
+	    if (z < visibleArea) return;
+	    x = x * scale + translate[0];
+	    y = y * scale + translate[1];
+	    if (x >= -10 && x <= width + 10 && y >= -10 && y <= height + 10 || z >= invisibleArea) this.stream.point(x, y);
+	  }
+	});
+
+	function zoomTo(location, scale) {
+	  var point = projection(location);
+	  return zoom
+	      .translate([width / 2 - point[0] * scale, height / 2 - point[1] * scale])
+	      .scale(scale);
+	}
+
+	function zoomed(d) {
+	  translate = zoom.translate();
+	  scale = zoom.scale();
+	  visibleArea = 1 / scale / scale;
+	  invisibleArea = 200 * visibleArea;
+	  context.clearRect(0, 0, width, height);
+	  context.beginPath();
+	  path(d);
+	  context.stroke();
+	}
+
+	function location1(){
+	  	var t = d3.select("svg");
+	  	t.transition()
+	    	.call(zoomTo(prince_abdul, 10).event)
+	    	.duration(60 * 2000 / 89 * 2);
+	};
+
+	function location2(){
+	  var t = d3.select("svg");
+	  t.transition()
+	    .call(zoomTo(al_futah, 12).event)
+	    .duration(60 * 2000 / 89 * 2);
+	};
+
+	function location3(){
+	  var t = d3.select("svg");
+	  t.transition()
+	    .call(zoomTo(kingdom_center, 14).event)
+	    .duration(60 * 2000 / 89 * 2);
+	};
+
+	function location4(){
+	  var t = d3.select("svg");
+	  t.transition()
+	    .call(zoomTo(king_saud, 8).event)
+	    .duration(60 * 2000 / 89 * 2);
+	};
+
+	function location5(){
+	  var t = d3.select("svg");
+	  t.transition()
+	    .call(zoomTo(jabal_park, 14).event)
+	    .duration(60 * 2000 / 89 * 2);
+	};
+
+	function location6(){
+	  var t = d3.select("svg");
+	  t.transition()
+	    .call(zoomTo(faisal_stadium, 14).event)
+	    .duration(60 * 2000 / 89 * 2);
+	};
+
+	function location7(){
+	  var t = d3.select("svg");
+	  t.transition()
+	    .call(zoomTo(ad_dirah, 14).event)
+	    .duration(60 * 2000 / 89 * 2);
+	};
+
+    svg.append("rect")
+        .attr("class", "overlay")
+        .attr("width", width)
+        .attr("height", height);
+
+    svg
+        .call(zoom)
+        .call(zoom.event);
+
+//plot twitter density am
+  g.selectAll( "path1" )
+      .data(topojson.feature(tweet_am, tweet_am.objects.td_am).features)
+      .enter()
+      .append( "path" )
+      .attr('class','tweet_fade am')
+      .style( "fill", "#007acc")
+      .attr( "d", geoPath )
+      .style( "fill-opacity", function(d){
+          return d.properties.GRIDCODE / 8;
+      })
+      .style( "opacity", 1)
+      .attr("visibility", "visible");
+
+//plot twitter density md
+  g.selectAll( "path2" )
+      .data( topojson.feature(tweet_md, tweet_md.objects.td_md).features )
+      .enter()
+      .append( "path" )
+      .attr('class','tweet_fade md')
+      .style( "fill", "#007acc")
+      .attr( "d", geoPath )
+      .style( "fill-opacity", function(d){
+          return d.properties.GRIDCODE / 8;
+      })
+      .style( "opacity", 1)
+      .attr("visibility", "hidden");
+
+//plot twitter density pm 
+  g.selectAll( "path3" )
+      .data( topojson.feature(tweet_pm, tweet_pm.objects.td_pm).features )
+      .enter()
+      .append( "path" )
+      .attr('class','tweet_fade pm')
+      .style( "fill", "#007acc")
+      .attr( "d", geoPath )
+      .style( "fill-opacity", function(d){
+          return d.properties.GRIDCODE / 8;
+      })
+      .style( "opacity", 1)
+      .attr("visibility", "hidden");
+
+//plot twitter density rd
+  g.selectAll( "path4" )
+      .data( topojson.feature(tweet_rd, tweet_rd.objects.td_rd).features )
+      .enter()
+      .append( "path" )
+      .attr('class','tweet_fade rd')
+      .style( "fill", "#007acc")
+      .attr( "d", geoPath )
+      .style( "fill-opacity", function(d){
+          return d.properties.GRIDCODE / 8;
+      })
+      .style( "opacity", 1)
+      .attr("visibility", "hidden");
+
+//plot congestions density am
+  g.selectAll( "path5" )
+      .data( topojson.feature(kernel_am, kernel_am.objects.kernel_am).features )
+      .enter()
+      .append( "path" )
+      .attr('class', 'cong_fade am')
+      .style( "fill", "red")
+      .attr( "d", geoPath )
+      .style( "fill-opacity", function(d){
+          return d.properties.GRIDCODE / 8;
+      })
+      .style( "opacity", 1)
+      .attr("visibility", "visible");
+
+//plot congestions density md
+  g.selectAll( "path6" )
+      .data( topojson.feature(kernel_md, kernel_md.objects.kernel_md).features )
+      .enter()
+      .append( "path" )
+      .attr('class', 'cong_fade md')
+      .style( "fill", "red")
+      .attr( "d", geoPath )
+      .style( "fill-opacity", function(d){
+          return d.properties.GRIDCODE / 8;
+      })
+      .style( "opacity", 1)
+      .attr("visibility", "hidden");
+
+  //plot congestions density pm
+  g.selectAll( "path7" )
+      .data( topojson.feature(kernel_pm, kernel_pm.objects.kernel_pm).features )
+      .enter()
+      .append( "path" )
+      .attr('class', 'cong_fade pm')
+      .style( "fill", "red")
+      .attr( "d", geoPath )
+      .style( "fill-opacity", function(d){
+          return d.properties.GRIDCODE / 8;
+      })
+      .style( "opacity", 1)
+      .attr("visibility", "hidden");
+
+  //plot congestions density rd
+  g.selectAll( "path8" )
+      .data( topojson.feature(kernel_rd, kernel_rd.objects.kernel_rd).features )
+      .enter()
+      .append( "path" )
+      .attr('class', 'cong_fade rd')
+      .style( "fill", "red")
+      .attr( "d", geoPath )
+      .style( "fill-opacity", function(d){
+          return d.properties.GRIDCODE / 8;
+      })
+      .style( "opacity", 1)
+      .attr("visibility", "hidden");
+
+// plot street grid congestion
+  g.selectAll( "path9" )
+      .data( topojson.feature(edges_cong_json, edges_cong_json.objects.riyadh_edges_congestion).features  )
+      .enter()
+      .append( "path" )
+      .attr('class','incident')
+      .style( "fill", "transparent" )
+      .style( "stroke", "#fff")
+      .attr( "d", geoPath )
+      .style( "stroke-linecap", "round")
+      .style( "stroke-width", function(d){
+          return Math.log(d.properties.am_TTI * 1.2);
+      });
+
+// plot tweet points am
+  g.selectAll( "path10" )
+      .data( topojson.feature(t_am, t_am.objects.t_am).features )
+      .enter()
+      .append( "path" )
+      .attr('class','incident2 am')
+      .style( "fill", "transparent" )
+      .style( "stroke-width", "0")
+      .attr( "d", geoPath );
+
+
+
+  function zoomed() {
+    g.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+  }
+
+  d3.select(self.frameElement).style("height", height + "px");
+
+//fade in/out for congestion density
+  ui_map = d3.map()
+  ui_map.set('toggled', 'false');
+  d3.select("#cmn-toggle-1").on("click", function() {
+    if (ui_map.get('toggled') == 'false') {
+      var selected = d3.selectAll(".cong_fade");
+
+      var duration = 250
+
+      levels = [1,2,3,4,5,6,7,8,9,10]
+      levels.forEach(function(each){
+        var filtered = selected.filter(function(d){
+          return d.properties.GRIDCODE == each;
+        })
+        filtered.transition()
+          .duration(each * duration)
+          .style("opacity", function(d){
+            return 0;
+        })
+      })
+      ui_map.set('toggled', 'true')
+      } 
+    else {
+      var selected = d3.selectAll(".cong_fade");
+
+      var duration = 30
+
+      levels = [1,2,3,4,5,6,7,8,9,10]
+      levels.forEach(function(each){
+        var filtered = selected.filter(function(d){
+          return d.properties.GRIDCODE == each;
+        })
+        filtered.transition()
+          .duration((11 - each) * duration * (11 - each))
+          .style("opacity", function(d){
+            return 1;
+        })
+      })
+      ui_map.set('toggled', 'false')
+      } 
+  });
+
+// fade in/out for twitter density
+  ui_map2 = d3.map()
+  ui_map2.set('toggled', 'false');
+  d3.select("#cmn-toggle-2").on("click", function() {
+    if (ui_map2.get('toggled') == 'false') {
+      var selected2 = d3.selectAll(".tweet_fade");
+
+      var duration2 = 250
+
+      levels2 = [1,2,3,4,5,6,7,8,9,10]
+      levels2.forEach(function(each2){
+        var filtered2 = selected2.filter(function(d){
+          return d.properties.GRIDCODE == each2;
+        })
+        filtered2.transition()
+          .duration(each2 * duration2)
+          .style("opacity", function(d){
+            return 0;
+        })
+      })
+      ui_map2.set('toggled', 'true')
+      } 
+    else {
+      var selected2 = d3.selectAll(".tweet_fade");
+
+      var duration2 = 30
+
+      levels2 = [1,2,3,4,5,6,7,8,9,10]
+      levels2.forEach(function(each2){
+        var filtered2 = selected2.filter(function(d){
+          return d.properties.GRIDCODE == each2;
+        })
+        filtered2.transition()
+          .duration((11 - each2) * duration2 * (11 - each2))
+          .style("opacity", function(d){
+            return 1;
+        })
+      })
+      ui_map2.set('toggled', 'false')
+      } 
+  });
+
+  // fade in/out for street grid
+  ui_map3 = d3.map()
+  ui_map3.set('toggled', 'false');
+  d3.select("#cmn-toggle-3").on("click", function() {
+    if (ui_map3.get('toggled') == 'false') {
+      var selected3 = d3.selectAll(".incident");
+      selected3.transition()
+          .duration(0)
+          .style("stroke", function(d){
+            return "#black";
+          })
+      ui_map3.set('toggled', 'true')
+      } 
+    else {
+      var selected3 = d3.selectAll(".incident");
+      selected3.transition()
+          .duration(0)
+          .style("stroke", function(d){
+            return "#fff";
+          })
+      ui_map3.set('toggled', 'false')
+      } 
+  });
+
+  // fade in/out for street grid
+  ui_map4 = d3.map()
+  ui_map4.set('toggled', 'false');
+  d3.select("#cmn-toggle-4").on("click", function() {
+    if (ui_map4.get('toggled') == 'false') {
+      var selected4 = d3.selectAll(".incident2");
+      selected4.transition()
+          .duration(0)
+          .style("fill", function(d){
+            return "black";
+          })
+      ui_map4.set('toggled', 'true')
+      } 
+    else {
+      var selected4 = d3.selectAll(".incident2");
+      selected4.transition()
+          .duration(0)
+          .style("fill", function(d){
+            return "transparent";
+          })
+      ui_map4.set('toggled', 'false')
+      } 
+  });
+
+    var inputValue = null;
+    var month = ["7am - 10am","10am - 4pm","4pm - 7pm","7pm - 7am"];
+
+    // when the input range changes update the value 
+    d3.select("#timeslide").on("input", function() {
+        update(+this.value);
+    });
+
+    // update the fill of each SVG of class "incident" with value
+    function update(value) {
+        document.getElementById("range").innerHTML=month[value];
+        inputValue = month[value];
+        d3.selectAll(".incident").each(function(each){
+            d3.select(this).style("stroke-width", function(d){
+            if (inputValue == "7am - 10am") {
+                return Math.log(d.properties.am_TTI * 1.2);
+            }
+            else if (inputValue == "10am - 4pm") {
+                return Math.log(d.properties.md_TTI * 1.2);
+            }
+            else if (inputValue == "4pm - 7pm") {
+                return Math.log(d.properties.pm_TTI * 1.2);
+            }
+            else {
+                return Math.log(d.properties.rd_TTI *1.2);
+            };
+        });
+        })
+        d3.selectAll(".am").each(function(each2){
+            d3.select(this).attr("visibility", function(d){
+            if (inputValue == "7am - 10am") {
+                return "visible";
+            }
+            else if (inputValue == "10am - 4pm") {
+                return "hidden";
+            }
+            else if (inputValue == "4pm - 7pm") {
+                return "hidden";
+            }
+            else {
+                return "hidden";
+            };
+        });
+        })
+        d3.selectAll(".md").each(function(each3){
+            d3.select(this).attr("visibility", function(d){
+            if (inputValue == "7am - 10am") {
+                return "hidden";
+            }
+            else if (inputValue == "10am - 4pm") {
+                return "visible";
+            }
+            else if (inputValue == "4pm - 7pm") {
+                return "hidden";
+            }
+            else {
+                return "hidden";
+            };
+        });
+        })
+        d3.selectAll(".pm").each(function(each3){
+            d3.select(this).attr("visibility", function(d){
+            if (inputValue == "7am - 10am") {
+                return "hidden";
+            }
+            else if (inputValue == "10am - 4pm") {
+                return "hidden";
+            }
+            else if (inputValue == "4pm - 7pm") {
+                return "visible";
+            }
+            else {
+                return "hidden";
+            };
+        });
+        })
+        d3.selectAll(".rd").each(function(each3){
+            d3.select(this).attr("visibility", function(d){
+            if (inputValue == "7am - 10am") {
+                return "hidden";
+            }
+            else if (inputValue == "10am - 4pm") {
+                return "hidden";
+            }
+            else if (inputValue == "4pm - 7pm") {
+                return "hidden";
+            }
+            else {
+                return "visible";
+            };
+        });
+        })
+    }
+
+
+
+    }
+
+
+	function resize(d){
+        var width = window.innerWidth;
+      	var	height = window.innerHeight;
+      	var node = document.getElementById("map-controls-id");
+      	var map_node = document.getElementById("map-id");
+      	var rect = map_node.getBoundingClientRect();
+      	node.style.position="absolute";
+      	node.style.left="0px";
+      	node.style.top = height - 100 + "px";
+      	node.style.display = "block";
+    };
+
+
+  </script>
+
+            </div>
+
+    <header>
+   
+
+        <div class="header-content">
+        	 <div>
+            
+        </div>
+    </header>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/wow.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/creative.js"></script>
+
+</body>
+
+</html>
