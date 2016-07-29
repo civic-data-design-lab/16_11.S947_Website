@@ -378,30 +378,37 @@
     right:0px;
     top:0px;
     bottom:0px;
-    background: rgb(150,150,150);
+    background: #FCFCFC;
 }
 
 .mount_go_back {
     position: absolute;
-    top: 8px;
     left: 20px;
-    color: rgb(255,255,255);
+}
+
+.mount_btn {
+    color: rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
     padding: 5px;
-    border: 1px solid white;
     padding-left: 10px;
     padding-right: 10px;
-    border-radius: 6px;
+    top: 8px;
 }
 
-.mount_go_back:hover {
-    background-color: white;
-    color:rgb(150,150,150);
+.mount_btn:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    color:WHITE;
     cursor: pointer;
-    
 }
 
-.mount_go_back p {
+.mount_btn p {
     margin:0px !important;
+}
+
+
+.mount_info {
+    position: absolute;
+    left: 105px;
 }
 
 .mount_window {
@@ -410,6 +417,44 @@
     left: 20px;
     right: 20px;
     bottom: 20px;
-    box-shadow: 10px 10px 5px rgba(0,0,0,0.4);
+    box-shadow: 0 0 20px 0 rgba(0,0,0,.5);
     background-color: white;
+}
+
+.info_window {
+    position: absolute;
+    width: 60%;
+    background-color: white;
+    z-index: 3;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0 0 20px 0 rgba(0,0,0,.15);
+    color: #484848;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background: #FFF;
+    padding:20px;
+    padding-bottom: 30px;
+}
+
+.outer_info_window {
+    position: absolute;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    background-color: rgba(255,255,255,0.9);
+    z-index: 3;
+
+}
+
+.toclose {
+    position: absolute;
+    right: 20px;
+    top:20px;
+    width:30px;
+    height:30px;
+    cursor: pointer;
+
 }

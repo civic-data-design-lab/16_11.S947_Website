@@ -168,11 +168,29 @@
 	                    d3.select(this).style("display","none");
 	                })
 
-	                project_mount.append("div").attr("class","mount_go_back")
+	                project_mount.append("div").attr("class","mount_go_back mount_btn")
 	                    .append("p")
 	                    .text("Go Back").on("click",function(){
 	                        d3.selectAll(".project_icon").style("display","block");
 	                        project_mount.remove();
+
+	                    });
+
+	                project_mount.append("div").attr("class","mount_info mount_btn")
+	                    .append("p")
+	                    .text("Project Info").on("click",function(){
+	                        var outer_window = project_mount.append("div").attr("class","outer_info_window")
+	                        var info_window = outer_window.append("div").attr("class","info_window")
+	                        info_window.append("img").attr("src","img/thex.png").attr("class","toclose")
+	                            .on("click",function(){
+	                                outer_window.remove();
+	                            })
+	                        info_window.append("p").attr("class","big_title").text(window.projects[project_id].title);
+	                        info_window.append("p").attr("class","project_team").html("<span>Team: </span>"+window.projects[project_id].team);
+	                        info_window.append("p").attr("class","texts").text(window.projects[project_id].text1);
+	                        info_window.append("p").attr("class","texts").text(window.projects[project_id].text2);
+	                        info_window.append("p").attr("class","texts").text(window.projects[project_id].text3);
+
 
 	                    });
 
