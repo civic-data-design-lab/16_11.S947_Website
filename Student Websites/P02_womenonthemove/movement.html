@@ -11,12 +11,15 @@
     <!-- Custom Fonts -->
     <link href="http://cortnik.github.io/project/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <script src="flow/data/roads.geojson"></script>
+    <script src="http://d3js.org/topojson.v1.min.js"></script>
+
+
+<!--    <script src="flow/data/roads.geojson"></script>
+-->    
     <script src="flow/data/PNOhotspots_total.json"></script>
     <script src="flow/data/PNDhotspot_total.json"></script>
-    <script src="flow/geojsons/PNOedgeflow0607.geojson"></script>
+<!--    <script src="flow/geojsons/PNOedgeflow0607.geojson"></script>
     <script src="flow/geojsons/PNOedgeflow0708.geojson"></script>
     <script src="flow/geojsons/PNOedgeflow0809.geojson"></script>
     <script src="flow/geojsons/PNOedgeflow0910.geojson"></script>    
@@ -51,7 +54,7 @@
     <script src="flow/geojsons/PNDedgeflow2021.geojson"></script>
     <script src="flow/geojsons/PNDedgeflow2122.geojson"></script>
     <script src="flow/geojsons/PNDedgeflow2223.geojson"></script>
-    <script src="flow/geojsons/PNDedgeflow2324.geojson"></script>
+    <script src="flow/geojsons/PNDedgeflow2324.geojson"></script>-->
     <script src="hotspot_data/metro.geojson"></script>
     <style> 
         @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
@@ -198,6 +201,11 @@
 
 
     <script>
+
+
+    d3.json("flow/data/converted/roads_.geojson",function(roads){
+
+
         // var sliderContainer = d3.slider().min(0).max(17).ticks(16);
     var inputValue = null;
     var time = ["6:00","7:00","8:00","9:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00","22:00","23:00","24:00"];
@@ -224,8 +232,11 @@
 
     var road_network = origin_map.append( "g" );
         road_network.selectAll( "path" )
-        .data( roads.features )
-        .enter()
+        .data(topojson.feature(roads, roads.objects.roads_).features)
+
+
+/*        .data( roads.features )
+*/        .enter()
         .append( "path" )
         .attr("fill", "none")
         .attr( "stroke", "#d3d3d3" )
@@ -235,7 +246,7 @@
         .attr("class", "roads");
 
     var PNOhotspots_total = origin_map.append("g")
-    var chosenhour_origin = PNOedgeflow6.features
+    var chosenhour_origin ;
     var PNO_routes = origin_map.append("g")
     var enter_duration = 10
     
@@ -267,59 +278,57 @@
         function update_pno(value) {
             document.getElementById("range").innerHTML=time[value];
             inputValue = time[value];
+            var starttime = +(inputValue.replace(":00", ""));
+            var endtime = starttime +1;
+            var filename = "flow/geojsons/PNOedgeflow" + ("0" + starttime).slice(-2) + ("0" + endtime).slice(-2)+".geojson";
 
-            chosenhour_origin = eval("PNOedgeflow" + String(inputValue.replace(":00", "")) + ".features");
-            PNO_routes.selectAll("path").remove();
-            PNO_routes.selectAll("path")
-            .data(chosenhour_origin)//maybe can make this query from database api
-            .enter()
-            .append("path")
-            .attr("stroke", "#000000")
-            .transition()
-            .delay(function (d,i){ 
-                return (d.properties.animation)* enter_duration;})
-            .attr("stroke-width", function(d) {
-                var flow2 = Math.sqrt(+d.properties.flow);
-                return flow2;})
-            .attr( "d", geoPath )
-            .attr("class", "Paths")
+            d3.json(filename,function(chosenhour_origin){
 
-            PNOhotspots_total.selectAll("circle").remove();
-
-            PNOhotspots_total.selectAll("circle")
-                .data(hotspots_o.features)
+                //chosenhour_origin = eval("PNOedgeflow" + String(inputValue.replace(":00", "")) + ".features");
+                PNO_routes.selectAll("path").remove();
+                PNO_routes.selectAll("path")
+                .data(chosenhour_origin.features)//maybe can make this query from database api
                 .enter()
-                .append("circle")
-                .attr( "stroke", "#ffe28a" )
-                .attr("transform", function(d) {
-                    return "translate(" + projection([+d.properties.long_dest,+d.properties.lat_dest]) + ")";
-                })
-                .attr("class", "hotspot")
-                .attr("r", 1)
-                .transition().delay(1100).duration(800)
-                .attr("r", function(d){return d.properties.flow*3;})
-                .attr("display", timeMatch)
+                .append("path")
+                .attr("stroke", "#000000")
+                .transition()
+                .delay(function (d,i){ 
+                    return (d.properties.animation)* enter_duration;})
+                .attr("stroke-width", function(d) {
+                    var flow2 = Math.sqrt(+d.properties.flow);
+                    return flow2;})
+                .attr( "d", geoPath )
+                .attr("class", "Paths")
 
-            PNOhotspots_total.selectAll("circle")
-                .on("mouseover", function(d){
-                    d3.select("h2_o").text("PERSON FLOW IN THIS HOUR: " + d.properties.flow);
-                    d3.select(this).attr("class","hotspothover");
-                })
-                .on("mouseout", function(d){
-                    d3.select("h2_o").text("");
-                    d3.select(this).attr("class","hotspot");
-                });
+                PNOhotspots_total.selectAll("circle").remove();
 
-            function timeMatch(data, value) {
-            var d = data.properties.hour;
-            var m = "9";
-            if (inputValue == d) {
-                this.parentElement.appendChild(this);
-                return "display";
-            } else {
-                return "none";
-            };
-        }
+                PNOhotspots_total.selectAll("circle")
+                    .data(hotspots_o.features)
+                    .enter()
+                    .append("circle")
+                    .attr( "stroke", "#ffe28a" )
+                    .attr("transform", function(d) {
+                        return "translate(" + projection([+d.properties.long_dest,+d.properties.lat_dest]) + ")";
+                    })
+                    .attr("class", "hotspot")
+                    .attr("r", 1)
+                    .transition().delay(1100).duration(800)
+                    .attr("r", function(d){return d.properties.flow*3;})
+                    .attr("display", timeMatch)
+
+                PNOhotspots_total.selectAll("circle")
+                    .on("mouseover", function(d){
+                        d3.select("h2_o").text("PERSON FLOW IN THIS HOUR: " + d.properties.flow);
+                        d3.select(this).attr("class","hotspothover");
+                    })
+                    .on("mouseout", function(d){
+                        d3.select("h2_o").text("");
+                        d3.select(this).attr("class","hotspot");
+                    });
+
+
+            })
+
     }
 
     var destination_map = d3.select( "#destination_map" )
@@ -331,8 +340,10 @@
 
     var road_network = destination_map.append( "g" );
         road_network.selectAll( "path" )
-        .data( roads.features )
-        .enter()
+        .data(topojson.feature(roads, roads.objects.roads_).features)
+
+/*        .data( roads.features )
+*/        .enter()
         .append( "path" )
         .attr("fill", "none")
         .attr( "stroke", "#d3d3d3" )
@@ -342,7 +353,7 @@
         .attr("class", "roads");
 
     var PNDhotspots_total = destination_map.append("g")
-    var chosenhour_dest = PNDedgeflow6.features
+    var chosenhour_dest;
     var PND_routes = destination_map.append("g")
     var enter_duration = 10
     
@@ -362,6 +373,8 @@
         .attr("stroke-width", 1.5)
         .attr( "d", geoPath )
         .attr("class", "metro");
+
+
     // TIMESLIDER
         function update_pnd(value) {
             document.getElementById("range").innerHTML=time[value];
@@ -370,58 +383,74 @@
             d3.selectAll(".hotspot")
             .attr("display", timeMatch);
 
-            chosenhour_dest = eval("PNDedgeflow" + String(inputValue.replace(":00", "")) + ".features");
-            PND_routes.selectAll("path").remove();
-            PND_routes.selectAll( "path" )
-            .data(chosenhour_dest)
-            .enter()
-            .append("path")
-            .attr("stroke", "#000000")
-            .transition()
-            .delay(function (d,i){ 
-                return (d.properties.animation)* enter_duration + 800;})
-            .attr("stroke-width", function(d) {
-                var flow2 = Math.sqrt(+d.properties.flow);
-                return flow2;})
-            .attr( "d", geoPath )
-            .attr("class", "Paths")
+            var starttime = +(inputValue.replace(":00", ""));
+            var endtime = starttime +1;
+            var filename = "flow/geojsons/PNDedgeflow" + ("0" + starttime).slice(-2) + ("0" + endtime).slice(-2)+".geojson";
+            
+            d3.json(filename,function(chosenhour_dest){
+                //chosenhour_dest = eval("PNDedgeflow" + String(inputValue.replace(":00", "")) + ".features");
 
-            PNDhotspots_total.selectAll("circle").remove();
-            PNDhotspots_total.selectAll("circle")
-            .data(hotspots_d.features)
-            .enter()
-            .append("circle")
-            .attr( "stroke", "#ffe28a" )
-            .attr("transform", function(d) {
-                return "translate(" + projection([d.properties.long_origin, d.properties.lat_origin]) + ")";
-            })
-            .attr("class", "hotspot")
-            .attr("r", 1)
-            .transition().duration(800)
-            .attr("r", function(d){return d.properties.flow*3;})
-            .attr("display", timeMatch)
+                console.log(filename,chosenhour_dest);
+                PND_routes.selectAll("path").remove();
+                PND_routes.selectAll( "path" )
+                .data(chosenhour_dest.features)//maybe can make this query from database api
+                .enter()
+                .append("path")
+                .attr("stroke", "#000000")
+                .transition()
+                .delay(function (d,i){ 
+                    return (d.properties.animation)* enter_duration + 800;})
+                .attr("stroke-width", function(d) {
+                    var flow2 = Math.sqrt(+d.properties.flow);
+                    return flow2;})
+                .attr( "d", geoPath )
+                .attr("class", "Paths")
 
-            PNDhotspots_total.selectAll("circle")
-            .on("mouseover", function(d){
-                d3.select("h2_d").text("PERSON FLOW IN THIS HOUR: " + d.properties.flow);
-                d3.select(this).attr("class","hotspothover");
-            })
-            .on("mouseout", function(d){
-                d3.select("h2_d").text("");
-                d3.select(this).attr("class","hotspot");
+                PNDhotspots_total.selectAll("circle").remove();
+                PNDhotspots_total.selectAll("circle")
+                .data(hotspots_d.features)
+                .enter()
+                .append("circle")
+                .attr( "stroke", "#ffe28a" )
+                .attr("transform", function(d) {
+                    return "translate(" + projection([d.properties.long_origin, d.properties.lat_origin]) + ")";
+                })
+                .attr("class", "hotspot")
+                .attr("r", 1)
+                .transition().duration(800)
+                .attr("r", function(d){return d.properties.flow*3;})
+                .attr("display", timeMatch)
+
+                PNDhotspots_total.selectAll("circle")
+                .on("mouseover", function(d){
+                    d3.select("h2_d").text("PERSON FLOW IN THIS HOUR: " + d.properties.flow);
+                    d3.select(this).attr("class","hotspothover");
+                })
+                .on("mouseout", function(d){
+                    d3.select("h2_d").text("");
+                    d3.select(this).attr("class","hotspot");
+                });
+
+
+
             });
 
-        function timeMatch(data, value) {
-            var d = data.properties.hour;
-            var m = "9";
-            if (inputValue == d) {
-                this.parentElement.appendChild(this);
-                return "display";
-            } else {
-                return "none";
-            };
-        }
+
     }
+
+            function timeMatch(data, value) {
+                var d = data.properties.hour;
+                var m = "9";
+                if (inputValue == d) {
+                    this.parentElement.appendChild(this);
+                    return "display";
+                } else {
+                    return "none";
+                };
+            }
+    });
+
+
 
 </script>
 

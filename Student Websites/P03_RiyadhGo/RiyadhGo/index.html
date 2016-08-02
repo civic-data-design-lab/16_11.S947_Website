@@ -1,110 +1,197 @@
 <html>
+
 <head>
     <title>RiyadhGo</title>
     <script src="js/d3.v3.min.js" charset="utf-8"></script>
+    <script src="js/queue.min.js" charset="utf-8"></script>
+    <script src="js/topojson.min.js" charset="utf-8"></script>
+
     <link href="css/main.css" rel="stylesheet" />
-    <script src="data/json/fsq_checkin.json"></script>
-    <script src="data/json/all_nodes.json"></script>
-    <script src="data/json/riyadh_traffic.json"></script>    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+        rel='stylesheet' type='text/css'>
 
     <style>
         body {
-        position: absolute;
-        font-family: "'Open Sans',  sans-serif";
-        }
-        h1, h2, h3, h4, span {
             position: absolute;
-            left: 10px; 
+            font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+            background-color: rgba(17, 26, 55, 1);
+            color: white;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        span {
+            position: absolute;
+            left: 10px;
             font-size: 0.6em;
             font-weight: 100;
             z-index: 9;
         }
+        
         h1 {
             font-size: 2.4em;
         }
-
+        
         h2 {
-            top: 50px;
-            font-size: 1.2em;
+            top: 24px;
+            font-size: 1em;
+            opacity: 0.6;
+            width: 500px;
+            position: absolute;
+            left: 209px;
         }
+        
         h3 {
             position: absolute;
-            top: 100px;
+            top: 90px;
             font-size: 1em;
         }
+        
         h4 {
             position: absolute;
-            top: 155px;                      
+            top: 148px;
             font-size: 1em;
+            width: 200px;
         }
+        
         #On {
-            position: absolute; 
-            margin-left: 5px; 
+            position: absolute;
+            margin-left: 5px;
             margin-top: 135px;
             z-index: 10;
             font-size: 0.7em;
+            width: 105px;
         }
+        
         #Off {
-            position: absolute; 
-            margin-left: 120px; 
+            position: absolute;
+            margin-left: 120px;
             margin-top: 135px;
             z-index: 10;
             font-size: 0.7em;
         }
+        
         #cost_radio {
             position: absolute;
-            top:190px;
-            width: 940px;
+            top: 190px;
             padding: 5px;
             z-index: 10;
             font-size: 0.6em;
+            width: 250px;
         }
+        
         .hover {
             fill: red;
-            stroke: red;  
+            stroke: red;
         }
+        
         .FSQ_checkin {
             z-index: 8;
         }
+        
         .Shortest_Path {
             z-index: 7;
         }
+        
         .RiyadhVoc {
             z-index: 6;
         }
+        
         #sliderContainer2 {
-            text-align: relative;
-            position: absolute;
-            font-family:Alegreya Sans SC;
             font-size: 8pt;
-            top: 175px;
-        }        
+            position: absolute;
+            bottom: 184px;
+            z-index: 10;
+        }
         
         svg {
             position: relative;
-            top: 100px;
+            top: 0px;
             z-index: 1;
+        }
+        
+        .horiline {
+            width: 100%;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            top: 65px;
+            position: absolute;
+        }
+        
+        .left_panel {
+            position: absolute;
+            left: 0px;
+            width: 265px;
+            height: calc(100% - 66px);
+            top: 73px;
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+        }
 
-        }   
+        button {
+            background-color: rgba(0,0,0,0);
+            -webkit-border-radius: 20px;
+            border: 2px solid #dddddd;
+            margin-bottom: 8px;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            color: black;
+            background-color: rgba(255,255,255,1);
+
+
+        }
     </style>
 </head>
+
 <body>
-    <h1 style="font-family:Alegreya Sans SC; font-size: 24pt;"><b> <a href="http://www.qiuwaishan.com/#!riyadhgo/fpq9p">RIYADH <font color = "ec008b">GO</font></a></b>.</h1>
-    <h2> Click to Explore Your Travel Cost from Riyadh Hotspots </h2> 
-    <h3> Basemap </h3> 
-    <h4> Type of Cost </h4> 
-    <div id="cost_radio">
-        <input name="mode" type="radio" value="Money" id="money" checked><label for="money"> Money</label>
-        <input name="mode" type="radio" value="Time" id="time"><label for="time"> Time</label>
-        <input name="mode" type="radio" value="Distance" id="dist"><label for="dist"> Distance</label>
-    </div>
-    <button id= "On" > Peak Hour Traffic </button>
-    <button id= "Off" > Off </button>
-    <div id="sliderContainer2"> <!-- a slider -->
-        <img style="margin-top: 60px;position: absolute; max-width: 250px"src="image/legends1.png"/>
+    <h1 style="font-size: 24pt;"><b> RIYADH <font color = "ec008b">GO</font></a></b></h1>
+    <h2> Click to Explore Your Travel Cost from Riyadh Hotspots </h2>
+    <div class="horiline"></div>
+    <div class="left_panel">
+        <h3> Basemap </h3>
+        <h4> Type of Cost </h4>
+        <div id="cost_radio">
+            <input name="mode" type="radio" value="Money" id="money" checked><label for="money"> Money</label>
+            <input name="mode" type="radio" value="Time" id="time"><label for="time"> Time</label>
+            <input name="mode" type="radio" value="Distance" id="dist"><label for="dist"> Distance</label>
+        </div>
+
+        <button id="On"> Peak Hour Traffic </button>
+        <button id="Off"> Off </button>
+        <div id="sliderContainer2">
+            <!-- a slider -->
+            <img style="margin-top: 60px;position: absolute; max-width: 250px" src="image/legends2.png" />
+        </div>
+
     </div>
 
-<script>
+
+    <script>
+    d3.selection.prototype.moveToFront = function() {
+    return this.each(function(){
+        this.parentNode.appendChild(this);
+    });
+    };
+
+    d3.selection.prototype.moveToBack = function() { 
+        return this.each(function() { 
+            var firstChild = this.parentNode.firstChild; 
+            if (firstChild) { 
+                this.parentNode.insertBefore(this, firstChild); 
+            } 
+        }); 
+    };
+
+    queue()
+      .defer(d3.json, 'data/json/converted/fsq_checkin_.json')
+      .defer(d3.json, 'data/json/converted/riyadh_traffic_s.json')
+      .await(makeMyMap);
+
+    function makeMyMap(error, checkin, traffic_json) {
+
     var width = window.innerWidth;
     var height = window.innerHeight;
     var scale0 = (width - 1) *200/ Math.PI;
@@ -123,8 +210,10 @@
     var typeofcost = ["Money","Time","Distance"]
     var color_roads = d3.scale.linear()
         .domain([0, 0.5, 4])
-        .range(["#dadaeb", "#bcbddc","#9e9ac8"]);
-    var color_gradient = d3.scale.linear()
+        .range(["#111a37", "#768dd5","#ccd4ef"]);
+
+/*        .range(["#dadaeb", "#bcbddc","#9e9ac8"]);
+*/    var color_gradient = d3.scale.linear()
         .domain([4, 20, 36])
         .range(['#88d8b0', '#ffcc5c','#ff6f69']);
     var color_checkin = d3.scale.threshold()
@@ -146,7 +235,7 @@
         .append( "svg" )
         .attr('class', 'road_network')
         .attr( "width", width-20 )
-        .attr( "height", 700 )
+        .attr( "height", height-20 )
         .attr("top",200);
     svg
         .call(zoom)
@@ -161,29 +250,44 @@
     var city_network = svg.append( "g" )
         .attr('class', 'RiyadhVoc');
     city_network.selectAll( "path" )
-        .data( traffic_json.features )
+        .data(topojson.feature(traffic_json, traffic_json.objects.riyadh_traffic_).features)
+
+
+        //.data( traffic_json.features )
         .enter()
         .append( "path" )
         .attr("fill","none")
         .attr("stroke", function (x) { return color_roads(x.properties.voc_md)})
-        .attr("stroke-width", function (x) {return x.properties.voc_md *0.9+0.3})
+        .attr("stroke-linecap","square")
+        .attr("stroke-width", function (x) {
+            return x.properties.voc_md *0.9*2+0.3;
+        })
         .attr( "d", geoPath ) // "d" is D3.attribute stands for coordinates of a path
         .attr("class","incident");
+    city_network.moveToBack();
+
     d3.select("#On").on("click", function() {//###should not recalculate if it's on already
         d3.select(".RiyadhVoc").remove();
         var city_network = svg.append( "g" )
             .attr('class', 'RiyadhVoc');
         city_network.selectAll( "path" )
-            .data( traffic_json.features )
+            .data(topojson.feature(traffic_json, traffic_json.objects.riyadh_traffic_).features)
+
+
+            //.data( traffic_json.features )
             .enter()
             .append( "path" )
 /*            .transition()
             .duration(1500)
 */            .attr("fill","none")
             .attr("stroke", function (x) { return color_roads(x.properties.voc_md)})
-            .attr("stroke-width", function (x) {return x.properties.voc_md *0.9+0.3})
+            .attr("stroke-linecap","square")
+            .attr("stroke-width", function (x) {return x.properties.voc_md *0.9*2+0.3})
             .attr( "d", geoPath ) // "d" is D3.attribute stands for coordinates of a path
             .attr("class","incident");
+
+        city_network.moveToBack();
+
     })
     d3.select("#Off").on("click", function() {
         d3.select(".RiyadhVoc").remove();
@@ -192,7 +296,9 @@
     var check_in = svg.append( "g" )
         .attr('class','FSQ_checkin');
     check_in.selectAll( "path" )
-        .data( checkin.features )
+        .data(topojson.feature(checkin, checkin.objects.fsq_checkin_).features)
+    
+        //.data( checkin.features )
         .enter()
         .append( "path" )
         .attr( "stroke", function(x) { return color_checkin_warm(x.properties.checkin);})
@@ -233,80 +339,88 @@
 
             var current_paths = svg.append( "g" )
                 .attr('class','Shortest_Path'); //"id" can be change to whatever for example "class", but if it is not "id", it cannot be selected by d3.select().romove
-            if (inputValue == "Distance") {
-                current_paths.selectAll(".incident2")
-                    .data(all_json[node_id].features)
-                    .enter()
-                    .append( "path" )
-                    .attr("stroke", "white")
-                    .attr("fill", "none")
-                    .attr("stroke-width",0.1)
-                    .on("mouseover", function(d){
-                        tooltip.style("visibility", "visible").text("Money Cost(SAR): "+Math.round((4+0.35*d.properties.sum_time+1.05*d.properties.sum_dist)*100)/100+" | Distance(KM): " +d.properties.sum_dist+" | "+"Time(Minutes) "+d.properties.sum_time);
-                    })
-                    .on("mousemove", function(d){
-                        tooltip.style("top", (event.pageY-10)+"px").style("left",(event.pageX+10)+"px").text("Money Cost(SAR): "+Math.round((4+0.35*d.properties.sum_time+1.05*d.properties.sum_dist)*100)/100+" | Distance(KM): " +d.properties.sum_dist+" | "+"Time(Minutes) "+d.properties.sum_time);
-                    })               
-                    .on("mouseout", function(d){
-                        tooltip.style("visibility","hidden");
-                    })
-                    .transition()
-                    .duration(2000)
-                    .attr( "fill", "#900" )
-                    .attr( "d", geoPath ) 
-                    .attr("class","incident2")
-                    .attr("stroke", function(d) { return color_dist(d.properties.sum_dist);})
-                    .attr("stroke-width", function(x) {return (x.properties.sum_dist*0.2);});
+            d3.json("data/json/splited/"+node_id+".json",function(node){
+                console.log(node);
 
-            } else if (inputValue == "Time") {
-                current_paths.selectAll(".incident2")
-                    .data(all_json[node_id].features)  
-                    .enter()
-                    .append( "path" )
-                    .attr("stroke", "white")
-                    .attr("fill", "none")
-                    .attr("stroke-width",0.1)
-                    .on("mouseover", function(d){
-                        tooltip.style("visibility", "visible").text("Money Cost(SAR): "+Math.round((4+0.35*d.properties.sum_time+1.05*d.properties.sum_dist)*100)/100+" | Distance(KM): " +d.properties.sum_dist+" | "+"Time(Minutes) "+d.properties.sum_time);
-                    })
-                    .on("mousemove", function(d){
-                        tooltip.style("top", (event.pageY-10)+"px").style("left",(event.pageX+10)+"px").text("Money Cost(SAR): "+Math.round((4+0.35*d.properties.sum_time+1.05*d.properties.sum_dist)*100)/100+" | Distance(KM): " +d.properties.sum_dist+" | "+"Time(Minutes) "+d.properties.sum_time);
-                    })
-                    .on("mouseout", function(d){
-                        tooltip.style("visibility","hidden");
-                    })
-                    .transition()
-                    .duration(2000)
-                    .attr( "fill", "#900" )
-                    .attr( "d", geoPath ) 
-                    .attr("class","incident")
-                    .attr("stroke", function(d) { return color_time(d.properties.sum_time);})
-                    .attr("stroke-width", function(x) {return (x.properties.sum_time*0.2);}); 
-            } else {
-                current_paths.selectAll(".incident2")
-                    .data(all_json[node_id].features)  
-                    .enter()
-                    .append( "path" )
-                    .attr("stroke", "white")
-                    .attr("fill", "none")
-                    .attr("stroke-width",0)
-                    .on("mouseover", function(d){
-                        tooltip.style("visibility", "visible").text("Money Cost(SAR): "+Math.round((4+0.35*d.properties.sum_time+1.05*d.properties.sum_dist)*100)/100+" | Distance(KM): " +d.properties.sum_dist+" | "+"Time(Minutes) "+d.properties.sum_time);
-                    })
-                    .on("mousemove", function(d){
-                        tooltip.style("top", (event.pageY-10)+"px").style("left",(event.pageX+10)+"px").text("Money Cost(SAR): "+Math.round((4+0.35*d.properties.sum_time+1.05*d.properties.sum_dist)*100)/100+" | Distance(KM): " +d.properties.sum_dist+" | "+"Time(Minutes) "+d.properties.sum_time);
-                    })
-                    .on("mouseout", function(d){
-                        tooltip.style("visibility","hidden");
-                    })
-                    .transition()
-                    .duration(2000)
-                    .attr( "fill", "#900" )
-                    .attr( "d", geoPath ) 
-                    .attr("class","incident2")
-                    .attr("stroke", function(d) { return color_gradient(4+0.35*d.properties.sum_time+1.05*d.properties.sum_dist);})
-                    .attr("stroke-width", function(x) {return ((4+0.35*x.properties.sum_time+1.05*x.properties.sum_dist)*0.15+0.05);});
-            }
+                if (inputValue == "Distance") {
+
+                    current_paths.selectAll(".incident2")
+                        .data(node.features)
+                        .enter()
+                        .append( "path" )
+                        .attr("stroke", "white")
+                        .attr("fill", "none")
+                        .attr("stroke-width",0.1)
+                        .on("mouseover", function(d){
+                            tooltip.style("visibility", "visible").text("Money Cost(SAR): "+Math.round((4+0.35*d.properties.sum_time+1.05*d.properties.sum_dist)*100)/100+" | Distance(KM): " +d.properties.sum_dist+" | "+"Time(Minutes) "+d.properties.sum_time);
+                        })
+                        .on("mousemove", function(d){
+                            tooltip.style("top", (event.pageY-10)+"px").style("left",(event.pageX+10)+"px").text("Money Cost(SAR): "+Math.round((4+0.35*d.properties.sum_time+1.05*d.properties.sum_dist)*100)/100+" | Distance(KM): " +d.properties.sum_dist+" | "+"Time(Minutes) "+d.properties.sum_time);
+                        })               
+                        .on("mouseout", function(d){
+                            tooltip.style("visibility","hidden");
+                        })
+                        .transition()
+                        .duration(2000)
+                        .attr( "fill", "#900" )
+                        .attr( "d", geoPath ) 
+                        .attr("class","incident2")
+                        .attr("stroke", function(d) { return color_dist(d.properties.sum_dist);})
+                        .attr("stroke-width", function(x) {return (x.properties.sum_dist*0.2);});
+
+                } else if (inputValue == "Time") {
+                    current_paths.selectAll(".incident2")
+                        .data(node.features)  
+                        .enter()
+                        .append( "path" )
+                        .attr("stroke", "white")
+                        .attr("fill", "none")
+                        .attr("stroke-width",0.1)
+                        .on("mouseover", function(d){
+                            tooltip.style("visibility", "visible").text("Money Cost(SAR): "+Math.round((4+0.35*d.properties.sum_time+1.05*d.properties.sum_dist)*100)/100+" | Distance(KM): " +d.properties.sum_dist+" | "+"Time(Minutes) "+d.properties.sum_time);
+                        })
+                        .on("mousemove", function(d){
+                            tooltip.style("top", (event.pageY-10)+"px").style("left",(event.pageX+10)+"px").text("Money Cost(SAR): "+Math.round((4+0.35*d.properties.sum_time+1.05*d.properties.sum_dist)*100)/100+" | Distance(KM): " +d.properties.sum_dist+" | "+"Time(Minutes) "+d.properties.sum_time);
+                        })
+                        .on("mouseout", function(d){
+                            tooltip.style("visibility","hidden");
+                        })
+                        .transition()
+                        .duration(2000)
+                        .attr( "fill", "#900" )
+                        .attr( "d", geoPath ) 
+                        .attr("class","incident")
+                        .attr("stroke", function(d) { return color_time(d.properties.sum_time);})
+                        .attr("stroke-width", function(x) {return (x.properties.sum_time*0.2);}); 
+                } else {
+                    current_paths.selectAll(".incident2")
+                        .data(node.features)  
+                        .enter()
+                        .append( "path" )
+                        .attr("stroke", "white")
+                        .attr("fill", "none")
+                        .attr("stroke-width",0)
+                        .on("mouseover", function(d){
+                            tooltip.style("visibility", "visible").text("Money Cost(SAR): "+Math.round((4+0.35*d.properties.sum_time+1.05*d.properties.sum_dist)*100)/100+" | Distance(KM): " +d.properties.sum_dist+" | "+"Time(Minutes) "+d.properties.sum_time);
+                        })
+                        .on("mousemove", function(d){
+                            tooltip.style("top", (event.pageY-10)+"px").style("left",(event.pageX+10)+"px").text("Money Cost(SAR): "+Math.round((4+0.35*d.properties.sum_time+1.05*d.properties.sum_dist)*100)/100+" | Distance(KM): " +d.properties.sum_dist+" | "+"Time(Minutes) "+d.properties.sum_time);
+                        })
+                        .on("mouseout", function(d){
+                            tooltip.style("visibility","hidden");
+                        })
+                        .transition()
+                        .duration(2000)
+                        .attr( "fill", "#900" )
+                        .attr( "d", geoPath ) 
+                        .attr("class","incident2")
+                        .attr("stroke", function(d) { return color_gradient(4+0.35*d.properties.sum_time+1.05*d.properties.sum_dist);})
+                        .attr("stroke-width", function(x) {return ((4+0.35*x.properties.sum_time+1.05*x.properties.sum_dist)*0.15+0.05);});
+                }
+
+
+            })
+            
     }
     function changeRadio(node_id){
         d3.selectAll("#cost_radio input[name=mode]").on("change", function() {
@@ -334,6 +448,13 @@
             .style("z-index", "10")
             .style("visibility", "hidden")
     }   
+
+
+    };
+
+
+
 </script>
 </body>
+
 </html>

@@ -16,25 +16,17 @@
 
     <!-- Custom Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
-
-    <!-- Plugin CSS -->
-    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/creative.css" type="text/css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+
 
 </head>
 
 <style>
+
+
 
 svg {
   background: #e6e6e6;
@@ -419,7 +411,7 @@ svg {
         .on("zoom", zoomed);
 */
     queue()
-      .defer(d3.json, 'data/topojson/riyadh_edges_congestion.json')
+      .defer(d3.json, 'data/topojson/riyadh_edges_congestion_s.json')
       .defer(d3.json, 'data/topojson/kernel_am.json')
       .defer(d3.json, 'data/topojson/kernel_md.json')
       .defer(d3.json, 'data/topojson/kernel_pm.json')
@@ -428,7 +420,7 @@ svg {
       .defer(d3.json, 'data/topojson/td_md.json')
       .defer(d3.json, 'data/topojson/td_pm.json')
       .defer(d3.json, 'data/topojson/td_rd.json')
-      .defer(d3.json, 'data/topojson/t_am.json')
+      .defer(d3.json, 'data/topojson/t_am_s.json')
       .await(makeMyMap);
 
     var path = d3.geo.path()
@@ -462,20 +454,6 @@ svg {
         .call(zoom.event);
 
     function makeMyMap(error, edges_cong_json, kernel_am, kernel_md, kernel_pm, kernel_rd, tweet_am, tweet_md, tweet_pm, tweet_rd, t_am) {
-/*      svg.append('path')
-        .datum(topojson.feature(states, states.objects.usStates))
-          .attr('d', path)
-          .attr('class', 'states');
-      svg.selectAll('.cities')
-        .data(cities.features)
-        .enter()
-        .append('path')
-        .attr('d', path.pointRadius(5))
-        .attr('class', 'cities');
-*/
-
-
-
 
 
     var am_add = edges_cong_json.objects.riyadh_edges_congestion.geometries;
@@ -656,7 +634,7 @@ svg {
 
       var duration = 250
 
-      levels = [1,2,3,4,5,6,7,8,9,10]
+      levels = [1,2,3,4,5,6,7,8,9,10];
       levels.forEach(function(each){
         var filtered = selected.filter(function(d){
           return d.properties.GRIDCODE == each;
@@ -974,8 +952,8 @@ svg {
     <script src="js/wow.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="js/creative.js"></script>
-
+<!--    <script src="js/creative.js"></script>
+-->
 </body>
 
 </html>

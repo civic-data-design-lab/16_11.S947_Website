@@ -15,7 +15,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-	<link href="css/custom.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -23,7 +23,7 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-  
+
 
     <!-- JavaScripts -->
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
@@ -31,62 +31,129 @@
     <script src="//d3js.org/topojson.v1.min.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    
-    <script src="http://duspviz.mit.edu/_assets/data/riyadh_traffic_voc.json"></script>
+
+    <script src="data/riyadh_traffic_voc.json"></script>
 
     <style>
-/*
+        /*
         body {
     position: absolute;
     text-align: center;
     font-family: "Proxima Nova", "Montserrat", sans-serif;
-    }   */ 
-    
-    #title h1 {
-    margin-bottom: 0px;
-    }
-    
-    #title p {
-    margin-top: 2px;
-    margin-bottom: 0px;
-    }
-    .overlay {
-    fill: none;
-    pointer-events: all;
-    }
-    #taz_brush {
-    top: 10px;
-    z-index: 100;
-    }
-    .brush {
-        fill-opacity: 0;
-        stroke: black;
-    }
-	  .lines {
-        fill:none;
-        stroke: orange;
-        stroke-width: 1.5;
-    }
-    g.tick text{
-        font-size: 8px;
-    }
-    a {
-    	color: orange;
-      font: Helvetica;
-      font-size: 11px;
-    }
-    b {
-      font-weight: bold;
-      font: Helvetica;
-    }
-    p {
-      font: Helvetica;
-      font-size: 11px;
-    }
-    i {
-    font-style: italic;
-    } 
+    }   */
+        
+        * {
+            margin: 0px;
+        }
+        
+        html {
+            overflow: none;
+        }
+        
+        #title h1 {
+            margin-bottom: 0px;
+        }
+        
+        #title p {
+            margin-top: 2px;
+            margin-bottom: 0px;
+        }
+        
+        .overlay {
+            fill: none;
+            pointer-events: all;
+        }
+        
+        .brush {
+            fill-opacity: 0;
+            stroke: black;
+        }
+        
+        .lines {
+            fill: none;
+            stroke: orange;
+            stroke-width: 1.5;
+        }
+        
+        g.tick text {
+            font-size: 8px;
+        }
+        
+        a {
+            color: orange;
+            font: Helvetica;
+            font-size: 11px;
+        }
+        
+        b {
+            font-weight: bold;
+            font: Helvetica;
+        }
+        
+        p {
+            font: Helvetica;
+            font-size: 11px;
+        }
+        
+        i {
+            font-style: italic;
+        }
+        
+        .arc_diagram_holder {
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            left: 10px;
+            top: 0px;
+        }
+        
+        #taz_brush {
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+            width: 350px;
+            height: 100px;
+            z-index: 100;
+        }
+        
+        #taz_map {
+            position: absolute;
+            left: 350px;
+        }
+        
+        .mappath {
+            cursor: pointer;
+        }
+        
+        .mappath:hover {
+            fill: rgba(248, 0, 0, 0.4) !important;
+        }
+        
+        body {
+            background-color: #FCFCFC;
+        }
+
+        .left_panel {
+            position:absolute;
+            left:0px;
+            top:0px;
+            width:375px;
+            height:100%;
+            background-color: rgb(230,230,230);
+
+        }
+
+        .btn_cus {
+            width:100% !important;
+        }
+
+        button {
+            width: 24%;
+            -webkit-border-radius: 20px !important;
+            border: 2px solid #dddddd !important;
+        }
     </style>
+
 
 
 </head>
@@ -94,133 +161,53 @@
 <body>
 
     <!-- Page Content -->
-    <div class="container">
 
 
 
-        <!-- Projects Row -->
-        <div class="row">
-            <div class="col-md-5">
-                <div id="taz_map"></div>
-                    <div class="row">
-                    <div class="col-md-2 col-md-offset-1">
-                <div id="taz_brush"></div>
+    <!-- Projects Row -->
+
+    <div id="taz_map"></div>
+
+    <div class="left_panel">
+
+        <div id="taz_brush"></div>
+
+        <div class="arc_diagram_holder">
+            <div id="arc_diagram"></div>
+            <div class="btn-group btn_cus">
+                <button type="button" onclick="updateMorning()" class="btn btn-default btn-xs">morning</button>
+                <button type="button" onclick="updateAfternoon()" class="btn btn-default btn-xs">afternoon</button>
+                <button type="button" onclick="updateEvening()" class="btn btn-default btn-xs">evening</button>
+                <button type="button" onclick="updateLateNight()" class="btn btn-default btn-xs">late night</button>
             </div>
         </div>
-            </div>
-            <div class="col-md-7 text-center">
-                <div id="arc_diagram"></div>
-				        <div class="btn-group">
-        				  <button type="button" onclick="updateMorning()" class="btn btn-default btn-xs">morning</button>
-        				  <button type="button" onclick="updateAfternoon()" class="btn btn-default btn-xs">afternoon</button>    
-        				  <button type="button" onclick="updateEvening()" class="btn btn-default btn-xs">evening</button>
-        				  <button type="button" onclick="updateLateNight()" class="btn btn-default btn-xs">late night</button>
-        				</div>
-            </p>
-            </div>
-
-        </div>
-
-        <!-- /.row -->
-
 
 
     </div>
+
+
+
+    <!-- /.row -->
+
+
+
     <!-- /.container -->
 
-
-    <!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">About this project</h4>
-      </div>
-      <div class="modal-body">
-        <b>About</b> 
-        <p></p>
-        <p>Current estimates suggest that a third of Riyadh’s inhabitants are migrants. The bulk of this population consists of an array of distinctive communities whose origins are located not only in neighboring Arab countries, but in from regions as far away from Saudi Arabia as the Pacific Rim and South Asia. Consistent with trends observed in other large urban agglomerations, the residential location of this sizeable migrant population is spatially segregated. Migrants make up a bigger share of neighbor-level populations in the city’s central area. In the city´s periphery, especially in the west and the east, migrant inhabitants are relatively less scarce.</p> 
-
-<p>In Riyadh, to this conventional residential segregation it should also be added a peculiar heterogeneity in the way migrants insert themselves in Riyadh’s economy. Most of Riyadh’s inhabitants work in the private enterprises, and make up 90% of the total workforce of the country’s private sector. </p>
-
-<p>Due to these demographic, residential and labor characteristics, visualizing the way Riyadh’s migrant population relates to the city’s overall transportation workflows is significant for a number of reasons: </p>
-
-<p>First, it serves as a vehicle to map the mobility experience of a significant part of Riyadh´s population. How do the approximately 2 million migrants living in the city move through Riyadh’s urban tissue?</p>
-
-<p>Second, it provides valuable information to understand the potential changes in mobility patterns that would ensue from an increasing amount of Saudis changing their labor sites from public to private.  As current public programs aspire to bring and increasing share of the Saudi population to the private sector, understanding the way in which migrant, private-sector working population works might be instrumental to provide some insights to the changes in transportation flows we might expect from this economic reconversion. </p>
-
-<p>Third, it allows to understand in migratory terms the type of users that will be more prone to take the projected Riyadh subway, therefore allowing to have a better of understanding of its potential user demography. </p>
-
-<p>Finally, it allows us to have with a quick way to analyze sociability patterns across Riyadh.  How frequent are transportation flows between migrant and non-migrant zones?  Are Riyadh’s neighborhoods primordially  “enclaves” that receive and send people to zones with a similar proportion of migrant population, or rather, do they function as “hinges” that commonly unite two heterogeneous zones in terms of their population density?  </p>
-
-<p>All in all, these features provide a solid substantive basis to conduct an exploration of the way migration status bears upon the general traffic patterns of the Saudi capital. </p>
-
-<p></p>
-<b>METHODS</b>
-<p></p>
-<i>Data</i>
-<p></p>
-<p>An ideal data structure to visualize the way in which migration affects transportation in Riyadh would be related to an individual-level panel data structure containing individual-level observations regarding origin and destination of trips without the Saudi capital. However, for logistic and data privacy reasons, this information was unavailable. Instead, we used Transportation Area Zone (TAZ) –level data. At this level of analysis, information was available regarding </p>
-
-<p>(1) The area and location of the TAZ within Riyadh –available through a shape file; </p>
-<p>(2) Basic demographic information of each –available through a database containing basic socio-demographic information obtained from the Saudi census, and </p>
-<p>(3) Information regarding transportation patterns between TAZ, which were codified in several origin/destination databases built out of cell  phone data. </p>
-
-
-<i>Outputs</i>
-<p></p>
-<p>The project featured three main outputs: </p>
-
-<i>A. Choropleth Map</i>
-<p></p>
-<p>Using the database on demographic characteristics of Riyadh’s TAZ’s, the first output sought to visualize differences across TAZ’s in terms of the proportion of migrant population each one had through cartographic means.  This element included the following components:</p>
-
-<p>A zoomable, TAZ-level map of Riyadh that colors each TAZ according to their migrant population; </p>
-<p>A visualization of the projected course of the Riyadh subway system;</p>
-<p>a brushing tool that allowed the user to make the map color only those TAZ’s whose proportion of migrant population fell under a specific interest range.</p>
-<img src="data/imageA.jpg" id="theImgId"/>
-<p></p>
-<i>B. Arc Diagram</i>
-<p></p>
-<p>The second output of the project sought to represent in a succinct, clear and readable way the transportation flows occurring to and from each of Riyadh’s TAZ’s.  For this task, the project used the origin/destination matrix across TAZ to generate, for each TAZ, an arc diagram that would make visible the transportation flows originating from/culminating to each specific TAZ.  By virtue of being a graphical device that relates elements arrayed along a one dimensional axis, an arc diagram was an ideal visualization strategy for the purposes of the project, as it allowed to map relationships between TAZ’s while still providing an orderly presentation according to the percentage of migrant population each had.</p>  
-
-<p>The arc diagram was composed by the following elements:</p>
-
-<p>A sorting axis that ordered TAZ’s according to the proportion of their migrant population</p>
-<p>A TAZ mark that indicated the specific TAZ whose transportation flows were visualized. This mark was positioned in the sorting axis according to the proportion of migrant population of the TAZ. Its color is related to its proximity to subway stations, with lighter colors indicating closer distance to the subway station. </p>
-<p>A series of arcs that visualized transportation flows related to the Target TAZ. Arcs occurring in the upper half of the diagram represented outward flows; arcs represented in the bottom half of the diagram was related to inward flows. The thickness of the arcs represented the volume of transportation between the target TAZ and all other TAZ’s. </p> 
-<p>A series of buttons that allowed the user to visualize data according to four times during the day: morning, afternoon, evening, and late night.</p> 
-<img src="data/imageB.jpg" id="theImgId2"/>
-<p></p>
-<i>C. Interphasing between the Map and the Diagram. </i>
-<p></p>
-<p>Finally, a third output consisted in interphasing the map and the arc diagram, allowing the user to select in the map a specific TAZ and generating its corresponding arc diagram.</p>
-<p></p>
-<p></p>
-<b>TEAM</b>
-<p></p>
-<p>Sergio Galaz Garcia is an M.Arch candidate at MIT and a doctor in sociology candidate at Princeton University. His interests lie in the analysis and design exploration of the relationships between power, space and the everyday life in contemporary urban experienes. </p>
-<p>Wayne Liu is currently in M.Arch ADV program at MIT. He is interested in how design and policy can together influence built environment. He also holds a BS in Architecture from Washington University in St. Louis.</p>
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-
-  </div>
-</div>
     <script>
-        var theImg = document.getElementById('theImgId');
+/*        var theImg = document.getElementById('theImgId');
           theImg.height = 459;
           theImg.width = 550;
 
         var theImg = document.getElementById('theImgId2');
           theImg.height = 426;
-          theImg.width = 550;
+          theImg.width = 550;*/
+
+        d3.selection.prototype.moveToFront = function() {
+        return this.each(function(){
+            this.parentNode.appendChild(this);
+        });
+        };
+
 
         function updateMorning(){
             console.log("clicked - Morning");
@@ -246,10 +233,14 @@
             timep = 4 }
           };
 
-        var width = 500;
-        var height = 500;
+        var widthM = window.innerWidth;
+        var heightM = window.innerHeight;
+
+
+        var width =  400;
+        var height = 400;
         var S_TAZ_id = 100;
-        var scale0 = (200* width - 1) / 2 / Math.PI;
+        var scale0 = (200* (widthM) - 1) / 2 / Math.PI;
         var number_of_obs = d3.map();
         var temp_data = []; 
         var timep = 1;
@@ -265,10 +256,10 @@
                      
         var albersProjection = d3.geo.albers()
                                 .rotate( [-46.670616,0] )
-                                .center( [0, 24.716042] )
+                                .center( [0.25, 24.716042] )
 
         var zoom =  d3.behavior.zoom()
-                    .translate([width / 2, height / 2])
+                    .translate([widthM / 2, heightM / 2])
                     .scale(scale0)
                     .scaleExtent([scale0, 8 * scale0])
                     .on("zoom", zoomed);
@@ -278,8 +269,8 @@
 
         var svg =   d3.select("#taz_map")
                     .append( "svg" )
-                    .attr( "width", width )
-                    .attr( "height", height ).append("g");
+                    .attr( "width", widthM-360 )
+                    .attr( "height", heightM-50 ).append("g");
         
         var g =     svg.append("g");
                     // svg.append("rect")
@@ -417,9 +408,9 @@
  	         .on('click', function(d) {
                  S_TAZ_id = d.properties.TAZ ;
                  // clear out everything
-                 d3.selectAll(".mappath").style("stroke", "none")
+                 d3.selectAll(".mappath").style("stroke", "none");
                  // hightlight this one
-                 d3.select(this).style("stroke", "orange").style("stroke-width", "3px")
+                 d3.select(this).style("stroke", "orange").style("stroke-width", "3px").moveToFront();
                  console.log("id",S_TAZ_id);
                  if (timep == 1) {
                  d3.json("data/Morning/Morning_" + S_TAZ_id.toString() + ".json", UpdateArc);}
@@ -588,8 +579,8 @@ d3.selectAll("path")
 
 /* GLOBALS */
 
-var width  = 500;           // width of svg image
-var height = 500;           // height of svg image
+var width  = 350;           // width of svg image
+var height = 350;           // height of svg image
 var margin = 20;            // amount of margin around plot area
 var pad = margin / 2;       // actual padding amount
 var radius = 5;             // fixed node radius
@@ -710,8 +701,8 @@ function arcDiagram(graph) {
     var svg2 = d3.select("#arc_diagram")
         .append("svg")
         .attr("id", "arc")
-        .attr("width", width)
-        .attr("height", height)
+        .attr("width", 350)
+        .attr("height", 350)
         //.style("stroke", bordercolor)
         //.style("fill", "none")
         //.style("stroke-width", 1);
