@@ -4,7 +4,6 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
 
 body,
 html {
@@ -19,7 +18,6 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Roboto Condensed', sans-serif;
 }
 
 .topnav {
@@ -176,7 +174,6 @@ p.copyright {
     padding: 20px;
     border-radius: 1px white;
     text-transform: uppercase;
-    font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;;
     font-weight: 400;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;

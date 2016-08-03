@@ -1,25 +1,28 @@
-
 <html>
+
 <head>
     <title>Moving Through Riyadh</title>
-     <!-- Bootstrap Core CSS -->
+    <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.css " rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="css/landing-page.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="http://cortnik.github.io/project/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <script src="http://d3js.org/topojson.v1.min.js"></script>
+    <!--    <link href="http://cortnik.github.io/project/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+        rel='stylesheet' type='text/css'>
+
+    <script src="js/d3.v3.min.js" charset="utf-8"></script>
+    <script src="js/topojson.min.js"></script>
 
 
-<!--    <script src="flow/data/roads.geojson"></script>
--->    
+    <!--    <script src="flow/data/roads.geojson"></script>
+-->
     <script src="flow/data/PNOhotspots_total.json"></script>
     <script src="flow/data/PNDhotspot_total.json"></script>
-<!--    <script src="flow/geojsons/PNOedgeflow0607.geojson"></script>
+    <!--    <script src="flow/geojsons/PNOedgeflow0607.geojson"></script>
     <script src="flow/geojsons/PNOedgeflow0708.geojson"></script>
     <script src="flow/geojsons/PNOedgeflow0809.geojson"></script>
     <script src="flow/geojsons/PNOedgeflow0910.geojson"></script>    
@@ -56,109 +59,270 @@
     <script src="flow/geojsons/PNDedgeflow2223.geojson"></script>
     <script src="flow/geojsons/PNDedgeflow2324.geojson"></script>-->
     <script src="hotspot_data/metro.geojson"></script>
-    <style> 
-        @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
+    <style>
+    input[type=range] {
+            -webkit-appearance: none;
+            /* Hides the slider so that custom slider can be made */
+            width: 100%;
+            /* Specific width is required for Firefox. */
+            background: transparent;
+            /* Otherwise white in Chrome */
+        }
+        
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+        }
+        
+        input[type=range]:focus {
+            outline: none;
+            /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+        }
+        
+        input[type=range]::-ms-track {
+            width: 100%;
+            cursor: pointer;
+            /* Hides the slider so custom styles can be added */
+            background: transparent;
+            border-color: transparent;
+            color: transparent;
+        }
+        /* Special styling for WebKit/Blink */
+        
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            border: 1px solid #000000;
+            height: 20px;
+            width: 10px;
+            border-radius: 30px;
+            background: #ffffff;
+            cursor: pointer;
+            margin-top: -10px;
+            /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+            box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+            /* Add cool effects to your sliders! */
+        }
+        /* All the same stuff for Firefox */
+        
+        input[type=range]::-moz-range-thumb {
+            box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+            border: 1px solid #000000;
+            height: 20px;
+            width: 10px;
+            border-radius: 30px;
+            background: #ffffff;
+            cursor: pointer;
+        }
+        /* All the same stuff for IE */
+        
+        input[type=range]::-ms-thumb {
+            box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+            border: 1px solid #000000;
+            height: 20px;
+            width: 10px;
+            border-radius: 30px;
+            background: #ffffff;
+            cursor: pointer;
+        }
+        
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 1px;
+            cursor: pointer;
+            box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+            background: #000000;
+            border-radius: 1.3px;
+            border: 0.2px solid #010101;
+            opacity:0.3;
 
+        }
+        
+        input[type=range]:focus::-webkit-slider-runnable-track {
+            background: #000000;
+            opacity:0.3;
+
+        }
+        
+        input[type=range]::-moz-range-track {
+            width: 100%;
+            height: 1px;
+            cursor: pointer;
+            box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+            background: #000000;
+            border-radius: 1.3px;
+            border: 0.2px solid #010101;
+            opacity:0.3;
+
+        }
+        
+        input[type=range]::-ms-track {
+            width: 100%;
+            height: 1px;
+            cursor: pointer;
+            background: transparent;
+            border-color: transparent;
+            border-width: 16px 0;
+            color: transparent;
+
+        }
+        
+        input[type=range]::-ms-fill-lower {
+            background: #2a6495;
+            border: 0.2px solid #010101;
+            border-radius: 2.6px;
+            box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+
+        }
+        
+        input[type=range]:focus::-ms-fill-lower {
+            background: #000000;
+        }
+        
+        input[type=range]::-ms-fill-upper {
+            background: #000000;
+            border: 0.2px solid #010101;
+            border-radius: 2.6px;
+            box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+        }
+        
+        input[type=range]:focus::-ms-fill-upper {
+            background: #000000;
+        }
+        
         body {
             position: absolute;
             top: 30px;
-            font-family: 'Roboto Condensed', sans-serif;
+            font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif !important;
             /*background-color: #FFFAFA;
             color: #708090;*/
         }
+        
         h3 {
-/*          position: absolute;
+            /*          position: absolute;
             left: 20px;*/
             font-size: 1.3em;
             font-weight: 100;
             /*color: #708090;*/
         }
+        
         h2 {
             font-size: 1em;
-           /* color: #708090;*/
+            /* color: #708090;*/
         }
+        
         .hotspot {
-            stroke: #ffffff;
-            fill: #5F9EA0;
+            stroke: none;
+            fill: #2980b9;
             opacity: .7;
         }
+        
         .hotspothover {
-            fill: #ffe28a; 
+            stroke: none;
+            fill: #2ecc71;
+            opacity: .7;
         }
+        
         .Paths {
-            opacity: .6;
+            opacity: 1;
             fill: none;
-            stroke: #ff812d;
-            stroke-linecap:round;
+            stroke: #f39c12;
+            stroke-linecap: round;
         }
+        
         #slider {
-            width: 5px;
-            height: 400px;
-            text-align: center;
+            width: 100%;
+            height: 5px;
             float: left;
-            /* position: absolute;    */     
-            }
-       #slider > input[type=range]{
-       		width: 400;       		
-       		height: 20;
-       		display:block;
-       		position: relative;
-       		text: center;
-       		transform: rotate(90deg);
-       		-webkit-transform: rotate(90deg);
-    		-moz-transform: rotate(90deg);
-    		-ms-transform: rotate(90deg);
-    		-o-transform: rotate(90deg);
-    		transform-origin: left;
-    		text-align: center;
-    		top: 80px;
-    		left: 10px;
-       }
-
-        #wrap{
-            width:1200px;
-            height:550px;
-            margin-left: 60px;
-            margin-top:30px;
+            margin-top:60px;
+            /* position: absolute;    */
+        }
+        
+        #slider > input[type=range] {
+            width: calc(100% - 150px);
+            margin-left: 100px;
+            height: 20;
+            display: block;
+            position: relative;
+            transform-origin: left;
+            text-align: center;
+        }
+        
+        #wrap {
+            position:relative;
+            width: 100%;
+            height: 700px;
+            margin-top: 30px;
+            border: 1px solid rgba(0,0,0,0.1);
+            background-color: rgba(0,0,0,0.03);
+            padding-top:30px;
+            margin-bottom: 30px;
+        }
+        
+        span#range {
+            position: absolute;
+            left: 60px;
+            bottom: 38px;
         }
         #origin_map {
-            width:550px;
-            height:550px;
-            float:left;
+            width: 49%;
+            height: 550px;
+            float: left;
             /* float:bottom; */
         }
-        #destination_map{
-            width:550px;
-            height:550px;
-            float:right;
+        
+        #destination_map {
+            width: 49%;
+            height: 550px;
+            float: left;
         }
-}
+
+        .maps h5 {
+            text-align:center;
+        }
+
+        .maps svg {
+            width:100%;
+            height:100%;
+        }
+    
     </style>
 </head>
+
 <body>
 
-<!-- Navigation -->
+    <!-- Navigation -->
 
-        <!-- /.container -->
-     <div class="container">
-    <br>
-    <br>
-    <h1 align="center"><strong>WHERE DO UNIVERSITY WOMEN TRAVEL IN RIYADH?</strong></h1>
-    <br><h3> Move the slider to animate the paths of commuters during each hour of a typical day. Orange lines represent the shortest paths between the Princess Noura campus and the commuter origin/destination hotspots. The size of the blue hotspots is based on the number of commuters flowing through each day. </h3>
-        </div>
-    </div>
-
-<div class="container">
-<div id="wrap">
-    <div id="origin_map">
-        <h3>COMMUTING FROM PRINCESS NOURA UNIVERSITY</h3>
-        <h2_o></h2_o>
+    <!-- /.container -->
+    <div class="container">
         <br>
+        <br>
+        <h1 align="center"><strong>WHERE DO UNIVERSITY WOMEN TRAVEL IN RIYADH?</strong></h1>
+        <br>
+        <h3> Move the slider to animate the paths of commuters during each hour of a typical day. Orange lines represent the shortest
+            paths between the Princess Noura campus and the commuter origin/destination hotspots. The size of the blue hotspots
+            is based on the number of commuters flowing through each day. </h3>
     </div>
-    
-    <div id="slider">
-        <input id="timeslide" type="range" min="0" max="17" value="0" step="1" list="ticks"><br>
-        <datalist id="ticks">
+    </div>
+
+    <div class="container">
+        <div id="wrap">
+            <div id="origin_map" class = "maps">
+                <h5>COMMUTING FROM PRINCESS NOURA UNIVERSITY</h5>
+                <h2_o></h2_o>
+                <br>
+            </div>
+
+
+
+            <div id="destination_map" class = "maps">
+                <h5>COMMUTING TO PRINCESS NOURA UNIVERSITY</h5>
+                <h2_d></h2_d>
+                <br>
+            </div>
+            <br>
+            <div id="slider">
+
+                <input id="timeslide" type="range" min="0" max="17" value="0" step="1" list="ticks"><br>
+                <!--        <datalist id="ticks">
             <option>0</option>
             <option>1</option>
             <option>2</option>
@@ -177,30 +341,42 @@
             <option>15</option>
             <option>16</option>
             <option>17</option>
-        </datalist><br>
-        <span id="range">6:00</span>
-    </div>
-    
-    <div id="destination_map">
-        <h3>COMMUTING TO PRINCESS NOURA UNIVERSITY</h3>
-        <h2_d></h2_d>
-        <br>
-    </div>
-<br>
-</div>
- <div class="container">
-<p> 
-	<li>The visualizations show "hotspots of the origins/ destinations, the size of which represents the estimated number of commuters that start, and end, at each location. </li>
-	<li>These two complementary visualizations map out the hour-by-hour travel flows of the women university students to and from the Princess Noura University, based on aggregated Call Detail Records (CDR).</li>
+        </datalist><br>-->
+                <span id="range">6:00</span>
+            </div>
+        </div>
+        <div class="container">
+            <p>
+                <li>The visualizations show "hotspots of the origins/ destinations, the size of which represents the estimated
+                    number of commuters that start, and end, at each location. </li>
+                <li>These two complementary visualizations map out the hour-by-hour travel flows of the women university students
+                    to and from the Princess Noura University, based on aggregated Call Detail Records (CDR).</li>
 
-	<li>The visualizations show "hotspots of the origins/ destinations, the size of which represents the estimated number of commuters that start, and end, at each location. </li>
+                <li>The visualizations show "hotspots of the origins/ destinations, the size of which represents the estimated
+                    number of commuters that start, and end, at each location. </li>
 
-	<li>A "shortest path" analysis was used to map out the approximate route that most commuters may choose. The thickness of the lines represents the corresponding number of estimated commuters travelling towards and from the University along those routes.</li>
-	</p>
-	</div>
+                <li>A "shortest path" analysis was used to map out the approximate route that most commuters may choose. The
+                    thickness of the lines represents the corresponding number of estimated commuters travelling towards
+                    and from the University along those routes.</li>
+            </p>
+        </div>
 
 
-    <script>
+        <script>
+    d3.selection.prototype.moveToFront = function() {
+    return this.each(function(){
+        this.parentNode.appendChild(this);
+    });
+    };
+
+    d3.selection.prototype.moveToBack = function() { 
+        return this.each(function() { 
+            var firstChild = this.parentNode.firstChild; 
+            if (firstChild) { 
+                this.parentNode.insertBefore(this, firstChild); 
+            } 
+        }); 
+    };
 
 
     d3.json("flow/data/converted/roads_.geojson",function(roads){
@@ -214,23 +390,23 @@
     var height = 500;
 
     var origin_map = d3.select( "#origin_map" )
-        .append("svg")
-        .attr( "width", width )
-        .attr( "height", height );
+        .append("svg").moveToBack();
+/*        .attr( "width", width )
+        .attr( "height", height )*/;
 
     var g = origin_map.append( "g" );
 
     // Set Projection Parameters
     // Mercator
     var projection = d3.geo.mercator()
-        .scale( 35000 )
-        .center( [46.765, 24.713] )
+        .scale( 70000 )
+        .center( [46.685, 24.763] )
         .translate( [width/2,height/2] );
 
     var geoPath = d3.geo.path()
         .projection( projection );
 
-    var road_network = origin_map.append( "g" );
+    var road_network = origin_map.append( "g" ).attr("class","road_network");
         road_network.selectAll( "path" )
         .data(topojson.feature(roads, roads.objects.roads_).features)
 
@@ -241,13 +417,11 @@
         .attr("fill", "none")
         .attr( "stroke", "#d3d3d3" )
         .attr("opacity", .7)
-        .attr("stroke-width", .5)
+        .attr("stroke-width", .1)
         .attr( "d", geoPath )
         .attr("class", "roads");
 
-    var PNOhotspots_total = origin_map.append("g")
     var chosenhour_origin ;
-    var PNO_routes = origin_map.append("g")
     var enter_duration = 10
     
     var pnu = projection([46.723616, 24.852326])
@@ -256,17 +430,27 @@
     	.attr("cy", pnu[1])
     	.attr("r",4)
     	.style("fill", "#a11e1e");
-        var metroLines = origin_map.append( "g" );
-        metroLines.selectAll( "path" )
-        .data(metro.features )
-        .enter()
-        .append( "path" )
-        .attr("fill", "none")
-        .attr( "stroke", "#828282" )
-        .attr("stroke-width", 1.5)
-        .attr( "d", geoPath )
-        .attr("class", "metro");
+    origin_map.append("circle")
+    	.attr("cx", pnu[0])
+    	.attr("cy", pnu[1])
+    	.attr("r",8)
+    	.style("fill", "none")
+        .style("stroke-dasharray", "4 2")
+        .style("stroke", "#a11e1e");
 
+    var metroLines = origin_map.append( "g" ).attr("class","metroLines");
+    metroLines.selectAll( "path" )
+    .data(metro.features )
+    .enter()
+    .append( "path" )
+    .attr("fill", "none")
+    .attr( "stroke", "#828282" )
+    .attr("stroke-width", .5)
+    .attr( "d", geoPath )
+    .attr("class", "metro");
+
+    var PNO_routes = origin_map.append("g").attr("class","PNO_routes")
+    var PNOhotspots_total = origin_map.append("g").attr("class","PNOhotspots_total");
 
     // when the input range changes update the value 
     d3.select("#timeslide").on("input", function() {
@@ -311,10 +495,10 @@
                         return "translate(" + projection([+d.properties.long_dest,+d.properties.lat_dest]) + ")";
                     })
                     .attr("class", "hotspot")
-                    .attr("r", 1)
+                    .attr("r", 0)
                     .transition().delay(1100).duration(800)
                     .attr("r", function(d){return d.properties.flow*3;})
-                    .attr("display", timeMatch)
+                    .attr("display", timeMatch);
 
                 PNOhotspots_total.selectAll("circle")
                     .on("mouseover", function(d){
@@ -325,6 +509,7 @@
                         d3.select("h2_o").text("");
                         d3.select(this).attr("class","hotspot");
                     });
+                    
 
 
             })
@@ -332,13 +517,14 @@
     }
 
     var destination_map = d3.select( "#destination_map" )
-        .append( "svg" )
+        .append( "svg" ).moveToBack();
+        /*
         .attr( "width", width )
-        .attr( "height", height );
+        .attr( "height", height )*/;
 
     var g = destination_map.append( "g" );
 
-    var road_network = destination_map.append( "g" );
+    var road_network = destination_map.append( "g" ).attr("class","road_network");
         road_network.selectAll( "path" )
         .data(topojson.feature(roads, roads.objects.roads_).features)
 
@@ -348,31 +534,43 @@
         .attr("fill", "none")
         .attr( "stroke", "#d3d3d3" )
         .attr("opacity", .7)
-        .attr("stroke-width", .5)
+        .attr("stroke-width", .1)
         .attr( "d", geoPath )
         .attr("class", "roads");
 
-    var PNDhotspots_total = destination_map.append("g")
     var chosenhour_dest;
-    var PND_routes = destination_map.append("g")
     var enter_duration = 10
     
-    var pnu1 = projection([46.723616, 24.852326])
-    	destination_map.append("circle")
+    var pnu1 = projection([46.723616, 24.852326]);
+
+    destination_map.append("circle")
+    .attr("cx", pnu[0])
+    .attr("cy", pnu[1])
+    .attr("r",4)
+    .style("fill", "#a11e1e");
+
+    destination_map.append("circle")
     	.attr("cx", pnu[0])
     	.attr("cy", pnu[1])
-    	.attr("r",4)
-    	.style("fill", "#a11e1e");
-     var metroLines = destination_map.append( "g" );
+    	.attr("r",8)
+    	.style("fill", "none")
+        .style("stroke-dasharray", "4 2")
+        .style("stroke", "#a11e1e");
+
+
+     var metroLines = destination_map.append( "g" ).attr("class","metroLines");
         metroLines.selectAll( "path" )
         .data(metro.features )
         .enter()
         .append( "path" )
         .attr("fill", "none")
-        .attr( "stroke", "#bdbdbd" )
-        .attr("stroke-width", 1.5)
+        .attr( "stroke", "#828282" )
+        .attr("stroke-width", .5)
         .attr( "d", geoPath )
         .attr("class", "metro");
+
+    var PND_routes = destination_map.append("g").attr("class","PND_routes");
+    var PNDhotspots_total = destination_map.append("g").attr("class","PNDhotspots_total");
 
 
     // TIMESLIDER
@@ -390,7 +588,6 @@
             d3.json(filename,function(chosenhour_dest){
                 //chosenhour_dest = eval("PNDedgeflow" + String(inputValue.replace(":00", "")) + ".features");
 
-                console.log(filename,chosenhour_dest);
                 PND_routes.selectAll("path").remove();
                 PND_routes.selectAll( "path" )
                 .data(chosenhour_dest.features)//maybe can make this query from database api
@@ -404,7 +601,7 @@
                     var flow2 = Math.sqrt(+d.properties.flow);
                     return flow2;})
                 .attr( "d", geoPath )
-                .attr("class", "Paths")
+                .attr("class", "Paths");
 
                 PNDhotspots_total.selectAll("circle").remove();
                 PNDhotspots_total.selectAll("circle")
@@ -416,10 +613,10 @@
                     return "translate(" + projection([d.properties.long_origin, d.properties.lat_origin]) + ")";
                 })
                 .attr("class", "hotspot")
-                .attr("r", 1)
+                .attr("r", 0)
                 .transition().duration(800)
                 .attr("r", function(d){return d.properties.flow*3;})
-                .attr("display", timeMatch)
+                .attr("display", timeMatch);
 
                 PNDhotspots_total.selectAll("circle")
                 .on("mouseover", function(d){
@@ -438,6 +635,9 @@
 
     }
 
+        update_pno(0);
+        update_pnd(0);
+
             function timeMatch(data, value) {
                 var d = data.properties.hour;
                 var m = "9";
@@ -455,6 +655,7 @@
 </script>
 
 
-  </div>
+    </div>
 </body>
+
 </html>

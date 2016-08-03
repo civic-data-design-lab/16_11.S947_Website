@@ -13,17 +13,19 @@
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+<!--    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+-->    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
 
 	<!-- Data links -->
-    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <script src="http://d3js.org/queue.v1.min.js"></script>
-    <script src="//d3js.org/d3.v3.min.js"></script>
-    
+    <script src="js/queue.min.js"></script>
+    <script src="js/d3.v3.min.js" charset="utf-8"></script>
+
     <style>
     body {
       position: absolute;
       top: 30px;
+      font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif !important;
+
     }
      .hotspothover {
             fill: #ffe28a; 
@@ -120,6 +122,10 @@ table{
      margin-left:60px;
    }
 
+   h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: 100 !important;
+   }
+
 </style>
     
 </head>
@@ -192,7 +198,7 @@ table{
 
 <script>
 var margin = {top: 0, right: 20, bottom: 0, left: 60},
-    width = 700 - margin.left - margin.right,
+    width = 800 - margin.left - margin.right,
     height = 320 - margin.top - margin.bottom;
 
 var ya0 = d3.scale.ordinal()
@@ -201,7 +207,7 @@ var ya0 = d3.scale.ordinal()
 var ya1 = d3.scale.linear();
 
 var xa = d3.scale.ordinal()
-    .rangeRoundBands([0, width], .1, 0);
+    .rangeRoundBands([40, width], .1, 0);
 
 var xaAxis = d3.svg.axis()
     .scale(xa)
@@ -262,7 +268,7 @@ var tooltip1 = d3.select("#area1")
 
   group1.append("text")
       .attr("class", "group-label")
-      .attr("x", -6)
+      .attr("x", 25)
       .attr("y", function(d) { return ya1(d.values[0].counta / 2); })
       .attr("dy", ".1em")
       .text(function(d) { return d.key; });
@@ -352,7 +358,7 @@ var y0 = d3.scale.ordinal()
 var y1 = d3.scale.linear();
 
 var x = d3.scale.ordinal()
-    .rangeRoundBands([0, width], .1, 0);
+    .rangeRoundBands([40, width], .1, 0);
 
 var xAxis = d3.svg.axis()
     .scale(x)
@@ -410,7 +416,7 @@ var tooltip = d3.select("#area2")
 
   group.append("text")
       .attr("class", "group-label")
-      .attr("x", -6)
+      .attr("x", 25)
       .attr("y", function(d) { return y1(d.values[0].count / 2); })
       .attr("dy", ".1em")
       .text(function(d) { return d.key; });

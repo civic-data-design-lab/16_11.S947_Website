@@ -458,3 +458,27 @@
     cursor: pointer;
 
 }
+
+#fosterimg {
+    background: url(../img/foster.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#swimg {
+    background: url(../img/williams.jpeg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#carlosimg {
+    background: url(../img/carlos.jpeg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
