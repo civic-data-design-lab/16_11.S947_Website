@@ -56,7 +56,7 @@
             left:0px;
             right:0px;
             bottom:0px;
-            background-color:rgba(0,0,0,0.1);
+            background-color:rgba(0,0,0,0.01);
         }
 
         
@@ -143,7 +143,7 @@
             bottom: 35px;
             width: 375px;
             height: 400px;
-            background-color: rgba(225, 225, 225,0.85);
+            background-color: rgba(245, 245, 245,0.85);
             border-radius: 3px;
             box-shadow: 0 0 10px 0 rgba(0,0,0,.25);        
         }
@@ -454,7 +454,7 @@
                  // clear out everything
                  d3.selectAll(".mappath").style("stroke", "none");
                  // hightlight this one
-                 d3.select(this).style("stroke", "orange").style("stroke-width", "3px").moveToFront();
+                 d3.select(this).style("stroke", "orange").style("stroke-width", "2px").moveToFront();
 
 
                  if (timep == 1) {
@@ -468,7 +468,7 @@
             });
 
 
-        d3.select("#TAZ_id_"+S_TAZ_id).style("stroke", "orange").style("stroke-width", "3px").moveToFront();
+        d3.select("#TAZ_id_"+S_TAZ_id).style("stroke", "orange").style("stroke-width", "2px").moveToFront();
         // map;  
         /////////////////
         /// METRO LINE //
