@@ -18,9 +18,8 @@
     <link href="css/grayscale.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,300|Karma:400,300|Lato:400,300,700" rel="stylesheet" type="text/css">    
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+        rel='stylesheet' type='text/css'>
 
     <script language="javascript" type="text/javascript">
     function resizeIframe(obj) {
@@ -29,7 +28,7 @@
     </script>
 
     <!-- favicon -->
-    
+
     <link rel="shortcut icon" href="/img/favicon.ico">
 
 
@@ -41,67 +40,73 @@
     <![endif]-->
 
     <style>
-    	table, th, td {
-   		border: 1px solid black;
-		}
-		th, td {
-    	width: 20px;
-		}
-        .streamgr {
-          background-color: white;
-          font-family: 'Lato', sans-serif;
-          font-weight: 700;
-          font-size: 12px;
-          color: black;
+        table,
+        th,
+        td {
+            border: 1px solid black;
         }
-
-        .share_chart { 
-          background-color: white;
-          color: black;
+        
+        th,
+        td {
+            width: 20px;
+        }
+        
+        .streamgr {
+            background-color: white;
+            font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+            font-weight: 700;
+            font-size: 12px;
+            color: black;
+        }
+        
+        .share_chart {
+            background-color: white;
+            color: black;
         }
         
         .streamgraph {
-          margin 0 auto;    
+            margin 0 auto;
         }
         
         .remove {
-          background-color: white;
-        }    
-
+            background-color: white;
+        }
+        
         .x .axis {
-          color: black;    
-        }    
-
-        .axis path, .axis line {
-          fill: none;
-          stroke: black;
-          stroke-width: 2px;
-          shape-rendering: crispEdges;
+            color: black;
         }
-
+        
+        .axis path,
+        .axis line {
+            fill: none;
+            stroke: black;
+            stroke-width: 2px;
+            shape-rendering: crispEdges;
+        }
+        
         button {
-          position: absolute;
-          right: 50px;
-          top: 10px;
+            position: absolute;
+            right: 50px;
+            top: 10px;
         }
-
+        
         .remove {
-          font-size: 18px;        
-            }
+            font-size: 18px;
+        }
     </style>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-custom" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand page-scroll">
-                     <span class="light">Riyadh</span>TOGETHER
+                    <span class="light">Riyadh</span>TOGETHER
                 </a>
             </div>
 
@@ -113,7 +118,7 @@
         <div class="intro-body">
             <div class="container">
                 <div class="row">
-                <br><br><br><br><br><br></div>
+                    <br><br><br><br><br><br></div>
             </div>
         </div>
     </header>
@@ -121,47 +126,55 @@
     <div class="container">
 
         <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Trip-sharing makes a big difference!</h2>
-                    <p> Our analysis shows that, in the best scenario, about 50% of taxi trips near New York City's Flushing Main Street station can be shared with a delay in travel time less than 10 minutes. This can reduce vehicle miles travelled and the associated CO2 emissions by up to 35%!</p>
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Trip-sharing makes a big difference!</h2>
+                <p> Our analysis shows that, in the best scenario, about 50% of taxi trips near New York City's Flushing Main
+                    Street station can be shared with a delay in travel time less than 10 minutes. This can reduce vehicle
+                    miles travelled and the associated CO2 emissions by up to 35%!</p>
 
-						<br><br><br>
-						</div>
-
-
-					<div class="col-lg-12 text-center">
-					<h3> Where are last-mile trips from Flushing-Main Street Going?</h3>
-                    <p>The map below shows commmon destinations of taxi trips picked up at Flushing-Main Street Station. In addition to the neighborhood immediately around the station, the College Point neighborhood to the north of Flushing is a hotspt of trip destinations. Understanding these concentrations of travel demand could inform where on-demand transit service could be successful, filling the gap between taxi trips and conventional buses.</p>
-                    <iframe width="80%" height="620" frameborder="0" src="https://jacampbe.cartodb.com/viz/12b5ef58-f6bc-11e5-bd7e-0e787de82d45/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
-
-					<br><br><br>
-					</div>
+                <br><br><br>
+            </div>
 
 
-					<div class="col-lg-12 text-center">
-					<h3> How can shared last-mile trips affect traffic congestion?</h3>
-                    <p><b>Click on the map below</b> to launch an interactive map of how shard taxi trips impact road usage. The map shows how many taxi trips use each road segment under different levels of shared taxi trips.</p>    
-                        
-                        
-                    <iframe width="100%" frameborder="0" scrolling="no" height = "720px" src="exploring_sharing/Exploring_Sharing.html" ></iframe>
-                        
+            <div class="col-lg-12 text-center">
+                <h3> Where are last-mile trips from Flushing-Main Street Going?</h3>
+                <p>The map below shows commmon destinations of taxi trips picked up at Flushing-Main Street Station. In addition
+                    to the neighborhood immediately around the station, the College Point neighborhood to the north of Flushing
+                    is a hotspt of trip destinations. Understanding these concentrations of travel demand could inform where
+                    on-demand transit service could be successful, filling the gap between taxi trips and conventional buses.</p>
+                <iframe width="100%" height="620" frameborder="0" src="https://jacampbe.cartodb.com/viz/12b5ef58-f6bc-11e5-bd7e-0e787de82d45/embed_map"
+                    allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
-					<br><br><br>
-					</div>
+                <br><br><br>
+            </div>
 
-					<div class="col-lg-12 text-center">
-					<h3> When is there the most opportunity for shared trips?</h3>
-                    <p>Across all of the sharing scenarios, there is a higher percentage of shared trips when there is a high total number of trips. <b>Click on the streamgraph below</b> to launch it in interactive mode, and explore the potential for shared trips across a typical day at various levels of sharing.</p>
-                    <br>
 
-                    <iframe width="100%" frameborder="0" scrolling="no" onload="resizeIframe(this)" src="streamgraph.html" ></iframe>
+            <div class="col-lg-12 text-center">
+                <h3> How can shared last-mile trips affect traffic congestion?</h3>
+                <p>The interactive map below shows how shard taxi trips impact road usage. The map shows how many taxi trips
+                    use each road segment under different levels of shared taxi trips.</p>
 
-                    
-					<br><br><br>
-					</div>
 
-           
-                </div>
+                <iframe width="100%" frameborder="0" scrolling="no" height="720px" src="exploring_sharing/Exploring_Sharing.html"></iframe>
+
+
+                <br><br><br>
+            </div>
+
+            <div class="col-lg-12 text-center">
+                <h3> When is there the most opportunity for shared trips?</h3>
+                <p>Across all of the sharing scenarios, there is a higher percentage of shared trips when there is a high total
+                    number of trips. See the streamgraph below in interactive mode, and explore the potential for shared
+                    trips across a typical day at various levels of sharing.</p>
+                <br>
+
+                <iframe width="100%" frameborder="0" scrolling="no" onload="resizeIframe(this)" src="streamgraph.html"></iframe>
+
+
+                <br><br><br>
+            </div>
+
+
         </div>
     </div>
-    
+    </div>

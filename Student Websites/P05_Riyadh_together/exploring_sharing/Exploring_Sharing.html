@@ -1,77 +1,103 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Exploring Shared Last-Mile Trips in NYC</title>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-    <link rel="shortcut icon" href="http://cartodb.com/assets/favicon.ico" />
 
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
-    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
-    <link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css">
-    <link rel="stylesheet" href="http://academy.cartodb.com/css/cdbui.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/bootstrap-theme.css">  
-    <style>
-      html, body {
-        height: 100%;
-        padding: 0;
-        margin: 0;
-      }
-      #map {
-        height: 80%;
-        padding: 0;
-        margin: 0;
-      }
-      #dashboard {
-        height: 20%;
-        padding: 25px;
-        margin: 0;
-        border-top: 2px solid #333;
-      }
-      #dash {
-        margin: 25px 0;
-        width: 400px;
-      }
-      button {
-        margin-right: 10px;
-        font-family: "Proxima Nova W01", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        background: transparent;
-      }
-      p {
-        font-size: 17px;
-        margin-bottom: 10px;
-      }
-        .btn-group {
-            margin-top: 30px;
-            margin-bottom: 30px;
-        }    
-    </style>
+<head>
+  <title>Exploring Shared Last-Mile Trips in NYC</title>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <link rel="shortcut icon" href="http://cartodb.com/assets/favicon.ico" />
 
-    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
-    <script type="text/javascript" src="http://fast.fonts.net/jsapi/b6470a43-5105-49d3-95ae-75217a436bf8.js"></script>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+  <link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css">
+  <link rel="stylesheet" href="http://academy.cartodb.com/css/cdbui.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap-theme.css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+    rel='stylesheet' type='text/css'>
 
-  </head>
-  <body>
-    <div id="map"></div>
-    <div id="dashboard">
-        <h3 class="Title Title--xs">Select a sharing scenario.</h3>
-        <div class="btn-group" role="group" aria-label="...">
-          <button type="button" id= "sublayer0" class="btn btn-default">No Shared Trips</button>
-          <button type="button" id= "sublayer1" class="btn btn-default">15% Shared Trips</button>
-          <button type="button" id= "sublayer2" class="btn btn-default">25% Shared Trips</button>
-          <button type="button" id= "sublayer3" class="btn btn-default">50% Shared Trips (Max)</button>    
-        </div>
-        <br>
-        <p>Then you can explore the map to see how shared taxi trips can reduce vehicles on the road. Hover your cursor over a section of road to see how use of that road segment changes under that sharing scenario.</p>
+  <style>
+    html,
+    body {
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    }
+    
+    #map {
+      height: 80%;
+      padding: 0;
+      margin: 0;
+    }
+    
+    #dashboard {
+      height: 20%;
+      padding: 25px;
+      margin: 0;
+      border-top: 2px solid #333;
+    }
+    
+    #dash {
+      margin: 25px 0;
+      width: 400px;
+    }
+    
+    button {
+      margin-right: 10px;
+      background: transparent;
+    }
+    
+    p {
+      font-size: 17px;
+      margin-bottom: 10px;
+    }
+    
+    .btn-group {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    
+    button {
+      background-color: white !important;
+      -webkit-border-radius: 20px !important;
+      border: 2px solid #dddddd !important;
+      margin-bottom: 8px !important;
+      color: black !important;
+      cursor: pointer !important;
+    }
+    
+    button:hover {
+      color: white !important;
+      background-color: rgba(0, 0, 0, 0.6) !important;
+    }
+  </style>
+
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+
+</head>
+
+<body>
+  <div id="map"></div>
+  <div id="dashboard">
+    <h3 class="Title Title--xs">Select a sharing scenario.</h3>
+    <div class="btn-group" role="group" aria-label="...">
+      <button type="button" id="sublayer0" class="">No Shared Trips</button>
+      <button type="button" id="sublayer1" class="">15% Shared Trips</button>
+      <button type="button" id="sublayer2" class="">25% Shared Trips</button>
+      <button type="button" id="sublayer3" class="">50% Shared Trips (Max)</button>
     </div>
+    <br>
+    <p>Then you can explore the map to see how shared taxi trips can reduce vehicles on the road. Hover your cursor over a section
+      of road to see how use of that road segment changes under that sharing scenario.</p>
+  </div>
 
-    <!-- include cartodb.js library -->
-    <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <!-- Place your code in the script tags below -->
-    <script>
+  <!-- include cartodb.js library -->
+  <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <!-- Place your code in the script tags below -->
+  <script>
         window.onload = function() {
             // Instantiate new map object, place it in 'map' element
           var map_object = new L.Map('map', {
@@ -176,5 +202,6 @@
               
         }
     </script>
-  </body>
+</body>
+
 </html>

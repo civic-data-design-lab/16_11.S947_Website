@@ -1,57 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
- <!--<link href="css/bootstrap.min.css" rel="stylesheet"> -->
-    <link href="css/full-width-pics.css" rel="stylesheet">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!--<link href="css/bootstrap.min.css" rel="stylesheet"> -->
+	<link href="css/full-width-pics.css" rel="stylesheet">
 	<link href="css/custom.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/multiline.css">
-	
-    <title>Voices of Riyadh</title>
+
+	<title>Voices of Riyadh</title>
 </head>
 
 <body>
 
-    <div class="container" style="padding-left:20px; padding-right:20px">
-        <div class="row">
+	<div class="container" style="padding-left:20px; padding-right:20px">
+		<div class="row">
 			<div class="col-lg-12 text-center">
 				<h2 style="text-align:center; margin-left:40px;">Visualizing Twitter Content</h2>
 				<h3>How It Works</h3>
-				<p>The line chart below represents one abstract week. The lines each represent a category of tweet (Traffic, Religion or Entertainment) and show how many tweets from that category were sent at a given time of the week. For example, you can see that people are talking about entertainment (museums, coffee shops, and so on) more frequently in the evenings, especially on Thursday and Friday night. Conversation about traffic spikes during rush hour times, but it is particularly fierce on Monday evenings. (Click on the legend to toggle visibility).</p>
-				<p>Meanwhile, the maps will show you the spatial distribution of the tweets at that time. For example, you can explore the Monday spike in traffic tweets, and see where in the city of Riyadh those tweets were posted. The map hexagons are colored darker to indicate greater tweet density, and you can hover over the hexagons to see the count.</p>
+				<p>The line chart below represents one abstract week. The lines each represent a category of tweet (Traffic, Religion or
+					Entertainment) and show how many tweets from that category were sent at a given time of the week. For example, you can
+					see that people are talking about entertainment (museums, coffee shops, and so on) more frequently in the evenings,
+					especially on Thursday and Friday night. Conversation about traffic spikes during rush hour times, but it is particularly
+					fierce on Monday evenings. (Click on the legend to toggle visibility).</p>
+				<p>Meanwhile, the maps will show you the spatial distribution of the tweets at that time. For example, you can explore the
+					Monday spike in traffic tweets, and see where in the city of Riyadh those tweets were posted. The map hexagons are colored
+					darker to indicate greater tweet density, and you can hover over the hexagons to see the count.</p>
 				<h3>Key Takeaways</h3>
-				<p><font style="font-weight:bold">Transportation: </font>Spikes of transportation talk are clearly visible during morning and evening commuting hours. During these local maximums, the map shows high amounts of activity near King Saud University, Highway 65/King Fahd Road, and Al Madinah Al Munawwarah Road.</p>
-				<p><font style="font-weight:bold">Religion: </font>Prayer-related tweets tended to occur between 7am and 9am on weekdays and around noon on Fridays. Again, the map showed that King Saud University was a hotspot for prayer tweet activity. Interestingly, during localized spikes on weekday evenings, eastern Riyadh, near An Nasim Cemetery saw a fair amount of activity.</p>
-				<p><font style="font-weight:bold">Entertainment: </font>Entertainment-related tweets showed the most consistent temporal grouping, with 8-9pm on weekdays and 4-10pm on weekends being the most popular time for such tweets. Spatially, these spikes were concentrated in two distinct areas: the central part of the city near the Al Nakheel Mall and in the southwest corner of the city near the King Abdullah International Gardens.</p>
+				<p>
+					<font style="font-weight:bold">Transportation: </font>Spikes of transportation talk are clearly visible during morning and evening commuting hours.
+					During these local maximums, the map shows high amounts of activity near King Saud University, Highway 65/King Fahd
+					Road, and Al Madinah Al Munawwarah Road.</p>
+				<p>
+					<font style="font-weight:bold">Religion: </font>Prayer-related tweets tended to occur between 7am and 9am on weekdays and around noon on Fridays. Again,
+					the map showed that King Saud University was a hotspot for prayer tweet activity. Interestingly, during localized spikes
+					on weekday evenings, eastern Riyadh, near An Nasim Cemetery saw a fair amount of activity.</p>
+				<p>
+					<font style="font-weight:bold">Entertainment: </font>Entertainment-related tweets showed the most consistent temporal grouping, with 8-9pm on weekdays
+					and 4-10pm on weekends being the most popular time for such tweets. Spatially, these spikes were concentrated in two
+					distinct areas: the central part of the city near the Al Nakheel Mall and in the southwest corner of the city near the
+					King Abdullah International Gardens.</p>
 			</div>
 		</div>
 
 
-        <!-- Content Map goes here -->
+		<!-- Content Map goes here -->
 
-        <div class="row" style="margin:auto; width:1190px; height:0px;">
-
-			<div class="col-md-4" id="transportationmap">
-			<h3 style="text-align:center"><font size="3">Transportation</font></h3>
-			</div>
-			
-			<div class="col-md-4" id="prayermap">
-			<h3 style="text-align: center" ><font size="3">Religion</font></h3>
-			</div>
-			
-			<div class="col-md-4" id="entertainmentmap">
-			<h3 style="text-align:center"><font size="3" >Entertainment</font></h3>
-			</div>
-		</div>
 	</div>
 
 
-    <div class="container">
+	<div class="container edit1">
+		<div class="row edit2" style="margin:auto; width:1190px; height:0px;">
+
+			<div class="col-md-4 edit4" id="transportationmap">
+				<h3 style="text-align:center" class = "edit3">
+					Transportation
+				</h3>
+			</div>
+
+			<div class="col-md-4 edit4" id="prayermap">
+				<h3 style="text-align: center" class = "edit3">
+					Religion
+				</h3>
+			</div>
+
+			<div class="col-md-4 edit4" id="entertainmentmap">
+				<h3 style="text-align:center" class = "edit3">
+					Entertainment
+				</h3>
+			</div>
+		</div>
+
 		<div class="row">
 			<div class="chart-wrapper" id="chart-line1" style="position:relative; left:10px; top:350px;height:350px;"></div>
 		</div>
@@ -59,22 +83,22 @@
 	</div>
 
 
-    <!-- /.container -->
+	<!-- /.container -->
 
 
 
 </body>
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-	<script src="http://d3js.org/d3.v3.js" charset="utf-8"></script>
-	<script src="http://d3js.org/queue.v1.min.js"></script>
-	<script src="http://d3js.org/topojson.v1.min.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="http://d3js.org/d3.v3.js" charset="utf-8"></script>
+<script src="http://d3js.org/queue.v1.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
 
-	<script src="js/date.js" type="text/javascript"></script>
+<script src="js/date.js" type="text/javascript"></script>
 
-	<script src="js/multiline.js" charset="utf-8"></script>
-	<script src="js/catmapper.js" type="text/javascript"></script>
-	<script type="text/javascript">
+<script src="js/multiline.js" charset="utf-8"></script>
+<script src="js/catmapper.js" type="text/javascript"></script>
+<script type="text/javascript">
 	var formatter = d3.time.format("%A, %B %d, %I %p");
 	var formatter2 = d3.time.format("%A %I %p");
 	var formatter3 = d3.time.format("%A %B %e %Y %I %p")
@@ -104,4 +128,5 @@ d3.csv('category_location_counters.csv', function(error, data) {
 
 });
 </script>
+
 </html>

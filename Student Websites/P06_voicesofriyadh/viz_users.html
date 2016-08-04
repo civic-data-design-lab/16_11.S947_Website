@@ -1,74 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
-<!--    <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!--    <link href="css/bootstrap.min.css" rel="stylesheet"> -->
 
 	<link href="css/custom.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/multiline.css">
 	<link href="css/full-width-pics.css" rel="stylesheet">
-	
-    <title>Voices of Riyadh</title>
+
+	<title>Voices of Riyadh</title>
 </head>
 
 <body>
 
-    <div class="container" style="padding-left:20px; padding-right:20px">
-        <div class="row">
+	<div class="container" style="padding-left:20px; padding-right:20px">
+		<div class="row">
 			<div class="col-lg-12 text-center">
 				<h2 style="text-align:center; margin-left:40px;">Visualizing Twitter Users in Riyadh</h2>
 				<h3>How It Works</h3>
-				<p>The line chart below represents one abstract week. The lines each represent a category of Twitter user (Local to Riyadh, Elsewhere in Saudi, or Elsewhere in the World) and show how many tweets from those users were sent at a given time of the week. For example, you can see that the vast majority of tweets from the dataset were posted by local Riyadh residents, and that they are most active in the evenings. (Click on the legend to toggle visibility).</p>
-				<p>Meanwhile, the maps will show you the spatial distribution of the tweets at that time. For example, you can explore spikes in tweets from visitors, and see where in the city of Riyadh those visitors went. The map hexagons are colored darker to indicate greater tweet density, and you can hover over the hexagons to see the count.</p>
+				<p>The line chart below represents one abstract week. The lines each represent a category of Twitter user (Local to Riyadh,
+					Elsewhere in Saudi, or Elsewhere in the World) and show how many tweets from those users were sent at a given time of
+					the week. For example, you can see that the vast majority of tweets from the dataset were posted by local Riyadh residents,
+					and that they are most active in the evenings. (Click on the legend to toggle visibility).</p>
+				<p>Meanwhile, the maps will show you the spatial distribution of the tweets at that time. For example, you can explore spikes
+					in tweets from visitors, and see where in the city of Riyadh those visitors went. The map hexagons are colored darker
+					to indicate greater tweet density, and you can hover over the hexagons to see the count.</p>
 				<h3>Key Takeaways</h3>
-				<p><font style="font-weight:bold">Locals: </font>Locals clearly make up the largest proportion of Twitter users in Riyadh. Temporal spikes tend to occur in the morning and evening, presumably before and after work. Spatially, much of the city is covered by tweets from locals, but the heaviest use occurs in the central city district of Olaya.</p>
-				<p><font style="font-weight:bold">Saudis: </font>Users who self-identified as being from Saudi Arabia but not specifically Riyadh make up a much smaller proportion of Riyadh's Twitter users. Temporally, there appears to be little-to-no pattern in tweet intensity. The map shows a similar scattering, though there are hotspots along King Fahd Road and near the King Fahad and Prince Sultan Medical Cities.</p>
-				<p><font style="font-weight:bold">Visitors: </font>Visitors are also a small proportion of Twitter users in Riyadh. While there do not appear to be any noticeable time spikes of visitor tweets, spatially they tend to concentrate in the tourism core of the city between King Fahd Road and Olaya Road and also in the southeastern districts of Al Mansourah and Al Khalidyah.</p>
+				<p>
+					<font style="font-weight:bold">Locals: </font>Locals clearly make up the largest proportion of Twitter users in Riyadh. Temporal spikes tend to occur
+					in the morning and evening, presumably before and after work. Spatially, much of the city is covered by tweets from
+					locals, but the heaviest use occurs in the central city district of Olaya.</p>
+				<p>
+					<font style="font-weight:bold">Saudis: </font>Users who self-identified as being from Saudi Arabia but not specifically Riyadh make up a much smaller
+					proportion of Riyadh's Twitter users. Temporally, there appears to be little-to-no pattern in tweet intensity. The map
+					shows a similar scattering, though there are hotspots along King Fahd Road and near the King Fahad and Prince Sultan
+					Medical Cities.</p>
+				<p>
+					<font style="font-weight:bold">Visitors: </font>Visitors are also a small proportion of Twitter users in Riyadh. While there do not appear to be any
+					noticeable time spikes of visitor tweets, spatially they tend to concentrate in the tourism core of the city between
+					King Fahd Road and Olaya Road and also in the southeastern districts of Al Mansourah and Al Khalidyah.</p>
 			</div>
 		</div>
 
-        <!-- Content Map goes here -->
-        <div class="row" style="margin:auto; width:1190px">
-			<div class="col-md-4" id="localmap" style="float:left; margin-left:10px; width:380px; border-style:solid; border-width:1px">
-			<h3 style="text-align: center"><font face = "century gothic" size="3" color="black">Locals</font></h3>
+		<!-- Content Map goes here -->
+	</div>
+	<div class="container edit1">
+		<div class="row edit2" style="margin:auto; width:1190px">
+			<div class="col-md-4 edit4" id="localmap" style="float:left; margin-left:10px; width:380px; ">
+				<h3 style="text-align: center" class = "edit3">
+					Locals
+				</h3>
 			</div>
-			<div class="col-md-4" id="saudimap" style="float:left; margin-left:10px; width:380px; border-style:solid; border-width:1px">
-			<h3 style="text-align:center"><font face = "century gothic" size="3" color="black">Saudis</font></h3>
+			<div class="col-md-4 edit4" id="saudimap" style="float:left; margin-left:10px; width:380px; ">
+				<h3 style="text-align:center" class = "edit3">
+					Saudis
+				</h3>
 			</div>
-			<div class="col-md-4" id="visitormap" style="float:left; margin-left:10px; width:380px; border-style:solid; border-width:1px">
-			<h3 style="text-align:center"><font face = "century gothic" size="3" color="black">Visitors</font></h3>
+			<div class="col-md-4 edit4" id="visitormap" style="float:left; margin-left:10px; width:380px; ">
+				<h3 style="text-align:center" class = "edit3">
+					Visitors
+				</h3>
 			</div>
 		</div>
-	</div>
-    <div class="container">
+
+
 		<div class="row">
-			<div class="chart-wrapper" id="chart-line1" style="position:relative; left:10px; top:320px;height:350px;"></div>
+			<div class="chart-wrapper" id="chart-line1" style="position:relative; left:10px; top:350px;height:350px;"></div>
 		</div>
 
 	</div>
 
 
-    <!-- /.container -->
+	<!-- /.container -->
 
 
 
 </body>
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-	<script src="http://d3js.org/d3.v3.js" charset="utf-8"></script>
-	<script src="http://d3js.org/queue.v1.min.js"></script>
-	<script src="http://d3js.org/topojson.v1.min.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="http://d3js.org/d3.v3.js" charset="utf-8"></script>
+<script src="http://d3js.org/queue.v1.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
 
-	<script src="js/date.js" type="text/javascript"></script>
+<script src="js/date.js" type="text/javascript"></script>
 
-	<script src="js/multiline.js" charset="utf-8"></script>
-	<script src="js/locmapper.js" type="text/javascript"></script>
-	<script type="text/javascript">
+<script src="js/multiline.js" charset="utf-8"></script>
+<script src="js/locmapper.js" type="text/javascript"></script>
+<script type="text/javascript">
 	var formatter = d3.time.format("%A, %B %d, %I %p");
 	var formatter2 = d3.time.format("%A %I %p");
 	var formatter3 = d3.time.format("%A %B %e %Y %I %p")
@@ -97,4 +121,5 @@ d3.csv('category_location_counters.csv', function(error, data) {
 
 });
 </script>
+
 </html>

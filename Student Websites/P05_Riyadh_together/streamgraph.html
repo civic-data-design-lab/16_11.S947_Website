@@ -1,109 +1,121 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
-<link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,300|Karma:400,300|Lato:400,300,700" rel="stylesheet" type="text/css">    
-<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-  
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+    rel='stylesheet' type='text/css'>
+
 <style>
+    body {
+        background-color: white;
+        font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        color: black;
+    }
     
-body {
-  background-color: white;
-  font-family: 'Lato', sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  color: black;    
-}
-
-.share_chart { 
-  position: relative;    
-  background-color: white;
-  color: black;
-}
-
-.remove {
-  background-color: white;
-}    
+    .share_chart {
+        position: relative;
+        background-color: white;
+        color: black;
+    }
     
-p {
-  font: 12px;
-}
-
-.x .axis {
-  color: black;    
-}    
+    .remove {
+        background-color: white;
+    }
     
-.axis path, .axis line {
-  fill: none;
-  stroke: black;
-  stroke-width: 2px;
-  shape-rendering: crispEdges;
-}
+    p {
+        font: 12px;
+    }
     
-.remove {
-  font-size: 24px;        
-    }    
-
-#shared {
-  text-align: center;
-    font-size: 28px;
-}
-
-#sharedtext {
-    text-align: center;
-    font-weight: 300;
-  font-size: 18px;            
-}
-
-#share_intro {
-    width: 100%;
-    position:relative;
-}    
-#share_box {
-    width:100%;
-}
-#choose_share {
-    width: 1000px;
-    margin: 0 auto;
-    position:relative;
-}
-
-button {
-  display:inline-block;
-  margin: 30px;
-  padding: 7px 20px;
-  font-family: 'Lato', sans-serif;
-  font-weight: 700;
-  font-size: 16px;    
-}
+    .x .axis {
+        color: black;
+    }
     
-#chart_scen {
-  text-align: center;
-    font-size: 28px;
-}    
+    .axis path,
+    .axis line {
+        fill: none;
+        stroke: black;
+        stroke-width: 2px;
+        shape-rendering: crispEdges;
+    }
     
+    .remove {
+        font-size: 24px;
+    }
+    
+    #shared {
+        text-align: center;
+        font-size: 24px;
+        font-weight:500;
+    }
+    
+    #sharedtext {
+        text-align: center;
+        font-weight: 300;
+        font-size: 18px;
+    }
+    
+    #share_intro {
+        width: 100%;
+        position: relative;
+    }
+    
+    #share_box {
+        width: 100%;
+    }
+    
+    #choose_share {
+        width: 1000px;
+        margin: 0 auto;
+        position: relative;
+    }
+    
+    #chart_scen {
+        text-align: center;
+        font-size: 28px;
+    }
+    
+    button {
+        background-color: white !important;
+        -webkit-border-radius: 20px !important;
+        border: 2px solid #dddddd !important;
+        margin-bottom: 8px !important;
+        color: black !important;
+        cursor: pointer !important;
+        font-size: 15px;
+    }
+    
+    button:hover {
+        color: white !important;
+        background-color: rgba(0, 0, 0, 0.6) !important;
+    }
 </style>
+
 <body>
-<script src="http://d3js.org/d3.v2.js"></script>
-<div id="share_intro">
-    <p id="shared"> When is there the most opportunity for shared trips?</p>
-    <p id="sharedtext">Across all of the sharing scenarios, there is a higher percentage of shared trips when there is a high total number of trips. In developing a first-/last-mile shared mobility policy in Riyadh, policy makers should examine exisiting taxi and other ride-hail trips in order to target sharing incentives at times of day and days of the week with the most trips. The streamgraph below allows you to explore the potential for shared trips across a typical day. Select a sharing scenario:</p>
-    <br>    
-</div>
-<div id="sharebox">    
-    <div id="choose_share">    
-        <button id="no_share">No Shared Trips</button>  
-        <button id="fiftn_share">15% Shared Trips</button>
-        <button id="twtyfv_share">25% Shared Trips</button>
-        <button id="max_share">50% shared trips (maximum)</button>          
+    <script src="http://d3js.org/d3.v2.js"></script>
+    <div id="share_intro">
+        <p id="shared"> When is there the most opportunity for shared trips?</p>
+        <p id="sharedtext">Across all of the sharing scenarios, there is a higher percentage of shared trips when there is a high total number
+            of trips. In developing a first-/last-mile shared mobility policy in Riyadh, policy makers should examine exisiting
+            taxi and other ride-hail trips in order to target sharing incentives at times of day and days of the week with
+            the most trips. The streamgraph below allows you to explore the potential for shared trips across a typical day.
+            Select a sharing scenario:</p>
+        <br>
     </div>
-</div>
-    
-<div class="chartbox">    
-    <div class="share_chart">
+    <div id="sharebox">
+        <div id="choose_share">
+            <button id="no_share">No Shared Trips</button>
+            <button id="fiftn_share">15% Shared Trips</button>
+            <button id="twtyfv_share">25% Shared Trips</button>
+            <button id="max_share">50% shared trips (maximum)</button>
+        </div>
     </div>
-</div>
-   
-<script>
+
+    <div class="chartbox">
+        <div class="share_chart">
+        </div>
+    </div>
+
+    <script>
 
 chart("data/unshared.csv", "blue");
 

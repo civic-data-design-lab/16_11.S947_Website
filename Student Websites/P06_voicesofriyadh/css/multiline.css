@@ -2,7 +2,6 @@
     max-width: 650px;
     min-width: 304px;
     margin: 0 auto;
-    background-color: white;
 }
 
 .chart-wrapper .inner-wrapper {
@@ -43,7 +42,7 @@
 
 }
 .chart-wrapper .axis path {
-  stroke-width: 2px;
+  stroke-width: 0.5px;
 }
 
 .chart-wrapper .line {
@@ -72,7 +71,9 @@
     display:inline;
     font-size: 0.8em;
     font-family: sans-serif;
-    font-weight: 600;
+    font-weight: 500;
+    opacity:0.65;
+
 }
 .chart-wrapper .legend .series-marker {
     height: 1em;
@@ -91,8 +92,6 @@
 
 .chart-wrapper .tooltip circle {
   fill: gray;
-  stroke: ivory;
-  stroke-width: 2px;
   fill-opacity: 25%;
 }
 .chart-wrapper .tooltip rect {
@@ -106,7 +105,7 @@
 .chart-wrapper .tooltip .line {
     stroke: steelblue;
     stroke-dasharray: 2,5;
-    stroke-width: 2;
+    stroke-width: 1;
     opacity: 0.5;
 }
 
@@ -115,3 +114,7 @@
     .chart-wrapper .legend {font-size: 14px;}
 }
 
+.year {
+    opacity:0.35;
+    font-size: 10px !important;
+}

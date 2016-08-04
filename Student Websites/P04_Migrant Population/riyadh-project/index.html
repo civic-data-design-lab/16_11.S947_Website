@@ -26,9 +26,9 @@
 
 
     <!-- JavaScripts -->
-    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <script src="//d3js.org/queue.v1.min.js"></script>
-    <script src="//d3js.org/topojson.v1.min.js"></script>
+    <script src="js/d3.v3.min.js" charset="utf-8"></script>
+    <script src="js/queue.min.js"></script>
+    <script src="js/topojson.min.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
@@ -49,6 +49,16 @@
         html {
             overflow: none;
         }
+
+        body{
+            position:absolute;
+            top:0px;
+            left:0px;
+            right:0px;
+            bottom:0px;
+            background-color:rgba(0,0,0,0.1);
+        }
+
         
         #title h1 {
             margin-bottom: 0px;
@@ -69,11 +79,7 @@
             stroke: black;
         }
         
-        .lines {
-            fill: none;
-            stroke: orange;
-            stroke-width: 1.5;
-        }
+
         
         g.tick text {
             font-size: 8px;
@@ -104,12 +110,12 @@
             width: 350px;
             height: 350px;
             left: 10px;
-            top: 0px;
+            bottom: 65px;
         }
         
         #taz_brush {
             position: absolute;
-            left: 10px;
+            right: 10px;
             bottom: 10px;
             width: 350px;
             height: 100px;
@@ -118,7 +124,7 @@
         
         #taz_map {
             position: absolute;
-            left: 350px;
+            left: 0px;
         }
         
         .mappath {
@@ -126,31 +132,61 @@
         }
         
         .mappath:hover {
-            fill: rgba(248, 0, 0, 0.4) !important;
+            fill: rgba(211, 84, 0, .6) !important;
         }
         
-        body {
-            background-color: #FCFCFC;
-        }
 
+        
         .left_panel {
-            position:absolute;
-            left:0px;
-            top:0px;
-            width:375px;
-            height:100%;
-            background-color: rgb(230,230,230);
-
+            position: absolute;
+            left: 35px;
+            bottom: 35px;
+            width: 375px;
+            height: 400px;
+            background-color: rgba(225, 225, 225,0.85);
+            border-radius: 3px;
+            box-shadow: 0 0 10px 0 rgba(0,0,0,.25);        
         }
-
+        
         .btn_cus {
-            width:100% !important;
+            width: 100% !important;
         }
-
+        
         button {
             width: 24%;
             -webkit-border-radius: 20px !important;
             border: 2px solid #dddddd !important;
+        }
+
+        .brush .extent {
+            stroke: #000;
+            fill: #fff;
+            fill-opacity: 1;
+            opacity:0.3;
+            shape-rendering: crispEdges;
+        }
+
+        #arclinks {
+            fill:rgb(70, 130, 180);
+        }
+        #arclinks:hover {
+            fill: rgba(192, 57, 43,1.0);
+            opacity:1;
+            stroke-weight:10;
+            stroke: rgba(192, 57, 43,1.0);
+        }
+
+        .lines {
+            fill: none;
+            stroke: rgba(46, 204, 113,.85);
+            stroke-width: 3px;
+            opacity:0.75;
+        }
+
+        .target_h {
+            fill:rgba(211, 84, 0,1.0) !important;
+            opacity:1 !important;
+
         }
     </style>
 
@@ -170,7 +206,6 @@
 
     <div class="left_panel">
 
-        <div id="taz_brush"></div>
 
         <div class="arc_diagram_holder">
             <div id="arc_diagram"></div>
@@ -185,6 +220,7 @@
 
     </div>
 
+    <div id="taz_brush"></div>
 
 
     <!-- /.row -->
@@ -239,7 +275,7 @@
 
         var width =  400;
         var height = 400;
-        var S_TAZ_id = 100;
+        var S_TAZ_id = 687;
         var scale0 = (200* (widthM) - 1) / 2 / Math.PI;
         var number_of_obs = d3.map();
         var temp_data = []; 
@@ -253,9 +289,14 @@
                      .range(["#dae7f1", "#1d3549"])
                      .domain([0.1, 1.0])
                      .interpolate(d3.interpolateHcl);
-                     
+
+        var color_percentage =  d3.scale.linear()
+                     .range(["#dae7f1", "#1d3549"])
+                     .domain([0.0, 0.9])
+                     .interpolate(d3.interpolateHcl);
+
         var albersProjection = d3.geo.albers()
-                                .rotate( [-46.670616,0] )
+                                .rotate( [-46.190616,0] )
                                 .center( [0.25, 24.716042] )
 
         var zoom =  d3.behavior.zoom()
@@ -269,8 +310,8 @@
 
         var svg =   d3.select("#taz_map")
                     .append( "svg" )
-                    .attr( "width", widthM-360 )
-                    .attr( "height", heightM-50 ).append("g");
+                    .attr( "width", widthM-5 )
+                    .attr( "height", heightM-5 ).append("g");
         
         var g =     svg.append("g");
                     // svg.append("rect")
@@ -399,6 +440,9 @@
            .append("path")
            .attr("d", geoPath)
            .attr('class', 'mappath')
+           .attr("id",function(d){
+               return "TAZ_id_"+d.properties.TAZ;
+           })
            map.attr("stroke-width", 5)
            .style("fill", function(d) { 
            return color(d.properties.sergios_data_Perc_Cont);
@@ -411,7 +455,8 @@
                  d3.selectAll(".mappath").style("stroke", "none");
                  // hightlight this one
                  d3.select(this).style("stroke", "orange").style("stroke-width", "3px").moveToFront();
-                 console.log("id",S_TAZ_id);
+
+
                  if (timep == 1) {
                  d3.json("data/Morning/Morning_" + S_TAZ_id.toString() + ".json", UpdateArc);}
                  if (timep == 2) {
@@ -423,13 +468,14 @@
             });
 
 
+        d3.select("#TAZ_id_"+S_TAZ_id).style("stroke", "orange").style("stroke-width", "3px").moveToFront();
         // map;  
         /////////////////
         /// METRO LINE //
         /////////////////
-        console.log(riyadh_topo)
          
-        g.selectAll(".lines").data(riyadh_topo.features).enter().append("path").attr("class", "lines").attr("d", geoPath)
+        g.selectAll(".lines").data(riyadh_topo.features)
+        .enter().append("path").attr("class", "lines").attr("d", geoPath)
 
     var data = [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ,0.8, 0.9, 1.0]
     
@@ -447,7 +493,7 @@
 
     var brush = d3.svg.brush()
         .x(x)
-        .extent([.5, .9])
+        .extent([.0, 1])
         .on("brushstart", brushstart)
         .on("brush", brushmove)
         .on("brushend", brushend);
@@ -466,7 +512,6 @@
         .attr( "height", 100 )
         .style("padding-left", 10)
         .append("g");
-        console.log(data)
      
      var circle = svg.append("g")
      .attr("transform", "translate(0," + 3 * height + ")")
@@ -477,17 +522,25 @@
             return x(d);  
         })
         .attr("y", function(d){
-            var x2 = x(d);
-            return  brushY(number_of_obs.get(d));
+            if(number_of_obs.get(d)){
+                var x2 = x(d);
+                return  brushY(number_of_obs.get(d));
+            }
+            else{
+                return 0;
+            }
         })
         .attr("width", function(d){
             return width / 10  
         })
         .attr("height", function(d){
-            var x2 = x(d);
-            return  height-brushY(number_of_obs.get(d)) ;
-        })
-        .style("fill-opacity", 0.2); 
+            if(number_of_obs.get(d)){
+                return  height-brushY(number_of_obs.get(d)) ;
+            }
+            else return 0;
+        }).attr("fill",function(d){
+            return color_percentage(d);
+        });
 
     var xAxis = d3.svg.axis()
         .scale(x)
@@ -504,7 +557,7 @@
         .style("fill", "Grey");
 
     var textL = svg.append("text")
-      .text("Migrant Population")
+      .text("Migrant Population Ratio")
       .attr("transform", "translate(" + width/2 + "," + 6.2 *height + ")")      
       .style('font-size', 9)
       .style("fill", "grey")
@@ -524,6 +577,8 @@
 
     brushg.selectAll("rect")
         .attr("height", 3 * height);
+
+    d3.select(".brush").attr("transform","translate(0,15)");
 
     brushstart();
     brushmove();
@@ -678,8 +733,8 @@ function UpdateArc(graph) {
    		.text((graph.nodes[S_index].ImmPer * 100).toFixed(1) + "%")
     	.attr("x", graph.nodes[S_index].x)
     	.attr("y", (graph.nodes[S_index].y + radius + 8))
-    	.style("font-size", 7)
-    	.style("fill", "grey")
+    	.style("font-size", 10)
+    	.style("fill", "rgba(0,0,0,0.7)")
     	.style("opacity", 1)
     	.style("text-anchor", "middle")
     	.style("font", "Arial");  }, 1500);
@@ -725,27 +780,27 @@ function arcDiagram(graph) {
     	.text("Out")
     	.attr("x", pad)
     	.attr('y', (yfixed + 7))
-    	.style('font-size', 7)
+    	.style('font-size', 10)
     	.style("fill", "grey")
-    	.style("opacity", .3)
+    	.style("opacity", .65)
     	.style('font', "Arial");
 
     var text2 = svg2.append("text")
     	.text("In")
     	.attr("x", pad)
     	.attr('y', (yfixed + 18))
-    	.style('font-size', 7)
+    	.style('font-size', 10)
     	.style("fill", "grey")
-    	.style("opacity", .3)
+    	.style("opacity", .65)
     	.style('font', "Arial");    
 
     var text3 = svg2.append("text")
     	.text("Out")
     	.attr("x", width)
     	.attr('y', (yfixed + 7))
-    	.style('font-size', 7)
+    	.style('font-size', 10)
     	.style("fill", "grey")
-    	.style("opacity", .3)
+    	.style("opacity", .65)
     	.style('text-anchor', "end")
     	.style('font', "Arial");
 
@@ -753,9 +808,9 @@ function arcDiagram(graph) {
     	.text("In")
     	.attr("x", width)
     	.attr('y', (yfixed + 18))
-    	.style('font-size', 7)
+    	.style('font-size', 10)
     	.style("fill", "grey")
-    	.style("opacity", .3)
+    	.style("opacity", .65)
     	.style('text-anchor', "end")
     	.style('font', "Arial");  
 
@@ -804,8 +859,8 @@ function arcDiagram(graph) {
    		.text((graph.nodes[S_index].ImmPer * 100).toFixed(1) + "%")
     	.attr("x", graph.nodes[S_index].x)
     	.attr("y", (graph.nodes[S_index].y + radius + 8))
-    	.style("font-size", 7)
-    	.style("fill", "grey")
+    	.style("font-size", 10)
+    	.style("fill", "rgba(0,0,0,0.7)")
     	.style("opacity", 1)
     	.style("text-anchor", "middle")
     	.style("font", "Arial")
@@ -853,7 +908,7 @@ function drawNodes(nodes) {
 function drawLinks(links) {
 
     // path generator for arcs (uses polar coordinates)
-    var arclink = d3.svg.arc()
+    var arclink = d3.svg.arc();
 
     d3.selection.prototype.moveToBack = function() {  
         return this.each(function() { 
@@ -886,18 +941,22 @@ function drawLinks(links) {
 
             if (hd > 50) { hd = 50};
             // set arc radius based on x distance
-            arclink.innerRadius(xdist / 2 - hd);
-            arclink.outerRadius(xdist / 2 + hd);
+
+
+            arclink.innerRadius(xdist / 2 - 0.5);
+            arclink.outerRadius(xdist / 2 + 0.5);
 
             // if the link is going in, the arc will be above
             if (d.target.TAZ_id == S_TAZ_id) {
-            arclink.startAngle(-Math.PI / 2);
-            arclink.endAngle(Math.PI / 2); }
+                arclink.startAngle(-Math.PI / 2);
+                arclink.endAngle(Math.PI / 2); 
+            }
 
             // if the link is going out, the arc will be below
             if (d.source.TAZ_id == S_TAZ_id) {
-            arclink.startAngle(Math.PI / 2);
-            arclink.endAngle(3 * Math.PI / 2); }
+                arclink.startAngle(Math.PI / 2);
+                arclink.endAngle(3 * Math.PI / 2); 
+            }
 
             // want to generate 1/3 as many points per pixel in x direction
             var points = d3.range(0, Math.ceil(xdist / 3));
@@ -909,12 +968,38 @@ function drawLinks(links) {
             return arclink(points);
             //}
         })
-        .attr('fill', 'white')
-        .attr('opacity', .3)
-        .moveToBack()
-        .transition()
-    	  .duration(1500)
-        .attr('fill', 'steelblue')
+        .attr("opacity",function(d){
+            var xdist = Math.abs(d.source.x - d.target.x);
+            var hd = d.value / 10;
+            if (hd > 5) { hd = 5};
+            hd = hd/5;
+
+            return hd;
+
+        })
+        
+            .moveToBack()
+            .on("mouseover",function(d){
+                if (d.source.TAZ_id == S_TAZ_id) {
+                    d3.select("#TAZ_id_"+d.target.TAZ_id)
+                        .classed("target_h",true);
+                }
+
+                else if (d.target.TAZ_id == S_TAZ_id) {
+                    d3.select("#TAZ_id_"+d.source.TAZ_id)
+                        .classed("target_h",true);
+                }
+
+
+            })
+            .on("mouseout",function(){
+                d3.selectAll(".mappath")
+                    .classed("target_h",false);
+            });
+        
+
+        
+        
 
 }
 

@@ -1,6 +1,6 @@
 // Globally used variables
 var width = 380,
-    height = 238;
+    height = 306;
 var albersProjection = d3.geo.albers()
     .scale( 53000 )
     .rotate([-46.67,0])
@@ -28,9 +28,13 @@ var grabvisitor = null;
 var saudiColor = d3.scale.threshold()
     .domain([1,2,4,10,15])
     .range(["none","#FFA968","#FF8426","#ED6C09","#AD4E05","#6D2F00"]);
+
+
+
+
 var saudiStroke = d3.scale.threshold()
     .domain([0.5])
-    .range(["none", "black"]);
+    .range(["none", "white"]);
 var saudiPath = d3.geo.path()
     .projection(albersProjection);
 var saudiSvg = d3.select("#saudimap").append("svg")
@@ -43,7 +47,7 @@ var localColor = d3.scale.threshold()
     .range(["none","#FFD968","#FFC826","#EDB409","#AD8305","#6D5200"]);
 var localStroke = d3.scale.threshold()
     .domain([0.5])
-    .range(["none", "black"]);
+    .range(["none", "white"]);
 var localPath = d3.geo.path()
     .projection(albersProjection);
 var localSvg = d3.select("#localmap").append("svg")
@@ -56,7 +60,7 @@ var visitorColor = d3.scale.threshold()
     .range(["none","#FF6868","#FF2626","#ED0909","#AD0505","#6D0000"]);
 var visitorStroke = d3.scale.threshold()
     .domain([0.5])
-    .range(["none", "black"]);
+    .range(["none", "white"]);
 var visitorPath = d3.geo.path()
     .projection(albersProjection);
 var visitorSvg = d3.select("#visitormap").append("svg")
@@ -91,18 +95,19 @@ function ready(error, roads, hex, saudi, local, visitor) {
           .data(topojson.feature(hex, hex.objects.hex_loc_wgs).features)
         .enter().append("path")
           .attr("d", saudiPath)
-          .attr("class", "saudiHexagon")
+          .attr("class", "saudiHexagon hexblock")
           .attr("stroke", function(d, i) { return saudiStroke(saudi[i]["Mon at 12AM"]); })
           .attr("fill", function(d, i) { return saudiColor(saudi[i]["Mon at 12AM"]); })
           .attr("fill-opacity", .8)
           .attr("stroke-opacity", 1)
+          .attr("stroke-width", 0.1)
           .on("mouseover", function(d, i){
             tooltip.style("visibility", "visible").html("<strong>saudi Tweets: </strong>" + saudi[i][inputValue]);
-            d3.select(this).attr("fill-opacity",1).attr("stroke-width", 3);
+            d3.select(this).attr("fill-opacity",1);
             })
           .on("mouseout", function(d){
             tooltip.style("visibility","hidden");
-            d3.select(this).attr("stroke-width", 1).attr("fill-opacity",.8);
+            d3.select(this).attr("fill-opacity",.8);
             })
           .on("mousemove", function(d) {
             tooltip.style("top", (event.pageY-10)+"px").style("left",(event.pageX+20)+"px")
@@ -122,18 +127,19 @@ function ready(error, roads, hex, saudi, local, visitor) {
           .data(topojson.feature(hex, hex.objects.hex_loc_wgs).features)
         .enter().append("path")
           .attr("d", localPath)
-          .attr("class", "localHexagon")
+          .attr("class", "localHexagon hexblock")
           .attr("stroke", function(d, i) { return localStroke(local[i]["Mon at 12AM"]); })
           .attr("fill", function(d, i) { return localColor(local[i]["Mon at 12AM"]); })
           .attr("fill-opacity", .8)
           .attr("stroke-opacity", 1)
+          .attr("stroke-width", 0.1)
           .on("mouseover", function(d, i){
             tooltip.style("visibility", "visible").html("<strong>local Tweets: </strong>" + local[i][inputValue]);
-            d3.select(this).attr("fill-opacity",1).attr("stroke-width", 3);
+            d3.select(this).attr("fill-opacity",1);
             })
           .on("mouseout", function(d){
             tooltip.style("visibility","hidden");
-            d3.select(this).attr("stroke-width", 1).attr("fill-opacity",.8);
+            d3.select(this).attr("fill-opacity",.8);
             })
           .on("mousemove", function(d) {
             tooltip.style("top", (event.pageY-10)+"px").style("left",(event.pageX+20)+"px")
@@ -155,18 +161,19 @@ function ready(error, roads, hex, saudi, local, visitor) {
           .data(topojson.feature(hex, hex.objects.hex_loc_wgs).features)
         .enter().append("path")
           .attr("d", visitorPath)
-          .attr("class", "visitorHexagon")
+          .attr("class", "visitorHexagon hexblock")
           .attr("stroke", function(d, i) { return visitorStroke(visitor[i]["Mon at 12AM"]); })
           .attr("fill", function(d, i) { return visitorColor(visitor[i]["Mon at 12AM"]); })
           .attr("fill-opacity", .8)
           .attr("stroke-opacity", 1)
+          .attr("stroke-width", 0.1)
           .on("mouseover", function(d, i){
             tooltip.style("visibility", "visible").html("<strong>visitor Tweets: </strong>" + visitor[i][inputValue]);
-            d3.select(this).attr("fill-opacity",1).attr("stroke-width", 3);
+            d3.select(this).attr("fill-opacity",1);
             })
           .on("mouseout", function(d){
             tooltip.style("visibility","hidden");
-            d3.select(this).attr("stroke-width", 1).attr("fill-opacity",.8);
+            d3.select(this).attr("fill-opacity",.8);
             })
           .on("mousemove", function(d) {
             tooltip.style("top", (event.pageY-10)+"px").style("left",(event.pageX+20)+"px")

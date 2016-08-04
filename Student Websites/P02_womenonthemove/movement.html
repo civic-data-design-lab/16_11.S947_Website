@@ -395,6 +395,16 @@
         .attr( "height", height )*/;
 
     var g = origin_map.append( "g" );
+    var tooltip = d3.select("body")
+        .append("div")
+        .style("position", "absolute")
+        .style("background-color", "rgba(255,255,255,0.9)")
+        .style("padding", "10px")
+        .style("border-radius", "13px")
+        .style("font-family", "'Open Sans', sans-serif")
+        .style("font-size", "12px")
+        .style("z-index", "10")
+        .style("visibility", "hidden");
 
     // Set Projection Parameters
     // Mercator
@@ -502,14 +512,17 @@
 
                 PNOhotspots_total.selectAll("circle")
                     .on("mouseover", function(d){
-                        d3.select("h2_o").text("PERSON FLOW IN THIS HOUR: " + d.properties.flow);
+                        tooltip.style("visibility", "visible").text("PERSON FLOW IN THIS HOUR: " + d.properties.flow);
+                        d3.select(this).attr("class","hotspothover");
+                    })
+                    .on("mousemove", function(d){
+                        tooltip.style("top", (event.pageY-10)+"px").style("left",(event.pageX+10)+"px").text("PERSON FLOW IN THIS HOUR: " + d.properties.flow);
                         d3.select(this).attr("class","hotspothover");
                     })
                     .on("mouseout", function(d){
-                        d3.select("h2_o").text("");
+                        tooltip.style("visibility", "hidden");
                         d3.select(this).attr("class","hotspot");
-                    });
-                    
+                    })   
 
 
             })
@@ -619,14 +632,18 @@
                 .attr("display", timeMatch);
 
                 PNDhotspots_total.selectAll("circle")
-                .on("mouseover", function(d){
-                    d3.select("h2_d").text("PERSON FLOW IN THIS HOUR: " + d.properties.flow);
-                    d3.select(this).attr("class","hotspothover");
-                })
-                .on("mouseout", function(d){
-                    d3.select("h2_d").text("");
-                    d3.select(this).attr("class","hotspot");
-                });
+                    .on("mouseover", function(d){
+                        tooltip.style("visibility", "visible").text("PERSON FLOW IN THIS HOUR: " + d.properties.flow);
+                        d3.select(this).attr("class","hotspothover");
+                    })
+                    .on("mousemove", function(d){
+                        tooltip.style("top", (event.pageY-10)+"px").style("left",(event.pageX+10)+"px").text("PERSON FLOW IN THIS HOUR: " + d.properties.flow);
+                        d3.select(this).attr("class","hotspothover");
+                    })
+                    .on("mouseout", function(d){
+                        tooltip.style("visibility", "hidden");
+                        d3.select(this).attr("class","hotspot");
+                    })   
 
 
 

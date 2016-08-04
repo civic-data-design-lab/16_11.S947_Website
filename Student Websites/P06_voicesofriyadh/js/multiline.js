@@ -129,7 +129,7 @@ function makeLineChart(dataset, xName, yNames) {
             if (cY.visible==true) {
                 cY.objs.line.g.attr("d", cY.objs.line.series).style("display",null);
 				cY.objs.line.g.attr("d", cY.objs.line.series).style("stroke-dasharray",null);
-				cY.objs.line.g.style("opacity","1")
+				cY.objs.line.g.style("opacity","0.65")
                 cY.objs.tooltip.style("display",null);
             } else {
  //               cY.objs.line.g.style("display","none");
@@ -275,6 +275,10 @@ function makeLineChart(dataset, xName, yNames) {
                 .attr("dy", ".71em")
                 .style("text-anchor", "middle")
                 .text(chart.yAxisLable);
+        
+        d3.selectAll("line").remove();//.attr("x2", "500");
+        console.log("running");
+
         return chart;
 
     };
@@ -309,7 +313,8 @@ function makeLineChart(dataset, xName, yNames) {
                 .attr("class", "line")
                 .attr("d", cY.objs.line.series)
                 .style("stroke", colorFunct(yName))
-				.style("stroke-width",2)
+				.style("stroke-width",1)
+                .style("opacity","0.65")
 				
                 .attr("data-series", yName)
                 .on("mouseover", function () {
@@ -340,7 +345,7 @@ function makeLineChart(dataset, xName, yNames) {
             cY = chart.groupObjs[yName];
             //Add tooltip elements
             var tooltip = chart.objs.tooltip.append("g");
-            cY.objs.circle = tooltip.append("circle").attr("r", 5);
+            cY.objs.circle = tooltip.append("circle").attr("r", 3);
             cY.objs.rect = tooltip.append("rect").attr("x", 8).attr("y","-5").attr("width",22).attr("height",'0.75em');
             cY.objs.text = tooltip.append("text").attr("x", 9).attr("dy", ".35em").attr("class","value");
             cY.objs.tooltip = tooltip;
@@ -374,7 +379,7 @@ function makeLineChart(dataset, xName, yNames) {
                 //Move the tooltip
                 cY.objs.tooltip.attr("transform", "translate(" + chart.xScale(chart.xFunct(d)) + "," + chart.yScale(cY.yFunct(d)) + ")");
                 //Change the text
-                cY.objs.tooltip.select("text").text(chart.yFormatter(cY.yFunct(d)));
+                cY.objs.tooltip.select("text").text(chart.yFormatter(cY.yFunct(d))).attr("opacity","0.65");
                 minY = Math.min(minY, chart.yScale(cY.yFunct(d)));
             }
 
