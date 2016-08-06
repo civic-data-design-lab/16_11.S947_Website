@@ -470,6 +470,9 @@
 
     // TIMESLIDER
         function update_pno(value) {
+            PNO_routes.selectAll("path").remove();
+            PNOhotspots_total.selectAll("circle").remove();
+
             document.getElementById("range").innerHTML=time[value];
             inputValue = time[value];
             var starttime = +(inputValue.replace(":00", ""));
@@ -479,7 +482,6 @@
             d3.json(filename,function(chosenhour_origin){
 
                 //chosenhour_origin = eval("PNOedgeflow" + String(inputValue.replace(":00", "")) + ".features");
-                PNO_routes.selectAll("path").remove();
                 PNO_routes.selectAll("path")
                 .data(chosenhour_origin.features)//maybe can make this query from database api
                 .enter()
@@ -494,7 +496,6 @@
                 .attr( "d", geoPath )
                 .attr("class", "Paths")
 
-                PNOhotspots_total.selectAll("circle").remove();
 
                 PNOhotspots_total.selectAll("circle")
                     .data(hotspots_o.features)
@@ -588,6 +589,9 @@
 
     // TIMESLIDER
         function update_pnd(value) {
+            PND_routes.selectAll("path").remove();
+            PNDhotspots_total.selectAll("circle").remove();
+
             document.getElementById("range").innerHTML=time[value];
             inputValue = time[value];
 
@@ -601,7 +605,6 @@
             d3.json(filename,function(chosenhour_dest){
                 //chosenhour_dest = eval("PNDedgeflow" + String(inputValue.replace(":00", "")) + ".features");
 
-                PND_routes.selectAll("path").remove();
                 PND_routes.selectAll( "path" )
                 .data(chosenhour_dest.features)//maybe can make this query from database api
                 .enter()
@@ -616,7 +619,6 @@
                 .attr( "d", geoPath )
                 .attr("class", "Paths");
 
-                PNDhotspots_total.selectAll("circle").remove();
                 PNDhotspots_total.selectAll("circle")
                 .data(hotspots_d.features)
                 .enter()

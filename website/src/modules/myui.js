@@ -10,10 +10,16 @@ MyUI.prototype = {
     initcontrol: function(){
         var myobj = this;
 
+
+
         $(".project_icon").css("height", $(".project_icon").css("width"));
+        $(".middle_content_right").css("margin-left",(window.innerWidth-$(".middle_content_right").width())/2+"px");
 
         $( window ).resize(function() {
             $(".project_icon").css("height", $(".project_icon").css("width"));
+        $(".middle_content_right").css("margin-left",(window.innerWidth-$(".middle_content_right").width())/2+"px");
+
+
         });
 
         d3.selectAll(".project_icon").on("mouseover",function(){
@@ -40,10 +46,14 @@ MyUI.prototype = {
                     d3.select(this).style("display","none");
                 })
 
+                d3.select(".col-sm-8").style("display","none");
+
                 project_mount.append("div").attr("class","mount_go_back mount_btn")
                     .append("p")
                     .text("Go Back").on("click",function(){
                         d3.selectAll(".project_icon").style("display","block");
+                        d3.select(".col-sm-8").style("display","block");
+
                         project_mount.remove();
 
                     });

@@ -720,8 +720,7 @@ function UpdateArc(graph) {
         .duration(1500)
         .attr("cx", graph.nodes[S_index].x)
         .attr("cy", graph.nodes[S_index].y)
-        .style("fill", function(d, i) { var p = graph.nodes[S_index].Metro_dist;
-            if (p > maxc) { p = maxc }; return colorCC(p)});
+        .style("fill", "rgb(211, 84, 0)");
 
     d3.selectAll("#text_per")
     	.remove();
@@ -835,7 +834,7 @@ function arcDiagram(graph) {
 
     var color = d3.scale.linear()
         .domain([40, maxc])
-        .range(["#ffcc99", "darkred"])
+        .range(["rgba(211, 84, 0, .6)"])
         .interpolate(d3.interpolateLab);    
 
     var circle = plot.append("circle")
@@ -845,8 +844,7 @@ function arcDiagram(graph) {
         .attr("cx", graph.nodes[S_index].x)
         .attr("cy", graph.nodes[S_index].y)
         .attr("r", radius)
-        .style("fill", function(d, i) { var p = graph.nodes[S_index].Metro_dist;
-            if (p > maxc) { p = maxc }; return color(p)})
+        .style("fill", "rgb(211, 84, 0)")
         .style("stroke-width", 1)
         .style("opacity", 1)
         .on("mouseover", function(d, i) { addTooltip(d3.select(this)); })
